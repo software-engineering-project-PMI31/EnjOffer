@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "1t07Hf8qa9tvuQTVOrUlI3D+his+pEE9+c2obNtVT1c=",
+  "Source": "EnjOffer.UI",
+  "BasePath": "_content/EnjOffer.UI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EnjOffer.UI\\wwwroot",
+      "Source": "EnjOffer.UI",
+      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
+      "BasePath": "_content/EnjOffer.UI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

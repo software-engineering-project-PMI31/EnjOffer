@@ -749,6 +749,8 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.2.0",
+          "Npgsql": "7.0.2",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.3",
           "Serilog": "2.12.0",
           "Serilog.Extensions.Hosting": "5.0.1",
           "SerilogTimings": "3.0.1"

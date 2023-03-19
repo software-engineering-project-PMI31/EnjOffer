@@ -1,0 +1,12 @@
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Core\bin\Debug\net6.0\EnjOffer.Core.deps.json
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Core\bin\Debug\net6.0\EnjOffer.Core.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Core\bin\Debug\net6.0\EnjOffer.Core.pdb
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Core\obj\Debug\net6.0\EnjOffer.Core.csproj.AssemblyReference.cache
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Core\obj\Debug\net6.0\EnjOffer.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Core\obj\Debug\net6.0\EnjOffer.Core.AssemblyInfoInputs.cache
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Core\obj\Debug\net6.0\EnjOffer.Core.AssemblyInfo.cs
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Core\obj\Debug\net6.0\EnjOffer.Core.csproj.CoreCompileInputs.cache
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Core\obj\Debug\net6.0\EnjOffer.Core.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Core\obj\Debug\net6.0\refint\EnjOffer.Core.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Core\obj\Debug\net6.0\EnjOffer.Core.pdb
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Core\obj\Debug\net6.0\ref\EnjOffer.Core.dll

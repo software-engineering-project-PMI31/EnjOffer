@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DbContext\" />
+    <Folder Include="Logs\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 
