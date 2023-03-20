@@ -9,9 +9,18 @@ namespace EnjOffer.Core.Domain.Entities
     public class DefaultWords
     {
         public Guid DefaultWordId { get; set; }
+
         public string? Word { get; set; }
+
         public string? WordTranslation { get; set; }
+
         public int Priority { get; set; }
+
         public string? ImageSrc { get; set; }
+
+        public ICollection<Users>? Users { get; set; }
+
+        public ICollection<UsersDefaultWords>? UsersDefaultWords { get; set; }
+
     }
 }

@@ -1,0 +1,17 @@
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\EnjOffer.Infrastructure.deps.json
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\EnjOffer.Infrastructure.runtimeconfig.json
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\EnjOffer.Infrastructure.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\EnjOffer.Infrastructure.pdb
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\EnjOffer.Core.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\EnjOffer.Core.pdb
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.csproj.AssemblyReference.cache
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.AssemblyInfoInputs.cache
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.AssemblyInfo.cs
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.csproj.CopyComplete
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\refint\EnjOffer.Infrastructure.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.pdb
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.genruntimeconfig.cache
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\ref\EnjOffer.Infrastructure.dll

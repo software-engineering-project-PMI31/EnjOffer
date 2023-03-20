@@ -11,5 +11,7 @@ namespace EnjOffer.Core.Domain.Entities
         public Guid AdviceId { get; set; }
         public int AdviceNumber { get; set; }
         public string? AdviceContent { get; set; }
+        public ICollection<Users>? Users { get; set; }
+        public ICollection<UsersAdvice>? UsersAdvice { get; set; }
     }
 }

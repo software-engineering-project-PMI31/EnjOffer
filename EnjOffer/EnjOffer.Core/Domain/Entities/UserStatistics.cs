@@ -9,7 +9,10 @@ namespace EnjOffer.Core.Domain.Entities
     public class UserStatistics
     {
         public Guid UserStatisticsId { get; set; }
+        public DateTime? AnswerDate { get; set; }
         public int CorrectAnswersCount { get; set; }
         public int IncorrectAnswersCount { get; set; }
+        public Guid UserId { get; set; }
+        public Users? User { get; set; }
     }
 }

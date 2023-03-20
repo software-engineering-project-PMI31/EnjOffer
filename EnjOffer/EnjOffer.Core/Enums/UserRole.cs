@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 namespace EnjOffer.Core.Enums
 {
-    [NpgsqlTypes.PgName("user_role")]
+    [NpgsqlTypes.PgName("user_role_type")]
     public enum UserRole
     {
         SuperAdmin,
