@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "p2AVfpVPlAauyVcEqiJLZca+L7igyFNaRAvm2d/4ajGb52NHWKO1nPMCOUQ1VMUtLh/RsSqjnqRTpOLnjy9jnQ==",
+  "dgSpecHash": "2NAeJ4y6sBvdSwSeDAStwdZaSPEO3zvOaLrPh7eoFB7wq+jn/kggEmFjTT+4zIJQgKM7bgMmw6n0l82llGwSlg==",
   "success": true,
   "projectFilePath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj",
   "expectedPackageFiles": [
@@ -53,7 +53,6 @@
     "C:\\Users\\user\\.nuget\\packages\\serilog.extensions.hosting\\5.0.1\\serilog.extensions.hosting.5.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\serilog.extensions.logging\\3.1.0\\serilog.extensions.logging.3.1.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\serilogtimings\\3.0.1\\serilogtimings.3.0.1.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",

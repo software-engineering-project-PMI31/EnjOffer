@@ -60,3 +60,5 @@ D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\bin\Debug\net6.0\Sys
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\bin\Debug\net6.0\EnjOffer.Infrastructure.dll
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\bin\Debug\net6.0\EnjOffer.Infrastructure.pdb
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\obj\Debug\net6.0\EnjOffer.UI.RazorAssemblyInfo.cache
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\obj\Debug\net6.0\EnjOffer.UI.RazorAssemblyInfo.cs

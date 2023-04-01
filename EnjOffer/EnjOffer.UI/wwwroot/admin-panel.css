@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.admin-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-panel__header {
+    margin: 1px;
+    padding: 0 20px;
+    border: 2px solid black;
+}
+
+.admin-panel__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 50px;
+}
+
+.manager {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-field__item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-field__input {
+    height: 25px;
+}
+
+.input-field__button {
+    width: fit-content;
+    align-self: center;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: #fff;
+    transition: all 0.3s linear;
+}
+
+.input-field__button:hover {
+    scale: 1.03;
+    background: #e3e3e3;
+}
+
+.input-field__button:active {
+    scale: 0.85;
+    background: white;
+}
+
+.input-field__button:disabled {
+    background: #626262;
+    color: #7d7d7d;
+}
+
+.input-field__button:disabled:hover {
+    scale: 1;
+}
+
+.form-button {
+    font-size: large;
+    user-select: none;
+}
+
+.remove-section {
+    display: flex;
+    gap: 5px;
+    align-self: center;
+}
+
+.remove-section__check {
+    display: flex;
+}
+
+.admin-panel__sections {
+    width: calc(100% - 210px);
+}
+
+.myChart {
+    width: 800px;
+}
+
+.advices {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.advice {
+    max-width: 200px;
+}
+
+.warning-text {
+    user-select: none;
+}

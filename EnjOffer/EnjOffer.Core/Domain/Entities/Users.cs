@@ -18,14 +18,6 @@ namespace EnjOffer.Core.Domain.Entities
 
         public UserRole Role { get; set; }
 
-        public ICollection<Books>? Books { get; set; }
-
-        public ICollection<UsersBooks>? UsersBooks { get; set; }
-
-        public ICollection<Advice>? Advice { get; set; }
-
-        public ICollection<UsersAdvice>? UsersAdvice { get; set; }
-
         public ICollection<UsersDefaultWords>? UsersDefaultWords { get; set; }
 
         public ICollection<DefaultWords>? DefaultWords { get; set; }

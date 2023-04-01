@@ -1,0 +1,53 @@
+2023-03-26 11:38:03.670 +03:00 [DBG] Initializing Razor view compiler with no compiled views.
+2023-03-26 11:38:03.817 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-03-26 11:38:04.065 +03:00 [DBG] Hosting starting
+2023-03-26 11:38:04.177 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-26 11:38:04.275 +03:00 [DBG] Reading data from file 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys\key-4a23e377-4798-4f0a-83bb-a8b0effb7b59.xml'.
+2023-03-26 11:38:04.358 +03:00 [DBG] Found key {4a23e377-4798-4f0a-83bb-a8b0effb7b59}.
+2023-03-26 11:38:04.393 +03:00 [DBG] Considering key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} with expiration date 2023-05-28 19:08:56Z as default key.
+2023-03-26 11:38:04.400 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-26 11:38:04.402 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-03-26 11:38:04.406 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-26 11:38:04.420 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-03-26 11:38:04.425 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-03-26 11:38:04.432 +03:00 [DBG] Using key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} as the default key.
+2023-03-26 11:38:04.435 +03:00 [DBG] Key ring with default key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} was loaded during application startup.
+2023-03-26 11:38:04.676 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 78B5EDBE021ECE7AEA6D0514B4FBCC51C59ABC71)
+2023-03-26 11:38:04.795 +03:00 [INF] Now listening on: https://localhost:7016
+2023-03-26 11:38:04.797 +03:00 [INF] Now listening on: http://localhost:5016
+2023-03-26 11:38:04.800 +03:00 [DBG] Loaded hosting startup assembly EnjOffer.UI
+2023-03-26 11:38:04.801 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-03-26 11:38:04.804 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-03-26 11:38:04.807 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-26 11:38:04.809 +03:00 [INF] Hosting environment: Development
+2023-03-26 11:38:04.811 +03:00 [INF] Content root path: D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\
+2023-03-26 11:38:04.813 +03:00 [DBG] Hosting started
+2023-03-26 11:38:04.870 +03:00 [DBG] Connection id "0HMPDQLLF5TLV" accepted.
+2023-03-26 11:38:04.870 +03:00 [DBG] Connection id "0HMPDQLLF5TM0" accepted.
+2023-03-26 11:38:04.873 +03:00 [DBG] Connection id "0HMPDQLLF5TLV" started.
+2023-03-26 11:38:04.874 +03:00 [DBG] Connection id "0HMPDQLLF5TM0" started.
+2023-03-26 11:38:07.038 +03:00 [DBG] Connection id "0HMPDQLLF5TM1" accepted.
+2023-03-26 11:38:08.121 +03:00 [DBG] Connection id "0HMPDQLLF5TM1" started.
+2023-03-26 11:38:08.686 +03:00 [DBG] Connection 0HMPDQLLF5TM1 established using the following protocol: "Tls12"
+2023-03-26 11:38:08.890 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/ - -
+2023-03-26 11:38:09.082 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-03-26 11:38:09.129 +03:00 [DBG] 1 candidate(s) found for the request path '/'
+2023-03-26 11:38:09.139 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)' with route pattern '' is valid for the request path '/'
+2023-03-26 11:38:09.142 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-26 11:38:09.144 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-26 11:38:09.353 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI).
+2023-03-26 11:38:09.357 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-03-26 11:38:09.360 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-26 11:38:09.363 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-03-26 11:38:09.367 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-03-26 11:38:09.370 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-26 11:38:09.378 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-26 11:38:09.383 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-26 11:38:09.392 +03:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2023-03-26 11:38:09.656 +03:00 [INF] Executed action EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI) in 276.7664ms
+2023-03-26 11:38:09.660 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-26 11:38:09.671 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/ - - - 200 38 text/plain;+charset=utf-8 790.5416ms
+2023-03-26 11:38:10.314 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/favicon.ico - -
+2023-03-26 11:38:10.319 +03:00 [DBG] No candidates found for the request path '/favicon.ico'
+2023-03-26 11:38:10.325 +03:00 [DBG] Request did not match any endpoints
+2023-03-26 11:38:10.329 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/favicon.ico - - - 404 0 - 15.1132ms

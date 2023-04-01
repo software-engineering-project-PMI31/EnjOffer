@@ -1,0 +1,81 @@
+2023-03-28 03:37:03.632 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-03-28 03:37:04.627 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 03:37:04.628 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 03:37:04.802 +03:00 [DBG] The property 'Advice.UsersUserId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-03-28 03:37:05.048 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-03-28 03:37:05.080 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-03-28 03:46:45.630 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-03-28 03:46:46.452 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 03:46:46.453 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 03:46:46.626 +03:00 [DBG] The property 'Advice.UsersUserId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-03-28 03:46:46.859 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-03-28 03:46:46.913 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 03:46:46.913 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 03:46:46.916 +03:00 [DBG] The property 'Advice.UsersUserId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-03-28 03:46:47.139 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-03-28 03:49:18.695 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-03-28 03:49:19.636 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 03:49:19.638 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 03:49:20.053 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-03-28 03:49:20.117 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 03:49:20.117 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 03:49:20.263 +03:00 [DBG] Creating DbConnection.
+2023-03-28 03:49:20.269 +03:00 [DBG] Created DbConnection. (3ms).
+2023-03-28 03:49:20.279 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 03:49:20.395 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 03:49:20.397 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 03:49:20.407 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (4ms).
+2023-03-28 03:49:20.420 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-03-28 03:49:20.427 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (6ms).
+2023-03-28 03:49:20.428 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (14ms).
+2023-03-28 03:49:20.429 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 03:49:20.522 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 03:49:20.532 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-03-28 03:49:20.559 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-03-28 03:49:20.559 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 03:49:20.559 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-03-28 03:49:20.570 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-03-28 03:49:20.572 +03:00 [DBG] Disposing connection to database 'EnjOffer' on server ''.
+2023-03-28 03:49:20.574 +03:00 [DBG] Disposed connection to database 'EnjOffer' on server '' (0ms).
+2023-03-28 03:49:29.833 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-03-28 03:49:30.593 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 03:49:30.594 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 03:49:31.043 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-03-28 03:49:31.105 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 03:49:31.105 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 03:49:31.366 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-03-28 03:50:58.621 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-03-28 03:50:59.417 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 03:50:59.418 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 03:50:59.885 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-03-28 03:50:59.945 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 03:50:59.945 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 03:51:00.106 +03:00 [DBG] Creating DbConnection.
+2023-03-28 03:51:00.116 +03:00 [DBG] Created DbConnection. (4ms).
+2023-03-28 03:51:00.129 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 03:51:00.249 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 03:51:00.251 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 03:51:00.261 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (4ms).
+2023-03-28 03:51:00.271 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-03-28 03:51:00.278 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (6ms).
+2023-03-28 03:51:00.279 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (12ms).
+2023-03-28 03:51:00.279 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 03:51:00.366 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 03:51:00.374 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-03-28 03:51:00.400 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-03-28 03:51:00.400 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 03:51:00.400 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-03-28 03:51:00.410 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-03-28 03:51:00.412 +03:00 [DBG] Disposing connection to database 'EnjOffer' on server ''.
+2023-03-28 03:51:00.413 +03:00 [DBG] Disposed connection to database 'EnjOffer' on server '' (0ms).
+2023-03-28 03:59:40.444 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-03-28 03:59:41.383 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 03:59:41.385 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 03:59:41.784 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-03-28 03:59:41.836 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 03:59:41.836 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 03:59:42.113 +03:00 [DBG] 'EnjOfferDbContext' disposed.

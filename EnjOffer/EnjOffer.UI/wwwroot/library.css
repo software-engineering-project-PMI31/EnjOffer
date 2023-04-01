@@ -1,0 +1,127 @@
+body,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.library {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.library__header {
+    margin: 1px;
+    padding: 0 20px;
+    border: 2px solid black;
+}
+
+.library__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 120px;
+}
+
+.selected-book {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.selected-book__image {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.read-book-button {
+    width: 300px;
+    padding: 10px 0;
+    font-size: larger;
+    background: #fff;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+}
+
+.read-book-button:hover {
+    scale: 1.03;
+    background: #e3e3e3;
+}
+
+.read-book-button:active {
+    scale: 0.85;
+    background: white;
+}
+
+.selected-book__image>img {
+    width: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.selected-book__description {
+    max-width: 550px;
+}
+
+.library-item {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.library-item > img {
+    width: 150px;
+}
+
+.library-item__actions {
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.library-item__star {
+    height: 25px;
+    width: 25px;
+}
+
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+.container {
+    user-select: none;
+}
+
+.see-book-button {
+    font-size: medium;
+    padding: 0 10px;
+    background: #fff;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+    user-select: none;
+}
+
+.see-book-button:hover {
+    scale: 1.03;
+    background: #e3e3e3;
+}
+
+.see-book-button:active {
+    scale: 0.85;
+    background: white;
+}

@@ -14,8 +14,6 @@ namespace EnjOffer.Core.Domain.Entities
 
         public string? WordTranslation { get; set; }
 
-        public int Priority { get; set; }
-
         public string? ImageSrc { get; set; }
 
         public ICollection<Users>? Users { get; set; }

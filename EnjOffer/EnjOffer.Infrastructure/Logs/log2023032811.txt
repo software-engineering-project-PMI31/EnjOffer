@@ -1,0 +1,645 @@
+2023-03-28 11:27:48.134 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'.
+2023-03-28 11:27:48.240 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-03-28 11:27:48.372 +03:00 [DBG] Hosting starting
+2023-03-28 11:27:48.477 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-28 11:27:48.542 +03:00 [DBG] Reading data from file 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys\key-4a23e377-4798-4f0a-83bb-a8b0effb7b59.xml'.
+2023-03-28 11:27:48.607 +03:00 [DBG] Found key {4a23e377-4798-4f0a-83bb-a8b0effb7b59}.
+2023-03-28 11:27:48.628 +03:00 [DBG] Considering key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} with expiration date 2023-05-28 19:08:56Z as default key.
+2023-03-28 11:27:48.633 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:27:48.639 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-03-28 11:27:48.643 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:27:48.655 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-03-28 11:27:48.662 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-03-28 11:27:48.670 +03:00 [DBG] Using key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} as the default key.
+2023-03-28 11:27:48.673 +03:00 [DBG] Key ring with default key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} was loaded during application startup.
+2023-03-28 11:27:48.937 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 78B5EDBE021ECE7AEA6D0514B4FBCC51C59ABC71)
+2023-03-28 11:27:49.002 +03:00 [INF] Now listening on: https://localhost:7016
+2023-03-28 11:27:49.008 +03:00 [INF] Now listening on: http://localhost:5016
+2023-03-28 11:27:49.010 +03:00 [DBG] Loaded hosting startup assembly EnjOffer.UI
+2023-03-28 11:27:49.011 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-03-28 11:27:49.013 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-03-28 11:27:49.014 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-28 11:27:49.016 +03:00 [INF] Hosting environment: Development
+2023-03-28 11:27:49.017 +03:00 [INF] Content root path: D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\
+2023-03-28 11:27:49.018 +03:00 [DBG] Hosting started
+2023-03-28 11:27:49.490 +03:00 [DBG] Connection id "0HMPFCP8FMDB6" accepted.
+2023-03-28 11:27:49.490 +03:00 [DBG] Connection id "0HMPFCP8FMDB7" accepted.
+2023-03-28 11:27:49.495 +03:00 [DBG] Connection id "0HMPFCP8FMDB6" started.
+2023-03-28 11:27:49.496 +03:00 [DBG] Connection id "0HMPFCP8FMDB7" started.
+2023-03-28 11:27:51.577 +03:00 [DBG] Connection id "0HMPFCP8FMDB8" accepted.
+2023-03-28 11:27:51.615 +03:00 [DBG] Connection id "0HMPFCP8FMDB8" started.
+2023-03-28 11:27:52.350 +03:00 [DBG] Connection 0HMPFCP8FMDB8 established using the following protocol: "Tls12"
+2023-03-28 11:27:52.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/ - -
+2023-03-28 11:27:53.354 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-03-28 11:27:53.361 +03:00 [DBG] The request path / does not match a supported file type
+2023-03-28 11:27:53.396 +03:00 [DBG] 1 candidate(s) found for the request path '/'
+2023-03-28 11:27:53.409 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)' with route pattern '' is valid for the request path '/'
+2023-03-28 11:27:53.412 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:27:53.415 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:27:53.645 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI).
+2023-03-28 11:27:53.651 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-03-28 11:27:53.653 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:27:53.655 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-03-28 11:27:53.660 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-03-28 11:27:53.662 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:27:53.671 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:27:53.677 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:27:53.690 +03:00 [DBG] View lookup cache miss for view 'Index' in controller 'Home'.
+2023-03-28 11:27:53.703 +03:00 [INF] Executing ViewResult, running view Index.
+2023-03-28 11:27:53.707 +03:00 [ERR] The view 'Index' was not found. Searched locations: ["/Views/Home/Index.cshtml","/Views/Shared/Index.cshtml"]
+2023-03-28 11:27:53.737 +03:00 [INF] Executed action EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI) in 61.676ms
+2023-03-28 11:27:53.744 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:27:53.750 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/Home/Index.cshtml
+/Views/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-28 11:27:54.455 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-03-28 11:27:54.484 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-03-28 11:27:54.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/ - - - 500 - text/html;+charset=utf-8 1589.8686ms
+2023-03-28 11:27:55.017 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-03-28 11:27:55.029 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 11.9062ms
+2023-03-28 11:27:55.923 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/favicon.ico - -
+2023-03-28 11:27:56.182 +03:00 [DBG] The request path /favicon.ico does not match an existing file
+2023-03-28 11:27:56.188 +03:00 [DBG] No candidates found for the request path '/favicon.ico'
+2023-03-28 11:27:56.191 +03:00 [DBG] Request did not match any endpoints
+2023-03-28 11:27:56.192 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/favicon.ico - - - 404 0 - 281.7422ms
+2023-03-28 11:27:58.991 +03:00 [DBG] Connection id "0HMPFCP8FMDB8" received FIN.
+2023-03-28 11:27:58.998 +03:00 [DBG] Connection id "0HMPFCP8FMDB8" is closed. The last processed stream ID was 5.
+2023-03-28 11:27:59.000 +03:00 [DBG] Connection id "0HMPFCP8FMDB8" sending FIN because: "The client closed the connection."
+2023-03-28 11:27:59.008 +03:00 [DBG] Connection id "0HMPFCP8FMDB8" stopped.
+2023-03-28 11:27:59.516 +03:00 [DBG] Authentication of the HTTPS connection timed out.
+2023-03-28 11:27:59.516 +03:00 [DBG] Authentication of the HTTPS connection timed out.
+2023-03-28 11:27:59.517 +03:00 [DBG] Connection id "0HMPFCP8FMDB7" stopped.
+2023-03-28 11:27:59.518 +03:00 [DBG] Connection id "0HMPFCP8FMDB6" stopped.
+2023-03-28 11:27:59.519 +03:00 [DBG] Connection id "0HMPFCP8FMDB7" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 11:27:59.521 +03:00 [DBG] Connection id "0HMPFCP8FMDB6" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 11:34:26.293 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'.
+2023-03-28 11:34:26.452 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'.
+2023-03-28 11:34:26.454 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/_ViewStart.cshtml'.
+2023-03-28 11:34:26.495 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-03-28 11:34:26.699 +03:00 [DBG] Hosting starting
+2023-03-28 11:34:26.842 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-28 11:34:26.903 +03:00 [DBG] Reading data from file 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys\key-4a23e377-4798-4f0a-83bb-a8b0effb7b59.xml'.
+2023-03-28 11:34:26.960 +03:00 [DBG] Found key {4a23e377-4798-4f0a-83bb-a8b0effb7b59}.
+2023-03-28 11:34:26.986 +03:00 [DBG] Considering key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} with expiration date 2023-05-28 19:08:56Z as default key.
+2023-03-28 11:34:26.992 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:34:27.002 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-03-28 11:34:27.005 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:34:27.018 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-03-28 11:34:27.023 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-03-28 11:34:27.032 +03:00 [DBG] Using key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} as the default key.
+2023-03-28 11:34:27.035 +03:00 [DBG] Key ring with default key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} was loaded during application startup.
+2023-03-28 11:34:27.355 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 78B5EDBE021ECE7AEA6D0514B4FBCC51C59ABC71)
+2023-03-28 11:34:27.451 +03:00 [INF] Now listening on: https://localhost:7016
+2023-03-28 11:34:27.453 +03:00 [INF] Now listening on: http://localhost:5016
+2023-03-28 11:34:27.455 +03:00 [DBG] Loaded hosting startup assembly EnjOffer.UI
+2023-03-28 11:34:27.456 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-03-28 11:34:27.458 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-03-28 11:34:27.461 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-28 11:34:27.462 +03:00 [INF] Hosting environment: Development
+2023-03-28 11:34:27.464 +03:00 [INF] Content root path: D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\
+2023-03-28 11:34:27.465 +03:00 [DBG] Hosting started
+2023-03-28 11:34:27.629 +03:00 [DBG] Connection id "0HMPFCSV4K6A2" accepted.
+2023-03-28 11:34:27.629 +03:00 [DBG] Connection id "0HMPFCSV4K6A2" received FIN.
+2023-03-28 11:34:27.633 +03:00 [DBG] Connection id "0HMPFCSV4K6A2" started.
+2023-03-28 11:34:27.679 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-28 11:34:27.869 +03:00 [DBG] Connection id "0HMPFCSV4K6A2" stopped.
+2023-03-28 11:34:27.873 +03:00 [DBG] Connection id "0HMPFCSV4K6A2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 11:34:29.643 +03:00 [DBG] Connection id "0HMPFCSV4K6A3" accepted.
+2023-03-28 11:34:29.648 +03:00 [DBG] Connection id "0HMPFCSV4K6A3" started.
+2023-03-28 11:34:29.755 +03:00 [DBG] Connection 0HMPFCSV4K6A3 established using the following protocol: "Tls12"
+2023-03-28 11:34:29.893 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/ - -
+2023-03-28 11:34:29.983 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-03-28 11:34:29.990 +03:00 [DBG] The request path / does not match a supported file type
+2023-03-28 11:34:30.037 +03:00 [DBG] 1 candidate(s) found for the request path '/'
+2023-03-28 11:34:30.047 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)' with route pattern '' is valid for the request path '/'
+2023-03-28 11:34:30.051 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:34:30.053 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:34:30.262 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI).
+2023-03-28 11:34:30.272 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-03-28 11:34:30.283 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:34:30.296 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-03-28 11:34:30.299 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-03-28 11:34:30.304 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:34:30.312 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:34:30.317 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:34:30.339 +03:00 [DBG] View lookup cache miss for view 'Index' in controller 'Home'.
+2023-03-28 11:34:30.388 +03:00 [INF] Executing ViewResult, running view Index.
+2023-03-28 11:34:30.415 +03:00 [DBG] The view path '/Views/Home/Index.cshtml' was found in 68.7741ms.
+2023-03-28 11:34:30.620 +03:00 [INF] Executed action EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI) in 312.2013ms
+2023-03-28 11:34:30.631 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:34:30.638 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The layout view '~/EnjOffer.UI/Views/Shared/_Layout.cshtml' could not be located. The following locations were searched:
+~/EnjOffer.UI/Views/Shared/_Layout.cshtml
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.GetLayoutPage(ViewContext context, String executingFilePath, String layoutPath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-28 11:34:30.909 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-03-28 11:34:30.929 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-03-28 11:34:30.938 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/ - - - 500 - text/html;+charset=utf-8 1051.4374ms
+2023-03-28 11:34:31.972 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-03-28 11:34:31.989 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 17.4800ms
+2023-03-28 11:34:34.317 +03:00 [DBG] Connection id "0HMPFCSV4K6A3" received FIN.
+2023-03-28 11:34:34.472 +03:00 [DBG] Connection id "0HMPFCSV4K6A3" is closed. The last processed stream ID was 3.
+2023-03-28 11:34:34.478 +03:00 [DBG] Connection id "0HMPFCSV4K6A3" sending FIN because: "The client closed the connection."
+2023-03-28 11:34:34.487 +03:00 [DBG] Connection id "0HMPFCSV4K6A3" stopped.
+2023-03-28 11:36:01.433 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'.
+2023-03-28 11:36:01.599 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'.
+2023-03-28 11:36:01.607 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/_ViewStart.cshtml'.
+2023-03-28 11:36:01.648 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-03-28 11:36:01.832 +03:00 [DBG] Hosting starting
+2023-03-28 11:36:01.944 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-28 11:36:02.004 +03:00 [DBG] Reading data from file 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys\key-4a23e377-4798-4f0a-83bb-a8b0effb7b59.xml'.
+2023-03-28 11:36:02.043 +03:00 [DBG] Found key {4a23e377-4798-4f0a-83bb-a8b0effb7b59}.
+2023-03-28 11:36:02.078 +03:00 [DBG] Considering key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} with expiration date 2023-05-28 19:08:56Z as default key.
+2023-03-28 11:36:02.097 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:36:02.116 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-03-28 11:36:02.123 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:36:02.142 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-03-28 11:36:02.151 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-03-28 11:36:02.162 +03:00 [DBG] Using key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} as the default key.
+2023-03-28 11:36:02.245 +03:00 [DBG] Key ring with default key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} was loaded during application startup.
+2023-03-28 11:36:02.551 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 78B5EDBE021ECE7AEA6D0514B4FBCC51C59ABC71)
+2023-03-28 11:36:02.643 +03:00 [INF] Now listening on: https://localhost:7016
+2023-03-28 11:36:02.668 +03:00 [INF] Now listening on: http://localhost:5016
+2023-03-28 11:36:02.670 +03:00 [DBG] Loaded hosting startup assembly EnjOffer.UI
+2023-03-28 11:36:02.671 +03:00 [DBG] Connection id "0HMPFCTRF26MQ" received FIN.
+2023-03-28 11:36:02.671 +03:00 [DBG] Connection id "0HMPFCTRF26MP" received FIN.
+2023-03-28 11:36:02.672 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-03-28 11:36:02.680 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-03-28 11:36:02.682 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-28 11:36:02.683 +03:00 [INF] Hosting environment: Development
+2023-03-28 11:36:02.684 +03:00 [INF] Content root path: D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\
+2023-03-28 11:36:02.687 +03:00 [DBG] Hosting started
+2023-03-28 11:36:02.687 +03:00 [DBG] Connection id "0HMPFCTRF26MP" accepted.
+2023-03-28 11:36:02.687 +03:00 [DBG] Connection id "0HMPFCTRF26MQ" accepted.
+2023-03-28 11:36:02.693 +03:00 [DBG] Connection id "0HMPFCTRF26MP" started.
+2023-03-28 11:36:02.695 +03:00 [DBG] Connection id "0HMPFCTRF26MQ" started.
+2023-03-28 11:36:02.718 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-28 11:36:02.718 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-28 11:36:02.805 +03:00 [DBG] Connection id "0HMPFCTRF26MQ" stopped.
+2023-03-28 11:36:02.805 +03:00 [DBG] Connection id "0HMPFCTRF26MP" stopped.
+2023-03-28 11:36:02.822 +03:00 [DBG] Connection id "0HMPFCTRF26MP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 11:36:02.823 +03:00 [DBG] Connection id "0HMPFCTRF26MQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 11:36:03.981 +03:00 [DBG] Connection id "0HMPFCTRF26MR" accepted.
+2023-03-28 11:36:04.003 +03:00 [DBG] Connection id "0HMPFCTRF26MR" started.
+2023-03-28 11:36:04.382 +03:00 [DBG] Connection 0HMPFCTRF26MR established using the following protocol: "Tls12"
+2023-03-28 11:36:04.713 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/ - -
+2023-03-28 11:36:04.995 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-03-28 11:36:05.014 +03:00 [DBG] The request path / does not match a supported file type
+2023-03-28 11:36:05.078 +03:00 [DBG] 1 candidate(s) found for the request path '/'
+2023-03-28 11:36:05.092 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)' with route pattern '' is valid for the request path '/'
+2023-03-28 11:36:05.097 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:36:05.110 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:36:05.496 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI).
+2023-03-28 11:36:05.503 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-03-28 11:36:05.513 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:36:05.516 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-03-28 11:36:05.519 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-03-28 11:36:05.522 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:36:05.534 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:36:05.541 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:36:05.569 +03:00 [DBG] View lookup cache miss for view 'Index' in controller 'Home'.
+2023-03-28 11:36:05.615 +03:00 [INF] Executing ViewResult, running view Index.
+2023-03-28 11:36:05.629 +03:00 [DBG] The view path '/Views/Home/Index.cshtml' was found in 52.1113ms.
+2023-03-28 11:36:05.870 +03:00 [INF] Executed action EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI) in 335.9595ms
+2023-03-28 11:36:05.883 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:36:05.895 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: RenderBody has not been called for the page at '/Views/Shared/_Layout.cshtml'. To ignore call IgnoreBody().
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-28 11:36:06.126 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-03-28 11:36:06.144 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-03-28 11:36:06.154 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/ - - - 500 - text/html;+charset=utf-8 1452.2105ms
+2023-03-28 11:36:08.156 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-03-28 11:36:08.162 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 6.3135ms
+2023-03-28 11:36:14.199 +03:00 [DBG] Connection id "0HMPFCTRF26MR" received FIN.
+2023-03-28 11:36:14.207 +03:00 [DBG] Connection id "0HMPFCTRF26MR" is closed. The last processed stream ID was 3.
+2023-03-28 11:36:14.209 +03:00 [DBG] Connection id "0HMPFCTRF26MR" sending FIN because: "The client closed the connection."
+2023-03-28 11:36:14.213 +03:00 [DBG] Connection id "0HMPFCTRF26MR" stopped.
+2023-03-28 11:36:41.285 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'.
+2023-03-28 11:36:41.406 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'.
+2023-03-28 11:36:41.429 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/_ViewStart.cshtml'.
+2023-03-28 11:36:41.475 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-03-28 11:36:41.732 +03:00 [DBG] Hosting starting
+2023-03-28 11:36:41.786 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-28 11:36:41.819 +03:00 [DBG] Reading data from file 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys\key-4a23e377-4798-4f0a-83bb-a8b0effb7b59.xml'.
+2023-03-28 11:36:41.835 +03:00 [DBG] Found key {4a23e377-4798-4f0a-83bb-a8b0effb7b59}.
+2023-03-28 11:36:41.848 +03:00 [DBG] Considering key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} with expiration date 2023-05-28 19:08:56Z as default key.
+2023-03-28 11:36:41.852 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:36:41.858 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-03-28 11:36:41.860 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:36:41.869 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-03-28 11:36:41.873 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-03-28 11:36:41.879 +03:00 [DBG] Using key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} as the default key.
+2023-03-28 11:36:41.881 +03:00 [DBG] Key ring with default key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} was loaded during application startup.
+2023-03-28 11:36:42.088 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 78B5EDBE021ECE7AEA6D0514B4FBCC51C59ABC71)
+2023-03-28 11:36:42.144 +03:00 [INF] Now listening on: https://localhost:7016
+2023-03-28 11:36:42.146 +03:00 [INF] Now listening on: http://localhost:5016
+2023-03-28 11:36:42.148 +03:00 [DBG] Loaded hosting startup assembly EnjOffer.UI
+2023-03-28 11:36:42.149 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-03-28 11:36:42.150 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-03-28 11:36:42.151 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-28 11:36:42.152 +03:00 [INF] Hosting environment: Development
+2023-03-28 11:36:42.153 +03:00 [INF] Content root path: D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\
+2023-03-28 11:36:42.155 +03:00 [DBG] Hosting started
+2023-03-28 11:36:42.237 +03:00 [DBG] Connection id "0HMPFCU78BF8A" accepted.
+2023-03-28 11:36:42.237 +03:00 [DBG] Connection id "0HMPFCU78BF8B" accepted.
+2023-03-28 11:36:42.243 +03:00 [DBG] Connection id "0HMPFCU78BF8A" started.
+2023-03-28 11:36:42.245 +03:00 [DBG] Connection id "0HMPFCU78BF8B" started.
+2023-03-28 11:36:42.257 +03:00 [DBG] Connection id "0HMPFCU78BF8B" received FIN.
+2023-03-28 11:36:42.257 +03:00 [DBG] Connection id "0HMPFCU78BF8A" received FIN.
+2023-03-28 11:36:42.307 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-28 11:36:42.338 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-28 11:36:42.479 +03:00 [DBG] Connection id "0HMPFCU78BF8B" stopped.
+2023-03-28 11:36:42.479 +03:00 [DBG] Connection id "0HMPFCU78BF8A" stopped.
+2023-03-28 11:36:42.492 +03:00 [DBG] Connection id "0HMPFCU78BF8B" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 11:36:42.492 +03:00 [DBG] Connection id "0HMPFCU78BF8A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 11:36:43.421 +03:00 [DBG] Connection id "0HMPFCU78BF8C" accepted.
+2023-03-28 11:36:43.511 +03:00 [DBG] Connection id "0HMPFCU78BF8C" started.
+2023-03-28 11:36:43.845 +03:00 [DBG] Connection 0HMPFCU78BF8C established using the following protocol: "Tls12"
+2023-03-28 11:36:44.139 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/ - -
+2023-03-28 11:36:44.195 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-03-28 11:36:44.201 +03:00 [DBG] The request path / does not match a supported file type
+2023-03-28 11:36:44.241 +03:00 [DBG] 1 candidate(s) found for the request path '/'
+2023-03-28 11:36:44.258 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)' with route pattern '' is valid for the request path '/'
+2023-03-28 11:36:44.264 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:36:44.267 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:36:44.334 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI).
+2023-03-28 11:36:44.339 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-03-28 11:36:44.343 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:36:44.346 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-03-28 11:36:44.349 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-03-28 11:36:44.352 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:36:44.358 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:36:44.360 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:36:44.370 +03:00 [DBG] View lookup cache miss for view 'Index' in controller 'Home'.
+2023-03-28 11:36:44.401 +03:00 [INF] Executing ViewResult, running view Index.
+2023-03-28 11:36:44.409 +03:00 [DBG] The view path '/Views/Home/Index.cshtml' was found in 34.7153ms.
+2023-03-28 11:36:44.569 +03:00 [INF] Executed action EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI) in 212.9026ms
+2023-03-28 11:36:44.577 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:36:44.583 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: RenderBody has not been called for the page at '/Views/Shared/_Layout.cshtml'. To ignore call IgnoreBody().
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-28 11:36:44.768 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-03-28 11:36:44.799 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-03-28 11:36:44.829 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/ - - - 500 - text/html;+charset=utf-8 699.5005ms
+2023-03-28 11:36:45.419 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-03-28 11:36:45.428 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 8.6870ms
+2023-03-28 11:37:09.202 +03:00 [DBG] Connection id "0HMPFCU78BF8C" received FIN.
+2023-03-28 11:37:09.224 +03:00 [DBG] Connection id "0HMPFCU78BF8C" is closed. The last processed stream ID was 3.
+2023-03-28 11:37:09.226 +03:00 [DBG] Connection id "0HMPFCU78BF8C" sending FIN because: "The client closed the connection."
+2023-03-28 11:37:09.229 +03:00 [DBG] Connection id "0HMPFCU78BF8C" stopped.
+2023-03-28 11:39:40.826 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'.
+2023-03-28 11:39:40.912 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'.
+2023-03-28 11:39:40.915 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/_ViewStart.cshtml'.
+2023-03-28 11:39:40.957 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-03-28 11:39:41.124 +03:00 [DBG] Hosting starting
+2023-03-28 11:39:41.234 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-28 11:39:41.288 +03:00 [DBG] Reading data from file 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys\key-4a23e377-4798-4f0a-83bb-a8b0effb7b59.xml'.
+2023-03-28 11:39:41.326 +03:00 [DBG] Found key {4a23e377-4798-4f0a-83bb-a8b0effb7b59}.
+2023-03-28 11:39:41.350 +03:00 [DBG] Considering key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} with expiration date 2023-05-28 19:08:56Z as default key.
+2023-03-28 11:39:41.357 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:39:41.367 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-03-28 11:39:41.372 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:39:41.387 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-03-28 11:39:41.395 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-03-28 11:39:41.406 +03:00 [DBG] Using key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} as the default key.
+2023-03-28 11:39:41.411 +03:00 [DBG] Key ring with default key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} was loaded during application startup.
+2023-03-28 11:39:41.720 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 78B5EDBE021ECE7AEA6D0514B4FBCC51C59ABC71)
+2023-03-28 11:39:41.804 +03:00 [INF] Now listening on: https://localhost:7016
+2023-03-28 11:39:41.806 +03:00 [INF] Now listening on: http://localhost:5016
+2023-03-28 11:39:41.808 +03:00 [DBG] Loaded hosting startup assembly EnjOffer.UI
+2023-03-28 11:39:41.811 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-03-28 11:39:41.814 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-03-28 11:39:41.818 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-28 11:39:41.820 +03:00 [INF] Hosting environment: Development
+2023-03-28 11:39:41.822 +03:00 [INF] Content root path: D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\
+2023-03-28 11:39:41.824 +03:00 [DBG] Hosting started
+2023-03-28 11:39:42.118 +03:00 [DBG] Connection id "0HMPFCVSRQGON" received FIN.
+2023-03-28 11:39:42.118 +03:00 [DBG] Connection id "0HMPFCVSRQGOM" received FIN.
+2023-03-28 11:39:42.119 +03:00 [DBG] Connection id "0HMPFCVSRQGON" accepted.
+2023-03-28 11:39:42.119 +03:00 [DBG] Connection id "0HMPFCVSRQGOM" accepted.
+2023-03-28 11:39:42.599 +03:00 [DBG] Connection id "0HMPFCVSRQGON" started.
+2023-03-28 11:39:42.600 +03:00 [DBG] Connection id "0HMPFCVSRQGOM" started.
+2023-03-28 11:39:42.662 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-28 11:39:42.662 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-28 11:39:43.377 +03:00 [DBG] Connection id "0HMPFCVSRQGON" stopped.
+2023-03-28 11:39:43.397 +03:00 [DBG] Connection id "0HMPFCVSRQGOM" stopped.
+2023-03-28 11:39:43.407 +03:00 [DBG] Connection id "0HMPFCVSRQGON" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 11:39:43.425 +03:00 [DBG] Connection id "0HMPFCVSRQGOM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 11:39:44.073 +03:00 [DBG] Connection id "0HMPFCVSRQGOO" accepted.
+2023-03-28 11:39:44.162 +03:00 [DBG] Connection id "0HMPFCVSRQGOO" started.
+2023-03-28 11:39:44.374 +03:00 [DBG] Connection 0HMPFCVSRQGOO established using the following protocol: "Tls12"
+2023-03-28 11:39:44.557 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/ - -
+2023-03-28 11:39:44.759 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-03-28 11:39:44.777 +03:00 [DBG] The request path / does not match a supported file type
+2023-03-28 11:39:44.843 +03:00 [DBG] 1 candidate(s) found for the request path '/'
+2023-03-28 11:39:44.857 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)' with route pattern '' is valid for the request path '/'
+2023-03-28 11:39:44.869 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:39:44.872 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:39:45.060 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI).
+2023-03-28 11:39:45.065 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-03-28 11:39:45.067 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:39:45.070 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-03-28 11:39:45.073 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-03-28 11:39:45.076 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:39:45.082 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:39:45.086 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:39:45.098 +03:00 [DBG] View lookup cache miss for view 'Index' in controller 'Home'.
+2023-03-28 11:39:45.120 +03:00 [INF] Executing ViewResult, running view Index.
+2023-03-28 11:39:45.131 +03:00 [DBG] The view path '/Views/Home/Index.cshtml' was found in 26.6532ms.
+2023-03-28 11:39:45.268 +03:00 [INF] Executed action EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI) in 189.3075ms
+2023-03-28 11:39:45.273 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:39:45.277 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: RenderBody has not been called for the page at '/Views/Shared/_Layout.cshtml'. To ignore call IgnoreBody().
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-28 11:39:49.542 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-03-28 11:39:49.677 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-03-28 11:39:49.918 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/ - - - 500 - text/html;+charset=utf-8 5369.6722ms
+2023-03-28 11:39:50.520 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-03-28 11:39:50.915 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 395.0978ms
+2023-03-28 11:39:59.771 +03:00 [DBG] Connection id "0HMPFCVSRQGOO" received FIN.
+2023-03-28 11:39:59.780 +03:00 [DBG] Connection id "0HMPFCVSRQGOO" is closed. The last processed stream ID was 3.
+2023-03-28 11:39:59.781 +03:00 [DBG] Connection id "0HMPFCVSRQGOO" sending FIN because: "The client closed the connection."
+2023-03-28 11:39:59.786 +03:00 [DBG] Connection id "0HMPFCVSRQGOO" stopped.
+2023-03-28 11:40:48.030 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'.
+2023-03-28 11:40:48.148 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'.
+2023-03-28 11:40:48.193 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-03-28 11:40:48.409 +03:00 [DBG] Hosting starting
+2023-03-28 11:40:48.555 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-28 11:40:48.612 +03:00 [DBG] Reading data from file 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys\key-4a23e377-4798-4f0a-83bb-a8b0effb7b59.xml'.
+2023-03-28 11:40:48.651 +03:00 [DBG] Found key {4a23e377-4798-4f0a-83bb-a8b0effb7b59}.
+2023-03-28 11:40:48.671 +03:00 [DBG] Considering key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} with expiration date 2023-05-28 19:08:56Z as default key.
+2023-03-28 11:40:48.675 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:40:48.681 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-03-28 11:40:48.684 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:40:48.695 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-03-28 11:40:48.701 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-03-28 11:40:48.711 +03:00 [DBG] Using key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} as the default key.
+2023-03-28 11:40:48.716 +03:00 [DBG] Key ring with default key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} was loaded during application startup.
+2023-03-28 11:40:48.992 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 78B5EDBE021ECE7AEA6D0514B4FBCC51C59ABC71)
+2023-03-28 11:40:49.049 +03:00 [INF] Now listening on: https://localhost:7016
+2023-03-28 11:40:49.050 +03:00 [INF] Now listening on: http://localhost:5016
+2023-03-28 11:40:49.051 +03:00 [DBG] Loaded hosting startup assembly EnjOffer.UI
+2023-03-28 11:40:49.052 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-03-28 11:40:49.053 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-03-28 11:40:49.055 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-28 11:40:49.056 +03:00 [INF] Hosting environment: Development
+2023-03-28 11:40:49.057 +03:00 [INF] Content root path: D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\
+2023-03-28 11:40:49.059 +03:00 [DBG] Hosting started
+2023-03-28 11:40:49.400 +03:00 [DBG] Connection id "0HMPFD0GTFEN2" accepted.
+2023-03-28 11:40:49.402 +03:00 [DBG] Connection id "0HMPFD0GTFEN2" started.
+2023-03-28 11:40:49.434 +03:00 [DBG] Connection id "0HMPFD0GTFEN2" received FIN.
+2023-03-28 11:40:49.448 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-28 11:40:49.569 +03:00 [DBG] Connection id "0HMPFD0GTFEN2" stopped.
+2023-03-28 11:40:49.574 +03:00 [DBG] Connection id "0HMPFD0GTFEN2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 11:40:50.474 +03:00 [DBG] Connection id "0HMPFD0GTFEN3" accepted.
+2023-03-28 11:40:50.505 +03:00 [DBG] Connection id "0HMPFD0GTFEN3" started.
+2023-03-28 11:40:50.590 +03:00 [DBG] Connection 0HMPFD0GTFEN3 established using the following protocol: "Tls12"
+2023-03-28 11:40:50.764 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/ - -
+2023-03-28 11:40:50.835 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-03-28 11:40:50.841 +03:00 [DBG] The request path / does not match a supported file type
+2023-03-28 11:40:50.886 +03:00 [DBG] 1 candidate(s) found for the request path '/'
+2023-03-28 11:40:50.899 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)' with route pattern '' is valid for the request path '/'
+2023-03-28 11:40:50.902 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:40:50.907 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:40:51.009 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI).
+2023-03-28 11:40:51.014 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-03-28 11:40:51.016 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:40:51.020 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-03-28 11:40:51.023 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-03-28 11:40:51.025 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:40:51.032 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:40:51.036 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:40:51.048 +03:00 [DBG] View lookup cache miss for view 'Index' in controller 'Home'.
+2023-03-28 11:40:51.069 +03:00 [INF] Executing ViewResult, running view Index.
+2023-03-28 11:40:51.081 +03:00 [DBG] The view path '/Views/Home/Index.cshtml' was found in 26.2829ms.
+2023-03-28 11:40:51.718 +03:00 [INF] Executed ViewResult - view Index executed in 673.6742ms.
+2023-03-28 11:40:51.731 +03:00 [INF] Executed action EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI) in 702.0187ms
+2023-03-28 11:40:51.735 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:40:51.748 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-03-28 11:40:51.774 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-03-28 11:40:51.785 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/ - - - 200 - text/html;+charset=utf-8 1031.0621ms
+2023-03-28 11:40:52.139 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/book-reader.css - -
+2023-03-28 11:40:52.237 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-03-28 11:40:52.241 +03:00 [DBG] The request path /book-reader.css does not match an existing file
+2023-03-28 11:40:52.245 +03:00 [DBG] No candidates found for the request path '/book-reader.css'
+2023-03-28 11:40:52.249 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 11.6829ms
+2023-03-28 11:40:52.250 +03:00 [DBG] Request did not match any endpoints
+2023-03-28 11:40:52.257 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/book-reader.css - - - 404 0 - 117.6884ms
+2023-03-28 11:42:39.522 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'.
+2023-03-28 11:42:39.741 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'.
+2023-03-28 11:42:39.774 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-03-28 11:42:39.933 +03:00 [DBG] Hosting starting
+2023-03-28 11:42:40.141 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-28 11:42:40.333 +03:00 [DBG] Reading data from file 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys\key-4a23e377-4798-4f0a-83bb-a8b0effb7b59.xml'.
+2023-03-28 11:42:40.438 +03:00 [DBG] Found key {4a23e377-4798-4f0a-83bb-a8b0effb7b59}.
+2023-03-28 11:42:40.486 +03:00 [DBG] Considering key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} with expiration date 2023-05-28 19:08:56Z as default key.
+2023-03-28 11:42:40.520 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:42:40.537 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-03-28 11:42:40.563 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 11:42:40.577 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-03-28 11:42:40.582 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-03-28 11:42:40.590 +03:00 [DBG] Using key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} as the default key.
+2023-03-28 11:42:40.593 +03:00 [DBG] Key ring with default key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} was loaded during application startup.
+2023-03-28 11:42:41.000 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 78B5EDBE021ECE7AEA6D0514B4FBCC51C59ABC71)
+2023-03-28 11:42:41.066 +03:00 [INF] Now listening on: https://localhost:7016
+2023-03-28 11:42:41.068 +03:00 [INF] Now listening on: http://localhost:5016
+2023-03-28 11:42:41.070 +03:00 [DBG] Loaded hosting startup assembly EnjOffer.UI
+2023-03-28 11:42:41.071 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-03-28 11:42:41.073 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-03-28 11:42:41.074 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-28 11:42:41.076 +03:00 [INF] Hosting environment: Development
+2023-03-28 11:42:41.077 +03:00 [INF] Content root path: D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\
+2023-03-28 11:42:41.078 +03:00 [DBG] Hosting started
+2023-03-28 11:42:41.279 +03:00 [DBG] Connection id "0HMPFD1I8ESOU" accepted.
+2023-03-28 11:42:41.279 +03:00 [DBG] Connection id "0HMPFD1I8ESOV" accepted.
+2023-03-28 11:42:41.282 +03:00 [DBG] Connection id "0HMPFD1I8ESOU" started.
+2023-03-28 11:42:41.283 +03:00 [DBG] Connection id "0HMPFD1I8ESOV" started.
+2023-03-28 11:42:41.314 +03:00 [DBG] Connection id "0HMPFD1I8ESOV" received FIN.
+2023-03-28 11:42:41.314 +03:00 [DBG] Connection id "0HMPFD1I8ESOU" received FIN.
+2023-03-28 11:42:41.356 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-28 11:42:41.376 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-28 11:42:41.571 +03:00 [DBG] Connection id "0HMPFD1I8ESOV" stopped.
+2023-03-28 11:42:41.571 +03:00 [DBG] Connection id "0HMPFD1I8ESOU" stopped.
+2023-03-28 11:42:41.575 +03:00 [DBG] Connection id "0HMPFD1I8ESOV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 11:42:41.579 +03:00 [DBG] Connection id "0HMPFD1I8ESOU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 11:42:42.563 +03:00 [DBG] Connection id "0HMPFD1I8ESP0" accepted.
+2023-03-28 11:42:42.587 +03:00 [DBG] Connection id "0HMPFD1I8ESP0" started.
+2023-03-28 11:42:42.980 +03:00 [DBG] Connection 0HMPFD1I8ESP0 established using the following protocol: "Tls12"
+2023-03-28 11:42:43.273 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/ - -
+2023-03-28 11:42:43.487 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-03-28 11:42:43.492 +03:00 [DBG] The request path / does not match a supported file type
+2023-03-28 11:42:43.539 +03:00 [DBG] 1 candidate(s) found for the request path '/'
+2023-03-28 11:42:43.553 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)' with route pattern '' is valid for the request path '/'
+2023-03-28 11:42:43.560 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:42:43.562 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:42:43.707 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI).
+2023-03-28 11:42:43.711 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-03-28 11:42:43.714 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:42:43.717 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-03-28 11:42:43.719 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-03-28 11:42:43.721 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-03-28 11:42:43.728 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:42:43.731 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-03-28 11:42:43.743 +03:00 [DBG] View lookup cache miss for view 'Index' in controller 'Home'.
+2023-03-28 11:42:43.759 +03:00 [INF] Executing ViewResult, running view Index.
+2023-03-28 11:42:43.767 +03:00 [DBG] The view path '/Views/Home/Index.cshtml' was found in 20.8304ms.
+2023-03-28 11:42:43.938 +03:00 [INF] Executed ViewResult - view Index executed in 198.3023ms.
+2023-03-28 11:42:43.946 +03:00 [INF] Executed action EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI) in 220.6439ms
+2023-03-28 11:42:43.948 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-03-28 11:42:43.957 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-03-28 11:42:43.976 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-03-28 11:42:43.984 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/ - - - 200 - text/html;+charset=utf-8 720.7535ms
+2023-03-28 11:42:44.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/book-reader.css - -
+2023-03-28 11:42:44.404 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-03-28 11:42:44.760 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 355.7518ms
+2023-03-28 11:42:44.780 +03:00 [INF] Sending file. Request path: '/book-reader.css'. Physical path: 'D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\wwwroot\book-reader.css'
+2023-03-28 11:42:44.783 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/book-reader.css - - - 200 2127 text/css 382.8189ms
+2023-03-28 11:42:44.942 +03:00 [DBG] Connection id "0HMPFD1I8ESP0" received FIN.
+2023-03-28 11:42:44.981 +03:00 [DBG] Connection id "0HMPFD1I8ESP0" is closed. The last processed stream ID was 5.
+2023-03-28 11:42:44.984 +03:00 [DBG] Connection id "0HMPFD1I8ESP0" sending FIN because: "The client closed the connection."
+2023-03-28 11:42:44.989 +03:00 [DBG] Connection id "0HMPFD1I8ESP0" stopped.

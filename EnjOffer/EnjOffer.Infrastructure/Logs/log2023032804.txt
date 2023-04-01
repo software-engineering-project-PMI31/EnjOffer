@@ -1,0 +1,352 @@
+2023-03-28 04:00:12.305 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-03-28 04:00:13.222 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 04:00:13.224 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 04:00:13.724 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-03-28 04:00:13.790 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 04:00:13.791 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 04:00:13.929 +03:00 [DBG] Creating DbConnection.
+2023-03-28 04:00:13.937 +03:00 [DBG] Created DbConnection. (2ms).
+2023-03-28 04:00:13.947 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 04:00:14.043 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:00:14.045 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:00:14.056 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (4ms).
+2023-03-28 04:00:14.069 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-03-28 04:00:14.076 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (6ms).
+2023-03-28 04:00:14.077 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (13ms).
+2023-03-28 04:00:14.078 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 04:00:14.176 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:00:14.185 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-03-28 04:00:14.213 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-03-28 04:00:14.213 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:00:14.213 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-03-28 04:00:14.223 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-03-28 04:00:14.224 +03:00 [DBG] Disposing connection to database 'EnjOffer' on server ''.
+2023-03-28 04:00:14.226 +03:00 [DBG] Disposed connection to database 'EnjOffer' on server '' (0ms).
+2023-03-28 04:24:34.388 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-03-28 04:24:35.368 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 04:24:35.370 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 04:24:35.815 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-03-28 04:24:35.853 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 04:24:35.853 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 04:24:36.185 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-03-28 04:25:54.901 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-03-28 04:25:55.926 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersBooks' as the properties are already covered by the index {'UserId', 'BookId'}.
+2023-03-28 04:25:55.928 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-03-28 04:25:56.323 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-03-28 04:25:56.341 +03:00 [DBG] Creating DbConnection.
+2023-03-28 04:25:56.347 +03:00 [DBG] Created DbConnection. (1ms).
+2023-03-28 04:25:56.352 +03:00 [DBG] Migrating using database 'EnjOffer' on server ''.
+2023-03-28 04:25:56.358 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 04:25:56.487 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:56.489 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:56.502 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (4ms).
+2023-03-28 04:25:56.515 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-03-28 04:25:56.522 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (6ms).
+2023-03-28 04:25:56.523 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (14ms).
+2023-03-28 04:25:56.524 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 04:25:56.610 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:56.618 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-03-28 04:25:56.646 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-03-28 04:25:56.646 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:56.646 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-03-28 04:25:56.646 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 04:25:56.817 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:56.818 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:56.826 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (8ms).
+2023-03-28 04:25:56.948 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:25:56.948 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:56.948 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:56.948 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 04:25:56.949 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:56.949 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2023-03-28 04:25:56.996 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2023-03-28 04:25:56.996 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:56.996 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-03-28 04:25:56.997 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 04:25:57.065 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:57.065 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:57.065 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-03-28 04:25:57.066 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-03-28 04:25:57.066 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-03-28 04:25:57.066 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-03-28 04:25:57.066 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 04:25:57.066 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:57.066 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-03-28 04:25:57.067 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-03-28 04:25:57.067 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:57.068 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-03-28 04:25:57.071 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-03-28 04:25:57.071 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-03-28 04:25:57.071 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-03-28 04:25:57.071 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 04:25:57.071 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:57.072 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-03-28 04:25:57.078 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-03-28 04:25:57.080 +03:00 [DBG] Closing data reader to 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:57.085 +03:00 [DBG] A data reader for 'EnjOffer' on server 'tcp://localhost:5432' is being disposed after spending 4ms reading results.
+2023-03-28 04:25:57.085 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:57.085 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-03-28 04:25:57.098 +03:00 [INF] Applying migration '20230328012436_Init'.
+2023-03-28 04:25:57.149 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-03-28 04:25:57.150 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:25:57.152 +03:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-03-28 04:25:57.158 +03:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2023-03-28 04:25:57.159 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:25:57.159 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:57.160 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:57.160 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE advice (
+    advice_id uuid NOT NULL,
+    advice_number integer NOT NULL DEFAULT 0,
+    advice_content text NOT NULL DEFAULT 'Advice isn''t supplied',
+    CONSTRAINT "PK_advice" PRIMARY KEY (advice_id)
+);
+2023-03-28 04:25:57.177 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE advice (
+    advice_id uuid NOT NULL,
+    advice_number integer NOT NULL DEFAULT 0,
+    advice_content text NOT NULL DEFAULT 'Advice isn''t supplied',
+    CONSTRAINT "PK_advice" PRIMARY KEY (advice_id)
+);
+2023-03-28 04:25:57.177 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:25:57.177 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:57.177 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:57.177 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE books (
+    book_id uuid NOT NULL,
+    book_title varchar(200) NOT NULL DEFAULT 'Book title isn''t supplied',
+    book_description text NOT NULL DEFAULT 'Book description isn''t supplied',
+    book_author varchar(200) NOT NULL DEFAULT 'The author isn''t supplied',
+    book_content text NOT NULL DEFAULT 'Book content isn''t supplied',
+    book_image_src text NULL DEFAULT 'imgNotFound.png',
+    CONSTRAINT "PK_books" PRIMARY KEY (book_id)
+);
+2023-03-28 04:25:57.634 +03:00 [INF] Executed DbCommand (456ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE books (
+    book_id uuid NOT NULL,
+    book_title varchar(200) NOT NULL DEFAULT 'Book title isn''t supplied',
+    book_description text NOT NULL DEFAULT 'Book description isn''t supplied',
+    book_author varchar(200) NOT NULL DEFAULT 'The author isn''t supplied',
+    book_content text NOT NULL DEFAULT 'Book content isn''t supplied',
+    book_image_src text NULL DEFAULT 'imgNotFound.png',
+    CONSTRAINT "PK_books" PRIMARY KEY (book_id)
+);
+2023-03-28 04:25:57.634 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:25:57.634 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:57.634 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:57.634 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE default_words (
+    default_word_id uuid NOT NULL,
+    default_word_word varchar(400) NOT NULL DEFAULT '',
+    default_word_word_translation varchar(400) NOT NULL DEFAULT '',
+    default_word_image_src text NULL DEFAULT 'imgNotFound.png',
+    CONSTRAINT "PK_default_words" PRIMARY KEY (default_word_id)
+);
+2023-03-28 04:25:57.645 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE default_words (
+    default_word_id uuid NOT NULL,
+    default_word_word varchar(400) NOT NULL DEFAULT '',
+    default_word_word_translation varchar(400) NOT NULL DEFAULT '',
+    default_word_image_src text NULL DEFAULT 'imgNotFound.png',
+    CONSTRAINT "PK_default_words" PRIMARY KEY (default_word_id)
+);
+2023-03-28 04:25:57.645 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:25:57.645 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:57.646 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:57.646 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE users (
+    user_id uuid NOT NULL,
+    user_email varchar(320) NOT NULL,
+    user_password bytea NOT NULL,
+    user_role text NOT NULL DEFAULT 'SuperAdmin',
+    CONSTRAINT "PK_users" PRIMARY KEY (user_id)
+);
+2023-03-28 04:25:57.655 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE users (
+    user_id uuid NOT NULL,
+    user_email varchar(320) NOT NULL,
+    user_password bytea NOT NULL,
+    user_role text NOT NULL DEFAULT 'SuperAdmin',
+    CONSTRAINT "PK_users" PRIMARY KEY (user_id)
+);
+2023-03-28 04:25:57.655 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:25:57.655 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:57.655 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:57.655 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE user_statistics (
+    user_statistic_id uuid NOT NULL,
+    user_statistic_answer_date date NOT NULL DEFAULT DATE '2023-03-28',
+    user_statistic_correct_answer_count integer NOT NULL DEFAULT 0,
+    user_statistic_incorrect_answer_count integer NOT NULL DEFAULT 0,
+    "UserId" uuid NOT NULL,
+    CONSTRAINT "PK_user_statistics" PRIMARY KEY (user_statistic_id),
+    CONSTRAINT "FK_user_statistics_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE RESTRICT
+);
+2023-03-28 04:25:57.666 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE user_statistics (
+    user_statistic_id uuid NOT NULL,
+    user_statistic_answer_date date NOT NULL DEFAULT DATE '2023-03-28',
+    user_statistic_correct_answer_count integer NOT NULL DEFAULT 0,
+    user_statistic_incorrect_answer_count integer NOT NULL DEFAULT 0,
+    "UserId" uuid NOT NULL,
+    CONSTRAINT "PK_user_statistics" PRIMARY KEY (user_statistic_id),
+    CONSTRAINT "FK_user_statistics_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE RESTRICT
+);
+2023-03-28 04:25:57.666 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:25:59.456 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1789ms).
+2023-03-28 04:25:59.457 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (1790ms).
+2023-03-28 04:25:59.457 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE user_words (
+    user_word_id uuid NOT NULL,
+    user_word_word varchar(400) NOT NULL DEFAULT '',
+    user_word_word_translation varchar(400) NOT NULL DEFAULT '',
+    user_word_priority integer NOT NULL DEFAULT 5,
+    "UserId" uuid NOT NULL,
+    CONSTRAINT "PK_user_words" PRIMARY KEY (user_word_id),
+    CONSTRAINT "FK_user_words_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE RESTRICT
+);
+2023-03-28 04:25:59.474 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE user_words (
+    user_word_id uuid NOT NULL,
+    user_word_word varchar(400) NOT NULL DEFAULT '',
+    user_word_word_translation varchar(400) NOT NULL DEFAULT '',
+    user_word_priority integer NOT NULL DEFAULT 5,
+    "UserId" uuid NOT NULL,
+    CONSTRAINT "PK_user_words" PRIMARY KEY (user_word_id),
+    CONSTRAINT "FK_user_words_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE RESTRICT
+);
+2023-03-28 04:25:59.474 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:25:59.474 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:59.474 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:59.474 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE users_books (
+    "UserId" uuid NOT NULL,
+    "BookId" uuid NOT NULL,
+    CONSTRAINT "PK_users_books" PRIMARY KEY ("UserId", "BookId"),
+    CONSTRAINT "FK_users_books_books_BookId" FOREIGN KEY ("BookId") REFERENCES books (book_id) ON DELETE RESTRICT,
+    CONSTRAINT "FK_users_books_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE RESTRICT
+);
+2023-03-28 04:25:59.482 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE users_books (
+    "UserId" uuid NOT NULL,
+    "BookId" uuid NOT NULL,
+    CONSTRAINT "PK_users_books" PRIMARY KEY ("UserId", "BookId"),
+    CONSTRAINT "FK_users_books_books_BookId" FOREIGN KEY ("BookId") REFERENCES books (book_id) ON DELETE RESTRICT,
+    CONSTRAINT "FK_users_books_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE RESTRICT
+);
+2023-03-28 04:25:59.482 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:25:59.482 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:59.482 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:59.482 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE users_default_words (
+    "UserId" uuid NOT NULL,
+    "DefaultWordId" uuid NOT NULL,
+    priority integer NOT NULL DEFAULT 5,
+    CONSTRAINT "PK_users_default_words" PRIMARY KEY ("UserId", "DefaultWordId"),
+    CONSTRAINT "FK_users_default_words_default_words_DefaultWordId" FOREIGN KEY ("DefaultWordId") REFERENCES default_words (default_word_id) ON DELETE RESTRICT,
+    CONSTRAINT "FK_users_default_words_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE RESTRICT
+);
+2023-03-28 04:25:59.490 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE users_default_words (
+    "UserId" uuid NOT NULL,
+    "DefaultWordId" uuid NOT NULL,
+    priority integer NOT NULL DEFAULT 5,
+    CONSTRAINT "PK_users_default_words" PRIMARY KEY ("UserId", "DefaultWordId"),
+    CONSTRAINT "FK_users_default_words_default_words_DefaultWordId" FOREIGN KEY ("DefaultWordId") REFERENCES default_words (default_word_id) ON DELETE RESTRICT,
+    CONSTRAINT "FK_users_default_words_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE RESTRICT
+);
+2023-03-28 04:25:59.491 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:25:59.491 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:59.491 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:25:59.491 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_advice_advice_number" ON advice (advice_number);
+2023-03-28 04:26:01.778 +03:00 [INF] Executed DbCommand (2,287ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_advice_advice_number" ON advice (advice_number);
+2023-03-28 04:26:01.778 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:26:01.778 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.778 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.779 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_default_words_default_word_word" ON default_words (default_word_word);
+2023-03-28 04:26:01.783 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_default_words_default_word_word" ON default_words (default_word_word);
+2023-03-28 04:26:01.783 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:26:01.783 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.783 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.783 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_user_statistics_UserId" ON user_statistics ("UserId");
+2023-03-28 04:26:01.789 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_user_statistics_UserId" ON user_statistics ("UserId");
+2023-03-28 04:26:01.789 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:26:01.789 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.789 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.789 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_user_words_user_word_word" ON user_words (user_word_word);
+2023-03-28 04:26:01.794 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_user_words_user_word_word" ON user_words (user_word_word);
+2023-03-28 04:26:01.794 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:26:01.794 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.794 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.794 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_user_words_UserId" ON user_words ("UserId");
+2023-03-28 04:26:01.799 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_user_words_UserId" ON user_words ("UserId");
+2023-03-28 04:26:01.799 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:26:01.799 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.799 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.800 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_users_user_email" ON users (user_email);
+2023-03-28 04:26:01.805 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_users_user_email" ON users (user_email);
+2023-03-28 04:26:01.805 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:26:01.805 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.805 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.805 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_users_books_BookId" ON users_books ("BookId");
+2023-03-28 04:26:01.811 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_users_books_BookId" ON users_books ("BookId");
+2023-03-28 04:26:01.811 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:26:01.811 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.811 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.811 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_users_default_words_DefaultWordId" ON users_default_words ("DefaultWordId");
+2023-03-28 04:26:01.815 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_users_default_words_DefaultWordId" ON users_default_words ("DefaultWordId");
+2023-03-28 04:26:01.815 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-28 04:26:01.815 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:01.815 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-28 04:26:03.778 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230328012436_Init', '7.0.4');
+2023-03-28 04:26:03.787 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230328012436_Init', '7.0.4');
+2023-03-28 04:26:03.789 +03:00 [DBG] Committing transaction.
+2023-03-28 04:26:03.795 +03:00 [DBG] Committed transaction.
+2023-03-28 04:26:03.796 +03:00 [DBG] Disposing transaction.
+2023-03-28 04:26:03.796 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-03-28 04:26:03.796 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-03-28 04:26:03.798 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-03-28 04:26:03.799 +03:00 [DBG] Disposing connection to database 'EnjOffer' on server ''.
+2023-03-28 04:26:03.800 +03:00 [DBG] Disposed connection to database 'EnjOffer' on server '' (0ms).

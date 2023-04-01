@@ -1,0 +1,67 @@
+2023-03-28 12:05:33.514 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'.
+2023-03-28 12:05:33.623 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'.
+2023-03-28 12:05:33.675 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-03-28 12:05:33.810 +03:00 [DBG] Hosting starting
+2023-03-28 12:05:33.959 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-28 12:05:34.184 +03:00 [DBG] Reading data from file 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys\key-4a23e377-4798-4f0a-83bb-a8b0effb7b59.xml'.
+2023-03-28 12:05:34.339 +03:00 [DBG] Found key {4a23e377-4798-4f0a-83bb-a8b0effb7b59}.
+2023-03-28 12:05:34.402 +03:00 [DBG] Considering key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} with expiration date 2023-05-28 19:08:56Z as default key.
+2023-03-28 12:05:34.408 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 12:05:34.417 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-03-28 12:05:34.422 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-03-28 12:05:34.434 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-03-28 12:05:34.440 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-03-28 12:05:34.449 +03:00 [DBG] Using key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} as the default key.
+2023-03-28 12:05:34.455 +03:00 [DBG] Key ring with default key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} was loaded during application startup.
+2023-03-28 12:05:34.628 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 78B5EDBE021ECE7AEA6D0514B4FBCC51C59ABC71)
+2023-03-28 12:05:34.692 +03:00 [INF] Now listening on: https://localhost:7016
+2023-03-28 12:05:34.695 +03:00 [INF] Now listening on: http://localhost:5016
+2023-03-28 12:05:34.698 +03:00 [DBG] Loaded hosting startup assembly EnjOffer.UI
+2023-03-28 12:05:34.699 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-03-28 12:05:34.701 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-03-28 12:05:34.703 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-28 12:05:34.704 +03:00 [INF] Hosting environment: Development
+2023-03-28 12:05:34.706 +03:00 [INF] Content root path: D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\
+2023-03-28 12:05:34.707 +03:00 [DBG] Hosting started
+2023-03-28 12:05:35.073 +03:00 [DBG] Connection id "0HMPFDEBLUU8C" accepted.
+2023-03-28 12:05:35.073 +03:00 [DBG] Connection id "0HMPFDEBLUU8B" accepted.
+2023-03-28 12:05:35.076 +03:00 [DBG] Connection id "0HMPFDEBLUU8C" started.
+2023-03-28 12:05:35.078 +03:00 [DBG] Connection id "0HMPFDEBLUU8B" started.
+2023-03-28 12:05:35.153 +03:00 [DBG] Connection id "0HMPFDEBLUU8B" received FIN.
+2023-03-28 12:05:35.153 +03:00 [DBG] Connection id "0HMPFDEBLUU8C" received FIN.
+2023-03-28 12:05:35.223 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-28 12:05:35.223 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-28 12:05:35.357 +03:00 [DBG] Connection id "0HMPFDEBLUU8C" stopped.
+2023-03-28 12:05:35.358 +03:00 [DBG] Connection id "0HMPFDEBLUU8B" stopped.
+2023-03-28 12:05:35.363 +03:00 [DBG] Connection id "0HMPFDEBLUU8C" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 12:05:35.364 +03:00 [DBG] Connection id "0HMPFDEBLUU8B" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-28 12:05:36.599 +03:00 [DBG] Connection id "0HMPFDEBLUU8D" accepted.
+2023-03-28 12:05:36.603 +03:00 [DBG] Connection id "0HMPFDEBLUU8D" started.
+2023-03-28 12:05:36.712 +03:00 [DBG] Connection 0HMPFDEBLUU8D established using the following protocol: "Tls12"
+2023-03-28 12:05:36.858 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/word-trainer.html - -
+2023-03-28 12:05:36.922 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-03-28 12:05:36.947 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-03-28 12:05:37.047 +03:00 [INF] Sending file. Request path: '/word-trainer.html'. Physical path: 'D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\wwwroot\word-trainer.html'
+2023-03-28 12:05:37.146 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-03-28 12:05:37.199 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/word-trainer.html - - - 200 - text/html 346.3798ms
+2023-03-28 12:05:37.900 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/~/word-trainer.css - -
+2023-03-28 12:05:37.945 +03:00 [DBG] The request path /~/word-trainer.css does not match an existing file
+2023-03-28 12:05:38.001 +03:00 [DBG] No candidates found for the request path '/~/word-trainer.css'
+2023-03-28 12:05:38.062 +03:00 [DBG] Request did not match any endpoints
+2023-03-28 12:05:38.067 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/~/word-trainer.css - - - 404 0 - 166.3209ms
+2023-03-28 12:05:38.099 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-03-28 12:05:38.126 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 27.2943ms
+2023-03-28 12:05:40.300 +03:00 [DBG] Connection id "0HMPFDEBLUU8D" received FIN.
+2023-03-28 12:05:40.312 +03:00 [DBG] Connection id "0HMPFDEBLUU8D" is closed. The last processed stream ID was 5.
+2023-03-28 12:05:40.315 +03:00 [DBG] Connection id "0HMPFDEBLUU8D" sending FIN because: "The client closed the connection."
+2023-03-28 12:05:40.322 +03:00 [DBG] Connection id "0HMPFDEBLUU8D" stopped.

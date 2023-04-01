@@ -14,8 +14,5 @@ namespace EnjOffer.Core.Domain.Entities
         public string? Author { get; set; }
         public string? Content { get; set; }
         public string? ImageSrc { get; set; }
-
-        public ICollection<Users>? Users { get; set; }
-        public ICollection<UsersBooks>? UsersBooks { get; set; }
     }
 }
