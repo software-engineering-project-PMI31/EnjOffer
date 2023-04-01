@@ -181,10 +181,11 @@ namespace UnitTests
             DefaultWordResponse defaultWord_response_from_add = _defaultWordsService.AddDefaultWord(defaultWord_add_request);
 
             //Act
-
+            DefaultWordResponse? defaultWord_from_get = _defaultWordsService.GetDefaultWordById
+                (defaultWord_response_from_add.DefaultWordId);
 
             //Assert
-
+            Assert.Equal(defaultWord_response_from_add, defaultWord_from_get);
         }
 
         #endregion
