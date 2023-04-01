@@ -58,7 +58,15 @@ namespace EnjOffer.Core.Services
 
         public DefaultWordResponse? GetDefaultWordById(Guid? defaultWordId)
         {
-            throw new NotImplementedException();
+            if (defaultWordId is null)
+            {
+                return null;
+            }
+
+            DefaultWords? defaultWord_response_from_list = _defaultWords.FirstOrDefault
+                (temp => temp.DefaultWordId == defaultWordId);
+
+            return defaultWord_response_from_list?.ToDefaultWordResponse() ?? null;
         }
     }
 }
