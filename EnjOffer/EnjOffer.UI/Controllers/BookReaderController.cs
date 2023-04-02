@@ -2,9 +2,9 @@
 
 namespace EnjOffer.UI.Controllers
 {
-    public class PersonalDashboardController : Controller
+    public class BookReaderController : Controller
     {
-        [Route("/personal-dashboard")]
+        [Route("/book-reader")]
         public IActionResult Index()
         {
             return View();
