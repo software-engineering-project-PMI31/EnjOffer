@@ -8,16 +8,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/BookReader/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1JlYWRlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/Library/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/PersonalDashboard/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxEYXNoYm9hcmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/Shared/_Layout.cshtml]

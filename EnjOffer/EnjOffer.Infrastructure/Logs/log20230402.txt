@@ -268,3 +268,203 @@ System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport
 2023-04-02 12:36:39.569 +03:00 [DBG] Connection id "0HMPJBMFU40FS" is closed. The last processed stream ID was 5.
 2023-04-02 12:36:39.575 +03:00 [DBG] Connection id "0HMPJBMFU40FS" sending FIN because: "The client closed the connection."
 2023-04-02 12:36:39.582 +03:00 [DBG] Connection id "0HMPJBMFU40FS" stopped.
+2023-04-02 12:46:48.163 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/BookReader/Index.cshtml'.
+2023-04-02 12:46:48.250 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'.
+2023-04-02 12:46:48.257 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Library/Index.cshtml'.
+2023-04-02 12:46:48.259 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'.
+2023-04-02 12:46:48.260 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/WordTrainer/Index.cshtml'.
+2023-04-02 12:46:48.290 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-02 12:46:48.464 +03:00 [DBG] Hosting starting
+2023-04-02 12:46:48.585 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-04-02 12:46:48.633 +03:00 [DBG] Reading data from file 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys\key-4a23e377-4798-4f0a-83bb-a8b0effb7b59.xml'.
+2023-04-02 12:46:48.678 +03:00 [DBG] Found key {4a23e377-4798-4f0a-83bb-a8b0effb7b59}.
+2023-04-02 12:46:48.699 +03:00 [DBG] Considering key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} with expiration date 2023-05-28 19:08:56Z as default key.
+2023-04-02 12:46:48.704 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-02 12:46:48.711 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-04-02 12:46:48.715 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-02 12:46:48.726 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-04-02 12:46:48.732 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-04-02 12:46:48.740 +03:00 [DBG] Using key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} as the default key.
+2023-04-02 12:46:48.744 +03:00 [DBG] Key ring with default key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} was loaded during application startup.
+2023-04-02 12:46:49.024 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 78B5EDBE021ECE7AEA6D0514B4FBCC51C59ABC71)
+2023-04-02 12:46:49.137 +03:00 [INF] Now listening on: https://localhost:7016
+2023-04-02 12:46:49.141 +03:00 [INF] Now listening on: http://localhost:5016
+2023-04-02 12:46:49.144 +03:00 [DBG] Loaded hosting startup assembly EnjOffer.UI
+2023-04-02 12:46:49.147 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 12:46:49.150 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 12:46:49.153 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 12:46:49.157 +03:00 [INF] Hosting environment: Development
+2023-04-02 12:46:49.160 +03:00 [INF] Content root path: D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\
+2023-04-02 12:46:49.162 +03:00 [DBG] Hosting started
+2023-04-02 12:46:49.340 +03:00 [DBG] Connection id "0HMPJBSN3G7TJ" received FIN.
+2023-04-02 12:46:49.369 +03:00 [DBG] Connection id "0HMPJBSN3G7TJ" accepted.
+2023-04-02 12:46:49.374 +03:00 [DBG] Connection id "0HMPJBSN3G7TJ" started.
+2023-04-02 12:46:49.410 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 12:46:49.625 +03:00 [DBG] Connection id "0HMPJBSN3G7TJ" stopped.
+2023-04-02 12:46:49.634 +03:00 [DBG] Connection id "0HMPJBSN3G7TJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 12:46:50.453 +03:00 [DBG] Connection id "0HMPJBSN3G7TK" accepted.
+2023-04-02 12:46:50.736 +03:00 [DBG] Connection id "0HMPJBSN3G7TK" started.
+2023-04-02 12:46:50.832 +03:00 [DBG] Connection 0HMPJBSN3G7TK established using the following protocol: "Tls12"
+2023-04-02 12:46:51.080 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/ - -
+2023-04-02 12:46:51.285 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 12:46:51.309 +03:00 [DBG] The request path / does not match a supported file type
+2023-04-02 12:46:51.388 +03:00 [DBG] 1 candidate(s) found for the request path '/'
+2023-04-02 12:46:51.401 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)' with route pattern '' is valid for the request path '/'
+2023-04-02 12:46:51.407 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-04-02 12:46:51.411 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-04-02 12:46:51.541 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI).
+2023-04-02 12:46:51.562 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-04-02 12:46:51.570 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-04-02 12:46:51.583 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-04-02 12:46:51.589 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-04-02 12:46:51.599 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-04-02 12:46:51.618 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-04-02 12:46:51.622 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-04-02 12:46:51.633 +03:00 [DBG] View lookup cache miss for view 'Index' in controller 'Home'.
+2023-04-02 12:46:51.648 +03:00 [INF] Executing ViewResult, running view Index.
+2023-04-02 12:46:51.657 +03:00 [DBG] The view path '/Views/Home/Index.cshtml' was found in 18.2885ms.
+2023-04-02 12:46:51.869 +03:00 [INF] Executed ViewResult - view Index executed in 238.2287ms.
+2023-04-02 12:46:51.880 +03:00 [INF] Executed action EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI) in 268.1211ms
+2023-04-02 12:46:51.884 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-04-02 12:46:51.920 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 12:46:51.941 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 12:46:51.955 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/ - - - 200 - text/html;+charset=utf-8 886.5994ms
+2023-04-02 12:46:52.861 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 12:46:52.870 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 8.8939ms
+2023-04-02 12:46:54.809 +03:00 [DBG] Connection id "0HMPJBSN3G7TK" received FIN.
+2023-04-02 12:46:54.833 +03:00 [DBG] Connection id "0HMPJBSN3G7TK" is closed. The last processed stream ID was 3.
+2023-04-02 12:46:54.836 +03:00 [DBG] Connection id "0HMPJBSN3G7TK" sending FIN because: "The client closed the connection."
+2023-04-02 12:46:54.840 +03:00 [DBG] Connection id "0HMPJBSN3G7TK" stopped.
+2023-04-02 12:47:27.035 +03:00 [DBG] Connection id "0HMPJBSN3G7TL" accepted.
+2023-04-02 12:47:27.040 +03:00 [DBG] Connection id "0HMPJBSN3G7TL" started.
+2023-04-02 12:47:27.055 +03:00 [DBG] Connection 0HMPJBSN3G7TL established using the following protocol: "Tls12"
+2023-04-02 12:47:27.062 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/ - -
+2023-04-02 12:47:27.068 +03:00 [DBG] The request path / does not match a supported file type
+2023-04-02 12:47:27.071 +03:00 [DBG] 1 candidate(s) found for the request path '/'
+2023-04-02 12:47:27.076 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)' with route pattern '' is valid for the request path '/'
+2023-04-02 12:47:27.084 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-04-02 12:47:27.088 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-04-02 12:47:27.095 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI).
+2023-04-02 12:47:27.105 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-04-02 12:47:27.112 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-04-02 12:47:27.121 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-04-02 12:47:27.133 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-04-02 12:47:27.140 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-04-02 12:47:27.151 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-04-02 12:47:27.157 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-04-02 12:47:27.164 +03:00 [DBG] View lookup cache hit for view 'Index' in controller 'Home'.
+2023-04-02 12:47:27.170 +03:00 [INF] Executing ViewResult, running view Index.
+2023-04-02 12:47:27.175 +03:00 [DBG] The view path '/Views/Home/Index.cshtml' was found in 12.0318ms.
+2023-04-02 12:47:27.228 +03:00 [INF] Executed ViewResult - view Index executed in 64.411ms.
+2023-04-02 12:47:27.233 +03:00 [INF] Executed action EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI) in 83.4239ms
+2023-04-02 12:47:27.239 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-04-02 12:47:27.249 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 12:47:27.255 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 12:47:27.259 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/ - - - 200 - text/html;+charset=utf-8 197.4712ms
+2023-04-02 12:47:27.447 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 12:47:27.455 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 8.0711ms
+2023-04-02 12:47:34.816 +03:00 [DBG] Connection id "0HMPJBSN3G7TL" received FIN.
+2023-04-02 12:47:34.821 +03:00 [DBG] Connection id "0HMPJBSN3G7TL" is closed. The last processed stream ID was 3.
+2023-04-02 12:47:34.828 +03:00 [DBG] Connection id "0HMPJBSN3G7TL" sending FIN because: "The client closed the connection."
+2023-04-02 12:47:34.837 +03:00 [DBG] Connection id "0HMPJBSN3G7TL" stopped.
+2023-04-02 12:47:43.348 +03:00 [DBG] Connection id "0HMPJBSN3G7TM" accepted.
+2023-04-02 12:47:43.350 +03:00 [DBG] Connection id "0HMPJBSN3G7TM" started.
+2023-04-02 12:47:43.359 +03:00 [DBG] Connection 0HMPJBSN3G7TM established using the following protocol: "Tls12"
+2023-04-02 12:47:43.365 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/book-reader - -
+2023-04-02 12:47:43.368 +03:00 [DBG] The request path /book-reader does not match a supported file type
+2023-04-02 12:47:43.373 +03:00 [DBG] 1 candidate(s) found for the request path '/book-reader'
+2023-04-02 12:47:43.376 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.BookReaderController.Index (EnjOffer.UI)' with route pattern 'book-reader' is valid for the request path '/book-reader'
+2023-04-02 12:47:43.381 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.BookReaderController.Index (EnjOffer.UI)'
+2023-04-02 12:47:43.383 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.BookReaderController.Index (EnjOffer.UI)'
+2023-04-02 12:47:43.388 +03:00 [INF] Route matched with {action = "Index", controller = "BookReader"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.BookReaderController (EnjOffer.UI).
+2023-04-02 12:47:43.393 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-04-02 12:47:43.397 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-04-02 12:47:43.401 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-04-02 12:47:43.406 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-04-02 12:47:43.409 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-04-02 12:47:43.414 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.BookReaderController (EnjOffer.UI)
+2023-04-02 12:47:43.417 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.BookReaderController (EnjOffer.UI)
+2023-04-02 12:47:43.420 +03:00 [DBG] View lookup cache miss for view 'Index' in controller 'BookReader'.
+2023-04-02 12:47:43.425 +03:00 [INF] Executing ViewResult, running view Index.
+2023-04-02 12:47:43.427 +03:00 [DBG] The view path '/Views/BookReader/Index.cshtml' was found in 6.8706ms.
+2023-04-02 12:47:43.454 +03:00 [INF] Executed ViewResult - view Index executed in 33.3026ms.
+2023-04-02 12:47:43.457 +03:00 [INF] Executed action EnjOffer.UI.Controllers.BookReaderController.Index (EnjOffer.UI) in 42.9849ms
+2023-04-02 12:47:43.460 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.BookReaderController.Index (EnjOffer.UI)'
+2023-04-02 12:47:43.466 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 12:47:43.470 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 12:47:43.473 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/book-reader - - - 200 - text/html;+charset=utf-8 107.5625ms
+2023-04-02 12:47:43.615 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 12:47:43.650 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 35.6131ms
+2023-04-02 12:47:44.817 +03:00 [DBG] Connection id "0HMPJBSN3G7TM" received FIN.
+2023-04-02 12:47:44.823 +03:00 [DBG] Connection id "0HMPJBSN3G7TM" is closed. The last processed stream ID was 3.
+2023-04-02 12:47:44.830 +03:00 [DBG] Connection id "0HMPJBSN3G7TM" sending FIN because: "The client closed the connection."
+2023-04-02 12:47:44.838 +03:00 [DBG] Connection id "0HMPJBSN3G7TM" stopped.
+2023-04-02 12:47:54.760 +03:00 [DBG] Connection id "0HMPJBSN3G7TN" accepted.
+2023-04-02 12:47:54.763 +03:00 [DBG] Connection id "0HMPJBSN3G7TN" started.
+2023-04-02 12:47:54.767 +03:00 [DBG] Connection 0HMPJBSN3G7TN established using the following protocol: "Tls12"
+2023-04-02 12:47:54.771 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/word-trainer - -
+2023-04-02 12:47:54.775 +03:00 [DBG] The request path /word-trainer does not match a supported file type
+2023-04-02 12:47:54.780 +03:00 [DBG] 1 candidate(s) found for the request path '/word-trainer'
+2023-04-02 12:47:54.783 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.WordTrainerController.Index (EnjOffer.UI)' with route pattern 'word-trainer' is valid for the request path '/word-trainer'
+2023-04-02 12:47:54.787 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.WordTrainerController.Index (EnjOffer.UI)'
+2023-04-02 12:47:54.790 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.WordTrainerController.Index (EnjOffer.UI)'
+2023-04-02 12:47:54.795 +03:00 [INF] Route matched with {action = "Index", controller = "WordTrainer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.WordTrainerController (EnjOffer.UI).
+2023-04-02 12:47:54.801 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-04-02 12:47:54.804 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-04-02 12:47:54.808 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-04-02 12:47:54.812 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-04-02 12:47:54.817 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-04-02 12:47:54.821 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.WordTrainerController (EnjOffer.UI)
+2023-04-02 12:47:54.825 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.WordTrainerController (EnjOffer.UI)
+2023-04-02 12:47:54.829 +03:00 [DBG] View lookup cache miss for view 'Index' in controller 'WordTrainer'.
+2023-04-02 12:47:54.833 +03:00 [INF] Executing ViewResult, running view Index.
+2023-04-02 12:47:54.836 +03:00 [DBG] The view path '/Views/WordTrainer/Index.cshtml' was found in 7.7222ms.
+2023-04-02 12:47:54.860 +03:00 [INF] Executed ViewResult - view Index executed in 31.3316ms.
+2023-04-02 12:47:54.864 +03:00 [INF] Executed action EnjOffer.UI.Controllers.WordTrainerController.Index (EnjOffer.UI) in 42.5529ms
+2023-04-02 12:47:54.867 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.WordTrainerController.Index (EnjOffer.UI)'
+2023-04-02 12:47:54.871 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 12:47:54.873 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 12:47:54.876 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/word-trainer - - - 200 - text/html;+charset=utf-8 104.6586ms
+2023-04-02 12:47:54.997 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 12:47:54.999 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 2.6562ms
+2023-04-02 12:48:04.842 +03:00 [DBG] Connection id "0HMPJBSN3G7TN" received FIN.
+2023-04-02 12:48:04.845 +03:00 [DBG] Connection id "0HMPJBSN3G7TN" is closed. The last processed stream ID was 3.
+2023-04-02 12:48:04.850 +03:00 [DBG] Connection id "0HMPJBSN3G7TN" sending FIN because: "The client closed the connection."
+2023-04-02 12:48:04.853 +03:00 [DBG] Connection id "0HMPJBSN3G7TN" stopped.
+2023-04-02 12:48:06.852 +03:00 [DBG] Connection id "0HMPJBSN3G7TO" accepted.
+2023-04-02 12:48:06.855 +03:00 [DBG] Connection id "0HMPJBSN3G7TO" started.
+2023-04-02 12:48:06.861 +03:00 [DBG] Connection 0HMPJBSN3G7TO established using the following protocol: "Tls12"
+2023-04-02 12:48:06.865 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/library - -
+2023-04-02 12:48:06.868 +03:00 [DBG] The request path /library does not match a supported file type
+2023-04-02 12:48:06.870 +03:00 [DBG] 1 candidate(s) found for the request path '/library'
+2023-04-02 12:48:06.873 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.LibraryController.Index (EnjOffer.UI)' with route pattern 'library' is valid for the request path '/library'
+2023-04-02 12:48:06.878 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.LibraryController.Index (EnjOffer.UI)'
+2023-04-02 12:48:06.881 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.LibraryController.Index (EnjOffer.UI)'
+2023-04-02 12:48:06.885 +03:00 [INF] Route matched with {action = "Index", controller = "Library"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.LibraryController (EnjOffer.UI).
+2023-04-02 12:48:06.891 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-04-02 12:48:06.895 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-04-02 12:48:06.899 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-04-02 12:48:06.904 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-04-02 12:48:06.911 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-04-02 12:48:06.916 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.LibraryController (EnjOffer.UI)
+2023-04-02 12:48:06.919 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.LibraryController (EnjOffer.UI)
+2023-04-02 12:48:06.922 +03:00 [DBG] View lookup cache miss for view 'Index' in controller 'Library'.
+2023-04-02 12:48:06.928 +03:00 [INF] Executing ViewResult, running view Index.
+2023-04-02 12:48:06.931 +03:00 [DBG] The view path '/Views/Library/Index.cshtml' was found in 9.0869ms.
+2023-04-02 12:48:06.949 +03:00 [INF] Executed ViewResult - view Index executed in 26.3784ms.
+2023-04-02 12:48:06.952 +03:00 [INF] Executed action EnjOffer.UI.Controllers.LibraryController.Index (EnjOffer.UI) in 35.5721ms
+2023-04-02 12:48:06.955 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.LibraryController.Index (EnjOffer.UI)'
+2023-04-02 12:48:06.960 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 12:48:06.963 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 12:48:06.965 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/library - - - 200 - text/html;+charset=utf-8 99.7773ms
+2023-04-02 12:48:07.108 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 12:48:07.136 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/images/star.svg - -
+2023-04-02 12:48:07.174 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 77.6573ms
+2023-04-02 12:48:07.180 +03:00 [DBG] The request path /images/star.svg does not match an existing file
+2023-04-02 12:48:07.185 +03:00 [DBG] No candidates found for the request path '/images/star.svg'
+2023-04-02 12:48:07.188 +03:00 [DBG] Request did not match any endpoints
+2023-04-02 12:48:07.197 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/images/star.svg - - - 404 0 - 62.7121ms
