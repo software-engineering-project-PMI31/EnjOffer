@@ -189,5 +189,38 @@ namespace UnitTests
         }
 
         #endregion
+
+        #region DeleteDefaultWord
+
+        [Fact]
+        public void DeleteDefaultWord_ValidId()
+        {
+            //Arrange
+            DefaultWordAddRequest defaultWord_add_request = new DefaultWordAddRequest()
+            {
+                Word = "Something",
+                WordTranslation = "ўось",
+                ImageSrc = "imgNotFound.png"
+            };
+            DefaultWordResponse defaultWord_response_from_add = _defaultWordsService.AddDefaultWord(defaultWord_add_request);
+
+            //Act
+            bool isDeleted = _defaultWordsService.DeleteDefaultWord(defaultWord_response_from_add.DefaultWordId);
+
+            //Assert
+            Assert.True(isDeleted);
+        }
+
+        [Fact]
+        public void DeleteDefaultWord_InvalidId()
+        {
+            //Act
+            bool isDeleted = _defaultWordsService.DeleteDefaultWord(Guid.NewGuid());
+
+            //Assert
+            Assert.False(isDeleted);
+        }
+
+        #endregion
     }
 }

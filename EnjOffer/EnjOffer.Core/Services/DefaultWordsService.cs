@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using EnjOffer.Core.DTO;
 using EnjOffer.Core.ServiceContracts;
 using EnjOffer.Core.Domain.Entities;
+using EnjOffer.Core.Helpers;
 
 namespace EnjOffer.Core.Services
 {
@@ -24,15 +25,8 @@ namespace EnjOffer.Core.Services
                 throw new ArgumentNullException(nameof(defaultWordAddRequest));
             }
 
-            if (defaultWordAddRequest.Word is null)
-            {
-                throw new ArgumentException(nameof(defaultWordAddRequest.Word));
-            }
+            ValidationHelper.ModelValidation(defaultWordAddRequest);
 
-            if (defaultWordAddRequest.WordTranslation is null)
-            {
-                throw new ArgumentException(nameof(defaultWordAddRequest.WordTranslation));
-            }
 
             if (_defaultWords.Any(temp => temp.Word == defaultWordAddRequest.Word && temp.WordTranslation == defaultWordAddRequest.WordTranslation))
             {
@@ -67,6 +61,25 @@ namespace EnjOffer.Core.Services
                 (temp => temp.DefaultWordId == defaultWordId);
 
             return defaultWord_response_from_list?.ToDefaultWordResponse() ?? null;
+        }
+
+        public bool DeleteDefaultWord(Guid? defaultWordId)
+        {
+            if (defaultWordId is null)
+            {
+                throw new ArgumentNullException(nameof(defaultWordId));
+            }
+
+            DefaultWords? defaultWord = _defaultWords.FirstOrDefault(temp => temp.DefaultWordId == defaultWordId);
+
+            if (defaultWord is null)
+            {
+                return false;
+            }
+
+            _defaultWords.RemoveAll(temp => temp.DefaultWordId == defaultWordId);
+
+            return true;
         }
     }
 }

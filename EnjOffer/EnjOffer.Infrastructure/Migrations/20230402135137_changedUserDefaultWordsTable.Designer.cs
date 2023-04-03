@@ -3,6 +3,7 @@ using System;
 using EnjOffer.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EnjOffer.Infrastructure.Migrations
 {
     [DbContext(typeof(EnjOfferDbContext))]
-    partial class EnjOfferDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230402135137_changedUserDefaultWordsTable")]
+    partial class changedUserDefaultWordsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -146,7 +149,7 @@ namespace EnjOffer.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("date")
-                        .HasDefaultValue(new DateTime(2023, 4, 2, 19, 3, 3, 289, DateTimeKind.Local).AddTicks(5678))
+                        .HasDefaultValue(new DateTime(2023, 4, 2, 16, 51, 37, 866, DateTimeKind.Local).AddTicks(5839))
                         .HasColumnName("user_statistic_answer_date");
 
                     b.Property<int>("CorrectAnswersCount")
@@ -177,25 +180,6 @@ namespace EnjOffer.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid")
                         .HasColumnName("user_word_id");
-
-                    b.Property<int>("CorrectEnteredCount")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasDefaultValue(0)
-                        .HasColumnName("user_correct_entered_count");
-
-                    b.Property<int>("IncorrectEnteredCount")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasDefaultValue(0)
-                        .HasColumnName("user_incorrect_entered_count");
-
-                    b.Property<DateTime?>("LastTimeEntered")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("date")
-                        .HasDefaultValue(new DateTime(2023, 4, 2, 19, 3, 3, 289, DateTimeKind.Local).AddTicks(2699))
-                        .HasColumnName("user_last_time_entered");
 
                     b.Property<int>("Priority")
                         .ValueGeneratedOnAdd()
@@ -289,7 +273,7 @@ namespace EnjOffer.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("date")
-                        .HasDefaultValue(new DateTime(2023, 4, 2, 19, 3, 3, 291, DateTimeKind.Local).AddTicks(3650))
+                        .HasDefaultValue(new DateTime(2023, 4, 2, 16, 51, 37, 868, DateTimeKind.Local).AddTicks(682))
                         .HasColumnName("last_time_entered");
 
                     b.Property<int>("Priority")
@@ -310,7 +294,7 @@ namespace EnjOffer.Infrastructure.Migrations
                     b.HasOne("EnjOffer.Core.Domain.Entities.Users", "User")
                         .WithMany("UserStatistics")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -321,7 +305,7 @@ namespace EnjOffer.Infrastructure.Migrations
                     b.HasOne("EnjOffer.Core.Domain.Entities.Users", "User")
                         .WithMany("UserWords")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -332,13 +316,13 @@ namespace EnjOffer.Infrastructure.Migrations
                     b.HasOne("EnjOffer.Core.Domain.Entities.DefaultWords", "DefaultWord")
                         .WithMany("UsersDefaultWords")
                         .HasForeignKey("DefaultWordId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("EnjOffer.Core.Domain.Entities.Users", "User")
                         .WithMany("UsersDefaultWords")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("DefaultWord");

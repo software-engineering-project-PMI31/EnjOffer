@@ -12,6 +12,9 @@ namespace EnjOffer.Core.Domain.Entities
         public Users? User { get; set; }
         public Guid DefaultWordId { get; set; }
         public DefaultWords? DefaultWord { get; set; }
+        public DateTime? LastTimeEntered { get; set; }
+        public int CorrectEnteredCount { get; set; }
+        public int IncorrectEnteredCount { get; set; }
         public int Priority { get; set; }
     }
 }

@@ -468,3 +468,674 @@ System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport
 2023-04-02 12:48:07.185 +03:00 [DBG] No candidates found for the request path '/images/star.svg'
 2023-04-02 12:48:07.188 +03:00 [DBG] Request did not match any endpoints
 2023-04-02 12:48:07.197 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/images/star.svg - - - 404 0 - 62.7121ms
+2023-04-02 16:51:03.765 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 16:51:04.735 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 16:51:05.171 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 16:51:05.193 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 16:51:36.598 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 16:51:37.448 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 16:51:37.835 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 16:51:37.868 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 16:51:38.086 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 16:52:01.621 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 16:52:02.601 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 16:52:03.030 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 16:52:03.051 +03:00 [DBG] Creating DbConnection.
+2023-04-02 16:52:03.091 +03:00 [DBG] Created DbConnection. (35ms).
+2023-04-02 16:52:03.097 +03:00 [DBG] Migrating using database 'EnjOffer' on server ''.
+2023-04-02 16:52:03.105 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 16:52:03.304 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.306 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.317 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (6ms).
+2023-04-02 16:52:03.328 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-04-02 16:52:03.335 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (7ms).
+2023-04-02 16:52:03.336 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (13ms).
+2023-04-02 16:52:03.336 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 16:52:03.433 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.440 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 16:52:03.524 +03:00 [INF] Executed DbCommand (83ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 16:52:03.525 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.527 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (1ms).
+2023-04-02 16:52:03.528 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 16:52:03.581 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.581 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.582 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 16:52:03.582 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-04-02 16:52:03.582 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-04-02 16:52:03.582 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-04-02 16:52:03.582 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 16:52:03.582 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.582 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 16:52:03.584 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 16:52:03.584 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.584 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 16:52:03.599 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-04-02 16:52:03.599 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 16:52:03.599 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 16:52:03.599 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 16:52:03.599 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.599 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 16:52:03.604 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 16:52:03.611 +03:00 [DBG] Closing data reader to 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.615 +03:00 [DBG] A data reader for 'EnjOffer' on server 'tcp://localhost:5432' is being disposed after spending 9ms reading results.
+2023-04-02 16:52:03.615 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.615 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 16:52:03.626 +03:00 [INF] Applying migration '20230402135137_changedUserDefaultWordsTable'.
+2023-04-02 16:52:03.665 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 16:52:03.665 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.667 +03:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-04-02 16:52:03.673 +03:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2023-04-02 16:52:03.674 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 16:52:03.674 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 16:52:03.674 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 16:52:03.674 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ADD correct_entered_count integer NOT NULL DEFAULT 0;
+2023-04-02 16:52:03.696 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ADD correct_entered_count integer NOT NULL DEFAULT 0;
+2023-04-02 16:52:03.696 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 16:52:03.696 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 16:52:03.696 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 16:52:03.696 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ADD incorrect_entered_count integer NOT NULL DEFAULT 0;
+2023-04-02 16:52:03.697 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ADD incorrect_entered_count integer NOT NULL DEFAULT 0;
+2023-04-02 16:52:03.697 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 16:52:03.698 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 16:52:03.698 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 16:52:03.698 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ADD last_time_entered date NOT NULL DEFAULT DATE '2023-04-02';
+2023-04-02 16:52:03.699 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ADD last_time_entered date NOT NULL DEFAULT DATE '2023-04-02';
+2023-04-02 16:52:03.699 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 16:52:03.699 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 16:52:03.699 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 16:52:03.699 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_statistics ALTER COLUMN user_statistic_answer_date SET DEFAULT DATE '2023-04-02';
+2023-04-02 16:52:03.705 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_statistics ALTER COLUMN user_statistic_answer_date SET DEFAULT DATE '2023-04-02';
+2023-04-02 16:52:03.705 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 16:52:03.705 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 16:52:03.705 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 16:52:03.705 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230402135137_changedUserDefaultWordsTable', '7.0.4');
+2023-04-02 16:52:03.708 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230402135137_changedUserDefaultWordsTable', '7.0.4');
+2023-04-02 16:52:03.709 +03:00 [DBG] Committing transaction.
+2023-04-02 16:52:03.715 +03:00 [DBG] Committed transaction.
+2023-04-02 16:52:03.716 +03:00 [DBG] Disposing transaction.
+2023-04-02 16:52:03.716 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 16:52:03.716 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 16:52:03.718 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 16:52:03.719 +03:00 [DBG] Disposing connection to database 'EnjOffer' on server ''.
+2023-04-02 16:52:04.607 +03:00 [DBG] Disposed connection to database 'EnjOffer' on server '' (888ms).
+2023-04-02 17:00:57.549 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 17:00:58.316 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 17:00:58.709 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 17:00:58.752 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 17:00:59.042 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 17:01:10.346 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 17:01:10.968 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 17:01:11.377 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 17:01:11.409 +03:00 [DBG] Creating DbConnection.
+2023-04-02 17:01:11.473 +03:00 [DBG] Created DbConnection. (58ms).
+2023-04-02 17:01:11.481 +03:00 [DBG] Migrating using database 'EnjOffer' on server ''.
+2023-04-02 17:01:11.493 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 17:01:11.750 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:11.752 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:11.763 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (5ms).
+2023-04-02 17:01:11.776 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-04-02 17:01:11.784 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (7ms).
+2023-04-02 17:01:11.785 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (13ms).
+2023-04-02 17:01:11.785 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 17:01:11.875 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:11.883 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 17:01:11.972 +03:00 [INF] Executed DbCommand (91ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 17:01:11.974 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:11.975 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (1ms).
+2023-04-02 17:01:11.976 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 17:01:12.030 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:12.030 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:12.030 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 17:01:12.031 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-04-02 17:01:12.031 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-04-02 17:01:12.031 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-04-02 17:01:12.031 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 17:01:12.031 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:12.032 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 17:01:12.034 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 17:01:12.034 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:12.034 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 17:01:12.049 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-04-02 17:01:12.049 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 17:01:12.049 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 17:01:12.049 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 17:01:12.049 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:12.050 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 17:01:12.054 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 17:01:12.060 +03:00 [DBG] Closing data reader to 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:12.064 +03:00 [DBG] A data reader for 'EnjOffer' on server 'tcp://localhost:5432' is being disposed after spending 8ms reading results.
+2023-04-02 17:01:12.064 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:12.064 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 17:01:12.076 +03:00 [INF] Applying migration '20230402140058_updateDeleteBehavior'.
+2023-04-02 17:01:12.117 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 17:01:12.117 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:12.119 +03:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-04-02 17:01:12.123 +03:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2023-04-02 17:01:12.124 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 17:01:12.125 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.125 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.125 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_statistics DROP CONSTRAINT "FK_user_statistics_users_UserId";
+2023-04-02 17:01:12.149 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_statistics DROP CONSTRAINT "FK_user_statistics_users_UserId";
+2023-04-02 17:01:12.149 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 17:01:12.149 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.149 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.149 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_words DROP CONSTRAINT "FK_user_words_users_UserId";
+2023-04-02 17:01:12.150 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_words DROP CONSTRAINT "FK_user_words_users_UserId";
+2023-04-02 17:01:12.150 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 17:01:12.150 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.150 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.150 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words DROP CONSTRAINT "FK_users_default_words_default_words_DefaultWordId";
+2023-04-02 17:01:12.263 +03:00 [INF] Executed DbCommand (113ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words DROP CONSTRAINT "FK_users_default_words_default_words_DefaultWordId";
+2023-04-02 17:01:12.264 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 17:01:12.264 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.264 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.264 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words DROP CONSTRAINT "FK_users_default_words_users_UserId";
+2023-04-02 17:01:12.265 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words DROP CONSTRAINT "FK_users_default_words_users_UserId";
+2023-04-02 17:01:12.265 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 17:01:12.265 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.265 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.265 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ALTER COLUMN last_time_entered SET DEFAULT DATE '2023-04-02';
+2023-04-02 17:01:12.270 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ALTER COLUMN last_time_entered SET DEFAULT DATE '2023-04-02';
+2023-04-02 17:01:12.271 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 17:01:12.271 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.271 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.271 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_statistics ALTER COLUMN user_statistic_answer_date SET DEFAULT DATE '2023-04-02';
+2023-04-02 17:01:12.271 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_statistics ALTER COLUMN user_statistic_answer_date SET DEFAULT DATE '2023-04-02';
+2023-04-02 17:01:12.272 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 17:01:12.272 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.272 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.272 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_statistics ADD CONSTRAINT "FK_user_statistics_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE SET NULL;
+2023-04-02 17:01:12.294 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_statistics ADD CONSTRAINT "FK_user_statistics_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE SET NULL;
+2023-04-02 17:01:12.294 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 17:01:12.294 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.294 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.294 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_words ADD CONSTRAINT "FK_user_words_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE SET NULL;
+2023-04-02 17:01:12.300 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_words ADD CONSTRAINT "FK_user_words_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE SET NULL;
+2023-04-02 17:01:12.300 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 17:01:12.300 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.300 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:12.300 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ADD CONSTRAINT "FK_users_default_words_default_words_DefaultWordId" FOREIGN KEY ("DefaultWordId") REFERENCES default_words (default_word_id) ON DELETE SET NULL;
+2023-04-02 17:01:12.306 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ADD CONSTRAINT "FK_users_default_words_default_words_DefaultWordId" FOREIGN KEY ("DefaultWordId") REFERENCES default_words (default_word_id) ON DELETE SET NULL;
+2023-04-02 17:01:13.948 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 17:01:13.948 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:13.948 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:13.948 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ADD CONSTRAINT "FK_users_default_words_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE SET NULL;
+2023-04-02 17:01:13.950 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ADD CONSTRAINT "FK_users_default_words_users_UserId" FOREIGN KEY ("UserId") REFERENCES users (user_id) ON DELETE SET NULL;
+2023-04-02 17:01:13.950 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 17:01:13.950 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:13.950 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 17:01:13.950 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230402140058_updateDeleteBehavior', '7.0.4');
+2023-04-02 17:01:13.953 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230402140058_updateDeleteBehavior', '7.0.4');
+2023-04-02 17:01:13.955 +03:00 [DBG] Committing transaction.
+2023-04-02 17:01:13.960 +03:00 [DBG] Committed transaction.
+2023-04-02 17:01:13.962 +03:00 [DBG] Disposing transaction.
+2023-04-02 17:01:13.962 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 17:01:13.962 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 17:01:13.964 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 17:01:13.965 +03:00 [DBG] Disposing connection to database 'EnjOffer' on server ''.
+2023-04-02 17:01:13.966 +03:00 [DBG] Disposed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 18:54:25.316 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 18:54:26.133 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 18:54:26.477 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 18:54:26.526 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 18:54:26.752 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 18:54:42.318 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 18:54:43.381 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 18:54:43.762 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 18:54:43.783 +03:00 [DBG] Creating DbConnection.
+2023-04-02 18:54:43.827 +03:00 [DBG] Created DbConnection. (38ms).
+2023-04-02 18:54:43.832 +03:00 [DBG] Migrating using database 'EnjOffer' on server ''.
+2023-04-02 18:54:43.843 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 18:54:44.149 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:54:44.150 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:54:44.163 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (6ms).
+2023-04-02 18:54:44.175 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-04-02 18:54:44.182 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (7ms).
+2023-04-02 18:54:44.183 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (12ms).
+2023-04-02 18:54:44.183 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 18:54:44.278 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:54:44.285 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 18:54:44.374 +03:00 [INF] Executed DbCommand (88ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 18:54:44.376 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:54:44.378 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (2ms).
+2023-04-02 18:54:44.379 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 18:54:44.535 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:54:44.535 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:54:44.535 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 18:54:44.535 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-04-02 18:54:44.535 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-04-02 18:54:44.535 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-04-02 18:54:44.536 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 18:54:44.536 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:54:44.536 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 18:54:44.538 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 18:54:44.538 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:54:44.538 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 18:54:44.553 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-04-02 18:54:44.553 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 18:54:44.553 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 18:54:44.553 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 18:54:44.553 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:54:44.553 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 18:54:44.559 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 18:54:44.565 +03:00 [DBG] Closing data reader to 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:54:44.569 +03:00 [DBG] A data reader for 'EnjOffer' on server 'tcp://localhost:5432' is being disposed after spending 9ms reading results.
+2023-04-02 18:54:44.569 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:54:44.569 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 18:54:44.582 +03:00 [INF] Applying migration '20230402155426_updateUserWordsTable'.
+2023-04-02 18:54:44.617 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 18:54:44.618 +03:00 [DBG] Disposing connection to database 'EnjOffer' on server ''.
+2023-04-02 18:54:44.619 +03:00 [DBG] Disposed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 18:56:26.861 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 18:56:27.706 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 18:56:28.106 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 18:56:28.144 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 18:56:28.199 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 18:57:05.085 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 18:57:05.681 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 18:57:05.987 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 18:57:06.018 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 18:57:06.231 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 18:57:33.762 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 18:57:34.493 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 18:57:34.958 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 18:57:34.980 +03:00 [DBG] Creating DbConnection.
+2023-04-02 18:57:35.024 +03:00 [DBG] Created DbConnection. (40ms).
+2023-04-02 18:57:35.030 +03:00 [DBG] Migrating using database 'EnjOffer' on server ''.
+2023-04-02 18:57:35.039 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 18:57:35.252 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:57:35.254 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:57:35.266 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (7ms).
+2023-04-02 18:57:35.279 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-04-02 18:57:35.286 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (6ms).
+2023-04-02 18:57:35.287 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (12ms).
+2023-04-02 18:57:35.287 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 18:57:35.378 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:57:35.385 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 18:57:35.471 +03:00 [INF] Executed DbCommand (85ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 18:57:35.472 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:57:35.474 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (1ms).
+2023-04-02 18:57:35.475 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 18:57:35.529 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:57:35.529 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:57:35.529 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 18:57:35.530 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-04-02 18:57:35.530 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-04-02 18:57:35.530 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-04-02 18:57:35.530 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 18:57:35.530 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:57:35.530 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 18:57:35.532 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 18:57:35.532 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:57:35.532 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 18:57:35.546 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-04-02 18:57:35.546 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 18:57:35.546 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 18:57:35.546 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 18:57:35.547 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:57:35.547 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 18:57:35.551 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 18:57:35.558 +03:00 [DBG] Closing data reader to 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:57:35.562 +03:00 [DBG] A data reader for 'EnjOffer' on server 'tcp://localhost:5432' is being disposed after spending 9ms reading results.
+2023-04-02 18:57:35.562 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 18:57:35.562 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 18:57:35.574 +03:00 [INF] Applying migration '20230402155426_updateUserWordsTable'.
+2023-04-02 18:57:35.609 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 18:57:35.611 +03:00 [DBG] Disposing connection to database 'EnjOffer' on server ''.
+2023-04-02 18:57:35.612 +03:00 [DBG] Disposed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 19:01:55.695 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 19:01:56.441 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 19:01:56.855 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 19:01:56.889 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 19:01:57.021 +03:00 [DBG] Creating DbConnection.
+2023-04-02 19:01:57.054 +03:00 [DBG] Created DbConnection. (28ms).
+2023-04-02 19:01:57.066 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 19:01:57.266 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:01:57.268 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:01:57.278 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (5ms).
+2023-04-02 19:01:57.290 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-04-02 19:01:57.297 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (6ms).
+2023-04-02 19:01:57.298 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (12ms).
+2023-04-02 19:01:57.299 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 19:01:57.389 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:01:57.397 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 19:01:57.496 +03:00 [INF] Executed DbCommand (100ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 19:01:57.498 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:01:57.500 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (2ms).
+2023-04-02 19:01:57.513 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-04-02 19:01:57.513 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 19:01:57.513 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 19:01:57.513 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 19:01:57.513 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:01:57.514 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 19:01:57.519 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 19:01:57.526 +03:00 [DBG] Closing data reader to 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:01:57.530 +03:00 [DBG] A data reader for 'EnjOffer' on server 'tcp://localhost:5432' is being disposed after spending 9ms reading results.
+2023-04-02 19:01:57.530 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:01:57.530 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 19:01:57.619 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 19:01:57.621 +03:00 [DBG] Disposing connection to database 'EnjOffer' on server ''.
+2023-04-02 19:01:57.622 +03:00 [DBG] Disposed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 19:02:17.474 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 19:02:18.166 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 19:02:18.561 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 19:02:18.602 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 19:02:18.762 +03:00 [DBG] Creating DbConnection.
+2023-04-02 19:02:18.798 +03:00 [DBG] Created DbConnection. (29ms).
+2023-04-02 19:02:18.813 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 19:02:18.983 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:02:18.984 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:02:18.996 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (6ms).
+2023-04-02 19:02:19.006 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-04-02 19:02:19.013 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (6ms).
+2023-04-02 19:02:19.014 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (13ms).
+2023-04-02 19:02:19.014 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 19:02:19.106 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:02:19.113 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 19:02:19.201 +03:00 [INF] Executed DbCommand (89ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 19:02:19.202 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:02:19.203 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (1ms).
+2023-04-02 19:02:19.213 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-04-02 19:02:19.213 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 19:02:19.213 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 19:02:19.214 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 19:02:19.214 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:02:19.214 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 19:02:19.218 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 19:02:19.223 +03:00 [DBG] Closing data reader to 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:02:19.227 +03:00 [DBG] A data reader for 'EnjOffer' on server 'tcp://localhost:5432' is being disposed after spending 7ms reading results.
+2023-04-02 19:02:19.227 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:02:19.227 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 19:02:19.310 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 19:02:19.313 +03:00 [DBG] Disposing connection to database 'EnjOffer' on server ''.
+2023-04-02 19:02:19.313 +03:00 [DBG] Disposed connection to database 'EnjOffer' on server '' (1ms).
+2023-04-02 19:03:02.198 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 19:03:02.838 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 19:03:03.248 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 19:03:03.292 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 19:03:03.585 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 19:03:22.867 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 19:03:23.530 +03:00 [DBG] The index {'UserId'} was not created on entity type 'UsersDefaultWords' as the properties are already covered by the index {'UserId', 'DefaultWordId'}.
+2023-04-02 19:03:24.004 +03:00 [DBG] Entity Framework Core 7.0.4 initialized 'EnjOfferDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+2023-04-02 19:03:24.032 +03:00 [DBG] Creating DbConnection.
+2023-04-02 19:03:24.075 +03:00 [DBG] Created DbConnection. (38ms).
+2023-04-02 19:03:24.081 +03:00 [DBG] Migrating using database 'EnjOffer' on server ''.
+2023-04-02 19:03:24.089 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 19:03:24.282 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:24.284 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:24.297 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (7ms).
+2023-04-02 19:03:24.308 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-04-02 19:03:24.315 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (7ms).
+2023-04-02 19:03:24.316 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (13ms).
+2023-04-02 19:03:24.316 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 19:03:24.405 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:24.411 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 19:03:24.494 +03:00 [INF] Executed DbCommand (83ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 19:03:24.495 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:24.497 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (1ms).
+2023-04-02 19:03:24.498 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 19:03:24.556 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:24.557 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:24.557 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 19:03:24.560 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-04-02 19:03:24.560 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-04-02 19:03:24.560 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-04-02 19:03:24.560 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 19:03:24.560 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:24.560 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 19:03:24.561 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-02 19:03:24.561 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:24.561 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 19:03:24.574 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-04-02 19:03:24.574 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 19:03:24.574 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-04-02 19:03:24.574 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 19:03:24.574 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:24.575 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 19:03:24.578 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-02 19:03:24.584 +03:00 [DBG] Closing data reader to 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:24.588 +03:00 [DBG] A data reader for 'EnjOffer' on server 'tcp://localhost:5432' is being disposed after spending 8ms reading results.
+2023-04-02 19:03:24.588 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:24.588 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 19:03:24.600 +03:00 [INF] Applying migration '20230402160303_updateUserWordsTable'.
+2023-04-02 19:03:24.639 +03:00 [DBG] Opening connection to database 'EnjOffer' on server ''.
+2023-04-02 19:03:24.639 +03:00 [DBG] Opened connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:24.640 +03:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-04-02 19:03:24.646 +03:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2023-04-02 19:03:24.647 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 19:03:24.647 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 19:03:24.648 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 19:03:24.648 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ALTER COLUMN last_time_entered SET DEFAULT DATE '2023-04-02';
+2023-04-02 19:03:24.664 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE users_default_words ALTER COLUMN last_time_entered SET DEFAULT DATE '2023-04-02';
+2023-04-02 19:03:24.665 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 19:03:24.665 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 19:03:24.665 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 19:03:24.665 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_words ADD user_correct_entered_count integer NOT NULL DEFAULT 0;
+2023-04-02 19:03:24.668 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_words ADD user_correct_entered_count integer NOT NULL DEFAULT 0;
+2023-04-02 19:03:24.668 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 19:03:24.668 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 19:03:24.669 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 19:03:24.669 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_words ADD user_incorrect_entered_count integer NOT NULL DEFAULT 0;
+2023-04-02 19:03:24.669 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_words ADD user_incorrect_entered_count integer NOT NULL DEFAULT 0;
+2023-04-02 19:03:24.669 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 19:03:24.669 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 19:03:24.669 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 19:03:24.669 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_words ADD user_last_time_entered date NOT NULL DEFAULT DATE '2023-04-02';
+2023-04-02 19:03:24.672 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_words ADD user_last_time_entered date NOT NULL DEFAULT DATE '2023-04-02';
+2023-04-02 19:03:24.672 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 19:03:24.672 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 19:03:24.672 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 19:03:24.672 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_statistics ALTER COLUMN user_statistic_answer_date SET DEFAULT DATE '2023-04-02';
+2023-04-02 19:03:24.673 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE user_statistics ALTER COLUMN user_statistic_answer_date SET DEFAULT DATE '2023-04-02';
+2023-04-02 19:03:24.673 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-04-02 19:03:24.673 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 19:03:24.673 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-04-02 19:03:24.673 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230402160303_updateUserWordsTable', '7.0.4');
+2023-04-02 19:03:25.474 +03:00 [INF] Executed DbCommand (801ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230402160303_updateUserWordsTable', '7.0.4');
+2023-04-02 19:03:25.476 +03:00 [DBG] Committing transaction.
+2023-04-02 19:03:25.481 +03:00 [DBG] Committed transaction.
+2023-04-02 19:03:25.483 +03:00 [DBG] Disposing transaction.
+2023-04-02 19:03:25.483 +03:00 [DBG] Closing connection to database 'EnjOffer' on server 'tcp://localhost:5432'.
+2023-04-02 19:03:25.483 +03:00 [DBG] Closed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 19:03:25.484 +03:00 [DBG] 'EnjOfferDbContext' disposed.
+2023-04-02 19:03:25.486 +03:00 [DBG] Disposing connection to database 'EnjOffer' on server ''.
+2023-04-02 19:03:25.486 +03:00 [DBG] Disposed connection to database 'EnjOffer' on server '' (0ms).
+2023-04-02 19:53:51.299 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/BookReader/Index.cshtml'.
+2023-04-02 19:53:51.383 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'.
+2023-04-02 19:53:51.388 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Library/Index.cshtml'.
+2023-04-02 19:53:51.390 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'.
+2023-04-02 19:53:51.391 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/WordTrainer/Index.cshtml'.
+2023-04-02 19:53:51.418 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-02 19:53:51.579 +03:00 [DBG] Hosting starting
+2023-04-02 19:53:51.668 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-04-02 19:53:51.719 +03:00 [DBG] Reading data from file 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys\key-4a23e377-4798-4f0a-83bb-a8b0effb7b59.xml'.
+2023-04-02 19:53:51.760 +03:00 [DBG] Found key {4a23e377-4798-4f0a-83bb-a8b0effb7b59}.
+2023-04-02 19:53:51.789 +03:00 [DBG] Considering key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} with expiration date 2023-05-28 19:08:56Z as default key.
+2023-04-02 19:53:51.795 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-02 19:53:51.803 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-04-02 19:53:51.806 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-02 19:53:51.815 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-04-02 19:53:51.821 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-04-02 19:53:51.828 +03:00 [DBG] Using key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} as the default key.
+2023-04-02 19:53:51.830 +03:00 [DBG] Key ring with default key {4a23e377-4798-4f0a-83bb-a8b0effb7b59} was loaded during application startup.
+2023-04-02 19:53:52.058 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 78B5EDBE021ECE7AEA6D0514B4FBCC51C59ABC71)
+2023-04-02 19:53:52.107 +03:00 [INF] Now listening on: https://localhost:7016
+2023-04-02 19:53:52.108 +03:00 [INF] Now listening on: http://localhost:5016
+2023-04-02 19:53:52.110 +03:00 [DBG] Loaded hosting startup assembly EnjOffer.UI
+2023-04-02 19:53:52.111 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 19:53:52.112 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 19:53:52.113 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 19:53:52.114 +03:00 [INF] Hosting environment: Development
+2023-04-02 19:53:52.115 +03:00 [INF] Content root path: D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\
+2023-04-02 19:53:52.117 +03:00 [DBG] Hosting started
+2023-04-02 19:53:52.151 +03:00 [DBG] Connection id "0HMPJJBB9L49R" accepted.
+2023-04-02 19:53:52.158 +03:00 [DBG] Connection id "0HMPJJBB9L49R" started.
+2023-04-02 19:53:52.161 +03:00 [DBG] Connection id "0HMPJJBB9L49R" received FIN.
+2023-04-02 19:53:52.184 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 19:53:52.294 +03:00 [DBG] Connection id "0HMPJJBB9L49R" stopped.
+2023-04-02 19:53:52.297 +03:00 [DBG] Connection id "0HMPJJBB9L49R" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 19:53:53.169 +03:00 [DBG] Connection id "0HMPJJBB9L49S" accepted.
+2023-04-02 19:53:53.171 +03:00 [DBG] Connection id "0HMPJJBB9L49S" started.
+2023-04-02 19:53:53.304 +03:00 [DBG] Connection 0HMPJJBB9L49S established using the following protocol: "Tls12"
+2023-04-02 19:53:53.466 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/ - -
+2023-04-02 19:53:53.567 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 19:53:53.574 +03:00 [DBG] The request path / does not match a supported file type
+2023-04-02 19:53:53.624 +03:00 [DBG] 1 candidate(s) found for the request path '/'
+2023-04-02 19:53:53.634 +03:00 [DBG] Endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)' with route pattern '' is valid for the request path '/'
+2023-04-02 19:53:53.640 +03:00 [DBG] Request matched endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-04-02 19:53:53.645 +03:00 [INF] Executing endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-04-02 19:53:53.770 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI).
+2023-04-02 19:53:53.775 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-04-02 19:53:53.778 +03:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-04-02 19:53:53.782 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2023-04-02 19:53:53.785 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-04-02 19:53:53.787 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2023-04-02 19:53:53.794 +03:00 [DBG] Executing controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-04-02 19:53:53.798 +03:00 [DBG] Executed controller factory for controller EnjOffer.UI.Controllers.HomeController (EnjOffer.UI)
+2023-04-02 19:53:53.808 +03:00 [DBG] View lookup cache miss for view 'Index' in controller 'Home'.
+2023-04-02 19:53:53.824 +03:00 [INF] Executing ViewResult, running view Index.
+2023-04-02 19:53:53.831 +03:00 [DBG] The view path '/Views/Home/Index.cshtml' was found in 19.5531ms.
+2023-04-02 19:53:54.101 +03:00 [INF] Executed ViewResult - view Index executed in 295.977ms.
+2023-04-02 19:53:54.107 +03:00 [INF] Executed action EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI) in 316.3549ms
+2023-04-02 19:53:54.110 +03:00 [INF] Executed endpoint 'EnjOffer.UI.Controllers.HomeController.Index (EnjOffer.UI)'
+2023-04-02 19:53:54.132 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 19:53:54.152 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 19:53:54.163 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/ - - - 200 - text/html;+charset=utf-8 702.2613ms
+2023-04-02 19:53:54.681 +03:00 [DBG] Connection id "0HMPJJBB9L49S" received FIN.
+2023-04-02 19:53:54.770 +03:00 [DBG] Connection id "0HMPJJBB9L49T" accepted.
+2023-04-02 19:53:54.836 +03:00 [DBG] Connection id "0HMPJJBB9L49S" is closed. The last processed stream ID was 1.
+2023-04-02 19:53:54.886 +03:00 [DBG] Connection id "0HMPJJBB9L49S" sending FIN because: "The client closed the connection."
+2023-04-02 19:53:54.883 +03:00 [DBG] Connection id "0HMPJJBB9L49T" started.
+2023-04-02 19:53:54.893 +03:00 [DBG] Connection id "0HMPJJBB9L49S" stopped.
+2023-04-02 19:53:54.905 +03:00 [DBG] Connection 0HMPJJBB9L49T established using the following protocol: "Tls12"
+2023-04-02 19:53:54.961 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 19:53:54.969 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 7.3476ms
+2023-04-02 19:53:56.184 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/favicon.ico - -
+2023-04-02 19:53:56.192 +03:00 [DBG] The request path /favicon.ico does not match an existing file
+2023-04-02 19:53:56.201 +03:00 [DBG] No candidates found for the request path '/favicon.ico'
+2023-04-02 19:53:56.209 +03:00 [DBG] Request did not match any endpoints
+2023-04-02 19:53:56.213 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/favicon.ico - - - 404 0 - 28.7532ms
+2023-04-02 19:53:59.668 +03:00 [DBG] Connection id "0HMPJJBB9L49T" received FIN.
+2023-04-02 19:53:59.670 +03:00 [DBG] Connection id "0HMPJJBB9L49T" is closed. The last processed stream ID was 3.
+2023-04-02 19:53:59.672 +03:00 [DBG] Connection id "0HMPJJBB9L49T" sending FIN because: "The client closed the connection."
+2023-04-02 19:53:59.675 +03:00 [DBG] Connection id "0HMPJJBB9L49T" stopped.

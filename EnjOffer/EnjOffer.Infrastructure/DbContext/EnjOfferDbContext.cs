@@ -78,6 +78,9 @@ namespace EnjOffer.Infrastructure
             modelBuilder.Entity<UserWords>().Property(t => t.UserWordId).HasColumnName("user_word_id").HasColumnType("uuid");
             modelBuilder.Entity<UserWords>().Property(t => t.Word).HasColumnName("user_word_word").HasColumnType("varchar(400)").HasMaxLength(400).IsRequired().HasDefaultValue(string.Empty);
             modelBuilder.Entity<UserWords>().Property(t => t.WordTranslation).HasColumnName("user_word_word_translation").HasColumnType("varchar(400)").HasMaxLength(400).IsRequired().HasDefaultValue(string.Empty);
+            modelBuilder.Entity<UserWords>().Property(t => t.LastTimeEntered).HasColumnName("user_last_time_entered").HasColumnType("date").IsRequired().HasDefaultValue(DateTime.Now);
+            modelBuilder.Entity<UserWords>().Property(t => t.CorrectEnteredCount).HasColumnName("user_correct_entered_count").HasColumnType("integer").IsRequired().HasDefaultValue(0);
+            modelBuilder.Entity<UserWords>().Property(t => t.IncorrectEnteredCount).HasColumnName("user_incorrect_entered_count").HasColumnType("integer").IsRequired().HasDefaultValue(0);
             modelBuilder.Entity<UserWords>().Property(t => t.Priority).HasColumnName("user_word_priority").HasColumnType("integer").IsRequired().HasDefaultValue(5);
 
             modelBuilder.Entity<UserStatistics>().HasKey(t => t.UserStatisticsId);
@@ -86,28 +89,50 @@ namespace EnjOffer.Infrastructure
             modelBuilder.Entity<UserStatistics>().Property(t => t.CorrectAnswersCount).HasColumnName("user_statistic_correct_answer_count").HasColumnType("integer").IsRequired().HasDefaultValue(0);
             modelBuilder.Entity<UserStatistics>().Property(t => t.IncorrectAnswersCount).HasColumnName("user_statistic_incorrect_answer_count").HasColumnType("integer").IsRequired().HasDefaultValue(0);
 
-            modelBuilder.Entity<Users>().HasMany(u => u.UserStatistics).WithOne(us => us.User).HasForeignKey(us => us.UserId).OnDelete(DeleteBehavior.Restrict);
-            modelBuilder.Entity<Users>().HasMany(u => u.UserWords).WithOne(uw => uw.User).HasForeignKey(uw => uw.UserId).OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Users>().HasMany(u => u.UserStatistics).WithOne(us => us.User).HasForeignKey(us => us.UserId).OnDelete(DeleteBehavior.SetNull);
+            modelBuilder.Entity<Users>().HasMany(u => u.UserWords).WithOne(uw => uw.User).HasForeignKey(uw => uw.UserId).OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<Users>().HasMany(u => u.DefaultWords).WithMany(dw => dw.Users).UsingEntity<UsersDefaultWords>(
                 j => j
                 .HasOne(pt => pt.DefaultWord)
                 .WithMany(t => t.UsersDefaultWords)
-                .HasForeignKey(pt => pt.DefaultWordId).OnDelete(DeleteBehavior.Restrict),
+                .HasForeignKey(pt => pt.DefaultWordId).OnDelete(DeleteBehavior.SetNull),
                 j => j
                 .HasOne(pt => pt.User)
                 .WithMany(t => t.UsersDefaultWords)
-                .HasForeignKey(pt => pt.UserId).OnDelete(DeleteBehavior.Restrict),
+                .HasForeignKey(pt => pt.UserId).OnDelete(DeleteBehavior.SetNull),
 
                 j =>
                 {
                     j.HasKey(t => new { t.UserId, t.DefaultWordId });
+
                     j
                     .Property(j => j.Priority)
                     .HasColumnType("integer")
                     .HasColumnName("priority")
                     .IsRequired()
                     .HasDefaultValue(5);
+
+                    j
+                    .Property(j => j.LastTimeEntered)
+                    .HasColumnType("date")
+                    .HasColumnName("last_time_entered")
+                    .IsRequired()
+                    .HasDefaultValue(DateTime.Now);
+
+                    j
+                    .Property(j => j.CorrectEnteredCount)
+                    .HasColumnType("integer")
+                    .HasColumnName("correct_entered_count")
+                    .IsRequired()
+                    .HasDefaultValue(0);
+
+                    j
+                    .Property(j => j.IncorrectEnteredCount)
+                    .HasColumnType("integer")
+                    .HasColumnName("incorrect_entered_count")
+                    .IsRequired()
+                    .HasDefaultValue(0);
 
                     j.ToTable("users_default_words");
                 }
