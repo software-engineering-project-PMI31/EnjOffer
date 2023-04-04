@@ -11,5 +11,8 @@ namespace EnjOffer.Core.ServiceContracts
     {
         UserWordsResponse AddUserWord(UserWordsAddRequest? userWordAddRequest);
         List<UserWordsResponse> GetAllUserWords();
+        UserWordsResponse? GetUserWordById(Guid? userWordId);
+        double GetPriority(DateTime? lastTimeEntered, int correctlyEntered, int incorrectlyEntererd);
+        bool DeleteUserWord(Guid? userWordId);
     }
 }
