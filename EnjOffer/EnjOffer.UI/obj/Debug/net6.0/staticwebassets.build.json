@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5z2+xxZzYbKGF6Uwv+00lvJ4kF5JQRboRZ3reGvYPVY=",
+  "Hash": "I91nChdQFGSi74voRnKVTz/aNPnKq1a5mew9EQHfmBU=",
   "Source": "EnjOffer.UI",
   "BasePath": "_content/EnjOffer.UI",
   "Mode": "Default",
@@ -34,23 +34,6 @@
       "OriginalItemSpec": "wwwroot\\admin-panel.css"
     },
     {
-      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\admin-panel.html",
-      "SourceId": "EnjOffer.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
-      "BasePath": "_content/EnjOffer.UI",
-      "RelativePath": "admin-panel.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin-panel.html"
-    },
-    {
       "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\book-reader.css",
       "SourceId": "EnjOffer.UI",
       "SourceType": "Discovered",
@@ -66,23 +49,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\book-reader.css"
-    },
-    {
-      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\book-reader.html",
-      "SourceId": "EnjOffer.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
-      "BasePath": "_content/EnjOffer.UI",
-      "RelativePath": "book-reader.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\book-reader.html"
     },
     {
       "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\img\\imgNotFound.png",
@@ -136,23 +102,6 @@
       "OriginalItemSpec": "wwwroot\\library.css"
     },
     {
-      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\library.html",
-      "SourceId": "EnjOffer.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
-      "BasePath": "_content/EnjOffer.UI",
-      "RelativePath": "library.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\library.html"
-    },
-    {
       "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\login-page.css",
       "SourceId": "EnjOffer.UI",
       "SourceType": "Discovered",
@@ -202,23 +151,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\word-trainer.css"
-    },
-    {
-      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\word-trainer.html",
-      "SourceId": "EnjOffer.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
-      "BasePath": "_content/EnjOffer.UI",
-      "RelativePath": "word-trainer.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\word-trainer.html"
     }
   ]
 }

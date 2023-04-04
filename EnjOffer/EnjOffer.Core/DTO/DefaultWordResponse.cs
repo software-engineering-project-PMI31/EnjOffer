@@ -30,6 +30,7 @@ namespace EnjOffer.Core.DTO
             }
             DefaultWordResponse defaultWord_to_compare = (DefaultWordResponse) obj;
             return DefaultWordId == defaultWord_to_compare.DefaultWordId &&
+                Word == defaultWord_to_compare.Word &&
                 WordTranslation == defaultWord_to_compare.WordTranslation &&
                 ImageSrc == defaultWord_to_compare.ImageSrc;
         }

@@ -81,7 +81,6 @@ namespace EnjOffer.Infrastructure
             modelBuilder.Entity<UserWords>().Property(t => t.LastTimeEntered).HasColumnName("user_last_time_entered").HasColumnType("date").IsRequired().HasDefaultValue(DateTime.Now);
             modelBuilder.Entity<UserWords>().Property(t => t.CorrectEnteredCount).HasColumnName("user_correct_entered_count").HasColumnType("integer").IsRequired().HasDefaultValue(0);
             modelBuilder.Entity<UserWords>().Property(t => t.IncorrectEnteredCount).HasColumnName("user_incorrect_entered_count").HasColumnType("integer").IsRequired().HasDefaultValue(0);
-            modelBuilder.Entity<UserWords>().Property(t => t.Priority).HasColumnName("user_word_priority").HasColumnType("integer").IsRequired().HasDefaultValue(5);
 
             modelBuilder.Entity<UserStatistics>().HasKey(t => t.UserStatisticsId);
             modelBuilder.Entity<UserStatistics>().Property(t => t.UserStatisticsId).HasColumnName("user_statistic_id").HasColumnType("uuid");
@@ -105,13 +104,6 @@ namespace EnjOffer.Infrastructure
                 j =>
                 {
                     j.HasKey(t => new { t.UserId, t.DefaultWordId });
-
-                    j
-                    .Property(j => j.Priority)
-                    .HasColumnType("integer")
-                    .HasColumnName("priority")
-                    .IsRequired()
-                    .HasDefaultValue(5);
 
                     j
                     .Property(j => j.LastTimeEntered)
