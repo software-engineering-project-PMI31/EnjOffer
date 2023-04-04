@@ -1,10 +1,6 @@
 ﻿using EnjOffer.Core.Domain.Entities;
+using EnjOffer.Core.ServiceContracts;
 using EnjOffer.Core.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EnjOffer.Core.DTO
 {
@@ -50,7 +46,7 @@ namespace EnjOffer.Core.DTO
 
     public static class UserWordsResponseExtensions
     {
-        public static UserWordsResponse ToUserWordsResponse(this UserWords userWords)
+        public static UserWordsResponse ToUserWordsResponse(this UserWords userWords, IUserWordsService userWordsService)
         {
             return new UserWordsResponse()
             {
@@ -60,8 +56,7 @@ namespace EnjOffer.Core.DTO
                 LastTimeEntered = userWords.LastTimeEntered,
                 CorrectEnteredCount = userWords.CorrectEnteredCount,
                 IncorrectEnteredCount = userWords.IncorrectEnteredCount,
-                Priority = (userWords.LastTimeEntered is not null) ? ((double)userWords.CorrectEnteredCount / (userWords.IncorrectEnteredCount +
-                userWords.CorrectEnteredCount) * (1 - Math.Exp(-(double)(DateTime.Now - userWords.LastTimeEntered).Value.Hours / 3))) : 0,
+                Priority = userWordsService.GetPriority(userWords.LastTimeEntered, userWords.CorrectEnteredCount, userWords.IncorrectEnteredCount),
                 UserId = userWords.UserId
             };
         }
