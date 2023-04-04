@@ -2,11 +2,6 @@
 using EnjOffer.Core.DTO;
 using EnjOffer.Core.Helpers;
 using EnjOffer.Core.ServiceContracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EnjOffer.Core.Services
 {
@@ -17,6 +12,12 @@ namespace EnjOffer.Core.Services
         public UserWordsService()
         {
             _userWords = new List<UserWords>();
+        }
+
+        public double GetPriority(DateTime? lastTimeEntered, int correctlyEntered, int incorrectlyEntererd)
+        {
+            return (lastTimeEntered is not null) ? ((double)correctlyEntered / (incorrectlyEntererd +
+                correctlyEntered) * (1 - Math.Exp(-(double)(DateTime.Now - lastTimeEntered).Value.Hours / 3))) : 1;
         }
 
         public UserWordsResponse AddUserWord(UserWordsAddRequest? userWordAddRequest)
@@ -42,18 +43,50 @@ namespace EnjOffer.Core.Services
             userWord.UserWordId = Guid.NewGuid();
 
             //Generate Datetime and default correct and incorrect answers
-            userWord.LastTimeEntered = DateTime.Now;
+            userWord.LastTimeEntered = null;
             userWord.CorrectEnteredCount = 0;
             userWord.IncorrectEnteredCount = 0;
 
             _userWords.Add(userWord);
 
-            return userWord.ToUserWordsResponse();
+            return userWord.ToUserWordsResponse(this);
         }
 
         public List<UserWordsResponse> GetAllUserWords()
         {
-            throw new NotImplementedException();
+            return _userWords.Select(userWord => userWord.ToUserWordsResponse(this)).ToList();
+        }
+
+        public UserWordsResponse? GetUserWordById(Guid? userWordId)
+        {
+            if (userWordId is null)
+            {
+                return null;
+            }
+
+            UserWords? userWord_response_from_list = _userWords.FirstOrDefault
+                (temp => temp.UserWordId == userWordId);
+
+            return userWord_response_from_list?.ToUserWordsResponse(this) ?? null;
+        }
+
+        public bool DeleteUserWord(Guid? userWordId)
+        {
+            if (userWordId is null)
+            {
+                throw new ArgumentNullException(nameof(userWordId));
+            }
+
+            UserWords? userWord = _userWords.FirstOrDefault(temp => temp.UserWordId == userWordId);
+
+            if (userWord is null)
+            {
+                return false;
+            }
+
+            _userWords.RemoveAll(temp => temp.UserWordId == userWordId);
+
+            return true;
         }
     }
 }
