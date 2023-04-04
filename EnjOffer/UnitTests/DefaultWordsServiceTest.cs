@@ -11,6 +11,7 @@ namespace UnitTests
     {
         private readonly IDefaultWordsService _defaultWordsService;
 
+        //TO-DO: Avoid the Service Locator Anti-Pattern here. Use Dependency Injection
         public DefaultWordsServiceTest()
         {
             _defaultWordsService = new DefaultWordsService();

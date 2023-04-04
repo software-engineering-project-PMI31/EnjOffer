@@ -14,7 +14,8 @@ namespace UnitTests
     public class UsersServiceTest
     {
         private readonly IUsersService _usersService;
-        
+
+        //TO-DO: Avoid the Service Locator Anti-Pattern here. Use Dependency Injection
         public UsersServiceTest()
         {
             _usersService = new UsersService();
