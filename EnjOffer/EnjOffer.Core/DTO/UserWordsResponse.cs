@@ -13,11 +13,11 @@ namespace EnjOffer.Core.DTO
         public int CorrectEnteredCount { get; set; }
         public int IncorrectEnteredCount { get; set; }
         public double Priority { get; set; }
-        public Guid UserId { get; set; }
+        public Guid? UserId { get; set; }
 
         public override bool Equals(object? obj)
         {
-            if (obj == null)
+            if (obj is null)
             {
                 return false;
             }
@@ -41,6 +41,17 @@ namespace EnjOffer.Core.DTO
         public override int GetHashCode()
         {
             return base.GetHashCode();
+        }
+
+        public UserWordsUpdateRequest ToUserWordsUpdateRequest()
+        {
+            return new UserWordsUpdateRequest()
+            {
+                UserWordId = UserWordId,
+                LastTimeEntered = LastTimeEntered,
+                CorrectEnteredCount = CorrectEnteredCount,
+                IncorrectEnteredCount = IncorrectEnteredCount
+            };
         }
     }
 
