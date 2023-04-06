@@ -10,7 +10,7 @@ namespace EnjOffer.Core.Domain.Entities
     {
         public Guid UserId { get; set; }
         public Users? User { get; set; }
-        public Guid DefaultWordId { get; set; }
+        public Guid? DefaultWordId { get; set; }
         public DefaultWords? DefaultWord { get; set; }
         public DateTime? LastTimeEntered { get; set; }
         public int CorrectEnteredCount { get; set; }
