@@ -88,5 +88,40 @@ namespace EnjOffer.Core.Services
 
             return true;
         }
+
+        public List<UserWordsResponse> GetUserWordsByDate(DateTime? dateTime)
+        {
+            if (dateTime is null)
+            {
+                return _userWords.Select(temp => temp.ToUserWordsResponse(this))
+                    .Where(temp => temp.LastTimeEntered is null).ToList();
+            }
+
+            return _userWords.Select(temp => temp.ToUserWordsResponse(this))
+                .Where(temp => temp.LastTimeEntered is not null &&
+                temp.LastTimeEntered.Value.Date == dateTime.Value.Date).ToList();
+        }
+
+        public UserWordsResponse UpdateUserWord(UserWordsUpdateRequest? userWordsUpdateRequest)
+        {
+            if (userWordsUpdateRequest is null)
+            {
+                throw new ArgumentNullException(nameof(userWordsUpdateRequest));
+            }
+
+            ValidationHelper.ModelValidation(userWordsUpdateRequest);
+
+            UserWords? matchingUserWord = _userWords.FirstOrDefault(temp => temp.UserWordId == userWordsUpdateRequest.UserWordId);
+            if (matchingUserWord is null)
+            {
+                throw new ArgumentException("Given user's word doesn't exist");
+            }
+
+            matchingUserWord.LastTimeEntered = userWordsUpdateRequest.LastTimeEntered ?? matchingUserWord.LastTimeEntered;
+            matchingUserWord.CorrectEnteredCount += userWordsUpdateRequest.IsIncreaseCorrectEnteredCount ? 1 : 0;
+            matchingUserWord.IncorrectEnteredCount += userWordsUpdateRequest.IsIncreaseIncorrectEnteredCount ? 1 : 0;
+
+            return matchingUserWord.ToUserWordsResponse(this);
+        }
     }
 }
