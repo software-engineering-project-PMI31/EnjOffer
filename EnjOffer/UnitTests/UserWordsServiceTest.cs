@@ -154,6 +154,75 @@ namespace UnitTests
 
         #endregion
 
+        #region GetUserWordsByDate
+
+        [Fact]
+        public void GetUserWordsByDate_NullDate()
+        {
+            //Arrange
+            DateTime? date = null;
+
+            UserAddRequest userAdd_request1 = new UserAddRequest()
+            {
+                Email = "example@example.com",
+                Password = "password",
+                Role = EnjOffer.Core.Enums.UserRole.Admin
+            };
+            UserAddRequest userAdd_request2 = new UserAddRequest()
+            {
+                Email = "example1@example.com",
+                Password = "password",
+                Role = EnjOffer.Core.Enums.UserRole.Admin
+            };
+
+            UserResponse user_response1 = _usersService.AddUser(userAdd_request1);
+            UserResponse user_response2 = _usersService.AddUser(userAdd_request2);
+
+
+            UserWordsAddRequest userWord_request1 = new UserWordsAddRequest()
+            {
+                Word = "Something",
+                WordTranslation = "Щось",
+                UserId = user_response1.UserId
+            };
+            UserWordsAddRequest userWord_request2 = new UserWordsAddRequest()
+            {
+                Word = "Someone",
+                WordTranslation = "Хтось",
+                UserId = user_response2.UserId
+            };
+            UserWordsAddRequest userWord_request3 = new UserWordsAddRequest()
+            {
+                Word = "Something",
+                WordTranslation = "Щось",
+                UserId = user_response2.UserId
+            };
+
+            List<UserWordsAddRequest> userWords_requests = new List<UserWordsAddRequest>()
+            {
+                userWord_request1, userWord_request2, userWord_request3
+            };
+
+            List<UserWordsResponse> userWords_response_list_from_add = new List<UserWordsResponse>();
+
+            foreach (UserWordsAddRequest userWord in userWords_requests)
+            {
+                UserWordsResponse userWord_response = _userWordsService.AddUserWord(userWord);
+                userWords_response_list_from_add.Add(userWord_response);
+            }
+
+            //Act
+            List<UserWordsResponse> userWords_from_get = _userWordsService.GetUserWordsByDate(date);
+
+            //Assert
+            foreach (UserWordsResponse userWord_response_from_add in userWords_response_list_from_add)
+            {
+                Assert.Contains(userWord_response_from_add, userWords_from_get);
+            }
+        }
+
+        #endregion
+
         #region GetAllUserWords
 
         [Fact]
@@ -227,6 +296,165 @@ namespace UnitTests
             {
                 Assert.Contains(userWord_response_from_add, userWords_from_get);
             }
+        }
+
+        #endregion
+
+        #region UpdateUserWord
+
+        [Fact]
+        public void UpdateUserWord_NullUserWord()
+        {
+            //Arrange
+            UserWordsUpdateRequest? userWord_update_request = null;
+
+            //Assert
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                //Act
+                _userWordsService.UpdateUserWord(userWord_update_request);
+            });
+        }
+
+        [Fact]
+        public void UpdateUserWord_InvalidUserWordId()
+        {
+            //Arrange
+            UserWordsUpdateRequest? userWord_update_request = new UserWordsUpdateRequest()
+            {
+                UserWordId = Guid.NewGuid()
+            };
+
+            //Assert
+            Assert.Throws<ArgumentException>(() =>
+            {
+                //Act
+                _userWordsService.UpdateUserWord(userWord_update_request);
+            });
+        }
+
+        [Fact]
+        public void UpdateUserWord_IncreaseBothCorrectAndIncorrect()
+        {
+            //Arrange
+            UserWordsUpdateRequest userWord_update_request = new UserWordsUpdateRequest()
+            {
+                IsIncreaseCorrectEnteredCount = true,
+                IsIncreaseIncorrectEnteredCount = true
+            };
+
+            //Assert
+            Assert.Throws<ArgumentException>(() =>
+            {
+                //Act
+                _userWordsService.UpdateUserWord(userWord_update_request);
+            });
+        }
+
+        [Fact]
+        public void UpdateUserWord_IncreaseCorrectEnteredCount()
+        {
+            //Arrange
+            int expected = 1;
+            UserAddRequest userAdd_request1 = new UserAddRequest()
+            {
+                Email = "example@example.com",
+                Password = "password",
+                Role = EnjOffer.Core.Enums.UserRole.Admin
+            };
+
+            UserResponse user_response1 = _usersService.AddUser(userAdd_request1);
+
+            UserWordsAddRequest userWord_request1 = new UserWordsAddRequest()
+            {
+                Word = "Something",
+                WordTranslation = "Щось",
+                UserId = user_response1.UserId
+            };
+
+            UserWordsResponse userWord_response_from_add = _userWordsService.AddUserWord(userWord_request1);
+
+            UserWordsUpdateRequest userWord_update_request = userWord_response_from_add.ToUserWordsUpdateRequest();
+
+            userWord_update_request.IsIncreaseCorrectEnteredCount = true;
+
+            //Act
+            UserWordsResponse userWords_response_from_update = _userWordsService.UpdateUserWord(userWord_update_request);
+
+            //Assert
+            Assert.Equal(expected, userWords_response_from_update.CorrectEnteredCount);
+        }
+
+        [Fact]
+        public void UpdateUserWord_IncreaseCorrectEnteredCountTwice()
+        {
+            //Arrange
+            int expected = 2;
+            int expected1 = 0;
+            UserAddRequest userAdd_request1 = new UserAddRequest()
+            {
+                Email = "example@example.com",
+                Password = "password",
+                Role = EnjOffer.Core.Enums.UserRole.Admin
+            };
+
+            UserResponse user_response1 = _usersService.AddUser(userAdd_request1);
+
+            UserWordsAddRequest userWord_request1 = new UserWordsAddRequest()
+            {
+                Word = "Something",
+                WordTranslation = "Щось",
+                UserId = user_response1.UserId
+            };
+
+            UserWordsResponse userWord_response_from_add = _userWordsService.AddUserWord(userWord_request1);
+            UserWordsUpdateRequest userWord_update_first_request = userWord_response_from_add.ToUserWordsUpdateRequest();
+            userWord_update_first_request.IsIncreaseCorrectEnteredCount = true;
+            UserWordsResponse userWords_response_from_first_update = _userWordsService.UpdateUserWord(userWord_update_first_request);
+
+            UserWordsUpdateRequest userWord_update_second_request = userWords_response_from_first_update.ToUserWordsUpdateRequest();
+            userWord_update_second_request.IsIncreaseCorrectEnteredCount = true;
+
+            //Act
+            UserWordsResponse userWords_response_from_second_update = _userWordsService.UpdateUserWord(userWord_update_second_request);
+
+            //Assert
+            Assert.Equal(expected, userWords_response_from_second_update.CorrectEnteredCount);
+            Assert.Equal(expected1, userWords_response_from_second_update.IncorrectEnteredCount);
+        }
+
+        [Fact]
+        public void UpdateUserWord_IncreaseIncorrectEnteredCount()
+        {
+            //Arrange
+            int expected = 1;
+            UserAddRequest userAdd_request1 = new UserAddRequest()
+            {
+                Email = "example@example.com",
+                Password = "password",
+                Role = EnjOffer.Core.Enums.UserRole.Admin
+            };
+
+            UserResponse user_response1 = _usersService.AddUser(userAdd_request1);
+
+            UserWordsAddRequest userWord_request1 = new UserWordsAddRequest()
+            {
+                Word = "Something",
+                WordTranslation = "Щось",
+                UserId = user_response1.UserId
+            };
+
+            UserWordsResponse userWord_response_from_add = _userWordsService.AddUserWord(userWord_request1);
+
+            UserWordsUpdateRequest userWord_update_request = userWord_response_from_add.ToUserWordsUpdateRequest();
+
+            userWord_update_request.IsIncreaseIncorrectEnteredCount = true;
+
+            //Act
+            UserWordsResponse userWords_response_from_update = _userWordsService.UpdateUserWord(userWord_update_request);
+
+            //Assert
+            Assert.Equal(expected, userWords_response_from_update.IncorrectEnteredCount);
         }
 
         #endregion
