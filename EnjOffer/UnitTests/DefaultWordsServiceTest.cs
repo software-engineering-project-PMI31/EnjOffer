@@ -4,17 +4,20 @@ using EnjOffer.Core.ServiceContracts;
 using System;
 using EnjOffer.Core.Services;
 using System.Collections.Generic;
+using AutoFixture;
 
 namespace UnitTests
 {
     public class DefaultWordsServiceTest
     {
         private readonly IDefaultWordsService _defaultWordsService;
+        private readonly IFixture _fixture;
 
         //TO-DO: Avoid the Service Locator Anti-Pattern here. Use Dependency Injection
         public DefaultWordsServiceTest()
         {
             _defaultWordsService = new DefaultWordsService();
+            _fixture = new Fixture();
         }
 
         #region AddDefaultWord
@@ -36,10 +39,9 @@ namespace UnitTests
         public void AddDefaultWord_NullWordProperty()
         {
             //Arrange
-            DefaultWordAddRequest? request = new DefaultWordAddRequest()
-            {
-                Word = null
-            };
+            DefaultWordAddRequest? request = _fixture.
+                Build<DefaultWordAddRequest>()
+                .With(temp => temp.Word, null as string).Create();
 
             //Assert
             Assert.Throws<ArgumentException>(() =>
@@ -53,10 +55,9 @@ namespace UnitTests
         public void AddDefaultWord_NullTranslationProperty()
         {
             //Arrange
-            DefaultWordAddRequest? request = new DefaultWordAddRequest()
-            {
-                WordTranslation = null
-            };
+            DefaultWordAddRequest? request = _fixture.
+                Build<DefaultWordAddRequest>()
+                .With(temp => temp.WordTranslation, null as string).Create();
 
             //Assert
             Assert.Throws<ArgumentException>(() =>
@@ -96,12 +97,7 @@ namespace UnitTests
         public void AddDefaultWord_ProperDefaultWordDetails()
         {
             //Arrange
-            DefaultWordAddRequest? request = new DefaultWordAddRequest()
-            {
-                Word = "Something",
-                WordTranslation = "ўось",
-                ImageSrc = "image.png"
-            };
+            DefaultWordAddRequest? request = _fixture.Create<DefaultWordAddRequest>();
 
             //Act
             DefaultWordResponse response = _defaultWordsService.AddDefaultWord(request);
@@ -131,8 +127,8 @@ namespace UnitTests
             //Arrange
             List<DefaultWordAddRequest> defaultWords_request_list = new List<DefaultWordAddRequest>()
             {
-                new DefaultWordAddRequest() {Word = "Something", WordTranslation = "ўось", ImageSrc = "imageNotFound.png"},
-                new DefaultWordAddRequest() {Word = "Someone", WordTranslation = "’тось", ImageSrc = "imageNotFound.png"}
+                _fixture.Create<DefaultWordAddRequest>(),
+                _fixture.Create<DefaultWordAddRequest>()
             };
 
             //Act
@@ -173,12 +169,7 @@ namespace UnitTests
         public void GetDefaultWordById_ValidDefaultWordId()
         {
             //Arrange
-            DefaultWordAddRequest? defaultWord_add_request = new DefaultWordAddRequest()
-            {
-                Word = "Something",
-                WordTranslation = "ўось",
-                ImageSrc = "imgNotFound.png"
-            };
+            DefaultWordAddRequest? defaultWord_add_request = _fixture.Create<DefaultWordAddRequest>();
             DefaultWordResponse defaultWord_response_from_add = _defaultWordsService.AddDefaultWord(defaultWord_add_request);
 
             //Act
@@ -197,12 +188,7 @@ namespace UnitTests
         public void DeleteDefaultWord_ValidId()
         {
             //Arrange
-            DefaultWordAddRequest defaultWord_add_request = new DefaultWordAddRequest()
-            {
-                Word = "Something",
-                WordTranslation = "ўось",
-                ImageSrc = "imgNotFound.png"
-            };
+            DefaultWordAddRequest defaultWord_add_request = _fixture.Create<DefaultWordAddRequest>();
             DefaultWordResponse defaultWord_response_from_add = _defaultWordsService.AddDefaultWord(defaultWord_add_request);
 
             //Act

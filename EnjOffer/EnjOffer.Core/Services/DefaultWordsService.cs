@@ -13,9 +13,13 @@ namespace EnjOffer.Core.Services
     public class DefaultWordsService : IDefaultWordsService
     {
         private readonly List<DefaultWords> _defaultWords;
+        private readonly List<UsersDefaultWords> _usersDefaultWords;
+        private readonly List<Users> _users;
         public DefaultWordsService()
         {
             _defaultWords = new List<DefaultWords>();
+            _usersDefaultWords = new List<UsersDefaultWords>();
+            _users = new List<Users>();
         } 
         public DefaultWordResponse AddDefaultWord(DefaultWordAddRequest? defaultWordAddRequest)
         {
@@ -41,6 +45,21 @@ namespace EnjOffer.Core.Services
 
             //Add default word into _defaultWords
             _defaultWords.Add(defaultWord);
+
+            foreach (Users user in _users)
+            {
+                UsersDefaultWords userDefaultWord = new UsersDefaultWords()
+                {
+                    UserId = user.UserId,
+                    DefaultWordId = defaultWord.DefaultWordId,
+                    LastTimeEntered = null,
+                    CorrectEnteredCount = 0,
+                    IncorrectEnteredCount = 0
+
+                };
+
+                _usersDefaultWords.Add(userDefaultWord);
+            }
 
             return defaultWord.ToDefaultWordResponse();
         }

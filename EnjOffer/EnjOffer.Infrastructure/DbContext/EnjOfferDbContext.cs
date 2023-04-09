@@ -12,19 +12,19 @@ namespace EnjOffer.Infrastructure
 {
     public class EnjOfferDbContext : DbContext
     {
-        public DbSet<Advice>? Advice { get; set; }
+        public virtual DbSet<Advice>? Advice { get; set; }
 
-        public DbSet<Books>? Books { get; set; }
+        public virtual DbSet<Books>? Books { get; set; }
 
-        public DbSet<DefaultWords>? DefaultWords { get; set; }
+        public virtual DbSet<DefaultWords>? DefaultWords { get; set; }
 
-        public DbSet<UserWords>? UserWords { get; set; }
+        public virtual DbSet<UserWords>? UserWords { get; set; }
 
-        public DbSet<Users>? Users { get; set; }
+        public virtual DbSet<Users>? Users { get; set; }
 
-        public DbSet<UserStatistics>? UserStatistics { get; set; }
+        public virtual DbSet<UserStatistics>? UserStatistics { get; set; }
 
-        public DbSet<UsersDefaultWords>? UsersDefaultWords { get; set; }
+        public virtual DbSet<UsersDefaultWords>? UsersDefaultWords { get; set; }
 
 
         public EnjOfferDbContext(DbContextOptions options) : base(options)

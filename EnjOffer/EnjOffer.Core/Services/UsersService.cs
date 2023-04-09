@@ -1,4 +1,5 @@
 ﻿using EnjOffer.Core.Domain.Entities;
+using EnjOffer.Core.Domain.RepositoryContracts;
 using EnjOffer.Core.DTO;
 using EnjOffer.Core.Helpers;
 using EnjOffer.Core.ServiceContracts;
@@ -12,11 +13,17 @@ namespace EnjOffer.Core.Services
 {
     public class UsersService : IUsersService
     {
+        private readonly IUsersRepository _usersRepository;
         private readonly List<Users> _users;
+        private readonly List<DefaultWords> _defaultWords;
+        private readonly List<UsersDefaultWords> _usersDefaultWords;
 
-        public UsersService()
+        public UsersService(IUsersRepository usersRepository)
         {
+            _usersRepository = usersRepository;
             _users = new List<Users>();
+            _defaultWords = new List<DefaultWords>();
+            _usersDefaultWords = new List<UsersDefaultWords>();
         }
 
         public UserResponse AddUser(UserAddRequest? userAddRequest)
@@ -42,6 +49,21 @@ namespace EnjOffer.Core.Services
 
             //Add user to list
             _users.Add(user);
+
+            foreach (DefaultWords defaultWord in _defaultWords)
+            {
+                UsersDefaultWords userDefaultWord = new UsersDefaultWords()
+                {
+                    UserId = user.UserId,
+                    DefaultWordId = defaultWord.DefaultWordId,
+                    LastTimeEntered = null,
+                    CorrectEnteredCount = 0,
+                    IncorrectEnteredCount = 0
+
+                };
+
+                _usersDefaultWords.Add(userDefaultWord);
+            }
 
             //Convert the Users object into UserResponse type
             return user.ToUserResponse();

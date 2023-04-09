@@ -138,3 +138,9 @@ D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\obj\Debug\net6.0\refin
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\obj\Debug\net6.0\UnitTests.pdb
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\obj\Debug\net6.0\UnitTests.genruntimeconfig.cache
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\obj\Debug\net6.0\ref\UnitTests.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\AutoFixture.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Castle.Core.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\EntityFrameworkCoreMock.Moq.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\EntityFrameworkCoreMock.Shared.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Fare.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Moq.dll

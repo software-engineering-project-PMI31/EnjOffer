@@ -18,11 +18,11 @@ namespace EnjOffer.Core.DTO
 
         [Required(ErrorMessage = "CorrectEnteredCount can't be blank")]
         [Range(0, double.MaxValue, ErrorMessage = "CorrectEnteredCountIncrease can't be less than 0")]
-        public int CorrectEnteredCount { get; set; }
+        public int? CorrectEnteredCount { get; set; }
 
         [Required(ErrorMessage = "IncorrectEnteredCount can't be blank")]
         [Range(0, double.MaxValue, ErrorMessage = "IncorrectEnteredCountIncrease can't be less than 0")]
-        public int IncorrectEnteredCount { get; set; }
+        public int? IncorrectEnteredCount { get; set; }
 
         [Required(ErrorMessage = "IsIncreaseCorrectEnteredCount can't be blank")]
         public bool IsIncreaseCorrectEnteredCount { get; set; }
@@ -36,8 +36,8 @@ namespace EnjOffer.Core.DTO
             {
                 UserWordId = UserWordId,
                 LastTimeEntered = LastTimeEntered,
-                CorrectEnteredCount = CorrectEnteredCount,
-                IncorrectEnteredCount = IncorrectEnteredCount
+                CorrectEnteredCount = CorrectEnteredCount ?? 0,
+                IncorrectEnteredCount = IncorrectEnteredCount ?? 0
             };
         }
 

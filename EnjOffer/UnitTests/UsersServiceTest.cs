@@ -8,17 +8,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using EntityFrameworkCoreMock;
+using Moq;
+using EnjOffer.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+using AutoFixture;
 
 namespace UnitTests
 {
     public class UsersServiceTest
     {
         private readonly IUsersService _usersService;
+        private readonly IFixture _fixture;
 
         //TO-DO: Avoid the Service Locator Anti-Pattern here. Use Dependency Injection
         public UsersServiceTest()
         {
+            /*var usersInitialData = new List<Users>();
+            DbContextMock<EnjOfferDbContext> dbContextMock =
+                new DbContextMock<EnjOfferDbContext>(new DbContextOptionsBuilder<EnjOfferDbContext>().Options);
+
+            EnjOfferDbContext dbContext = dbContextMock.Object;
+            dbContextMock.CreateDbSetMock(temp => temp.Users);*/
+            
             _usersService = new UsersService();
+            _fixture = new Fixture();
         }
 
         #region AddUser
@@ -41,10 +55,7 @@ namespace UnitTests
         public void AddUser_EmailIsNull()
         {
             //Arrange
-            UserAddRequest? request = new UserAddRequest()
-            {
-                Email = null
-            };
+            UserAddRequest? request = _fixture.Build<UserAddRequest>().With(temp => temp.Email, null as string).Create();
 
             //Assert
             Assert.Throws<ArgumentException>(() =>
@@ -84,12 +95,7 @@ namespace UnitTests
         public void AddUser_ProperUserDetails()
         {
             //Arrange
-            UserAddRequest? userAddRequest = new UserAddRequest()
-            {
-                Email = "email@example.com",
-                Password = "password",
-                Role = EnjOffer.Core.Enums.UserRole.Admin
-            };
+            UserAddRequest? userAddRequest = _fixture.Create<UserAddRequest>();
 
             //Act
             UserResponse user_response_from_add = _usersService.AddUser(userAddRequest);
@@ -120,9 +126,9 @@ namespace UnitTests
             //Arrange
             List<UserAddRequest> users_request_list = new List<UserAddRequest>()
             {
-                new UserAddRequest() {Email = "example@example.com", Password = "password", Role = EnjOffer.Core.Enums.UserRole.User},
-                new UserAddRequest() {Email = "example1@example1.com", Password = "password", Role = EnjOffer.Core.Enums.UserRole.Admin}
-            };
+                _fixture.Create<UserAddRequest>(),
+                _fixture.Create<UserAddRequest>()
+        };
 
             //Act
             List<UserResponse> users_list_from_add = new List<UserResponse>();
@@ -162,12 +168,7 @@ namespace UnitTests
         public void GetUserById_ValidUserId()
         {
             //Arrange
-            UserAddRequest? user_add_request = new UserAddRequest()
-            {
-                Email = "example@example.com",
-                Password = "password",
-                Role = EnjOffer.Core.Enums.UserRole.Admin
-            };
+            UserAddRequest? user_add_request = _fixture.Create<UserAddRequest>();
             UserResponse user_response_from_add = _usersService.AddUser(user_add_request);
 
             //Act
@@ -186,12 +187,7 @@ namespace UnitTests
         public void DeleteUser_ValidId()
         {
             //Arrange
-            UserAddRequest user_add_request = new UserAddRequest()
-            {
-                Email = "example@example.com",
-                Password = "password",
-                Role = EnjOffer.Core.Enums.UserRole.Admin
-            };
+            UserAddRequest user_add_request = _fixture.Create<UserAddRequest>();
             UserResponse user_response_from_add = _usersService.AddUser(user_add_request);
 
             //Act

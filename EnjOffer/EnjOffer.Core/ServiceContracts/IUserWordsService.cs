@@ -12,6 +12,7 @@ namespace EnjOffer.Core.ServiceContracts
         UserWordsResponse AddUserWord(UserWordsAddRequest? userWordAddRequest);
         List<UserWordsResponse> GetAllUserWords();
         List<UserWordsResponse> GetUserWordsByDate(DateTime? dateTime);
+        List<UserWordsResponse> GetUserWordsSortedByPriority(List<UserWordsResponse> userWords);
         UserWordsResponse? GetUserWordById(Guid? userWordId);
         UserWordsResponse UpdateUserWord(UserWordsUpdateRequest? userWordsUpdateRequest);
         double GetPriority(DateTime? lastTimeEntered, int correctlyEntered, int incorrectlyEntererd);

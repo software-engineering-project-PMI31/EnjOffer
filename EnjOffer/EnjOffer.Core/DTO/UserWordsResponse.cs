@@ -30,7 +30,7 @@ namespace EnjOffer.Core.DTO
             return UserWordId == userWord_to_compare.UserWordId &&
                 Word == userWord_to_compare.Word &&
                 WordTranslation == userWord_to_compare.WordTranslation &&
-                LastTimeEntered == userWord_to_compare.LastTimeEntered &&
+                LastTimeEntered== userWord_to_compare.LastTimeEntered &&
                 CorrectEnteredCount == userWord_to_compare.CorrectEnteredCount &&
                 IncorrectEnteredCount == userWord_to_compare.IncorrectEnteredCount &&
                 Priority == userWord_to_compare.Priority &&
