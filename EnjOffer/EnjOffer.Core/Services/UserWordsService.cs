@@ -2,16 +2,17 @@
 using EnjOffer.Core.DTO;
 using EnjOffer.Core.Helpers;
 using EnjOffer.Core.ServiceContracts;
+using EnjOffer.Core.Domain.RepositoryContracts;
 
 namespace EnjOffer.Core.Services
 {
     public class UserWordsService : IUserWordsService
     {
-        private readonly List<UserWords> _userWords;
+        private readonly IUserWordsRepository _userWordsRepository;
 
-        public UserWordsService()
+        public UserWordsService(IUserWordsRepository userWords)
         {
-            _userWords = new List<UserWords>();
+            _userWordsRepository = userWords;
         }
 
         public double GetPriority(DateTime? lastTimeEntered, int correctlyEntered, int incorrectlyEntererd)
@@ -31,7 +32,7 @@ namespace EnjOffer.Core.Services
 
             ValidationHelper.ModelValidation(userWordAddRequest);
 
-            if (_userWords.Any(temp => temp.Word == userWordAddRequest.Word &&
+            if (_userWordsRepository.GetAllUserWords().Any(temp => temp.Word == userWordAddRequest.Word &&
             temp.WordTranslation == userWordAddRequest.WordTranslation &&
             temp.UserId == userWordAddRequest.UserId))
             {
@@ -49,14 +50,14 @@ namespace EnjOffer.Core.Services
             userWord.CorrectEnteredCount = 0;
             userWord.IncorrectEnteredCount = 0;
 
-            _userWords.Add(userWord);
+            _userWordsRepository.AddUserWord(userWord);
 
             return userWord.ToUserWordsResponse(this);
         }
 
         public List<UserWordsResponse> GetAllUserWords()
         {
-            return _userWords.Select(userWord => userWord.ToUserWordsResponse(this)).ToList();
+            return _userWordsRepository.GetAllUserWords().Select(userWord => userWord.ToUserWordsResponse(this)).ToList();
         }
 
         public UserWordsResponse? GetUserWordById(Guid? userWordId)
@@ -66,8 +67,7 @@ namespace EnjOffer.Core.Services
                 return null;
             }
 
-            UserWords? userWord_response_from_list = _userWords.FirstOrDefault
-                (temp => temp.UserWordId == userWordId);
+            UserWords? userWord_response_from_list = _userWordsRepository.GetUserWordById(userWordId);
 
             return userWord_response_from_list?.ToUserWordsResponse(this) ?? null;
         }
@@ -79,29 +79,30 @@ namespace EnjOffer.Core.Services
                 throw new ArgumentNullException(nameof(userWordId));
             }
 
-            UserWords? userWord = _userWords.FirstOrDefault(temp => temp.UserWordId == userWordId);
+            UserWords? userWord = _userWordsRepository.GetUserWordById(userWordId);
 
             if (userWord is null)
             {
                 return false;
             }
 
-            _userWords.RemoveAll(temp => temp.UserWordId == userWordId);
+            _userWordsRepository.DeleteUserWord(userWordId);
 
             return true;
         }
 
         public List<UserWordsResponse> GetUserWordsByDate(DateTime? dateTime)
         {
-            if (dateTime is null)
+            /*if (dateTime is null)
             {
-                return _userWords.Select(temp => temp.ToUserWordsResponse(this))
-                    .Where(temp => temp.LastTimeEntered is null).ToList();
-            }
-
-            return _userWords.Select(temp => temp.ToUserWordsResponse(this))
+                *//*return _userWordsRepository.GetAllUserWords().Select(temp => temp.ToUserWordsResponse(this))
+                    .Where(temp => temp.LastTimeEntered is null).ToList();*//*
+               
+            }*/
+            return _userWordsRepository.GetUserWordsByDate(dateTime).Select(temp => temp.ToUserWordsResponse(this)).ToList();
+            /*return _userWordsRepository.GetAllUserWords().Select(temp => temp.ToUserWordsResponse(this))
                 .Where(temp => temp.LastTimeEntered is not null &&
-                temp.LastTimeEntered.Value.Date == dateTime.Value.Date).ToList();
+                temp.LastTimeEntered.Value.Date == dateTime.Value.Date).ToList();*/
         }
 
         public UserWordsResponse UpdateUserWord(UserWordsUpdateRequest? userWordsUpdateRequest)
@@ -113,7 +114,7 @@ namespace EnjOffer.Core.Services
 
             ValidationHelper.ModelValidation(userWordsUpdateRequest);
 
-            UserWords? matchingUserWord = _userWords.FirstOrDefault(temp => temp.UserWordId == userWordsUpdateRequest.UserWordId);
+            UserWords? matchingUserWord = _userWordsRepository.GetUserWordById(userWordsUpdateRequest.UserWordId);
             if (matchingUserWord is null)
             {
                 throw new ArgumentException("Given user's word doesn't exist");
@@ -125,6 +126,9 @@ namespace EnjOffer.Core.Services
             matchingUserWord.CorrectEnteredCount += userWordsUpdateRequest.IsIncreaseCorrectEnteredCount ? 1 : 0;
             matchingUserWord.IncorrectEnteredCount += userWordsUpdateRequest.IsIncreaseIncorrectEnteredCount ? 1 : 0;
 
+            _userWordsRepository.UpdateUserWord(matchingUserWord);
+
+            //_userWordsRepository
             return matchingUserWord.ToUserWordsResponse(this);
         }
 

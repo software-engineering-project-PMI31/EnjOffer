@@ -1,0 +1,95 @@
+﻿<Window x:Class="SeidelMethod.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeidelMethod"
+        mc:Ignorable="d"
+        Title="Seidel's method" Height="1000" Width="1500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Content="Enter a quantity of rows:" HorizontalAlignment="Left" Margin="55,45,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="RowsInput" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="60,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+        <Label Grid.Row="0" Grid.Column="0" Content="Enter a quantity of columns:" HorizontalAlignment="Left" Margin="55,95,0,0" VerticalAlignment="Top"/>
+        <TextBox Grid.Row="0" x:Name="ColsInput" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="60,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+        <Label Grid.Row="0" Grid.Column="0" Content="Enter a minimum element in the matrix:" HorizontalAlignment="Left" Margin="55,145,0,0" VerticalAlignment="Top"/>
+        <TextBox Grid.Row="0" x:Name="MinimumElInput" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="60,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+        <Label Grid.Row="0" Grid.Column="0" Content="Enter a maximum element in the matrix:" HorizontalAlignment="Left" Margin="55,195,0,0" VerticalAlignment="Top"/>
+        <TextBox Grid.Row="0" x:Name="MaximumElInput" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="60,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+        <Label Grid.Row="0" Grid.Column="0" Content="Choose the action:" HorizontalAlignment="Left" Margin="55,245,0,0" VerticalAlignment="Top"/>
+        <ComboBox Grid.Row="0" Grid.Column="0" x:Name="ActionComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="20" Margin="60, 270, 0, 0">
+            <ComboBoxItem Content="Fill matrix 1" IsSelected="True"></ComboBoxItem>
+            <ComboBoxItem Content="Fill vector" IsSelected="False"></ComboBoxItem>
+        </ComboBox>
+        <Button Grid.Row="0" Grid.Column="0" Content="Generate" HorizontalAlignment="Left" Margin="60,320,0,0" VerticalAlignment="Top" Width="80" Padding="3" Click="Button_Click_GenerateRandomly"/>
+
+        <Button Grid.Row="0" Grid.Column="0" Content="Save changes" HorizontalAlignment="Left" Margin="160,320,0,0" VerticalAlignment="Top" Width="80" Padding="3" Click="Button_Click_SaveChanges"/>
+
+        <Button Content="Solve" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,360,0,0" Width="130" Click="Button_Click_Solve"/>
+        
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Content="Name of the file in the directory:" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="100,0,0,0"></Label>
+            <TextBox x:Name="PathFirstMatrix" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="100,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+            <Button Content="Generate" Margin="320,25,0,0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Click="Button_Click_GenerateFirstMatrixFromFile"/>
+            <DataGrid x:Name="FirstMatrix" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0"  AutoGenerateColumns="True" VerticalScrollBarVisibility="Visible" HeadersVisibility="None" HorizontalScrollBarVisibility="Visible"/>
+            <Button Content="Add Column" Grid.Row="2" Grid.Column="1" Margin="100,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="95" Click="Button_Click_AddColumnToFirstMatrix"/>
+            <Button Content="Remove Column" Grid.Row="2" Grid.Column="1" Margin="210,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="95" Click="Button_Click_RemoveColumnInFirstMatrix"/>
+            <Button Content="Add Row" Grid.Row="2" Grid.Column="1" Margin="320,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="95" Click="Button_Click_AddRowToFirstMatrix"/>
+            <Button Content="Remove Row" Grid.Row="2" Grid.Column="1" Margin="430,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="95" Click="Button_Click_RemoveRowInFirstMatrix"/>
+            <Button Content="Find Evklid Norm" Grid.Row="3" Grid.Column="1" Margin="100,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="95" Click="Button_Click_FindEvklidNormFirstMatrix"/>
+            <Button Content="Find max module norm" Grid.Row="3" Grid.Column="1" Margin="210,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="130" Click="Button_Click_FindMaxModuleNormFirstMatrix"/>
+
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Content="Name of the file in the directory:" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="100,0,0,0"></Label>
+            <TextBox x:Name="PathVectorForSeidel" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="100,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+            <Button Content="Generate" Margin="320,25,0,0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Click="Button_Click_GenerateVectorForSeidelFromFile"/>
+            <DataGrid x:Name="VectorForSeidel" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0"  AutoGenerateColumns="True" VerticalScrollBarVisibility="Visible" HeadersVisibility="None" HorizontalScrollBarVisibility="Visible"/>
+            <!--<Button Content="Find Evklid Norm" Grid.Row="3" Grid.Column="1" Margin="100,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="95" Click="Button_Click_FindEvklidNormVectorForGaussian"/>
+                        <Button Content="Find max module norm" Grid.Row="3" Grid.Column="1" Margin="210,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="130" Click="Button_Click_FindMaxModuleNormVectorForGaussian"/>
+                        -->
+
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Content="Name of the file in the directory:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="100,0,0,0"></Label>
+            <TextBox x:Name="ResultMatrixAddress" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="100,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+            <DataGrid x:Name="ResultMatrix" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" HeadersVisibility="Column" AutoGenerateColumns="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"/>
+            <Button Content="Save the result to the file" Grid.Row="0" Grid.Column="1" Margin="320,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="130" Click="Button_Click_SaveResultMatrixToFile"/>
+        </Grid>
+
+        <Label Grid.Row="1" Grid.Column="2" Content="Operations output:" HorizontalAlignment="Center" Margin="0,0,0,350" VerticalAlignment="Top"/>
+        <TextBox Grid.Row="1" Grid.Column="2" x:Name="ResultBox" Width="250" Height="250" Margin="0,70,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Text=""></TextBox>
+
+    </Grid>
+</Window>

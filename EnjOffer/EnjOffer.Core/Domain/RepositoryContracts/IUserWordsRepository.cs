@@ -9,13 +9,13 @@ namespace EnjOffer.Core.Domain.RepositoryContracts
 {
     public interface IUserWordsRepository
     {
-        Users AddUserWord(Users userWord);
-        List<Users> GetAllUserWords();
-        List<Users> GetUserWordsByDate(DateTime? dateTime);
-        List<Users> GetUserWordsSortedByPriority(List<Users> userWords);
-        Users GetUserWordById(Guid userWordId);
-        Users UpdateUserWord(Users userWordUpdate);
+        UserWords AddUserWord(UserWords userWord);
+        List<UserWords> GetAllUserWords();
+        List<UserWords> GetUserWordsByDate(DateTime? dateTime);
+        List<UserWords> GetUserWordsSortedByPriority(List<UserWords> userWords);
+        UserWords GetUserWordById(Guid? userWordId);
+        UserWords UpdateUserWord(UserWords userWordUpdate);
         double GetPriority(DateTime? lastTimeEntered, int correctlyEntered, int incorrectlyEntererd);
-        bool DeleteUserWord(Guid userWordId);
+        bool DeleteUserWord(Guid? userWordId);
     }
 }

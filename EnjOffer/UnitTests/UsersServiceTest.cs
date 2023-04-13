@@ -24,15 +24,16 @@ namespace UnitTests
         //TO-DO: Avoid the Service Locator Anti-Pattern here. Use Dependency Injection
         public UsersServiceTest()
         {
-            /*var usersInitialData = new List<Users>();
+            _fixture = new Fixture();
+
+            var usersInitialData = new List<Users>();
             DbContextMock<EnjOfferDbContext> dbContextMock =
                 new DbContextMock<EnjOfferDbContext>(new DbContextOptionsBuilder<EnjOfferDbContext>().Options);
 
             EnjOfferDbContext dbContext = dbContextMock.Object;
-            dbContextMock.CreateDbSetMock(temp => temp.Users);*/
-            
-            _usersService = new UsersService();
-            _fixture = new Fixture();
+            dbContextMock.CreateDbSetMock(temp => temp.Users, usersInitialData);
+
+            _usersService = new UsersService(null, null, null);
         }
 
         #region AddUser
