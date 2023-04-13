@@ -57,7 +57,7 @@ namespace SeidelMethod
             {
                 case "Fill matrix 1":
                     Matrix matrix = new Matrix(Convert.ToInt32(RowsInput.Text), Convert.ToInt32(ColsInput.Text));
-                    matrix.FillMatrixRandomly(Convert.ToInt32(MinimumElInput.Text), Convert.ToInt32(MaximumElInput.Text));
+                    matrix.FillMatrixRandomlyStrictlyDiagonal(Convert.ToInt32(MinimumElInput.Text), Convert.ToInt32(MaximumElInput.Text));
                     try
                     {
                         matrixList[0] = matrix;
@@ -201,14 +201,14 @@ namespace SeidelMethod
                 for (int j = 0; j < FirstMatrix.Columns.Count; j++)
                 {
                     x = FirstMatrix.Columns[j].GetCellContent(FirstMatrix.Items[i]) as TextBlock;
-                    newMatrixGaussian.Values[i, j] = x is not null ? Convert.ToDecimal(x.Text) : 0;
+                    newMatrixGaussian.Values[i, j] = x is not null ? Convert.ToDouble(x.Text) : 0;
                 }
             }
 
             for (int i = 0; i < VectorForSeidel.Items.Count; i++)
             {
                 x = VectorForSeidel.Columns[0].GetCellContent(VectorForSeidel.Items[i]) as TextBlock;
-                vector.Values[i, 0] = x is not null ? Convert.ToDecimal(x.Text) : 0;
+                vector.Values[i, 0] = x is not null ? Convert.ToDouble(x.Text) : 0;
             }
 
             try
@@ -236,12 +236,20 @@ namespace SeidelMethod
             {
                 matrixList[0] = new Matrix(PathFirstMatrix.Text);
                 FirstMatrix.ItemsSource = Output.CreateDataTableFromMatrix(matrixList[0]).DefaultView;
+
+                Vector solutionVector = new Vector(matrixList[0].Rows);
+                VectorForSeidel.ItemsSource = Output.CreateDataTableFromMatrix(solutionVector).DefaultView;
+
                 ResultBox.Text = matrixList[0].ToString();
             }
             catch (ArgumentOutOfRangeException)
             {
                 matrixList.Add(new Matrix(PathFirstMatrix.Text));
                 FirstMatrix.ItemsSource = Output.CreateDataTableFromMatrix(matrixList[0]).DefaultView;
+
+                Vector solutionVector = new Vector(matrixList[0].Rows);
+                VectorForSeidel.ItemsSource = Output.CreateDataTableFromMatrix(solutionVector).DefaultView;
+
                 ResultBox.Text = matrixList[0].ToString();
             }
         }
@@ -314,21 +322,13 @@ namespace SeidelMethod
 
                 SystemLinearArithmeticEquation slar = new SystemLinearArithmeticEquation(matrixList[0], (Vector)matrixList[1]);
                 Matrix resultTable = new Matrix(1000, slar.A.Columns * 2 + 1);
+                double eps = Eps.Text == string.Empty ? 0.0001 : Convert.ToDouble(Eps.Text);
 
-                decimal[,] resultSeidel = slar.SolveSeidel(out resultTable);
+                double[,] resultSeidel = slar.SolveSeidel(out resultTable, relativeError: eps);
+
+                matrixList.Add(resultTable);
 
                 ResultMatrix.ItemsSource = Output.CreateDataTableFromMatrix(resultTable).DefaultView;
-                ResultMatrix.Columns[0].Header = "Iteration";
-                int indx = 1;
-                for (; indx < slar.A.Columns; indx++)
-                {
-                    ResultMatrix.Columns[0].Header = $"x{indx}";
-                }
-
-                for (; indx < slar.A.Columns * 2; indx++)
-                {
-                    ResultMatrix.Columns[0].Header = $"Delta x{indx}";
-                }
 
                 ResultBox.Text = "";
                 for (int i = 0; i < resultSeidel.GetLength(0); i++)

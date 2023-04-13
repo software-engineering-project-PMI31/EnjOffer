@@ -20,17 +20,17 @@ namespace SeidelMethod
             B = b;
         }
 
-        public decimal[,] SolveSeidel(out Matrix outTable, int maxIterations = 1000, double relativeError = 1e-6)
+        public double[,] SolveSeidel(out Matrix outTable, int maxIterations = 100000, double relativeError = 0.0001)
         {
             int n = A.Rows;
             Vector x = new Vector(A.Rows);
             Vector xx = new Vector(A.Rows);
             int iteration;
-            decimal[] gap = new decimal[n];
-            decimal maxGap = 1;
+            double[] gap = new double[n];
+            double maxGap = 1;
             Matrix resultTable = new Matrix(maxIterations, A.Columns * 2 + 1);
 
-            for (iteration = 0; iteration < maxIterations && maxGap > (decimal)relativeError; iteration++)
+            for (iteration = 0; iteration < maxIterations && maxGap > relativeError; iteration++)
             {
                 Array.Copy(x.Values, xx.Values, x.Values.Length);
                 resultTable.Values[iteration, 0] = iteration;
@@ -43,11 +43,16 @@ namespace SeidelMethod
                     {
                         if (j != i)
                         {
-                            sum += (double)A.Values[i, j] * (double)x.Values[j, 0];
+                            sum += A.Values[i, j] * x.Values[j, 0];
                         }
                     }
 
-                    x.Values[i, 0] = (decimal)(-(sum - (double)B.Values[i, 0]) / (double)A.Values[i, i]);
+                    x.Values[i, 0] = (-(sum - B.Values[i, 0]) / A.Values[i, i]);
+
+                    if (x.Values[i, 0] is double.NaN || double.IsInfinity(x.Values[i, 0]))
+                    {
+                        throw new Exception("The method did not converge within the specified number of iterations.");
+                    }
 
                     resultTable.Values[iteration, colIndexBeforeError++] = x.Values[i, 0];
                 }
@@ -61,7 +66,7 @@ namespace SeidelMethod
                 maxGap = gap.Max();
             }
 
-            if (iteration == maxIterations && maxGap > (decimal)relativeError)
+            if (iteration == maxIterations && maxGap > relativeError)
             {
                 throw new Exception("The method did not converge within the specified number of iterations.");
             }
@@ -70,47 +75,5 @@ namespace SeidelMethod
 
             return x.Values;
         }
-
-        /*public decimal[,] SolveSeidel(double tolerance = 1e-3, int maxIterations = 1000, double eps = 0.001)
-        {
-            int n = A.Rows;
-            Vector x = new Vector(A.Rows);
-            Vector xx = new Vector(A.Rows);
-            int MAX_ITERATIONS = 1000;
-
-            for (int iteration = 0; iteration < MAX_ITERATIONS; iteration++)
-            {
-                Array.Copy(x.Values, xx.Values, x.Values.Length);
-
-                for (int i = 0; i < n; i++)
-                {
-                    decimal sum = 0;
-
-                    for (int j = 0; j < n; j++)
-                    {
-                        if (j != i)
-                        {
-                            sum += A.Values[i, j] * x.Values[j, 0];
-                        }
-                    }
-
-                    x.Values[i, 0] = -(sum - B.Values[i, 0]) / A.Values[i, i];
-                }
-
-                decimal[] gap = new decimal[n];
-
-                for (int i = 0; i < n; i++)
-                {
-                    gap[i] = Math.Abs(x.Values[i, 0] - xx.Values[i, 0]);
-                }
-
-                if (gap.Max() < (decimal)eps)
-                {
-                    break;
-                }
-            }
-
-            return x.Values;
-        }*/
     }
 }

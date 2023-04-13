@@ -36,7 +36,10 @@
         <Button Grid.Row="0" Grid.Column="0" Content="Save changes" HorizontalAlignment="Left" Margin="160,320,0,0" VerticalAlignment="Top" Width="80" Padding="3" Click="Button_Click_SaveChanges"/>
 
         <Button Content="Solve" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,360,0,0" Width="130" Click="Button_Click_Solve"/>
-        
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Enter eps:" HorizontalAlignment="Left" Margin="60,385,0,0" VerticalAlignment="Top"/>
+        <TextBox Grid.Row="0" x:Name="Eps" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="60,410,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+
         <Grid Grid.Row="0" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="45"></RowDefinition>

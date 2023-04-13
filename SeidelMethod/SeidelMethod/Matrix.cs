@@ -9,7 +9,7 @@ namespace SeidelMethod
 {
     public class Matrix
     {
-        public decimal[,] Values { get; set; }
+        public double[,] Values { get; set; }
         public int Rows { get; private set; }
         public int Columns { get; private set; }
 
@@ -22,10 +22,10 @@ namespace SeidelMethod
 
             Rows = rows;
             Columns = columns;
-            Values = new decimal[rows, columns];
+            Values = new double[rows, columns];
         }
 
-        public Matrix(decimal[,] matrix)
+        public Matrix(double[,] matrix)
         {
             Rows = matrix.GetLength(0);
             Columns = matrix.GetLength(1);
@@ -53,7 +53,7 @@ namespace SeidelMethod
 
             for (int i = 0; i < matrix.Rows; i++)
             {
-                decimal sum = 0;
+                double sum = 0;
                 for (int j = 0; j < matrix.Columns; j++)
                 {
                     sum += matrix.Values[i, j] * vector.Values[j, 0];
@@ -68,7 +68,7 @@ namespace SeidelMethod
         {
             if (a.Rows == b.Rows && a.Columns == b.Columns)
             {
-                decimal[,] res = new decimal[a.Rows, a.Columns];
+                double[,] res = new double[a.Rows, a.Columns];
                 for (int i = 0; i < a.Rows; ++i)
                 {
                     for (int j = 0; j < a.Columns; ++j)
@@ -89,7 +89,7 @@ namespace SeidelMethod
         {
             if (a.Rows == b.Rows && a.Columns == b.Columns)
             {
-                decimal[,] res = new decimal[a.Rows, a.Columns];
+                double[,] res = new double[a.Rows, a.Columns];
                 for (int i = 0; i < a.Rows; ++i)
                 {
                     for (int j = 0; j < a.Columns; ++j)
@@ -108,8 +108,8 @@ namespace SeidelMethod
 
         public static Matrix operator *(Matrix a, Matrix b)
         {
-            decimal sum = 0;
-            decimal[,] result = new decimal[a.Rows, b.Columns];
+            double sum = 0;
+            double[,] result = new double[a.Rows, b.Columns];
             if (a.Columns == b.Rows)
             {
                 for (int i = 0; i < a.Rows; i++)
@@ -135,7 +135,7 @@ namespace SeidelMethod
 
         public void AddRowOfZeros()
         {
-            decimal[,] newValues = new decimal[Rows + 1, Columns];
+            double[,] newValues = new double[Rows + 1, Columns];
             for (int i = 0; i < Rows; i++)
             {
                 for (int j = 0; j < Columns; j++)
@@ -158,7 +158,7 @@ namespace SeidelMethod
                 throw new InvalidOperationException("You can't remove a row since there aren't rows in the matrix");
             }
 
-            decimal[,] newValues = new decimal[Rows - 1, Columns];
+            double[,] newValues = new double[Rows - 1, Columns];
             for (int i = 0; i < Rows - 1; i++)
             {
                 for (int j = 0; j < Columns; j++)
@@ -172,7 +172,7 @@ namespace SeidelMethod
 
         public void AddColumnOfZeros()
         {
-            decimal[,] newValues = new decimal[Rows, Columns + 1];
+            double[,] newValues = new double[Rows, Columns + 1];
 
             for (int i = 0; i < Rows; i++)
             {
@@ -195,7 +195,7 @@ namespace SeidelMethod
                 throw new InvalidOperationException("You can't remove column since there aren't columns in the matrix");
             }
 
-            decimal[,] newValues = new decimal[Rows, Columns - 1];
+            double[,] newValues = new double[Rows, Columns - 1];
 
             for (int i = 0; i < Rows; i++)
             {
@@ -218,7 +218,7 @@ namespace SeidelMethod
                 int rows = lines.Length;
                 int cols = lines[0].Split(' ').Length;
 
-                Values = new decimal[rows, cols];
+                Values = new double[rows, cols];
                 Columns = cols;
                 Rows = rows;
 
@@ -232,8 +232,8 @@ namespace SeidelMethod
                     }
                     for (int j = 0; j < cols; j++)
                     {
-                        decimal cellValue;
-                        if (!decimal.TryParse(rowValues[j], out cellValue))
+                        double cellValue;
+                        if (!double.TryParse(rowValues[j], out cellValue))
                         {
                             throw new ArgumentException($"Invalid value in row {i + 1}, column {j + 1}: '{rowValues[j]}' is not a valid number.");
                         }
@@ -247,6 +247,26 @@ namespace SeidelMethod
             }
         }
 
+        public void FillMatrixRandomlyStrictlyDiagonal(int start, int end)
+        {
+            Random rand = new Random();
+
+            // Generate a random matrix with a dominant diagonal
+            for (int i = 0; i < Rows; i++)
+            {
+                double rowSum = 0.0;
+                for (int j = 0; j < Columns; j++)
+                {
+                    if (i != j)
+                    {
+                        Values[i, j] = rand.NextDouble() * (end - start) + start;
+                        rowSum += Math.Abs(Values[i, j]);
+                    }
+                }
+                Values[i, i] = rowSum + rand.NextDouble() * (end - start) + start;
+            }
+        }
+
         public void FillMatrixRandomly(int start, int end)
         {
             Random rnd = new Random();
@@ -254,14 +274,21 @@ namespace SeidelMethod
             {
                 for (int j = 0; j < Columns; ++j)
                 {
-                    Values[i, j] = Convert.ToInt32(rnd.Next(start, end));
+                    if (j > 0)
+                    {
+                        Values[i, j] = Convert.ToInt32(rnd.Next(start, (int)Values[i, j - 1]));
+                    }
+                    else
+                    {
+                        Values[i, j] = Convert.ToInt32(rnd.Next(start, end));
+                    }
                 }
             }
         }
 
-        public decimal FindMaxModul()
+        public double FindMaxModul()
         {
-            decimal max = 0;
+            double max = 0;
             for (var i = 0; i < Rows; i++)
             {
                 for (var j = 0; j < Columns; j++)
@@ -273,18 +300,18 @@ namespace SeidelMethod
             return max;
         }
 
-        public decimal FindEvklidNorm()
+        public double FindEvklidNorm()
         {
-            decimal normSquared = 0;
+            double normSquared = 0;
             for (var i = 0; i < Rows; i++)
             {
                 for (var j = 0; j < Columns; j++)
                 {
-                    normSquared += (decimal)Math.Pow((double)Values[i, j], 2);
+                    normSquared += (double)Math.Pow((double)Values[i, j], 2);
                 }
             }
 
-            return (decimal)Math.Sqrt((double)normSquared);
+            return (double)Math.Sqrt((double)normSquared);
         }
 
         public void SwapRows(int row1, int row2)
@@ -294,7 +321,7 @@ namespace SeidelMethod
                 return;
             }
 
-            decimal temp;
+            double temp;
             for (int j = 0; j < Columns; j++)
             {
                 temp = Values[row1, j];

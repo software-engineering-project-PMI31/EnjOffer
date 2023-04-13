@@ -14,19 +14,11 @@ namespace SeidelMethod
         public static DataTable CreateDataTableFromMatrix(Matrix matrix)
         {
             DataTable matrixTable = new DataTable();
-            matrixTable.Columns.Add(new DataColumn($"Iteration", typeof(decimal)));
-            for (int i = 1; i < matrix.Columns / 2; i++)
+
+            for (int i = 0; i < matrix.Columns; i++)
             {
-                matrixTable.Columns.Add(new DataColumn($"x{i}", typeof(decimal)));
+                matrixTable.Columns.Add(new DataColumn($"Column {i}", typeof(double)));
             }
-            for (int i = matrix.Columns / 2; i < matrix.Columns; i++)
-            {
-                matrixTable.Columns.Add(new DataColumn($"Delta x{i}", typeof(decimal)));
-            }
-            /*for (int i = 0; i < matrix.Columns; i++)
-            {
-                matrixTable.Columns.Add(new DataColumn($"Column {i}", typeof(decimal)));
-            }*/
 
             for (int i = 0; i < matrix.Rows; i++)
             {
@@ -44,7 +36,7 @@ namespace SeidelMethod
         public static DataTable CreateDataTableFromMatrix(Vector vector)
         {
             DataTable matrixTable = new DataTable();
-            matrixTable.Columns.Add(new DataColumn($"Column {1}", typeof(decimal)));
+            matrixTable.Columns.Add(new DataColumn($"Column {1}", typeof(double)));
 
             for (int i = 0; i < vector.Rows; i++)
             {

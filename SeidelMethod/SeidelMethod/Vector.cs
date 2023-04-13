@@ -15,7 +15,7 @@ namespace SeidelMethod
             Size = Rows;
         }
 
-        public Vector(decimal[,] matr) : base(matr)
+        public Vector(double[,] matr) : base(matr)
         {
             Size = matr.GetLength(0);
         }
@@ -29,7 +29,7 @@ namespace SeidelMethod
 
         public static Vector operator *(Vector a, Vector b)
         {
-            decimal[,] res = new decimal[a.Size, 1];
+            double[,] res = new double[a.Size, 1];
             if (a.Size == b.Size)
             {
                 for (int i = 0; i < a.Size; ++i)
@@ -51,7 +51,7 @@ namespace SeidelMethod
                 throw new ArgumentException("Vectors must have the same length");
             }
 
-            decimal[,] resultValues = new decimal[v1.Size, 1];
+            double[,] resultValues = new double[v1.Size, 1];
             for (int i = 0; i < v1.Size; i++)
             {
                 resultValues[i, 0] = v1.Values[i, 0] - v2.Values[i, 0];
