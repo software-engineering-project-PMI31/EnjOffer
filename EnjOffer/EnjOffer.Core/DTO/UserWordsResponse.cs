@@ -26,6 +26,7 @@ namespace EnjOffer.Core.DTO
             {
                 return false;
             }
+
             UserWordsResponse userWord_to_compare = (UserWordsResponse)obj;
             return UserWordId == userWord_to_compare.UserWordId &&
                 Word == userWord_to_compare.Word &&
@@ -33,7 +34,7 @@ namespace EnjOffer.Core.DTO
                 LastTimeEntered== userWord_to_compare.LastTimeEntered &&
                 CorrectEnteredCount == userWord_to_compare.CorrectEnteredCount &&
                 IncorrectEnteredCount == userWord_to_compare.IncorrectEnteredCount &&
-                Priority == userWord_to_compare.Priority &&
+                Math.Round(Priority, 6) == Math.Round(userWord_to_compare.Priority, 6) &&
                 UserId == userWord_to_compare.UserId;
         }
 

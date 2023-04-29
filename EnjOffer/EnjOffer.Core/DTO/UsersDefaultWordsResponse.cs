@@ -34,13 +34,25 @@ namespace EnjOffer.Core.DTO
                 LastTimeEntered == userDefaultWord_to_compare.LastTimeEntered &&
                 CorrectEnteredCount == userDefaultWord_to_compare.CorrectEnteredCount &&
                 IncorrectEnteredCount == userDefaultWord_to_compare.IncorrectEnteredCount &&
-                Priority == userDefaultWord_to_compare.Priority;
+                Math.Round(Priority, 6) == Math.Round(userDefaultWord_to_compare.Priority, 6);
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Major Bug", "S3249:Classes directly extending \"object\" should not call \"base\" in \"GetHashCode\" or \"Equals\"", Justification = "<Pending>")]
         public override int GetHashCode()
         {
             return base.GetHashCode();
+        }
+
+        public UsersDefaultWordsUpdateRequest ToUsersDefaultWordsWordsUpdateRequest()
+        {
+            return new UsersDefaultWordsUpdateRequest()
+            {
+                DefaultWordId = DefaultWordId,
+                UserId = UserId,
+                LastTimeEntered = LastTimeEntered,
+                CorrectEnteredCount = CorrectEnteredCount,
+                IncorrectEnteredCount = IncorrectEnteredCount
+            };
         }
 
     }
