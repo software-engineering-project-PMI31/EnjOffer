@@ -12,10 +12,10 @@ namespace EnjOffer.Core.ServiceContracts
         UsersDefaultWordsResponse AddUserDefaultWord(UsersDefaultWordsAddRequest? userDefaultWordAddRequest);
         List<UsersDefaultWordsResponse> GetAllUserDefaultWords();
         List<UsersDefaultWordsResponse> GetUserDefaultWordsByDate(DateTime? dateTime);
-        List<UsersDefaultWordsResponse> GetUserDefaultWordsSortedByPriority(List<UserWordsResponse> userDefaultWords);
-        UsersDefaultWordsResponse? GetUserDefaultWordById(Guid? userDefaultWordId);
-        UsersDefaultWordsResponse UpdateUserDefaultWord(UserWordsUpdateRequest? userWordsUpdateRequest);
+        List<UsersDefaultWordsResponse> GetUserDefaultWordsSortedByPriority(List<UsersDefaultWordsResponse> userDefaultWords);
+        UsersDefaultWordsResponse? GetUserDefaultWordById(Guid? defaultWordId, Guid? userId);
+        UsersDefaultWordsResponse UpdateUserDefaultWord(UsersDefaultWordsUpdateRequest? userWordsUpdateRequest);
         double GetPriority(DateTime? lastTimeEntered, int correctlyEntered, int incorrectlyEntererd);
-        bool DeleteUserDefaultWord(Guid? userWordId);
+        bool DeleteUserDefaultWord(Guid? defaultWordId, Guid? userId);
     }
 }

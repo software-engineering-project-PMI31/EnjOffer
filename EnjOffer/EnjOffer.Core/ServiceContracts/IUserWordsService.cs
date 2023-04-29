@@ -14,6 +14,7 @@ namespace EnjOffer.Core.ServiceContracts
         List<UserWordsResponse> GetUserWordsByDate(DateTime? dateTime);
         List<UserWordsResponse> GetUserWordsSortedByPriority(List<UserWordsResponse> userWords);
         UserWordsResponse? GetUserWordById(Guid? userWordId);
+        UserWordsResponse? GetUserWordToShow();
         UserWordsResponse UpdateUserWord(UserWordsUpdateRequest? userWordsUpdateRequest);
         double GetPriority(DateTime? lastTimeEntered, int correctlyEntered, int incorrectlyEntererd);
         bool DeleteUserWord(Guid? userWordId);

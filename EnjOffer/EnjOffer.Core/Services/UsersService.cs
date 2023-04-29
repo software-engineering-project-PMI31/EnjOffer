@@ -34,9 +34,8 @@ namespace EnjOffer.Core.Services
             }
 
             ValidationHelper.ModelValidation(userAddRequest);
-
-            if (_usersRepository.GetAllUsers().Any(temp => temp.Email == userAddRequest.Email && temp.Password == userAddRequest.Password &&
-            temp.Role == userAddRequest.Role))
+            
+            if (userAddRequest.Email is not null && _usersRepository.GetUserByEmail(userAddRequest.Email) is not null)
             {
                 throw new ArgumentException("This user already exists", nameof(userAddRequest));
             }
@@ -50,7 +49,7 @@ namespace EnjOffer.Core.Services
             //Add user to list
             _usersRepository.AddUser(user);
 
-            foreach (DefaultWords defaultWord in _defaultWordsRepository.GetAllDefaultWords())
+            /*foreach (DefaultWords defaultWord in _defaultWordsRepository.GetAllDefaultWords())
             {
                 UsersDefaultWords userDefaultWord = new UsersDefaultWords()
                 {
@@ -63,7 +62,7 @@ namespace EnjOffer.Core.Services
                 };
 
                 _usersDefaultWordsRepository.AddUserDefaultWord(userDefaultWord);
-            }
+            }*/
 
             //Convert the Users object into UserResponse type
             return user.ToUserResponse();
@@ -76,14 +75,14 @@ namespace EnjOffer.Core.Services
                 throw new ArgumentNullException(nameof(userId));
             }
 
-            Users? user = _usersRepository.GetAllUsers().FirstOrDefault(temp => temp.UserId == userId);
+            Users? user = _usersRepository.GetUserById(userId.Value);
 
             if (user is null)
             {
                 return false;
             }
 
-            _usersRepository.GetAllUsers().RemoveAll(temp => temp.UserId == userId);
+            _usersRepository.DeleteUser(userId.Value);
 
             return true;
         }
@@ -100,8 +99,12 @@ namespace EnjOffer.Core.Services
                 return null;
             }
 
-            Users? user_response_from_list = _usersRepository.GetAllUsers().FirstOrDefault
-                (temp => temp.UserId == userId);
+            Users? user_response_from_list = _usersRepository.GetUserById(userId.Value);
+
+            if (user_response_from_list is null)
+            {
+                return null;
+            }
 
             return user_response_from_list?.ToUserResponse() ?? null;
         }

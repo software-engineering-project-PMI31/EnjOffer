@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EnjOffer.Core.DTO;
 using EnjOffer.Core.ServiceContracts;
+using EnjOffer.Core.Domain.RepositoryContracts;
 using EnjOffer.Core.Domain.Entities;
 using EnjOffer.Core.Helpers;
 
@@ -12,14 +13,20 @@ namespace EnjOffer.Core.Services
 {
     public class DefaultWordsService : IDefaultWordsService
     {
-        private readonly List<DefaultWords> _defaultWords;
+        private readonly IDefaultWordsRepository _defaultWordsRepository;
+        /*private readonly IUsersRepository _usersRepository;
+        private readonly IUsersDefaultWordsRepository _usersDefaultWordsRepository;*/
+        /*private readonly List<DefaultWords> _defaultWords;
         private readonly List<UsersDefaultWords> _usersDefaultWords;
-        private readonly List<Users> _users;
-        public DefaultWordsService()
+        private readonly List<Users> _users;*/
+        public DefaultWordsService(IDefaultWordsRepository defaultWordsRepository)
         {
-            _defaultWords = new List<DefaultWords>();
+            _defaultWordsRepository = defaultWordsRepository;
+            /*_usersRepository = usersRepository;
+            _usersDefaultWordsRepository = usersDefaultWordsRepository;*/
+            /*_defaultWords = new List<DefaultWords>();
             _usersDefaultWords = new List<UsersDefaultWords>();
-            _users = new List<Users>();
+            _users = new List<Users>();*/
         } 
         public DefaultWordResponse AddDefaultWord(DefaultWordAddRequest? defaultWordAddRequest)
         {
@@ -31,8 +38,10 @@ namespace EnjOffer.Core.Services
 
             ValidationHelper.ModelValidation(defaultWordAddRequest);
 
-
-            if (_defaultWords.Any(temp => temp.Word == defaultWordAddRequest.Word && temp.WordTranslation == defaultWordAddRequest.WordTranslation))
+            if (defaultWordAddRequest.Word is not null &&
+                defaultWordAddRequest.WordTranslation is not null &&
+                _defaultWordsRepository.GetDefaultWordByWordAndTranslation(defaultWordAddRequest.Word,
+                defaultWordAddRequest.WordTranslation) is not null)
             {
                 throw new ArgumentException("This word and translation already exist", nameof(defaultWordAddRequest));
             }
@@ -44,9 +53,9 @@ namespace EnjOffer.Core.Services
             defaultWord.DefaultWordId = Guid.NewGuid();
 
             //Add default word into _defaultWords
-            _defaultWords.Add(defaultWord);
+            _defaultWordsRepository.AddDefaultWord(defaultWord);
 
-            foreach (Users user in _users)
+            /*foreach (Users user in _usersRepository.GetAllUsers())
             {
                 UsersDefaultWords userDefaultWord = new UsersDefaultWords()
                 {
@@ -58,15 +67,15 @@ namespace EnjOffer.Core.Services
 
                 };
 
-                _usersDefaultWords.Add(userDefaultWord);
-            }
+                _usersDefaultWordsRepository.GetAllUserDefaultWords().Add(userDefaultWord);
+            }*/
 
             return defaultWord.ToDefaultWordResponse();
         }
 
         public List<DefaultWordResponse> GetAllDefaultWords()
         {
-            return _defaultWords.Select(defaultWord => defaultWord.ToDefaultWordResponse()).ToList();
+            return _defaultWordsRepository.GetAllDefaultWords().Select(defaultWord => defaultWord.ToDefaultWordResponse()).ToList();
         }
 
         public DefaultWordResponse? GetDefaultWordById(Guid? defaultWordId)
@@ -76,8 +85,7 @@ namespace EnjOffer.Core.Services
                 return null;
             }
 
-            DefaultWords? defaultWord_response_from_list = _defaultWords.FirstOrDefault
-                (temp => temp.DefaultWordId == defaultWordId);
+            DefaultWords? defaultWord_response_from_list = _defaultWordsRepository.GetDefaultWordById(defaultWordId.Value);
 
             return defaultWord_response_from_list?.ToDefaultWordResponse() ?? null;
         }
@@ -89,14 +97,14 @@ namespace EnjOffer.Core.Services
                 throw new ArgumentNullException(nameof(defaultWordId));
             }
 
-            DefaultWords? defaultWord = _defaultWords.FirstOrDefault(temp => temp.DefaultWordId == defaultWordId);
+            DefaultWords? defaultWord = _defaultWordsRepository.GetDefaultWordById(defaultWordId.Value);
 
             if (defaultWord is null)
             {
                 return false;
             }
 
-            _defaultWords.RemoveAll(temp => temp.DefaultWordId == defaultWordId);
+            _defaultWordsRepository.DeleteDefaultWord(defaultWordId.Value);
 
             return true;
         }

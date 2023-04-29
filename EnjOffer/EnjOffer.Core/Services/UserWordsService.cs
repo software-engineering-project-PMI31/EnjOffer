@@ -10,16 +10,21 @@ namespace EnjOffer.Core.Services
     {
         private readonly IUserWordsRepository _userWordsRepository;
 
-        public UserWordsService(IUserWordsRepository userWords)
+        public UserWordsService(IUserWordsRepository userWordsRepository)
         {
-            _userWordsRepository = userWords;
+            _userWordsRepository = userWordsRepository;
         }
 
         public double GetPriority(DateTime? lastTimeEntered, int correctlyEntered, int incorrectlyEntererd)
         {
+            const double correctlyEnteredWeight = 0.9;
+            const double incorrectlyEnteredWeight = 0.1;
+            double decayRate = (lastTimeEntered is not null) &&
+                (DateTime.Now - ((DateTime)lastTimeEntered)).TotalHours > 200 ? 600 : 400;
+
             return (lastTimeEntered is not null)
-                ? (double)correctlyEntered / (incorrectlyEntererd +
-                correctlyEntered) * (1 - Math.Exp(-(double)(DateTime.Now - ((DateTime)lastTimeEntered)).TotalHours / 3))
+                ? ((double)correctlyEntered * correctlyEnteredWeight) / ((incorrectlyEntererd * incorrectlyEnteredWeight) +
+                (correctlyEntered * correctlyEnteredWeight)) * (1 - Math.Exp(-(DateTime.Now - ((DateTime)lastTimeEntered)).TotalHours / decayRate))
                 : 1;
         }
 
@@ -32,15 +37,15 @@ namespace EnjOffer.Core.Services
 
             ValidationHelper.ModelValidation(userWordAddRequest);
 
-            if (_userWordsRepository.GetAllUserWords().Any(temp => temp.Word == userWordAddRequest.Word &&
-            temp.WordTranslation == userWordAddRequest.WordTranslation &&
-            temp.UserId == userWordAddRequest.UserId))
+            if (userWordAddRequest.Word is not null &&
+                userWordAddRequest.WordTranslation is not null &&
+                _userWordsRepository.GetUserWordByWordAndTranslation(userWordAddRequest.Word, userWordAddRequest.WordTranslation) is not null)
             {
-                throw new ArgumentException("This user already exists", nameof(userWordAddRequest));
+                throw new ArgumentException("This word and translation already exist", nameof(userWordAddRequest));
             }
 
             //Convert userWordAddRequest to UserWords type
-            UserWords userWord = userWordAddRequest.ToUserWords();
+            UserWords? userWord = userWordAddRequest.ToUserWords();
 
             //Generate UserWordId
             userWord.UserWordId = Guid.NewGuid();
@@ -93,16 +98,7 @@ namespace EnjOffer.Core.Services
 
         public List<UserWordsResponse> GetUserWordsByDate(DateTime? dateTime)
         {
-            /*if (dateTime is null)
-            {
-                *//*return _userWordsRepository.GetAllUserWords().Select(temp => temp.ToUserWordsResponse(this))
-                    .Where(temp => temp.LastTimeEntered is null).ToList();*//*
-               
-            }*/
             return _userWordsRepository.GetUserWordsByDate(dateTime).Select(temp => temp.ToUserWordsResponse(this)).ToList();
-            /*return _userWordsRepository.GetAllUserWords().Select(temp => temp.ToUserWordsResponse(this))
-                .Where(temp => temp.LastTimeEntered is not null &&
-                temp.LastTimeEntered.Value.Date == dateTime.Value.Date).ToList();*/
         }
 
         public UserWordsResponse UpdateUserWord(UserWordsUpdateRequest? userWordsUpdateRequest)
@@ -135,6 +131,14 @@ namespace EnjOffer.Core.Services
         public List<UserWordsResponse> GetUserWordsSortedByPriority(List<UserWordsResponse> userWords)
         {
             return userWords.OrderByDescending(temp => temp.Priority).ToList();
+        }
+
+        public UserWordsResponse? GetUserWordToShow()
+        {
+            List<UserWordsResponse> userWords = 
+                _userWordsRepository.GetAllUserWords().Select(userWord => userWord.ToUserWordsResponse(this)).ToList();
+
+            return userWords.OrderByDescending(temp => temp.Priority).ElementAt(0);
         }
     }
 }
