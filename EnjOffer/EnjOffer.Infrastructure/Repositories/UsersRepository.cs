@@ -19,7 +19,7 @@ namespace EnjOffer.Infrastructure.Repositories
 
         public Users AddUser(Users user)
         {
-            _db.Users!.Add(user);
+            _db.Users.Add(user);
             _db.SaveChanges();
 
             return user;
@@ -27,20 +27,25 @@ namespace EnjOffer.Infrastructure.Repositories
 
         public List<Users> GetAllUsers()
         {
-            return _db.Users!.ToList();
+            return _db.Users.ToList();
         }
 
-        public Users GetUserById(Guid userId)
+        public Users? GetUserById(Guid userId)
         {
-            return _db.Users!.FirstOrDefault(temp => temp.UserId == userId)!;
+            return _db.Users.FirstOrDefault(temp => temp.UserId == userId);
         }
 
         public bool DeleteUser(Guid userId)
         {
-            _db.Users!.RemoveRange(_db.Users.Where(temp => temp.UserId == userId));
+            _db.Users.RemoveRange(_db.Users.Where(temp => temp.UserId == userId));
             int rowsDeleted = _db.SaveChanges();
 
             return rowsDeleted > 0;
+        }
+
+        public Users? GetUserByEmail(string email)
+        {
+            return _db.Users.FirstOrDefault(temp => temp.Email == email);
         }
     }
 }
