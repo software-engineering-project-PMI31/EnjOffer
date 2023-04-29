@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    ViewBag.Title = "Personal cabinet";
+}
+
+@*<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,8 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/admin-panel.css">
     <title>Document</title>
-</head>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>*@
+
+@*<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     function formInteraction() {
         const button = document.querySelector('.form-button');
@@ -33,9 +39,9 @@
             ? (removeWord.disabled = false)
             : (removeWord.disabled = true)
     }
-</script>
+</script>*@
 
-<body>
+@*<body>*@
     <main class="admin-panel">
         <div class="admin-panel__header">
             <h1 class="admin-panel__header__text">
@@ -150,9 +156,9 @@
             </div>
         </div>
     </main>
-</body>
+@*</body>*@
 
-</html>
+@*</html>*@
 <script>
     @Html.Raw(@"const ctx = document.getElementById('myChart')?.getContext('2d');
     const myChart = new Chart(ctx, {

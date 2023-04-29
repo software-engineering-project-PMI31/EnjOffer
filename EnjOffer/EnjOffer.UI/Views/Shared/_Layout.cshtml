@@ -5,186 +5,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="book-reader.css">
-    <title>Document</title>
+    
+    
+    <link rel="stylesheet" href="~/admin-panel.css">
+    <title>@ViewBag.Title</title>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+   @Html.Raw(@"function formInteraction() {
+        const button = document.querySelector('.form-button');
+        if (button.innerHTML === 'Open form') {
+            button.innerHTML = 'Close form';
+        } else {
+            button.innerHTML = 'Open form';
+        }
+    }
+
+    function canDelete() {
+        const checkAccount = document.getElementById('check-for-delete-account');
+        const checkWord = document.getElementById('check-for-delete-word');
+        const removeAccount = document.getElementById('remove-account-button');
+        const removeWord = document.getElementById('remove-word-button');
+
+        removeAccount && checkAccount.checked
+            ? (removeAccount.disabled = false)
+            : (removeAccount.disabled = true)
+
+        removeWord && checkWord.checked
+            ? (removeWord.disabled = false)
+            : (removeWord.disabled = true)
+    }
+
+    function setSelected() {
+        const ids = ['sidebar__personal-account', 'sidebar__word-trainer', 'sidebar__library'];
+
+       const elementId = event.target.parentElement.id;
+       const element = document.getElementById(elementId);
+       
+       ids.forEach(id => {
+        if (id === elementId) {
+            // element.style.backgroundColor = '#e8e8e8';
+            document.getElementById(id).style.backgroundColor = '#e8e8e8';
+        } else {
+            document.getElementById(id).style.backgroundColor = 'white';
+        }
+       })
+    }");
+</script>
+
 <body>
-    <main class="book-reader">
-        <div class="book-reader__header">
-            <h1 class="book-reader__header__text">
-                Word trainer
-            </h1>
-        </div>
-        <div class="book-reader__main">
-            <div class="book-chapter">
-                <h1>Chapter</h1>
+<div class="container">
+    <aside class="sidebar">
+            <div class="sidebar__item" id="sidebar__personal-account" onclick="setSelected()" style="background-color: #e8e8e8;">
+                <h2 class="sidebar__item-content"><a href="/">Personal account</a></h2>
             </div>
-            <div class="book-actions">
-                <p class="book-text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae tempora facere
-                    explicabo autem fugit, dolores saepe doloribus at commodi quisquam aperiam, expedita aliquid
-                    ratione, sunt quas officiis iure. Laboriosam, quisquam.
-                    Minus nostrum inventore optio, veritatis dolores quibusdam aperiam assumenda eum excepturi neque
-                    nihil voluptatibus necessitatibus omnis dicta saepe quasi eaque dolor enim debitis labore quo!
-                    Corrupti labore quidem laborum deserunt!
-                    Praesentium consequatur itaque at omnis libero laborum, atque dolor quibusdam optio, eos voluptate
-                    blanditiis ab, mollitia maxime voluptatibus delectus similique nemo! Iure pariatur placeat in
-                    aperiam! A nostrum odio molestiae.
-                    Quae esse distinctio, at repellat veniam officiis? Provident repudiandae tempora vero, tempore
-                    maiores alias commodi omnis reiciendis ab, dolorem harum est voluptates modi atque consequuntur
-                    pariatur totam, porro sint cum.
-                    Veniam maiores laboriosam eius expedita dolores. Ipsum nemo adipisci repellendus earum neque impedit
-                    voluptas eveniet doloribus, aspernatur quis dicta perspiciatis ipsam beatae, asperiores voluptates
-                    facere aliquid ab placeat? Reiciendis, beatae.
-                    Facilis eum numquam voluptatibus neque tempora beatae quod, quae recusandae eaque quo, totam
-                    cupiditate accusantium doloremque. Ipsum cum repellendus aliquid veniam, maxime maiores voluptatem
-                    explicabo minus ad nostrum neque cupiditate.
-                    Consequuntur voluptatum itaque totam id ut similique minima, corrupti nam! Maxime temporibus est
-                    incidunt suscipit doloremque distinctio, esse magnam, unde nostrum officia similique? Corrupti velit
-                    vitae voluptate cupiditate, neque explicabo?
-                    Fuga perspiciatis doloremque vel beatae doloribus quidem commodi tenetur eum cum est deleniti amet,
-                    harum mollitia, fugiat ad id quo aperiam? Laboriosam ratione suscipit, itaque obcaecati quidem ipsum
-                    nulla vero.
-                    Modi dignissimos quo suscipit eum. Minima nesciunt, omnis in perspiciatis maxime ea aut expedita
-                    repudiandae esse cum quis molestiae magnam nisi iusto earum porro cumque eum totam eius est numquam?
-                    Nihil voluptatibus consectetur voluptates? Non soluta nulla quod saepe voluptates, sit ea earum
-                    quia, labore commodi eius, suscipit culpa velit odit. Ullam expedita aspernatur repudiandae laborum
-                    porro eos esse ab?
-                    Quas sapiente ipsam atque optio, et tempore ad voluptatum excepturi vitae dicta, aspernatur quia
-                    doloremque qui reiciendis tenetur ipsa error neque molestiae? Nihil consectetur vel ullam beatae
-                    tempore explicabo maiores.
-                    Saepe consectetur quibusdam ad ipsum itaque ex, eveniet cumque dolorum magnam amet eaque incidunt
-                    rerum consequuntur quaerat! Porro, ullam. Nostrum dignissimos cupiditate ab culpa veritatis eos.
-                    Ratione laborum eius ea?
-                    Nihil, alias! Tempore quod voluptatum ab iusto quibusdam voluptatibus quaerat numquam nobis
-                    blanditiis suscipit saepe accusamus molestias sapiente, consectetur cum dolores illum repudiandae
-                    fugit eum. Ipsam, vero. Totam, eaque nam!
-                    Ex repellendus quae fugit harum tenetur itaque, deleniti autem atque vero sint, ipsa dolorum in, non
-                    eveniet est officia qui quos modi? Libero quam suscipit nobis recusandae soluta corporis ad?
-                    Molestias quidem suscipit voluptas sequi a? Accusamus voluptates aliquid tenetur neque quam sunt
-                    explicabo veniam perspiciatis. Esse asperiores neque fugit quisquam a, vitae ullam id ex
-                    reprehenderit, laborum, voluptates mollitia?
-                    Qui quis placeat minus, repellat accusamus quaerat cumque distinctio. Aut consequatur corrupti iusto
-                    ullam! Ab dicta totam voluptate beatae, amet ullam voluptatibus molestias, ducimus optio enim
-                    laborum officiis, necessitatibus eveniet.
-                    Incidunt, laboriosam sunt itaque placeat natus impedit nostrum. Quidem omnis reiciendis soluta
-                    cumque vel ratione dolorem laudantium aut. Sed quas soluta incidunt odio eos vel ipsam perferendis
-                    eum modi deleniti!
-                    Hic incidunt cupiditate libero laborum quaerat impedit quia laboriosam dignissimos unde est repellat
-                    nihil a, accusantium similique fuga deserunt, accusamus ab ea! Dignissimos esse praesentium suscipit
-                    beatae nobis quam neque?
-                    Dolores ipsam quam modi facere? Quia in iure culpa aliquid nisi ea voluptate. Quae libero eos
-                    voluptates perspiciatis, unde, officiis maxime obcaecati doloribus a consequuntur vitae est facere
-                    excepturi provident.
-                    Maiores dolores sint nemo numquam excepturi aliquam harum, adipisci architecto eveniet minus odit
-                    earum, quas ad facilis reiciendis magni sequi nisi sunt nesciunt perferendis perspiciatis. Quas iure
-                    velit nisi perspiciatis?
-                    Excepturi enim vel consequuntur modi esse sint numquam aspernatur quibusdam alias earum maxime
-                    distinctio laboriosam, voluptatum consectetur. Dicta, provident sed quasi molestias magni
-                    praesentium quae laudantium, reprehenderit labore corrupti voluptatem.
-                    Quasi, perspiciatis illo architecto reprehenderit aspernatur expedita sequi doloribus vero error
-                    dolorem, itaque officia autem excepturi eum, quas quisquam ad adipisci deserunt sed aut. Adipisci at
-                    in necessitatibus unde quisquam.
-                    Labore vero eligendi odit facere ut eum recusandae inventore nam corporis, totam quisquam itaque
-                    beatae sint tenetur, excepturi placeat qui! Quasi et beatae, illo labore officia excepturi? Autem,
-                    ab veniam.
-                    Consectetur commodi, aut cumque quam, ut laborum maiores dolore esse provident laudantium veritatis
-                    officiis. Maxime atque, veniam possimus esse provident corrupti perferendis autem? Similique
-                    aspernatur quis voluptatum, qui praesentium ab!
-                    Voluptatum sed commodi ut quasi omnis officia qui cupiditate sit numquam tempore. Incidunt vel
-                    assumenda eaque minima dolorem dolore enim, eveniet nulla, est sint numquam rem molestiae, aliquid
-                    magni dignissimos.
-                    Quisquam, expedita temporibus molestias fugiat exercitationem laboriosam aperiam blanditiis
-                    perferendis sit. Illo eaque dolores magnam cum assumenda ullam nostrum vel blanditiis quas ratione,
-                    pariatur quidem distinctio veniam, ea quam perspiciatis!
-                    Harum repudiandae animi fugit esse autem obcaecati nihil maiores nam. Deleniti, sapiente pariatur et
-                    veniam laudantium praesentium tempore amet illo doloribus enim nesciunt mollitia facere tenetur ad
-                    ipsa recusandae. Dolores.
-                    Quisquam, debitis maxime laudantium sapiente quod excepturi rem tempora iure eaque ipsum saepe
-                    soluta fugiat, nemo perspiciatis sint nulla placeat quo facere eum voluptatum quos incidunt? Atque
-                    maiores ad exercitationem!
-                    Ipsum distinctio officia, debitis necessitatibus maxime libero vel facilis. Veniam neque ullam minus
-                    necessitatibus ducimus corporis consequuntur. Aliquid perspiciatis quo quos! Totam magni neque ipsa
-                    labore maxime quidem tenetur aliquid!
-                    Numquam eaque quas placeat libero itaque consequatur quidem, facilis ratione porro dolorem qui.
-                    Nesciunt ipsum vero debitis tempore, ipsa soluta quasi voluptate eveniet inventore rem adipisci
-                    corporis repellendus doloribus molestias.
-                    Culpa velit voluptatum esse, quos minima deleniti reiciendis porro tempora asperiores sapiente iusto
-                    quo, sint alias maxime laborum sunt quisquam sed totam debitis cum fuga aspernatur similique?
-                    Possimus, atque accusantium!
-                    Officiis asperiores, culpa, reiciendis eaque quisquam porro quos fugiat quam eveniet consectetur
-                    animi exercitationem! Expedita ab quia molestiae. Deleniti expedita ratione cumque magni vitae, quod
-                    et unde sed aperiam quam?
-                    Aut culpa unde, minima asperiores omnis deserunt! Placeat, inventore blanditiis. Quasi modi non a,
-                    quibusdam quos obcaecati porro voluptas quisquam aliquam quo laborum quam, placeat molestiae est
-                    perspiciatis nostrum incidunt!
-                    Error, fugit rem! Eaque perspiciatis unde repudiandae, tempore eveniet molestiae blanditiis facilis
-                    voluptas corrupti reprehenderit at excepturi quis praesentium cum? Laboriosam animi maxime nobis
-                    ratione iure dignissimos fugiat architecto ab.
-                    Sequi deserunt error similique alias, omnis sed deleniti at voluptatibus distinctio reprehenderit
-                    repellendus. Sit explicabo iste praesentium, repellat temporibus officiis facilis, magnam id fugiat
-                    saepe consectetur quae eum maxime placeat.
-                    Error veritatis sunt animi dicta cupiditate esse, earum corrupti architecto nisi sit, quasi soluta
-                    aut officia debitis eius incidunt perferendis consequuntur eos mollitia molestiae consequatur illum
-                    vel modi? Labore, repudiandae?
-                    Omnis tempora adipisci beatae unde, tenetur minima, quo rem sequi placeat eaque obcaecati iure aut
-                    dolores reiciendis iste nemo dolore vel minus nesciunt cumque officiis natus a ducimus. Inventore,
-                    facere.
-                    Iste aliquid veritatis sed deserunt dolorem odio repudiandae nulla exercitationem ipsam labore dicta
-                    distinctio provident numquam quas, doloribus voluptatum! Animi similique cupiditate id, repellat
-                    mollitia voluptatibus facilis consequuntur nihil debitis.
-                    Deleniti inventore id vel dolores molestiae omnis repellat veritatis ea eveniet culpa, rerum
-                    tempora, ullam ab voluptates at nobis porro asperiores quos! Eius facilis harum dolorem molestias
-                    laudantium, facere cum?
-                    Nihil inventore magni nesciunt asperiores mollitia cum enim blanditiis praesentium at, tenetur illum
-                    modi repudiandae quia in aspernatur quas dolore quis! Voluptate nemo sapiente eveniet maiores natus
-                    delectus doloremque suscipit.
-                    Error soluta sit vel recusandae sunt quas autem reiciendis, doloribus aut aliquid culpa iste
-                    architecto molestiae est molestias. Ipsum rem saepe, at eligendi exercitationem vero doloremque
-                    neque aperiam veritatis eius!
-                    Officiis eum ab id et, ipsum optio consequatur atque aspernatur saepe voluptate vitae illo, quam sed
-                    repudiandae reiciendis impedit rem, laudantium dolor dicta perspiciatis iure animi enim nostrum!
-                    Quibusdam, magnam?
-                    Eligendi qui tempora neque fuga corrupti tempore assumenda facere a laudantium fugiat nobis ratione
-                    quos magni, quam minima rerum sequi aspernatur similique. Magni officia ut quam fugiat labore
-                    ratione dolor.
-                    Odit reiciendis magnam ducimus sit tenetur maiores, a, quas vel quo hic ea quisquam ipsum? Numquam
-                    perspiciatis tempora repellat labore? Eius perferendis saepe libero cum aperiam vitae possimus quos
-                    enim?
-                    Quia deleniti corrupti quibusdam ipsa quasi excepturi dolores quae, maiores eum velit culpa?
-                    Voluptate reiciendis, architecto commodi quibusdam odio, harum accusantium iste cum molestias quae
-                    nostrum delectus nam natus eaque.
-                    Suscipit quaerat aliquam ipsa, ea cum, perspiciatis quis expedita dignissimos, necessitatibus esse
-                    sunt voluptas architecto excepturi? Dignissimos neque, laudantium tempore libero dolorem omnis,
-                    molestiae hic maxime labore cupiditate officia consequuntur.
-                    Aliquid ipsa accusamus ullam quos, quisquam nisi iusto consequuntur asperiores vel ad amet explicabo
-                    delectus, neque voluptates iure culpa distinctio temporibus rerum ut inventore qui! Magni facilis
-                    aperiam architecto et!
-                    Voluptates nostrum reprehenderit vero quam corporis, expedita possimus praesentium ipsam et rem
-                    ullam saepe deleniti quisquam recusandae, natus reiciendis laborum sunt dolor accusantium harum unde
-                    veritatis. Illo laboriosam natus ea?
-                    Dicta esse cumque quaerat, provident autem expedita ducimus commodi eligendi architecto. Nihil
-                    quibusdam facere pariatur dolore, veritatis voluptas deleniti voluptatibus magnam blanditiis eius
-                    minima fugit perspiciatis unde commodi quaerat culpa.
-                    Laudantium veniam voluptatum, eum facilis ad cum odio harum animi architecto voluptates quo quas,
-                    ratione voluptatem totam labore dolorem officiis temporibus. Eius nisi unde sint cupiditate
-                    voluptate, mollitia cumque iure.
-                </p>
-                <div class="book-modal">
-                    <div class="book-modal__header">
-                        <h3>Add your own word or phrase</h3>
-                    </div>
-                    <div class="book-modal__main">
-                        <form class="book-modal__form">
-                            <input type="text" placeholder="Word" class="form-input"/>
-                            <input type="text" placeholder="Translation" class="form-input"/>
-                            <p class="form-button">Add to dictionary</p>
-                        </form>
-                    </div>
-                </div>
+            <div class="sidebar__item" id="sidebar__word-trainer" onclick="setSelected()">
+                <h2 class="sidebar__item-content"><a href="/word-trainer">Word Trainer</a></h2>
             </div>
-        </div>
-    </main>
+            <div class="sidebar__item" id="sidebar__library" onclick="setSelected()">
+                <h2 class="sidebar__item-content"><a href="/library">Library</a></h2>
+            </div>
+        </aside>
+
+        @RenderBody();
+    </div>
 </body>
 
 </html>
+<script>
+    @Html.Raw(@"const ctx = document.getElementById('myChart')?.getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [{
+                label: `Quantity`,
+                data: [12, 19, 3, 5, 2, 3, 7],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+    });");
+</script>

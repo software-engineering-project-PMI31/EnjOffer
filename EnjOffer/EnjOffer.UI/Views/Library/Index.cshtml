@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewBag.Title = "Library";
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +13,7 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="~/library.css">
-    <title>Document</title>
+    <title>@ViewBag.Title</title>
 </head>
 <script>
     @Html.Raw(@"$(document).ready(function () {

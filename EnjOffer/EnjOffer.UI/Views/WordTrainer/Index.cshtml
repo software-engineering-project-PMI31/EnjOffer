@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewBag.Title = "Word trainer";
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/word-trainer.css">
-    <title>Document</title>
+    <title>@ViewBag.Title</title>
 </head>
 <script>
     @Html.Raw(@"function addWord() {
