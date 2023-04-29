@@ -5,19 +5,32 @@ using System;
 using EnjOffer.Core.Services;
 using System.Collections.Generic;
 using AutoFixture;
+using EnjOffer.Core.Domain.RepositoryContracts;
+using Moq;
+using EnjOffer.Core.Domain.Entities;
+using System.Linq;
 
 namespace UnitTests
 {
     public class DefaultWordsServiceTest
     {
+        /*private readonly IDefaultWordsService _defaultWordsService;*/
+        private readonly Mock<IDefaultWordsRepository> _defaultWordsRepositoryMock;
+        private readonly IDefaultWordsRepository _defaultWordsRepository;
         private readonly IDefaultWordsService _defaultWordsService;
+
         private readonly IFixture _fixture;
 
         //TO-DO: Avoid the Service Locator Anti-Pattern here. Use Dependency Injection
         public DefaultWordsServiceTest()
         {
-            _defaultWordsService = new DefaultWordsService();
+            /*_defaultWordsService = new DefaultWordsService();*/
             _fixture = new Fixture();
+
+            _defaultWordsRepositoryMock = new Mock<IDefaultWordsRepository>();
+            _defaultWordsRepository = _defaultWordsRepositoryMock.Object;
+
+            _defaultWordsService = new DefaultWordsService(_defaultWordsRepository);
         }
 
         #region AddDefaultWord
@@ -26,6 +39,12 @@ namespace UnitTests
         {
             //Arrange
             DefaultWordAddRequest? request = null;
+            DefaultWords defaultWord = _fixture.Build<DefaultWords>()
+                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .Create();
+
+            _defaultWordsRepositoryMock.Setup(temp => temp.AddDefaultWord(It.IsAny<DefaultWords>())).Returns(defaultWord);
 
             //Assert
             Assert.Throws<ArgumentNullException>(() =>
@@ -43,6 +62,13 @@ namespace UnitTests
                 Build<DefaultWordAddRequest>()
                 .With(temp => temp.Word, null as string).Create();
 
+            DefaultWords defaultWord = _fixture.Build<DefaultWords>()
+                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .Create();
+
+            _defaultWordsRepositoryMock.Setup(temp => temp.AddDefaultWord(It.IsAny<DefaultWords>())).Returns(defaultWord);
+
             //Assert
             Assert.Throws<ArgumentException>(() =>
             {
@@ -58,6 +84,13 @@ namespace UnitTests
             DefaultWordAddRequest? request = _fixture.
                 Build<DefaultWordAddRequest>()
                 .With(temp => temp.WordTranslation, null as string).Create();
+
+            DefaultWords defaultWord = _fixture.Build<DefaultWords>()
+                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .Create();
+
+            _defaultWordsRepositoryMock.Setup(temp => temp.AddDefaultWord(It.IsAny<DefaultWords>())).Returns(defaultWord);
 
             //Assert
             Assert.Throws<ArgumentException>(() =>
@@ -84,11 +117,16 @@ namespace UnitTests
                 ImageSrc = "imgNotFound.png"
             };
 
+            DefaultWords first_defaultWord = request1.ToDefaultWords();
+
+            _defaultWordsRepositoryMock.SetupSequence(temp => temp.AddDefaultWord(It.IsAny<DefaultWords>()))
+                .Throws(new ArgumentException("The defaultWord with such word and translation already exist"))
+                .Returns(first_defaultWord);
+
             //Assert
             Assert.Throws<ArgumentException>(() =>
             {
                 // Act
-                _defaultWordsService.AddDefaultWord(request1);
                 _defaultWordsService.AddDefaultWord(request2);
             });
         }
@@ -98,15 +136,23 @@ namespace UnitTests
         {
             //Arrange
             DefaultWordAddRequest? request = _fixture.Create<DefaultWordAddRequest>();
+            DefaultWords defaultWord = request.ToDefaultWords();
+            DefaultWordResponse defaultWord_response = defaultWord.ToDefaultWordResponse();
+
+            _defaultWordsRepositoryMock.Setup(temp => temp.AddDefaultWord(It.IsAny<DefaultWords>()))
+                .Returns(defaultWord);
 
             //Act
-            DefaultWordResponse response = _defaultWordsService.AddDefaultWord(request);
-            List<DefaultWordResponse> defaultWords_from_GetAllDefaultWords = _defaultWordsService.GetAllDefaultWords();
+            DefaultWordResponse defaultWords_response_from_add = _defaultWordsService.AddDefaultWord(request);
+            
+            defaultWord.DefaultWordId = defaultWords_response_from_add.DefaultWordId;
+            defaultWord_response.DefaultWordId = defaultWords_response_from_add.DefaultWordId;
 
             //Assert
-            Assert.True(response.DefaultWordId != Guid.Empty);
-            Assert.Contains(response, defaultWords_from_GetAllDefaultWords);
+            Assert.True(defaultWords_response_from_add.DefaultWordId != Guid.Empty);
+            Assert.Equal(defaultWords_response_from_add, defaultWord_response);
         }
+
         #endregion
 
         #region GetAllDefaultWords
@@ -114,6 +160,10 @@ namespace UnitTests
         [Fact]
         public void GetAllDefaultWords_EmptyList()
         {
+            //Arrange
+            List<DefaultWords> defaultWords = new List<DefaultWords>();
+            _defaultWordsRepositoryMock.Setup(temp => temp.GetAllDefaultWords()).Returns(defaultWords);
+
             //Act
             List<DefaultWordResponse> actual_defaultWords_response_list = _defaultWordsService.GetAllDefaultWords();
 
@@ -125,26 +175,29 @@ namespace UnitTests
         public void GetAllDefaultWords_AddFewDefaultWords()
         {
             //Arrange
-            List<DefaultWordAddRequest> defaultWords_request_list = new List<DefaultWordAddRequest>()
+            List<DefaultWords> defaultWords_list = new List<DefaultWords>()
             {
-                _fixture.Create<DefaultWordAddRequest>(),
-                _fixture.Create<DefaultWordAddRequest>()
+                _fixture.Build<DefaultWords>()
+                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .Create(),
+
+                _fixture.Build<DefaultWords>()
+                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .Create()
             };
 
-            //Act
-            List<DefaultWordResponse> defaultWords_list_from_add_defaultWord = new List<DefaultWordResponse>();
-            foreach (DefaultWordAddRequest defaultWord_request in defaultWords_request_list)
-            {
-                defaultWords_list_from_add_defaultWord.Add(_defaultWordsService.AddDefaultWord(defaultWord_request));
-            }
+            List<DefaultWordResponse> defaultWords_response_list = defaultWords_list
+                .Select(temp => temp.ToDefaultWordResponse()).ToList();
 
-            List<DefaultWordResponse> actualDefaultWordsResponseList = _defaultWordsService.GetAllDefaultWords();
+            _defaultWordsRepositoryMock.Setup(temp => temp.GetAllDefaultWords()).Returns(defaultWords_list);
+
+            //Act
+            List<DefaultWordResponse> actual_defaultWords_response_list = _defaultWordsService.GetAllDefaultWords();
 
             //Assert
-            foreach (DefaultWordResponse expected_defaultWord in defaultWords_list_from_add_defaultWord)
-            {
-                Assert.Contains(expected_defaultWord, actualDefaultWordsResponseList);
-            }
+            Assert.Equal(defaultWords_response_list, actual_defaultWords_response_list);
         }
 
         #endregion
@@ -156,7 +209,7 @@ namespace UnitTests
         {
             //Arrange
             Guid? defaultWordId = null;
-            
+
             //Act
             DefaultWordResponse? defaultWord_response_from_get_method = 
                 _defaultWordsService.GetDefaultWordById(defaultWordId);
@@ -168,16 +221,21 @@ namespace UnitTests
         [Fact]
         public void GetDefaultWordById_ValidDefaultWordId()
         {
-            //Arrange
-            DefaultWordAddRequest? defaultWord_add_request = _fixture.Create<DefaultWordAddRequest>();
-            DefaultWordResponse defaultWord_response_from_add = _defaultWordsService.AddDefaultWord(defaultWord_add_request);
+            //Arrange          
+            DefaultWords defaultWord = _fixture.Build<DefaultWords>()
+                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .Create();
+
+            DefaultWordResponse defaultWord_response_expected = defaultWord.ToDefaultWordResponse();
+            _defaultWordsRepositoryMock.Setup(temp => temp.GetDefaultWordById(It.IsAny<Guid>())).Returns(defaultWord);
 
             //Act
             DefaultWordResponse? defaultWord_from_get = _defaultWordsService.GetDefaultWordById
-                (defaultWord_response_from_add.DefaultWordId);
+                (defaultWord.DefaultWordId);
 
             //Assert
-            Assert.Equal(defaultWord_response_from_add, defaultWord_from_get);
+            Assert.Equal(defaultWord_response_expected, defaultWord_from_get);
         }
 
         #endregion
@@ -188,11 +246,16 @@ namespace UnitTests
         public void DeleteDefaultWord_ValidId()
         {
             //Arrange
-            DefaultWordAddRequest defaultWord_add_request = _fixture.Create<DefaultWordAddRequest>();
-            DefaultWordResponse defaultWord_response_from_add = _defaultWordsService.AddDefaultWord(defaultWord_add_request);
+            DefaultWords defaultWord = _fixture.Build<DefaultWords>()
+                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .Create();
+
+            _defaultWordsRepositoryMock.Setup(temp => temp.DeleteDefaultWord(It.IsAny<Guid>())).Returns(true);
+            _defaultWordsRepositoryMock.Setup(temp => temp.GetDefaultWordById(It.IsAny<Guid>())).Returns(defaultWord);
 
             //Act
-            bool isDeleted = _defaultWordsService.DeleteDefaultWord(defaultWord_response_from_add.DefaultWordId);
+            bool isDeleted = _defaultWordsService.DeleteDefaultWord(defaultWord.DefaultWordId);
 
             //Assert
             Assert.True(isDeleted);

@@ -13,12 +13,22 @@ using Moq;
 using EnjOffer.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using AutoFixture;
+using EnjOffer.Core.Domain.RepositoryContracts;
 
 namespace UnitTests
 {
     public class UsersServiceTest
     {
+        private readonly Mock<IUsersRepository> _usersRepositoryMock;
+        private readonly IUsersRepository _usersRepository;
         private readonly IUsersService _usersService;
+
+        private readonly Mock<IDefaultWordsRepository> _defaultWordsRepositoryMock;
+        private readonly IDefaultWordsRepository _defaultWordsRepository;
+
+        private readonly Mock<IUsersDefaultWordsRepository> _usersDefaultWordsRepositoryMock;
+        private readonly IUsersDefaultWordsRepository _usersDefaultWordsRepository;
+
         private readonly IFixture _fixture;
 
         //TO-DO: Avoid the Service Locator Anti-Pattern here. Use Dependency Injection
@@ -26,14 +36,23 @@ namespace UnitTests
         {
             _fixture = new Fixture();
 
-            var usersInitialData = new List<Users>();
+            _usersRepositoryMock = new Mock<IUsersRepository>();
+            _usersRepository = _usersRepositoryMock.Object;
+
+            _defaultWordsRepositoryMock = new Mock<IDefaultWordsRepository>();
+            _defaultWordsRepository = _defaultWordsRepositoryMock.Object;
+
+            _usersDefaultWordsRepositoryMock = new Mock<IUsersDefaultWordsRepository>();
+            _usersDefaultWordsRepository = _usersDefaultWordsRepositoryMock.Object;
+
+            /*var usersInitialData = new List<Users>();
             DbContextMock<EnjOfferDbContext> dbContextMock =
                 new DbContextMock<EnjOfferDbContext>(new DbContextOptionsBuilder<EnjOfferDbContext>().Options);
 
             EnjOfferDbContext dbContext = dbContextMock.Object;
-            dbContextMock.CreateDbSetMock(temp => temp.Users, usersInitialData);
+            dbContextMock.CreateDbSetMock(temp => temp.Users, usersInitialData);*/
 
-            _usersService = new UsersService(null, null, null);
+            _usersService = new UsersService(_usersRepository, _defaultWordsRepository, _usersDefaultWordsRepository);
         }
 
         #region AddUser
@@ -43,6 +62,16 @@ namespace UnitTests
         {
             //Arrange
             UserAddRequest? request = null;
+
+            Users user = _fixture.Build<Users>()
+                .With(temp => temp.DefaultWords, null as ICollection<DefaultWords>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .With(temp => temp.UserStatistics, null as ICollection<UserStatistics>)
+                .With(temp => temp.UserWords, null as ICollection<UserWords>)
+                .Create();
+
+            _usersRepositoryMock.Setup(temp => temp.AddUser(It.IsAny<Users>()))
+                .Returns(user);
 
             //Assert
             Assert.Throws<ArgumentNullException>(() =>
@@ -57,6 +86,16 @@ namespace UnitTests
         {
             //Arrange
             UserAddRequest? request = _fixture.Build<UserAddRequest>().With(temp => temp.Email, null as string).Create();
+
+            Users user = _fixture.Build<Users>()
+                .With(temp => temp.DefaultWords, null as ICollection<DefaultWords>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .With(temp => temp.UserStatistics, null as ICollection<UserStatistics>)
+                .With(temp => temp.UserWords, null as ICollection<UserWords>)
+                .Create();
+
+            _usersRepositoryMock.Setup(temp => temp.AddUser(It.IsAny<Users>()))
+                .Returns(user);
 
             //Assert
             Assert.Throws<ArgumentException>(() =>
@@ -83,11 +122,21 @@ namespace UnitTests
                 Role = EnjOffer.Core.Enums.UserRole.Admin
             };
 
+            Users first_user = request1.ToUser();
+
+            /*_usersRepositoryMock.SetupSequence(temp => temp.AddUser(It.IsAny<Users>()))
+                .Returns(first_user)
+                .Throws<ArgumentException>();*/
+
+            _usersRepositoryMock.SetupSequence(temp => temp.AddUser(It.IsAny<Users>()))
+                .Throws(new ArgumentException("User with same email already exists"))
+                .Returns(first_user);
+
+
             //Assert
             Assert.Throws<ArgumentException>(() =>
             {
                 // Act
-                _usersService.AddUser(request1);
                 _usersService.AddUser(request2);
             });
         }
@@ -97,14 +146,21 @@ namespace UnitTests
         {
             //Arrange
             UserAddRequest? userAddRequest = _fixture.Create<UserAddRequest>();
+            Users user = userAddRequest.ToUser();
+            UserResponse user_response = user.ToUserResponse();
+
+            _usersRepositoryMock.Setup(temp => temp.AddUser(It.IsAny<Users>()))
+                .Returns(user);
 
             //Act
             UserResponse user_response_from_add = _usersService.AddUser(userAddRequest);
-            List<UserResponse> users_list = _usersService.GetAllUsers();
+
+            user.UserId = user_response_from_add.UserId;
+            user_response.UserId = user_response_from_add.UserId;
 
             //Assert
             Assert.True(user_response_from_add.UserId != Guid.Empty);
-            Assert.Contains(user_response_from_add, users_list);
+            Assert.Equal(user_response_from_add, user_response);
         }
 
         #endregion
@@ -114,6 +170,10 @@ namespace UnitTests
         [Fact]
         public void GetAllUsers_EmptyList()
         {
+            //Arrange
+            List<Users> users = new List<Users>();
+            _usersRepositoryMock.Setup(temp => temp.GetAllUsers()).Returns(users);
+
             //Act
             List<UserResponse> actual_users_response_list = _usersService.GetAllUsers();
 
@@ -122,29 +182,35 @@ namespace UnitTests
         }
 
         [Fact]
-        public void GetAllDefaultWords_AddFewDefaultWords()
+        public void GetAllUsers_AddFewUsers()
         {
             //Arrange
-            List<UserAddRequest> users_request_list = new List<UserAddRequest>()
+            List<Users> users_list = new List<Users>()
             {
-                _fixture.Create<UserAddRequest>(),
-                _fixture.Create<UserAddRequest>()
-        };
+                _fixture.Build<Users>()
+                .With(temp => temp.DefaultWords, null as ICollection<DefaultWords>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .With(temp => temp.UserStatistics, null as ICollection<UserStatistics>)
+                .With(temp => temp.UserWords, null as ICollection<UserWords>)
+                .Create(),
+
+                _fixture.Build<Users>()
+                .With(temp => temp.DefaultWords, null as ICollection<DefaultWords>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .With(temp => temp.UserStatistics, null as ICollection<UserStatistics>)
+                .With(temp => temp.UserWords, null as ICollection<UserWords>)
+                .Create()
+            };
+
+            List<UserResponse> users_response_list = users_list.Select(temp => temp.ToUserResponse()).ToList();
+
+            _usersRepositoryMock.Setup(temp => temp.GetAllUsers()).Returns(users_list);
 
             //Act
-            List<UserResponse> users_list_from_add = new List<UserResponse>();
-            foreach (UserAddRequest user_request in users_request_list)
-            {
-                users_list_from_add.Add(_usersService.AddUser(user_request));
-            }
-
             List<UserResponse> actualUsersResponseList = _usersService.GetAllUsers();
 
             //Assert
-            foreach (UserResponse expected_user in users_list_from_add)
-            {
-                Assert.Contains(expected_user, actualUsersResponseList);
-            }
+            Assert.Equal(users_response_list, actualUsersResponseList);
         }
 
         #endregion
@@ -156,6 +222,7 @@ namespace UnitTests
         {
             //Arrange
             Guid? userId = null;
+            _usersRepositoryMock.Setup(temp => temp.GetUserById(It.IsAny<Guid>())).Returns(null as Users);
 
             //Act
             UserResponse? user_response_from_get_method =
@@ -169,15 +236,22 @@ namespace UnitTests
         public void GetUserById_ValidUserId()
         {
             //Arrange
-            UserAddRequest? user_add_request = _fixture.Create<UserAddRequest>();
-            UserResponse user_response_from_add = _usersService.AddUser(user_add_request);
+            Users user = _fixture.Build<Users>()
+                .With(temp => temp.DefaultWords, null as ICollection<DefaultWords>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .With(temp => temp.UserStatistics, null as ICollection<UserStatistics>)
+                .With(temp => temp.UserWords, null as ICollection<UserWords>)
+                .Create();
+
+            UserResponse user_response = user.ToUserResponse();
+
+            _usersRepositoryMock.Setup(temp => temp.GetUserById(It.IsAny<Guid>())).Returns(user);
 
             //Act
-            UserResponse? duser_from_get = _usersService.GetUserById
-                (user_response_from_add.UserId);
+            UserResponse? user_from_get = _usersService.GetUserById(user.UserId);
 
             //Assert
-            Assert.Equal(user_response_from_add, duser_from_get);
+            Assert.Equal(user_response, user_from_get);
         }
 
         #endregion
@@ -188,11 +262,18 @@ namespace UnitTests
         public void DeleteUser_ValidId()
         {
             //Arrange
-            UserAddRequest user_add_request = _fixture.Create<UserAddRequest>();
-            UserResponse user_response_from_add = _usersService.AddUser(user_add_request);
+            Users user = _fixture.Build<Users>()
+                .With(temp => temp.DefaultWords, null as ICollection<DefaultWords>)
+                .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
+                .With(temp => temp.UserStatistics, null as ICollection<UserStatistics>)
+                .With(temp => temp.UserWords, null as ICollection<UserWords>)
+                .Create();
+
+            _usersRepositoryMock.Setup(temp => temp.DeleteUser(It.IsAny<Guid>())).Returns(true);
+            _usersRepositoryMock.Setup(temp => temp.GetUserById(It.IsAny<Guid>())).Returns(user);
 
             //Act
-            bool isDeleted = _usersService.DeleteUser(user_response_from_add.UserId);
+            bool isDeleted = _usersService.DeleteUser(user.UserId);
 
             //Assert
             Assert.True(isDeleted);
