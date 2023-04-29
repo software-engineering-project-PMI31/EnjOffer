@@ -5,6 +5,8 @@ using Serilog;
 using Microsoft.Extensions.Configuration;
 using EnjOffer.Core.ServiceContracts;
 using EnjOffer.Core.Services;
+using EnjOffer.Core.Domain.RepositoryContracts;
+using EnjOffer.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<EnjOfferDbContext>(options =>
@@ -15,9 +17,17 @@ builder.Host.UseSerilog((HostBuilderContext context, IServiceProvider services, 
     loggerConfiguration.ReadFrom.Configuration(context.Configuration).ReadFrom.Services(services);
 });
 
-builder.Services.AddScoped<IUserWordsService, UserWordsService>();
-builder.Services.AddScoped<IUsersService, UsersService>();
-builder.Services.AddScoped<IDefaultWordsService, DefaultWordsService>();
+builder.Services.AddSingleton<IUsersRepository, UsersRepository>();
+builder.Services.AddSingleton<IUserWordsRepository, UserWordsRepository>();
+builder.Services.AddSingleton<IDefaultWordsRepository, DefaultWordsRepository>();
+builder.Services.AddSingleton<IUserStatisticsRepository, UserStatisticsRepository>();
+builder.Services.AddSingleton<IUsersDefaultWordsRepository, UsersDefaultWordsRepository>();
+
+builder.Services.AddSingleton<IUsersService, UsersService>();
+builder.Services.AddSingleton<IUserWordsService, UserWordsService>();
+builder.Services.AddSingleton<IDefaultWordsService, DefaultWordsService>();
+builder.Services.AddSingleton<IUserStatisticsService, UserStatisticsService>();
+builder.Services.AddSingleton<IUsersDefaultWordsService, UsersDefaultWordsService>();
 
 builder.Services.AddControllersWithViews();
 
