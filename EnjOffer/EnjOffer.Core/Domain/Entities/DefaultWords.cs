@@ -19,6 +19,5 @@ namespace EnjOffer.Core.Domain.Entities
         public ICollection<Users>? Users { get; set; }
 
         public ICollection<UsersDefaultWords>? UsersDefaultWords { get; set; }
-
     }
 }
