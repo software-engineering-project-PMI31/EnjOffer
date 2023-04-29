@@ -12,10 +12,9 @@ namespace EnjOffer.Core.Domain.RepositoryContracts
         UserWords AddUserWord(UserWords userWord);
         List<UserWords> GetAllUserWords();
         List<UserWords> GetUserWordsByDate(DateTime? dateTime);
-        List<UserWords> GetUserWordsSortedByPriority(List<UserWords> userWords);
-        UserWords GetUserWordById(Guid? userWordId);
+        UserWords? GetUserWordById(Guid? userWordId);
+        UserWords? GetUserWordByWordAndTranslation(string word, string translation);
         UserWords UpdateUserWord(UserWords userWordUpdate);
-        double GetPriority(DateTime? lastTimeEntered, int correctlyEntered, int incorrectlyEntererd);
         bool DeleteUserWord(Guid? userWordId);
     }
 }

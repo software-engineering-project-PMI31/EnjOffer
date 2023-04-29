@@ -11,7 +11,8 @@ namespace EnjOffer.Core.Domain.RepositoryContracts
     {
         DefaultWords AddDefaultWord(DefaultWords defaultWord);
         List<DefaultWords> GetAllDefaultWords();
-        DefaultWords GetDefaultWordById(Guid defaultWordId);
+        DefaultWords? GetDefaultWordById(Guid defaultWordId);
+        DefaultWords? GetDefaultWordByWordAndTranslation(string word, string translation);
         bool DeleteDefaultWord(Guid defaultWordId);
     }
 }

@@ -12,10 +12,9 @@ namespace EnjOffer.Core.Domain.RepositoryContracts
         UsersDefaultWords AddUserDefaultWord(UsersDefaultWords userDefaultWord);
         List<UsersDefaultWords> GetAllUserDefaultWords();
         List<UsersDefaultWords> GetUserDefaultWordsByDate(DateTime? dateTime);
-        List<UsersDefaultWords> GetUserDefaultWordsSortedByPriority(List<UsersDefaultWords> userDefaultWords);
-        UsersDefaultWords GetUserDefaultWordById(Guid userDefaultWordId);
+        UsersDefaultWords? GetUserDefaultWordById(Guid? defaultWordId, Guid? userId);
+        //UsersDefaultWords? GetUserDefaultWordByWordAndTranslation(string word, string translation);
         UsersDefaultWords UpdateUserDefaultWord(UsersDefaultWords userWordUpdate);
-        double GetPriority(DateTime? lastTimeEntered, int correctlyEntered, int incorrectlyEntererd);
-        bool DeleteUserDefaultWord(Guid userWordId);
+        bool DeleteUserDefaultWord(Guid? defaultWordId, Guid? userId);
     }
 }

@@ -11,7 +11,8 @@ namespace EnjOffer.Core.Domain.RepositoryContracts
     {
         Users AddUser(Users user);
         List<Users> GetAllUsers();
-        Users GetUserById(Guid userId);
+        Users? GetUserById(Guid userId);
         bool DeleteUser(Guid userId);
+        Users? GetUserByEmail(string email);
     }
 }
