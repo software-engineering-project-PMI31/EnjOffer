@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f66e2aa1-14df-4962-9734-3cb8cb663701": {
+      "ProjectGuid": "f66e2aa1-14df-4962-9734-3cb8cb663701",
+      "DisplayName": "EnjOffer.Core",
+      "ColorIndex": 0
+    },
+    "be160b9e-b725-4788-85f2-8dc8d91cc6bf": {
+      "ProjectGuid": "be160b9e-b725-4788-85f2-8dc8d91cc6bf",
+      "DisplayName": "UnitTests",
+      "ColorIndex": 1
+    },
+    "caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d": {
+      "ProjectGuid": "caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d",
+      "DisplayName": "EnjOffer.UI",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "60dbdea4-c432-4bc5-8996-b068c571ee57": {
+      "ProjectGuid": "60dbdea4-c432-4bc5-8996-b068c571ee57",
+      "DisplayName": "EnjOffer.Infrastructure",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

@@ -1,0 +1,28 @@
+<script>
+    function setSelected() {
+        const ids = ["sidebar__personal-account", "sidebar__word-trainer", "sidebar__library"];
+
+       const elementId = event.target.parentElement.id;
+       const element = document.getElementById(elementId);
+       
+       ids.forEach(id => {
+        if (id === elementId) {
+            // element.style.backgroundColor = "#e8e8e8";
+            document.getElementById(id).style.backgroundColor = "#e8e8e8";
+        } else {
+            document.getElementById(id).style.backgroundColor = "white";
+        }
+       })
+    }
+</script>
+<aside class="sidebar">
+        <div class="sidebar__item" id="sidebar__personal-account" onclick="setSelected()">
+            <h2 class="sidebar__item-content">Personal account</h2>
+        </div>
+        <div class="sidebar__item" id="sidebar__word-trainer" onclick="setSelected()">
+            <h2 class="sidebar__item-content">Word trainer</h2>
+        </div>
+        <div class="sidebar__item" id="sidebar__library" onclick="setSelected()">
+            <h2 class="sidebar__item-content">Library</h2>
+        </div>
+</aside>

@@ -1,0 +1,346 @@
+﻿++Solution 'EnjOffer' ‎(4 of 4 projects)
+i:{00000000-0000-0000-0000-000000000000}:EnjOffer.sln
+++src
+i:{00000000-0000-0000-0000-000000000000}:src
+++EnjOffer.UI
+i:{8aa44d1c-d1b5-4946-8cf9-d050efb431c0}:EnjOffer.UI
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\bin\debug\net6.0\enjoffer.ui.dll
+++Connected Services 
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>889
+++Dependencies
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>888
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:>758
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:>757
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:>761
+++Properties
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\properties\
+++launchSettings.json
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\properties\launchsettings.json
+++wwwroot
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\wwwroot\
+++Assets
+++star.svg
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\wwwroot\img\star.svg
+++Controllers
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\controllers\
+++BookReaderController.cs
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\controllers\bookreadercontroller.cs
+++HomeController.cs
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\controllers\homecontroller.cs
+++LibraryController.cs
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\controllers\librarycontroller.cs
+++WordTrainerController.cs
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\controllers\wordtrainercontroller.cs
+++Views
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\
+++BookReader
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\bookreader\
+++Index.cshtml
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\bookreader\index.cshtml
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\home\index.cshtml
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\library\index.cshtml
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\wordtrainer\index.cshtml
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\loginpage\index.cshtml
+++Home
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\home\
+++Library
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\library\
+++Shared
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\shared\
+++_Layout.cshtml
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\shared\_layout.cshtml
+++WordTrainer
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\wordtrainer\
+++appsettings.json
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\appsettings.json
+++Program.cs
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\program.cs
+++No service dependencies discovered
+++Analyzers
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:analyzers
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:analyzers
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:analyzers
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:analyzers
+++Frameworks
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:frameworks
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:frameworks
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:frameworks
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:frameworks
+++Packages
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:packages
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:packages
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:packages
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:packages
+++Projects
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:projects
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:projects
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:projects
+++css
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\wwwroot\css\
+++img
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\wwwroot\img\
+++admin-panel.css
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\wwwroot\admin-panel.css
+++book-reader.css
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\wwwroot\book-reader.css
+++library.css
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\wwwroot\library.css
+++login-page.css
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\wwwroot\login-page.css
+++login-page.html
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\wwwroot\login-page.html
+++word-trainer.css
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\wwwroot\word-trainer.css
+++appsettings.Development.json
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\appsettings.development.json
+++Microsoft.AspNetCore.Analyzers
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:c:\program files\dotnet\sdk\6.0.102\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.2\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.2\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.2\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.2\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:c:\program files\dotnet\sdk\6.0.102\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:c:\program files\dotnet\sdk\6.0.102\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:c:\program files\dotnet\sdk\6.0.102\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\7.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\7.0.3\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\7.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\7.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:c:\users\user\.nuget\packages\microsoft.extensions.logging.abstractions\7.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:c:\users\user\.nuget\packages\microsoft.extensions.logging.abstractions\7.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:c:\users\user\.nuget\packages\microsoft.extensions.logging.abstractions\7.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:c:\users\user\.nuget\packages\microsoft.extensions.logging.abstractions\7.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:c:\program files\dotnet\sdk\6.0.102\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:c:\users\user\.nuget\packages\system.text.json\7.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:c:\users\user\.nuget\packages\system.text.json\7.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\microsoft.netcore.app
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\microsoft.netcore.app
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\microsoft.netcore.app
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:d:\projects\enjoffer2\enjoffer\enjoffer\unittests\microsoft.netcore.app
+++Microsoft.EntityFrameworkCore (7.0.4)
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>956
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:>922
+++Microsoft.EntityFrameworkCore.Design (7.0.4)
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>957
+++Microsoft.EntityFrameworkCore.Tools (7.0.4)
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>960
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:>930
+++Npgsql.EntityFrameworkCore.PostgreSQL (7.0.3)
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>959
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:>924
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:>925
+++Serilog (2.12.0)
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>961
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:>927
+++Serilog.AspNetCore (6.1.0)
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>958
+++Serilog.Sinks.PostgreSQL (2.3.0)
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>962
+++Serilog.Sinks.Seq (5.2.2)
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>955
+++EnjOffer.Core
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\bin\debug\net6.0\enjoffer.core.dll
+i:{8aa44d1c-d1b5-4946-8cf9-d050efb431c0}:EnjOffer.Core
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\bin\debug\net6.0\enjoffer.core.dll
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\bin\debug\net6.0\enjoffer.core.dll
+++EnjOffer.Infrastructure
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\bin\debug\net6.0\enjoffer.infrastructure.dll
+i:{8aa44d1c-d1b5-4946-8cf9-d050efb431c0}:EnjOffer.Infrastructure
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\bin\debug\net6.0\enjoffer.infrastructure.dll
+++imgNotFound.png
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\wwwroot\img\imgnotfound.png
+++Domain
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\domain\
+++DTO
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\dto\
+++Enums
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\enums\
+++Helpers
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\helpers\
+++ServiceContracts
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\servicecontracts\
+++Services
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\services\
+++Entities
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\domain\entities\
+++RepositoryContracts
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\domain\repositorycontracts\
+++DefaultWordAddRequest.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\dto\defaultwordaddrequest.cs
+++DefaultWordResponse.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\dto\defaultwordresponse.cs
+++UserAddRequest.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\dto\useraddrequest.cs
+++UserResponse.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\dto\userresponse.cs
+++UserWordsAddRequest.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\dto\userwordsaddrequest.cs
+++UserWordsResponse.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\dto\userwordsresponse.cs
+++UserWordsUpdateRequest.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\dto\userwordsupdaterequest.cs
+++UserRole.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\enums\userrole.cs
+++ValidationHelper.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\helpers\validationhelper.cs
+++IDefaultWordsService.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\servicecontracts\idefaultwordsservice.cs
+++IUsersService.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\servicecontracts\iusersservice.cs
+++IUserWordsService.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\servicecontracts\iuserwordsservice.cs
+++DefaultWordsService.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\services\defaultwordsservice.cs
+++UsersService.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\services\usersservice.cs
+++UserWordsService.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\services\userwordsservice.cs
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:c:\program files\dotnet\sdk\6.0.102\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:c:\program files\dotnet\sdk\6.0.102\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:c:\program files\dotnet\sdk\6.0.102\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:c:\program files\dotnet\sdk\6.0.102\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:c:\program files\dotnet\sdk\6.0.102\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:c:\program files\dotnet\sdk\6.0.102\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.AspNetCore.Mvc.DataAnnotations (2.2.0)
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:>933
+++Npgsql (7.0.2)
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:>932
+++Serilog.Extensions.Hosting (5.0.1)
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:>921
+++SerilogTimings (3.0.1)
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:>929
+++Advice.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\domain\entities\advice.cs
+++Books.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\domain\entities\books.cs
+++DefaultWords.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\domain\entities\defaultwords.cs
+++Users.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\domain\entities\users.cs
+++UsersDefaultWords.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\domain\entities\usersdefaultwords.cs
+++UserStatistics.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\domain\entities\userstatistics.cs
+++UserWords.cs
+i:{f66e2aa1-14df-4962-9734-3cb8cb663701}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.core\domain\entities\userwords.cs
+++DbContext
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\dbcontext\
+++Logs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\
+++Migrations
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\
+++Repositories
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\repositories\
+++EnjOfferDbContext.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\dbcontext\enjofferdbcontext.cs
+++log2023031917.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log2023031917.txt
+++log2023032111.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log2023032111.txt
+++log2023032112.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log2023032112.txt
+++log2023032611.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log2023032611.txt
+++log2023032803.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log2023032803.txt
+++log2023032804.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log2023032804.txt
+++log2023032805.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log2023032805.txt
+++log2023032811.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log2023032811.txt
+++log2023032812.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log2023032812.txt
+++log20230402.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log20230402.txt
+++log20230404.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log20230404.txt
+++log20230405.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log20230405.txt
+++log20230429.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log20230429.txt
+++log20230430.txt
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\logs\log20230430.txt
+++20230328012436_Init.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\20230328012436_init.cs
+++20230328022240_RemoveBooksRelationships.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\20230328022240_removebooksrelationships.cs
+++20230402135137_changedUserDefaultWordsTable.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\20230402135137_changeduserdefaultwordstable.cs
+++20230402140058_updateDeleteBehavior.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\20230402140058_updatedeletebehavior.cs
+++20230402160303_updateUserWordsTable.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\20230402160303_updateuserwordstable.cs
+++20230403232011_RemovePriorityPropertyFromtables.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\20230403232011_removeprioritypropertyfromtables.cs
+++EnjOfferDbContextModelSnapshot.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\enjofferdbcontextmodelsnapshot.cs
+++20230328012436_Init.Designer.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\20230328012436_init.designer.cs
+++20230328022240_RemoveBooksRelationships.Designer.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\20230328022240_removebooksrelationships.designer.cs
+++20230402135137_changedUserDefaultWordsTable.Designer.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\20230402135137_changeduserdefaultwordstable.designer.cs
+++20230402140058_updateDeleteBehavior.Designer.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\20230402140058_updatedeletebehavior.designer.cs
+++20230402160303_updateUserWordsTable.Designer.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\20230402160303_updateuserwordstable.designer.cs
+++20230403232011_RemovePriorityPropertyFromtables.Designer.cs
+i:{60dbdea4-c432-4bc5-8996-b068c571ee57}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.infrastructure\migrations\20230403232011_removeprioritypropertyfromtables.designer.cs
+++tests
+i:{00000000-0000-0000-0000-000000000000}:tests
+++UnitTests
+i:{970fbb80-372e-42d0-a7e3-54ba9172a461}:UnitTests
+++DefaultWordsServiceTest.cs
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:d:\projects\enjoffer2\enjoffer\enjoffer\unittests\defaultwordsservicetest.cs
+++UsersServiceTest.cs
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:d:\projects\enjoffer2\enjoffer\enjoffer\unittests\usersservicetest.cs
+++UserWordsServiceTest.cs
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:d:\projects\enjoffer2\enjoffer\enjoffer\unittests\userwordsservicetest.cs
+++xunit.analyzers
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:c:\users\user\.nuget\packages\xunit.analyzers\0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll
+++coverlet.collector (3.1.0)
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:>931
+++Microsoft.NET.Test.Sdk (16.11.0)
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:>923
+++xunit (2.4.1)
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:>926
+++xunit.runner.visualstudio (2.4.3)
+i:{be160b9e-b725-4788-85f2-8dc8d91cc6bf}:>928
+++NewFolder
+++LoginPage
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\loginpage\
+++LoginPageConroller.cs
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\controllers\loginpageconroller.cs
+++Secrets.json (Local)
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>984
+++Secrets.json (Local) dependency is detected
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>985
+++SQL Server Database
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>986
+++SQL Server Database dependency is detected
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:>987
+++Header
+++Header.cshtml
+++Sidebar
+++Sidebar.cshtml
+++_Header.cshtml
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\shared\_header.cshtml
+++_Sidebar.cshtml
+i:{caf93eb9-e0bc-4726-a6fd-cb3e5b3c346d}:d:\projects\enjoffer2\enjoffer\enjoffer\enjoffer.ui\views\shared\_sidebar.cshtml

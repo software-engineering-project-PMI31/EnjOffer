@@ -22,6 +22,32 @@
         document.querySelector('.add-word-modal').style.display = 'none';
         document.querySelector('.add-word').style.display = 'block';
     }")
+
+    function handleSubmit(event) {
+  event.preventDefault();
+    if (event.target.className === "word-trainer__main") {
+        const inputs = event.target.querySelectorAll('.word-input');
+
+        inputs.forEach(input => {
+        console.log(`${input.getAttribute('name')}: ${input.value}`);
+        });
+
+        for (let i = 0; i < inputs.length; i++) {
+        inputs[i].value = '';
+        }
+    }
+    if (event.target.className === "add-word-modal__main") {
+        const inputs = event.target.querySelectorAll('.modal-input');
+
+        inputs.forEach(input => {
+        console.log(`${input.getAttribute('name')}: ${input.value}`);
+        });
+
+        for (let i = 0; i < inputs.length; i++) {
+        inputs[i].value = '';
+        }
+    }
+}
 </script>
 
 <body>
@@ -31,18 +57,18 @@
                 Word trainer
             </h1>
         </div>
-        <div class="word-trainer__main">
+        <form class="word-trainer__main" onsubmit="handleSubmit(event)" method="POST">
             <div class="image-container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png"
                     draggable="false">
                 <h1>Слово або фраза</h1>
             </div>
-            <input type="text" class="word-input" placeholder="Введіть слово..." />
+            <input type="text" class="word-input" placeholder="Введіть слово..." name="entered-word" />
             <div class="word-trainer__buttons">
-                <button class="functional-button">Enter</button>
+                <button type="submit" class="functional-button">Enter</button>
                 <button class="functional-button">Use a hint</button>
             </div>
-        </div>
+        </form>
         <img src="https://www.freeiconspng.com/thumbs/plus-icon/plus-icon-black-2.png" class="add-word"
             draggable="false" onclick="addWord()">
         <section class="add-word-modal">
@@ -51,11 +77,11 @@
             <div class="add-word-modal__header">
                 <h2>Add your word</h2>
             </div>
-            <div class="add-word-modal__main">
-                <input type="text" placeholder="Word" class="modal-input" />
-                <input type="text" placeholder="Traslation" class="modal-input" />
+            <form class="add-word-modal__main" onsubmit="handleSubmit(event)" method="POST">
+                <input type="text" placeholder="Word" class="modal-input" name="word-trainer-word" />
+                <input type="text" placeholder="Traslation" class="modal-input" name="word-trainer-translate"/>
                 <button class="add-word-button">Add word</button>
-            </div>
+            </form>
         </section>
     </main>
 </body>

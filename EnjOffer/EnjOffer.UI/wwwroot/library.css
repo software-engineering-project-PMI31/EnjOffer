@@ -93,17 +93,17 @@ p {
     width: 25px;
 }
 
-.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
-    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
-        .MultiCarousel .MultiCarousel-inner .item { float: left;}
-        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
-    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
-    .MultiCarousel .leftLst { left:0; }
-    .MultiCarousel .rightLst { right:0; }
-    
-        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
 .container {
     user-select: none;
+    overflow-x: scroll;
+    width: 90vw;
+}
+
+.library-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    width: fit-content;
 }
 
 .see-book-button {
@@ -121,6 +121,7 @@ p {
     background: #e3e3e3;
 }
 
+.see-book-button:active {
 .see-book-button:active {
     scale: 0.85;
     background: white;

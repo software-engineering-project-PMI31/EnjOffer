@@ -1,0 +1,459 @@
+2023-04-29 17:45:43.723 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/BookReader/Index.cshtml'.
+2023-04-29 17:45:43.760 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'.
+2023-04-29 17:45:43.762 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Library/Index.cshtml'.
+2023-04-29 17:45:43.764 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'.
+2023-04-29 17:45:43.765 +03:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/WordTrainer/Index.cshtml'.
+2023-04-29 17:45:43.778 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-29 17:45:43.821 +03:00 [DBG] Hosting starting
+2023-04-29 17:45:43.835 +03:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-04-29 17:45:43.848 +03:00 [DBG] Reading data from file 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys\key-276c3544-4f50-4dde-a08d-b577c9d630e6.xml'.
+2023-04-29 17:45:43.876 +03:00 [DBG] Found key {276c3544-4f50-4dde-a08d-b577c9d630e6}.
+2023-04-29 17:45:43.886 +03:00 [DBG] Considering key {276c3544-4f50-4dde-a08d-b577c9d630e6} with expiration date 2023-07-01 10:19:44Z as default key.
+2023-04-29 17:45:43.889 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-29 17:45:43.893 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-04-29 17:45:43.895 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-29 17:45:43.902 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-04-29 17:45:43.905 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-04-29 17:45:43.909 +03:00 [DBG] Using key {276c3544-4f50-4dde-a08d-b577c9d630e6} as the default key.
+2023-04-29 17:45:43.910 +03:00 [DBG] Key ring with default key {276c3544-4f50-4dde-a08d-b577c9d630e6} was loaded during application startup.
+2023-04-29 17:45:43.956 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: E8B221FCF3E654E90597CFE81DD4A947EA35E671)
+2023-04-29 17:45:43.976 +03:00 [INF] Now listening on: https://localhost:7016
+2023-04-29 17:45:43.977 +03:00 [INF] Now listening on: http://localhost:5016
+2023-04-29 17:45:43.980 +03:00 [DBG] Loaded hosting startup assembly EnjOffer.UI
+2023-04-29 17:45:43.981 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-29 17:45:43.983 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-29 17:45:43.985 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-29 17:45:43.986 +03:00 [INF] Hosting environment: Development
+2023-04-29 17:45:43.987 +03:00 [INF] Content root path: D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.UI\
+2023-04-29 17:45:43.988 +03:00 [DBG] Hosting started
+2023-04-29 17:45:44.178 +03:00 [DBG] Connection id "0HMQ8O1KLSL17" accepted.
+2023-04-29 17:45:44.180 +03:00 [DBG] Connection id "0HMQ8O1KLSL17" started.
+2023-04-29 17:45:44.187 +03:00 [DBG] Connection id "0HMQ8O1KLSL18" accepted.
+2023-04-29 17:45:44.189 +03:00 [DBG] Connection id "0HMQ8O1KLSL18" started.
+2023-04-29 17:45:44.220 +03:00 [DBG] Connection id "0HMQ8O1KLSL17" received FIN.
+2023-04-29 17:45:44.220 +03:00 [DBG] Connection id "0HMQ8O1KLSL18" received FIN.
+2023-04-29 17:45:44.229 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:45:44.229 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:45:44.278 +03:00 [DBG] Connection id "0HMQ8O1KLSL18" stopped.
+2023-04-29 17:45:44.287 +03:00 [DBG] Connection id "0HMQ8O1KLSL17" stopped.
+2023-04-29 17:45:44.292 +03:00 [DBG] Connection id "0HMQ8O1KLSL18" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:45:44.293 +03:00 [DBG] Connection id "0HMQ8O1KLSL17" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:45:44.379 +03:00 [DBG] Connection id "0HMQ8O1KLSL19" accepted.
+2023-04-29 17:45:44.381 +03:00 [DBG] Connection id "0HMQ8O1KLSL19" started.
+2023-04-29 17:45:44.381 +03:00 [DBG] Connection id "0HMQ8O1KLSL1A" accepted.
+2023-04-29 17:45:44.384 +03:00 [DBG] Connection id "0HMQ8O1KLSL1A" started.
+2023-04-29 17:45:44.457 +03:00 [DBG] Connection id "0HMQ8O1KLSL1A" received FIN.
+2023-04-29 17:45:44.457 +03:00 [DBG] Connection id "0HMQ8O1KLSL19" received FIN.
+2023-04-29 17:45:44.461 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:45:44.461 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:45:44.499 +03:00 [DBG] Connection id "0HMQ8O1KLSL1A" stopped.
+2023-04-29 17:45:44.550 +03:00 [DBG] Connection id "0HMQ8O1KLSL19" stopped.
+2023-04-29 17:45:44.551 +03:00 [DBG] Connection id "0HMQ8O1KLSL1A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:45:44.553 +03:00 [DBG] Connection id "0HMQ8O1KLSL19" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:45:52.126 +03:00 [DBG] Connection id "0HMQ8O1KLSL1B" accepted.
+2023-04-29 17:45:52.128 +03:00 [DBG] Connection id "0HMQ8O1KLSL1B" started.
+2023-04-29 17:45:52.128 +03:00 [DBG] Connection id "0HMQ8O1KLSL1C" accepted.
+2023-04-29 17:45:52.132 +03:00 [DBG] Connection id "0HMQ8O1KLSL1B" received FIN.
+2023-04-29 17:45:52.132 +03:00 [DBG] Connection id "0HMQ8O1KLSL1C" started.
+2023-04-29 17:45:52.132 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:45:52.137 +03:00 [DBG] Connection id "0HMQ8O1KLSL1C" received FIN.
+2023-04-29 17:45:52.138 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:45:52.146 +03:00 [DBG] Connection id "0HMQ8O1KLSL1B" stopped.
+2023-04-29 17:45:52.151 +03:00 [DBG] Connection id "0HMQ8O1KLSL1C" stopped.
+2023-04-29 17:45:52.152 +03:00 [DBG] Connection id "0HMQ8O1KLSL1B" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:45:52.155 +03:00 [DBG] Connection id "0HMQ8O1KLSL1C" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:46:15.155 +03:00 [DBG] Connection id "0HMQ8O1KLSL1D" accepted.
+2023-04-29 17:46:15.159 +03:00 [DBG] Connection id "0HMQ8O1KLSL1D" started.
+2023-04-29 17:46:15.160 +03:00 [DBG] Connection id "0HMQ8O1KLSL1E" accepted.
+2023-04-29 17:46:15.164 +03:00 [DBG] Connection id "0HMQ8O1KLSL1E" started.
+2023-04-29 17:46:15.165 +03:00 [DBG] Connection id "0HMQ8O1KLSL1D" received FIN.
+2023-04-29 17:46:15.165 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:46:15.169 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:46:15.171 +03:00 [DBG] Connection id "0HMQ8O1KLSL1E" received FIN.
+2023-04-29 17:46:15.180 +03:00 [DBG] Connection id "0HMQ8O1KLSL1D" stopped.
+2023-04-29 17:46:15.190 +03:00 [DBG] Connection id "0HMQ8O1KLSL1E" stopped.
+2023-04-29 17:46:15.194 +03:00 [DBG] Connection id "0HMQ8O1KLSL1D" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:46:15.196 +03:00 [DBG] Connection id "0HMQ8O1KLSL1E" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:38.447 +03:00 [DBG] Connection id "0HMQ8O1KLSL1F" accepted.
+2023-04-29 17:47:38.449 +03:00 [DBG] Connection id "0HMQ8O1KLSL1F" started.
+2023-04-29 17:47:38.449 +03:00 [DBG] Connection id "0HMQ8O1KLSL1G" accepted.
+2023-04-29 17:47:38.451 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:38.452 +03:00 [DBG] Connection id "0HMQ8O1KLSL1G" started.
+2023-04-29 17:47:38.455 +03:00 [DBG] Connection id "0HMQ8O1KLSL1F" stopped.
+2023-04-29 17:47:38.457 +03:00 [DBG] Connection id "0HMQ8O1KLSL1F" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:38.460 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:38.463 +03:00 [DBG] Connection id "0HMQ8O1KLSL1G" stopped.
+2023-04-29 17:47:38.465 +03:00 [DBG] Connection id "0HMQ8O1KLSL1G" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:38.467 +03:00 [DBG] Connection id "0HMQ8O1KLSL1H" accepted.
+2023-04-29 17:47:38.468 +03:00 [DBG] Connection id "0HMQ8O1KLSL1H" started.
+2023-04-29 17:47:38.469 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:38.472 +03:00 [DBG] Connection id "0HMQ8O1KLSL1H" stopped.
+2023-04-29 17:47:38.473 +03:00 [DBG] Connection id "0HMQ8O1KLSL1H" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:39.551 +03:00 [DBG] Connection id "0HMQ8O1KLSL1I" accepted.
+2023-04-29 17:47:39.553 +03:00 [DBG] Connection id "0HMQ8O1KLSL1I" started.
+2023-04-29 17:47:39.553 +03:00 [DBG] Connection id "0HMQ8O1KLSL1J" accepted.
+2023-04-29 17:47:39.555 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:39.556 +03:00 [DBG] Connection id "0HMQ8O1KLSL1J" started.
+2023-04-29 17:47:39.560 +03:00 [DBG] Connection id "0HMQ8O1KLSL1I" stopped.
+2023-04-29 17:47:39.562 +03:00 [DBG] Connection id "0HMQ8O1KLSL1I" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:39.564 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:39.570 +03:00 [DBG] Connection id "0HMQ8O1KLSL1J" stopped.
+2023-04-29 17:47:39.571 +03:00 [DBG] Connection id "0HMQ8O1KLSL1J" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:39.573 +03:00 [DBG] Connection id "0HMQ8O1KLSL1K" accepted.
+2023-04-29 17:47:39.574 +03:00 [DBG] Connection id "0HMQ8O1KLSL1K" started.
+2023-04-29 17:47:39.576 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:39.578 +03:00 [DBG] Connection id "0HMQ8O1KLSL1K" stopped.
+2023-04-29 17:47:39.579 +03:00 [DBG] Connection id "0HMQ8O1KLSL1K" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:42.580 +03:00 [DBG] Connection id "0HMQ8O1KLSL1L" accepted.
+2023-04-29 17:47:42.582 +03:00 [DBG] Connection id "0HMQ8O1KLSL1L" started.
+2023-04-29 17:47:42.582 +03:00 [DBG] Connection id "0HMQ8O1KLSL1M" accepted.
+2023-04-29 17:47:42.583 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:42.585 +03:00 [DBG] Connection id "0HMQ8O1KLSL1M" started.
+2023-04-29 17:47:42.588 +03:00 [DBG] Connection id "0HMQ8O1KLSL1L" stopped.
+2023-04-29 17:47:42.590 +03:00 [DBG] Connection id "0HMQ8O1KLSL1L" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:42.592 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:42.596 +03:00 [DBG] Connection id "0HMQ8O1KLSL1M" stopped.
+2023-04-29 17:47:42.597 +03:00 [DBG] Connection id "0HMQ8O1KLSL1M" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:42.599 +03:00 [DBG] Connection id "0HMQ8O1KLSL1N" accepted.
+2023-04-29 17:47:42.601 +03:00 [DBG] Connection id "0HMQ8O1KLSL1N" started.
+2023-04-29 17:47:42.602 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:42.605 +03:00 [DBG] Connection id "0HMQ8O1KLSL1N" stopped.
+2023-04-29 17:47:42.606 +03:00 [DBG] Connection id "0HMQ8O1KLSL1N" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:43.507 +03:00 [DBG] Connection id "0HMQ8O1KLSL1O" accepted.
+2023-04-29 17:47:43.509 +03:00 [DBG] Connection id "0HMQ8O1KLSL1O" started.
+2023-04-29 17:47:43.509 +03:00 [DBG] Connection id "0HMQ8O1KLSL1P" accepted.
+2023-04-29 17:47:43.511 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:43.513 +03:00 [DBG] Connection id "0HMQ8O1KLSL1P" started.
+2023-04-29 17:47:43.516 +03:00 [DBG] Connection id "0HMQ8O1KLSL1O" stopped.
+2023-04-29 17:47:43.519 +03:00 [DBG] Connection id "0HMQ8O1KLSL1O" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:43.522 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:43.524 +03:00 [DBG] Connection id "0HMQ8O1KLSL1P" stopped.
+2023-04-29 17:47:43.525 +03:00 [DBG] Connection id "0HMQ8O1KLSL1P" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:43.528 +03:00 [DBG] Connection id "0HMQ8O1KLSL1Q" accepted.
+2023-04-29 17:47:43.529 +03:00 [DBG] Connection id "0HMQ8O1KLSL1Q" started.
+2023-04-29 17:47:43.530 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:43.532 +03:00 [DBG] Connection id "0HMQ8O1KLSL1Q" stopped.
+2023-04-29 17:47:43.533 +03:00 [DBG] Connection id "0HMQ8O1KLSL1Q" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:44.156 +03:00 [DBG] Connection id "0HMQ8O1KLSL1R" accepted.
+2023-04-29 17:47:44.158 +03:00 [DBG] Connection id "0HMQ8O1KLSL1R" started.
+2023-04-29 17:47:44.159 +03:00 [DBG] Connection id "0HMQ8O1KLSL1S" accepted.
+2023-04-29 17:47:44.161 +03:00 [DBG] Connection id "0HMQ8O1KLSL1S" started.
+2023-04-29 17:47:44.164 +03:00 [DBG] Connection id "0HMQ8O1KLSL1R" received FIN.
+2023-04-29 17:47:44.164 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:44.166 +03:00 [DBG] Connection id "0HMQ8O1KLSL1S" received FIN.
+2023-04-29 17:47:44.166 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:44.170 +03:00 [DBG] Connection id "0HMQ8O1KLSL1R" stopped.
+2023-04-29 17:47:44.175 +03:00 [DBG] Connection id "0HMQ8O1KLSL1S" stopped.
+2023-04-29 17:47:44.176 +03:00 [DBG] Connection id "0HMQ8O1KLSL1R" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:44.177 +03:00 [DBG] Connection id "0HMQ8O1KLSL1S" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:45.141 +03:00 [DBG] Connection id "0HMQ8O1KLSL1T" accepted.
+2023-04-29 17:47:45.143 +03:00 [DBG] Connection id "0HMQ8O1KLSL1T" started.
+2023-04-29 17:47:45.143 +03:00 [DBG] Connection id "0HMQ8O1KLSL1U" accepted.
+2023-04-29 17:47:45.146 +03:00 [DBG] Connection id "0HMQ8O1KLSL1T" received FIN.
+2023-04-29 17:47:45.146 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:45.146 +03:00 [DBG] Connection id "0HMQ8O1KLSL1U" started.
+2023-04-29 17:47:45.152 +03:00 [DBG] Connection id "0HMQ8O1KLSL1T" stopped.
+2023-04-29 17:47:45.154 +03:00 [DBG] Connection id "0HMQ8O1KLSL1U" received FIN.
+2023-04-29 17:47:45.154 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:45.155 +03:00 [DBG] Connection id "0HMQ8O1KLSL1T" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:45.159 +03:00 [DBG] Connection id "0HMQ8O1KLSL1U" stopped.
+2023-04-29 17:47:45.161 +03:00 [DBG] Connection id "0HMQ8O1KLSL1U" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:46.320 +03:00 [DBG] Connection id "0HMQ8O1KLSL1V" accepted.
+2023-04-29 17:47:46.322 +03:00 [DBG] Connection id "0HMQ8O1KLSL1V" started.
+2023-04-29 17:47:46.322 +03:00 [DBG] Connection id "0HMQ8O1KLSL20" accepted.
+2023-04-29 17:47:46.325 +03:00 [DBG] Connection id "0HMQ8O1KLSL20" started.
+2023-04-29 17:47:46.327 +03:00 [DBG] Connection id "0HMQ8O1KLSL1V" received FIN.
+2023-04-29 17:47:46.328 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:46.327 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:46.328 +03:00 [DBG] Connection id "0HMQ8O1KLSL20" received FIN.
+2023-04-29 17:47:46.332 +03:00 [DBG] Connection id "0HMQ8O1KLSL20" stopped.
+2023-04-29 17:47:46.336 +03:00 [DBG] Connection id "0HMQ8O1KLSL1V" stopped.
+2023-04-29 17:47:46.338 +03:00 [DBG] Connection id "0HMQ8O1KLSL20" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:46.339 +03:00 [DBG] Connection id "0HMQ8O1KLSL1V" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:56.107 +03:00 [DBG] Connection id "0HMQ8O1KLSL21" accepted.
+2023-04-29 17:47:56.109 +03:00 [DBG] Connection id "0HMQ8O1KLSL21" started.
+2023-04-29 17:47:56.109 +03:00 [DBG] Connection id "0HMQ8O1KLSL22" accepted.
+2023-04-29 17:47:56.112 +03:00 [DBG] Connection id "0HMQ8O1KLSL21" received FIN.
+2023-04-29 17:47:56.112 +03:00 [DBG] Connection id "0HMQ8O1KLSL22" started.
+2023-04-29 17:47:56.113 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:56.117 +03:00 [DBG] Connection id "0HMQ8O1KLSL22" received FIN.
+2023-04-29 17:47:56.118 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:47:56.120 +03:00 [DBG] Connection id "0HMQ8O1KLSL21" stopped.
+2023-04-29 17:47:56.125 +03:00 [DBG] Connection id "0HMQ8O1KLSL22" stopped.
+2023-04-29 17:47:56.126 +03:00 [DBG] Connection id "0HMQ8O1KLSL21" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:47:56.127 +03:00 [DBG] Connection id "0HMQ8O1KLSL22" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:48:00.968 +03:00 [DBG] Connection id "0HMQ8O1KLSL23" accepted.
+2023-04-29 17:48:00.970 +03:00 [DBG] Connection id "0HMQ8O1KLSL23" started.
+2023-04-29 17:48:00.970 +03:00 [DBG] Connection id "0HMQ8O1KLSL24" accepted.
+2023-04-29 17:48:00.972 +03:00 [DBG] Connection id "0HMQ8O1KLSL24" started.
+2023-04-29 17:48:00.973 +03:00 [DBG] Connection id "0HMQ8O1KLSL23" received FIN.
+2023-04-29 17:48:00.973 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:48:00.975 +03:00 [DBG] Connection id "0HMQ8O1KLSL24" received FIN.
+2023-04-29 17:48:00.976 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:48:00.983 +03:00 [DBG] Connection id "0HMQ8O1KLSL23" stopped.
+2023-04-29 17:48:00.989 +03:00 [DBG] Connection id "0HMQ8O1KLSL24" stopped.
+2023-04-29 17:48:00.990 +03:00 [DBG] Connection id "0HMQ8O1KLSL23" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:48:00.992 +03:00 [DBG] Connection id "0HMQ8O1KLSL24" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:48:29.735 +03:00 [DBG] Connection id "0HMQ8O1KLSL25" accepted.
+2023-04-29 17:48:29.737 +03:00 [DBG] Connection id "0HMQ8O1KLSL25" started.
+2023-04-29 17:48:29.737 +03:00 [DBG] Connection id "0HMQ8O1KLSL26" accepted.
+2023-04-29 17:48:29.740 +03:00 [DBG] Connection id "0HMQ8O1KLSL26" started.
+2023-04-29 17:48:29.741 +03:00 [DBG] Connection id "0HMQ8O1KLSL25" received FIN.
+2023-04-29 17:48:29.742 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:48:29.743 +03:00 [DBG] Connection id "0HMQ8O1KLSL26" received FIN.
+2023-04-29 17:48:29.743 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:48:29.747 +03:00 [DBG] Connection id "0HMQ8O1KLSL25" stopped.
+2023-04-29 17:48:29.753 +03:00 [DBG] Connection id "0HMQ8O1KLSL26" stopped.
+2023-04-29 17:48:29.754 +03:00 [DBG] Connection id "0HMQ8O1KLSL25" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:48:29.755 +03:00 [DBG] Connection id "0HMQ8O1KLSL26" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:48:38.233 +03:00 [DBG] Connection id "0HMQ8O1KLSL27" accepted.
+2023-04-29 17:48:38.235 +03:00 [DBG] Connection id "0HMQ8O1KLSL27" started.
+2023-04-29 17:48:38.235 +03:00 [DBG] Connection id "0HMQ8O1KLSL28" accepted.
+2023-04-29 17:48:38.237 +03:00 [DBG] Connection id "0HMQ8O1KLSL28" started.
+2023-04-29 17:48:38.238 +03:00 [DBG] Connection id "0HMQ8O1KLSL27" received FIN.
+2023-04-29 17:48:38.238 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:48:38.241 +03:00 [DBG] Connection id "0HMQ8O1KLSL28" received FIN.
+2023-04-29 17:48:38.241 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:48:38.245 +03:00 [DBG] Connection id "0HMQ8O1KLSL27" stopped.
+2023-04-29 17:48:38.251 +03:00 [DBG] Connection id "0HMQ8O1KLSL28" stopped.
+2023-04-29 17:48:38.252 +03:00 [DBG] Connection id "0HMQ8O1KLSL27" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:48:38.253 +03:00 [DBG] Connection id "0HMQ8O1KLSL28" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:48:50.399 +03:00 [DBG] Connection id "0HMQ8O1KLSL29" accepted.
+2023-04-29 17:48:50.401 +03:00 [DBG] Connection id "0HMQ8O1KLSL2A" accepted.
+2023-04-29 17:48:50.401 +03:00 [DBG] Connection id "0HMQ8O1KLSL29" started.
+2023-04-29 17:48:50.402 +03:00 [DBG] Connection id "0HMQ8O1KLSL2A" started.
+2023-04-29 17:48:50.405 +03:00 [DBG] Connection id "0HMQ8O1KLSL29" received FIN.
+2023-04-29 17:48:50.405 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:48:50.407 +03:00 [DBG] Connection id "0HMQ8O1KLSL2A" received FIN.
+2023-04-29 17:48:50.407 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:48:50.411 +03:00 [DBG] Connection id "0HMQ8O1KLSL29" stopped.
+2023-04-29 17:48:50.416 +03:00 [DBG] Connection id "0HMQ8O1KLSL2A" stopped.
+2023-04-29 17:48:50.417 +03:00 [DBG] Connection id "0HMQ8O1KLSL29" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:48:50.418 +03:00 [DBG] Connection id "0HMQ8O1KLSL2A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:49:06.460 +03:00 [DBG] Connection id "0HMQ8O1KLSL2B" accepted.
+2023-04-29 17:49:06.461 +03:00 [DBG] Connection id "0HMQ8O1KLSL2B" started.
+2023-04-29 17:49:06.462 +03:00 [DBG] Connection id "0HMQ8O1KLSL2C" accepted.
+2023-04-29 17:49:06.465 +03:00 [DBG] Connection id "0HMQ8O1KLSL2C" started.
+2023-04-29 17:49:06.466 +03:00 [DBG] Connection id "0HMQ8O1KLSL2B" received FIN.
+2023-04-29 17:49:06.466 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:49:06.468 +03:00 [DBG] Connection id "0HMQ8O1KLSL2C" received FIN.
+2023-04-29 17:49:06.468 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:49:06.472 +03:00 [DBG] Connection id "0HMQ8O1KLSL2B" stopped.
+2023-04-29 17:49:06.477 +03:00 [DBG] Connection id "0HMQ8O1KLSL2C" stopped.
+2023-04-29 17:49:06.478 +03:00 [DBG] Connection id "0HMQ8O1KLSL2B" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:49:06.479 +03:00 [DBG] Connection id "0HMQ8O1KLSL2C" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:49:26.117 +03:00 [DBG] Connection id "0HMQ8O1KLSL2D" accepted.
+2023-04-29 17:49:26.119 +03:00 [DBG] Connection id "0HMQ8O1KLSL2D" started.
+2023-04-29 17:49:26.119 +03:00 [DBG] Connection id "0HMQ8O1KLSL2E" accepted.
+2023-04-29 17:49:26.122 +03:00 [DBG] Connection id "0HMQ8O1KLSL2E" started.
+2023-04-29 17:49:26.122 +03:00 [DBG] Connection id "0HMQ8O1KLSL2D" received FIN.
+2023-04-29 17:49:26.123 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:49:26.125 +03:00 [DBG] Connection id "0HMQ8O1KLSL2E" received FIN.
+2023-04-29 17:49:26.125 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-29 17:49:26.131 +03:00 [DBG] Connection id "0HMQ8O1KLSL2D" stopped.
+2023-04-29 17:49:26.137 +03:00 [DBG] Connection id "0HMQ8O1KLSL2E" stopped.
+2023-04-29 17:49:26.138 +03:00 [DBG] Connection id "0HMQ8O1KLSL2D" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:49:26.139 +03:00 [DBG] Connection id "0HMQ8O1KLSL2E" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-29 17:52:35.411 +03:00 [INF] Application is shutting down...
+2023-04-29 17:52:35.418 +03:00 [DBG] Hosting stopping
+2023-04-29 17:52:35.425 +03:00 [DBG] Hosting stopped
