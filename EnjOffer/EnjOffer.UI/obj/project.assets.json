@@ -2403,24 +2403,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\EnjOffer.UI.csproj",
+      "projectUniqueName": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\EnjOffer.UI.csproj",
       "projectName": "EnjOffer.UI",
-      "projectPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\EnjOffer.UI.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\obj\\",
+      "projectPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\EnjOffer.UI.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2434,11 +2429,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj": {
-              "projectPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj"
+            "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj": {
+              "projectPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj"
             },
-            "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj": {
-              "projectPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj"
+            "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj": {
+              "projectPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj"
             }
           }
         }
@@ -2508,7 +2503,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

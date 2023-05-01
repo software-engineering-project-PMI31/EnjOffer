@@ -5,114 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="~/library.css">
     <title>Document</title>
 </head>
-<script>
-    @Html.Raw(@"$(document).ready(function () {
-        var itemsMainDiv = ('.MultiCarousel');
-        var itemsDiv = ('.MultiCarousel-inner');
-        var itemWidth = "";
-
-        $('.leftLst, .rightLst').click(function () {
-            var condition = $(this).hasClass('leftLst');
-            if (condition)
-                click(0, this);
-            else
-                click(1, this)
-        });
-
-        ResCarouselSize();
-
-        $(window).resize(function () {
-            ResCarouselSize();
-        });
-
-        function ResCarouselSize() {
-            var incno = 0;
-            var dataItems = ('data-items');
-            var itemClass = ('.item');
-            var id = 0;
-            var btnParentSb = '';
-            var itemsSplit = '';
-            var sampwidth = $(itemsMainDiv).width();
-            var bodyWidth = $('body').width();
-            $(itemsDiv).each(function () {
-                id = id + 1;
-                var itemNumbers = $(this).find(itemClass).length;
-                btnParentSb = $(this).parent().attr(dataItems);
-                itemsSplit = btnParentSb.split(',');
-                $(this).parent().attr('id', 'MultiCarousel' + id);
-
-
-                if (bodyWidth >= 1200) {
-                    incno = itemsSplit[3];
-                    itemWidth = sampwidth / incno;
-                }
-                else if (bodyWidth >= 992) {
-                    incno = itemsSplit[2];
-                    itemWidth = sampwidth / incno;
-                }
-                else if (bodyWidth >= 768) {
-                    incno = itemsSplit[1];
-                    itemWidth = sampwidth / incno;
-                }
-                else {
-                    incno = itemsSplit[0];
-                    itemWidth = sampwidth / incno;
-                }
-                $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
-                $(this).find(itemClass).each(function () {
-                    $(this).outerWidth(itemWidth);
-                });
-
-                $('.leftLst').addClass('over');
-                $('.rightLst').removeClass('over');
-
-            });
-        }
-
-        function ResCarousel(e, el, s) {
-            var leftBtn = ('.leftLst');
-            var rightBtn = ('.rightLst');
-            var translateXval = '';
-            var divStyle = $(el + ' ' + itemsDiv).css('transform');
-            var values = divStyle.match(/-?[\d\.]+/g);
-            var xds = Math.abs(values[4]);
-            if (e == 0) {
-                translateXval = parseInt(xds) - parseInt(itemWidth * s);
-                $(el + ' ' + rightBtn).removeClass('over');
-
-                if (translateXval <= itemWidth / 2) {
-                    translateXval = 0;
-                    $(el + ' ' + leftBtn).addClass('over');
-                }
-            }
-            else if (e == 1) {
-                var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
-                translateXval = parseInt(xds) + parseInt(itemWidth * s);
-                $(el + ' ' + leftBtn).removeClass('over');
-
-                if (translateXval >= itemsCondition - itemWidth / 2) {
-                    translateXval = itemsCondition;
-                    $(el + ' ' + rightBtn).addClass('over');
-                }
-            }
-            $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
-        }
-
-        function click(ell, ee) {
-            var Parent = '#' + $(ee).parent().attr('id');
-            var slide = $(Parent).attr('data-slide');
-            ResCarousel(ell, Parent, slide);
-        }
-
-    });")
-</script>
-
 <body>
     <main class="library">
         <div class="library__header">
@@ -148,105 +43,88 @@
 
 
             <div class="container">
-                <div class="row">
-                    <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"
-                        data-interval="1000">
-                        <div class="MultiCarousel-inner">
-                            <div class="item">
-                                <div class="pad15">
-                                    <div class="library-item">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png"
-                                            draggable="false">
-                                        <p>Book name 1</p>
-                                        <div class="library-item__actions">
-                                            <button class="see-book-button">See</button>
-                                            <img src="./images/star.svg" class="library-item__star" draggable="false" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pad15">
-                                    <div class="library-item">
-                                        <img
-                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                                        <p>Book name 2</p>
-                                        <div class="library-item__actions">
-                                            <button class="see-book-button">See</button>
-                                            <img src="./images/star.svg" class="library-item__star" draggable="false" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pad15">
-                                    <div class="library-item">
-                                        <img
-                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                                        <p>Book name 3</p>
-                                        <div class="library-item__actions">
-                                            <button class="see-book-button">See</button>
-                                            <img src="./images/star.svg" class="library-item__star" draggable="false"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pad15">
-                                    <div class="library-item">
-                                        <img
-                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                                        <p>Book name 4</p>
-                                        <div class="library-item__actions">
-                                            <button class="see-book-button">See</button>
-                                            <img src="./images/star.svg" class="library-item__star" draggable="false" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pad15">
-                                    <div class="library-item">
-                                        <img
-                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                                        <p>Book name 5</p>
-                                        <div class="library-item__actions">
-                                            <button class="see-book-button">See</button>
-                                            <img src="./images/star.svg" class="library-item__star" draggable="false"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pad15">
-                                    <div class="library-item">
-                                        <img
-                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                                        <p>Book name 6</p>
-                                        <div class="library-item__actions">
-                                            <button class="see-book-button">See</button>
-                                            <img src="./images/star.svg" class="library-item__star" draggable="false" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pad15">
-                                    <div class="library-item">
-                                        <img
-                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                                        <p>Book name 7</p>
-                                        <div class="library-item__actions">
-                                            <button class="see-book-button">See</button>
-                                            <img src="./images/star.svg" class="library-item__star" draggable="false"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary leftLst">&lt</button>
-                        <button class="btn btn-primary rightLst">></button>
+                <div class="library-list">
+                    <div class="library-item">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
+                    <p>Book name 1</p>
+                    <div class="library-item__actions">
+                        <button class="see-book-button">See</button>
+                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
                     </div>
+                </div>
+                <div class="library-item">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
+                    <p>Book name 2</p>
+                    <div class="library-item__actions">
+                        <button class="see-book-button">See</button>
+                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
+                    </div>
+                </div>
+                <div class="library-item">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
+                    <p>Book name 3</p>
+                    <div class="library-item__actions">
+                        <button class="see-book-button">See</button>
+                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
+                    </div>
+                </div>
+                <div class="library-item">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
+                    <p>Book name 4</p>
+                    <div class="library-item__actions">
+                        <button class="see-book-button">See</button>
+                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
+                    </div>
+                </div>
+                <div class="library-item">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
+                    <p>Book name 5</p>
+                    <div class="library-item__actions">
+                        <button class="see-book-button">See</button>
+                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
+                    </div>
+                </div>
+                <div class="library-item">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
+                    <p>Book name 6</p>
+                    <div class="library-item__actions">
+                        <button class="see-book-button">See</button>
+                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
+                    </div>
+                </div>
+                <div class="library-item">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
+                    <p>Book name 7</p>
+                    <div class="library-item__actions">
+                        <button class="see-book-button">See</button>
+                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
+                    </div>
+                </div>
+                <div class="library-item">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
+                    <p>Book name 8</p>
+                    <div class="library-item__actions">
+                        <button class="see-book-button">See</button>
+                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
+                    </div>
+                </div>
+                <div class="library-item">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
+                    <p>Book name 9</p>
+                    <div class="library-item__actions">
+                        <button class="see-book-button">See</button>
+                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
+                    </div>
+                </div>
                 </div>
             </div>
 

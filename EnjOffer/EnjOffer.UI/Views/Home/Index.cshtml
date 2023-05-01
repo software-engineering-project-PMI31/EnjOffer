@@ -33,102 +33,112 @@
             ? (removeWord.disabled = false)
             : (removeWord.disabled = true)
     }
+
+    function handleSubmit(event) {
+  event.preventDefault();
+
+  const inputs = event.target.querySelectorAll('.input-field__input');
+
+  inputs.forEach(input => {
+    console.log(`${input.getAttribute('name')}: ${input.value}`);
+  });
+
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].value = '';
+  }
+}
 </script>
 
 <body>
     <main class="admin-panel">
-        <div class="admin-panel__header">
-            <h1 class="admin-panel__header__text">
-                Dashboard. Personal account
-            </h1>
-        </div>
+        @Html.Partial("_Header")
         <div class="admin-panel__main">
             <h2 class="admin-panel__sections">
                 Admin panel
             </h2>
             <div class="manager">
-                <div>
+                <form id="create-admin-account" onsubmit="handleSubmit(event)" method="POST">
                     <h3>Add admin account</h3>
                     <details>
                         <summary class="form-button" onclick="formInteraction()">Open form</summary>
                         <div class="input-field">
                             <div class="input-field__item">
                                 <p>Nickname</p>
-                                <input type="text" class="input-field__input" />
+                                <input type="text" class="input-field__input" name="create-admin-account-nickname"/>
                             </div>
                             <div class="input-field__item">
                                 <p>Email</p>
-                                <input type="email" class="input-field__input" />
+                                <input type="email" class="input-field__input" name="create-admin-account-email"/>
                             </div>
                             <div class="input-field__item">
                                 <p>Password</p>
-                                <input type="password" class="input-field__input" />
+                                <input type="password" class="input-field__input" name="create-admin-account-password"/>
                             </div>
                             <div class="input-field__item">
                                 <p>Repeat password</p>
-                                <input type="password" class="input-field__input" />
+                                <input type="password" class="input-field__input" name="create-admin-account-repeat-password"/>
                             </div>
                             <button class="input-field__button">Create account</button>
                         </div>
                     </details>
-                </div>
-                <div>
+                </form>
+                <form id="remove-admin-account" onsubmit="handleSubmit(event)" method="POST">
                     <h3>Remove admin account</h3>
                     <details>
                         <summary class="form-button" onclick="formInteraction()">Open form</summary>
                         <div class="input-field">
                             <div class="input-field__item">
                                 <p>Nickname</p>
-                                <input type="text" class="input-field__input" />
+                                <input type="text" class="input-field__input" name="remove-admin-account-nickname"/>
                             </div>
                             <div class="remove-section">
                                 <div class="remove-section__check">
                                     <p class="warning-text">I am sure</p>
                                     <input type="checkbox" id="check-for-delete-account" onclick="canDelete()">
                                 </div>
-                                <button id="remove-account-button" class="input-field__button" disabled>Remove
+                                <button type="submit" id="remove-account-button" class="input-field__button" disabled>Remove
                                     account</button>
                             </div>
                         </div>
                     </details>
-                </div>
-                <div>
+                </form>
+                <form id="database-add-word" onsubmit="handleSubmit(event)" method="POST">
                     <h3>Add word to database</h3>
                     <details>
                         <summary class="form-button" onclick="formInteraction()">Open form</summary>
                         <div class="input-field">
                             <div class="input-field__item">
                                 <p>Word</p>
-                                <input type="text" class="input-field__input" />
+                                <input type="text" class="input-field__input" name="add-word"/>
                             </div>
                             <div class="input-field__item">
                                 <p>Translation</p>
-                                <input type="text" class="input-field__input" />
+                                <input type="text" class="input-field__input" name="add-word-translation" />
                             </div>
-                            <button class="input-field__button">Add new word</button>
+                            <button type="submit" class="input-field__button">Add new word</button>
                         </div>
                     </details>
-                </div>
-                <div>
+                </form>
+                <form id="database-remove-word" onsubmit="handleSubmit(event)" method="POST">
                     <h3>Remove word from database</h3>
                     <details>
                         <summary class="form-button" onclick="formInteraction()">Open form</summary>
                         <div class="input-field">
                             <div class="input-field__item">
                                 <p>Word</p>
-                                <input type="text" class="input-field__input" />
+                                <input type="text" class="input-field__input" name="remove-word"/>
                             </div>
                             <div class="remove-section">
                                 <div class="remove-section__check">
                                     <p class="warning-text">I am sure</p>
                                     <input type="checkbox" id="check-for-delete-word" onclick="canDelete()">
                                 </div>
-                                <button id="remove-word-button" class="input-field__button" disabled>Remove
+                                <button type="submit" id="remove-word-button" class="input-field__button" disabled>Remove
                                     word</button>
                             </div>
                         </div>
                     </details>
-                </div>
+                </form>
             </div>
             <h2 class="admin-panel__sections" style="margin-bottom: 0;">Statistics</h2>
             <div>

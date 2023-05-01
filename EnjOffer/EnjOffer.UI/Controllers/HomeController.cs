@@ -9,5 +9,15 @@ namespace EnjOffer.UI.Controllers
         {
             return View();
         }
+
+        public IActionResult Header()
+        {
+            return View();
+        }
+
+        public IActionResult Sidebar()
+        {
+            return View();
+        }
     }
 }

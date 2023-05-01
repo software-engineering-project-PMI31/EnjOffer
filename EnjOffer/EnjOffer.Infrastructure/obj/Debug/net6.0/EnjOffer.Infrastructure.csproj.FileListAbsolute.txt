@@ -15,3 +15,20 @@ D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debu
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.pdb
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.genruntimeconfig.cache
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\ref\EnjOffer.Infrastructure.dll
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\EnjOffer.Infrastructure.deps.json
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\EnjOffer.Infrastructure.runtimeconfig.json
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\EnjOffer.Infrastructure.dll
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\ref\EnjOffer.Infrastructure.dll
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\EnjOffer.Infrastructure.pdb
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\EnjOffer.Core.dll
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\bin\Debug\net6.0\EnjOffer.Core.pdb
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.csproj.AssemblyReference.cache
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.AssemblyInfoInputs.cache
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.AssemblyInfo.cs
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.csproj.CoreCompileInputs.cache
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.csproj.CopyComplete
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.dll
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\ref\EnjOffer.Infrastructure.dll
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.pdb
+D:\projects\EnjOffer2\EnjOffer\EnjOffer\EnjOffer.Infrastructure\obj\Debug\net6.0\EnjOffer.Infrastructure.genruntimeconfig.cache
