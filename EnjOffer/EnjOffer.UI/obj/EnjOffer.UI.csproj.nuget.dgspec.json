@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\EnjOffer.UI.csproj": {}
+    "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\EnjOffer.UI.csproj": {}
   },
   "projects": {
-    "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj": {
+    "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj",
+        "projectUniqueName": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj",
         "projectName": "EnjOffer.Core",
-        "projectPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Core\\obj\\",
+        "projectPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -80,21 +84,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj": {
+    "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj",
         "projectName": "EnjOffer.Infrastructure",
-        "projectPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\obj\\",
+        "projectPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -108,8 +116,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj": {
-                "projectPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj"
+              "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj": {
+                "projectPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj"
               }
             }
           }
@@ -154,21 +162,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\EnjOffer.UI.csproj": {
+    "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\EnjOffer.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\EnjOffer.UI.csproj",
+        "projectUniqueName": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\EnjOffer.UI.csproj",
         "projectName": "EnjOffer.UI",
-        "projectPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\EnjOffer.UI.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\obj\\",
+        "projectPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\EnjOffer.UI.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -182,11 +194,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj": {
-                "projectPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj"
+              "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj": {
+                "projectPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Core\\EnjOffer.Core.csproj"
               },
-              "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj": {
-                "projectPath": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj"
+              "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj": {
+                "projectPath": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.Infrastructure\\EnjOffer.Infrastructure.csproj"
               }
             }
           }
@@ -256,7 +268,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -17,17 +17,17 @@ builder.Host.UseSerilog((HostBuilderContext context, IServiceProvider services, 
     loggerConfiguration.ReadFrom.Configuration(context.Configuration).ReadFrom.Services(services);
 });
 
-builder.Services.AddSingleton<IUsersRepository, UsersRepository>();
-builder.Services.AddSingleton<IUserWordsRepository, UserWordsRepository>();
-builder.Services.AddSingleton<IDefaultWordsRepository, DefaultWordsRepository>();
-builder.Services.AddSingleton<IUserStatisticsRepository, UserStatisticsRepository>();
-builder.Services.AddSingleton<IUsersDefaultWordsRepository, UsersDefaultWordsRepository>();
+builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+builder.Services.AddScoped<IUserWordsRepository, UserWordsRepository>();
+builder.Services.AddScoped<IDefaultWordsRepository, DefaultWordsRepository>();
+builder.Services.AddScoped<IUserStatisticsRepository, UserStatisticsRepository>();
+builder.Services.AddScoped<IUsersDefaultWordsRepository, UsersDefaultWordsRepository>();
 
-builder.Services.AddSingleton<IUsersService, UsersService>();
-builder.Services.AddSingleton<IUserWordsService, UserWordsService>();
-builder.Services.AddSingleton<IDefaultWordsService, DefaultWordsService>();
-builder.Services.AddSingleton<IUserStatisticsService, UserStatisticsService>();
-builder.Services.AddSingleton<IUsersDefaultWordsService, UsersDefaultWordsService>();
+builder.Services.AddScoped<IUsersService, UsersService>();
+builder.Services.AddScoped<IUserWordsService, UserWordsService>();
+builder.Services.AddScoped<IDefaultWordsService, DefaultWordsService>();
+builder.Services.AddScoped<IUserStatisticsService, UserStatisticsService>();
+builder.Services.AddScoped<IUsersDefaultWordsService, UsersDefaultWordsService>();
 
 builder.Services.AddControllersWithViews();
 

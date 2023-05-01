@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "X9s9sLofXPln45+ARI6k+VK33Ak+v8rFkW9+3NvH328=",
+  "Hash": "I91nChdQFGSi74voRnKVTz/aNPnKq1a5mew9EQHfmBU=",
   "Source": "EnjOffer.UI",
   "BasePath": "_content/EnjOffer.UI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "EnjOffer.UI\\wwwroot",
       "Source": "EnjOffer.UI",
-      "ContentRoot": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
+      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
       "BasePath": "_content/EnjOffer.UI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\admin-panel.css",
+      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\admin-panel.css",
       "SourceId": "EnjOffer.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
+      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
       "BasePath": "_content/EnjOffer.UI",
       "RelativePath": "admin-panel.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\admin-panel.css"
     },
     {
-      "Identity": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\book-reader.css",
+      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\book-reader.css",
       "SourceId": "EnjOffer.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
+      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
       "BasePath": "_content/EnjOffer.UI",
       "RelativePath": "book-reader.css",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\book-reader.css"
     },
     {
-      "Identity": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\img\\imgNotFound.png",
+      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\img\\imgNotFound.png",
       "SourceId": "EnjOffer.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
+      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
       "BasePath": "_content/EnjOffer.UI",
       "RelativePath": "img/imgNotFound.png",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\img\\imgNotFound.png"
     },
     {
-      "Identity": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\img\\star.svg",
+      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\img\\star.svg",
       "SourceId": "EnjOffer.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
+      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
       "BasePath": "_content/EnjOffer.UI",
       "RelativePath": "img/star.svg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\img\\star.svg"
     },
     {
-      "Identity": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\library.css",
+      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\library.css",
       "SourceId": "EnjOffer.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
+      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
       "BasePath": "_content/EnjOffer.UI",
       "RelativePath": "library.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\library.css"
     },
     {
-      "Identity": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\login-page.css",
+      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\login-page.css",
       "SourceId": "EnjOffer.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
+      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
       "BasePath": "_content/EnjOffer.UI",
       "RelativePath": "login-page.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\login-page.css"
     },
     {
-      "Identity": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\login-page.html",
+      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\login-page.html",
       "SourceId": "EnjOffer.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
+      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
       "BasePath": "_content/EnjOffer.UI",
       "RelativePath": "login-page.html",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\login-page.html"
     },
     {
-      "Identity": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\word-trainer.css",
+      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\word-trainer.css",
       "SourceId": "EnjOffer.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\projects\\EnjOffer2\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
+      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
       "BasePath": "_content/EnjOffer.UI",
       "RelativePath": "word-trainer.css",
       "AssetKind": "All",
