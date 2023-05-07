@@ -31,16 +31,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EnjOffer.Core\EnjOffer.Core.csproj" />
-    <ProjectReference Include="..\EnjOffer.Infrastructure\EnjOffer.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\sidebar.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EnjOffer.Core\EnjOffer.Core.csproj" />
+    <ProjectReference Include="..\EnjOffer.Infrastructure\EnjOffer.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

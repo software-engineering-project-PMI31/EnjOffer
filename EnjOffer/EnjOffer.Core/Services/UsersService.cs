@@ -87,6 +87,19 @@ namespace EnjOffer.Core.Services
             return true;
         }
 
+        public bool DeleteUserByEmail(string email)
+        {
+            UserResponse? user = _usersRepository.GetAllUsers().FirstOrDefault(user => user.Email == email)?.ToUserResponse();
+
+            if (user is null)
+            {
+                return false;
+            }
+
+            _usersRepository.DeleteUser(user.UserId);
+            return true;
+        }
+
         public List<UserResponse> GetAllUsers()
         {
             return _usersRepository.GetAllUsers().Select(user => user.ToUserResponse()).ToList();

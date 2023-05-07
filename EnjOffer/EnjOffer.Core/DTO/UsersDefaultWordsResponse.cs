@@ -10,8 +10,8 @@ namespace EnjOffer.Core.DTO
 {
     public class UsersDefaultWordsResponse
     {
-        public Guid UserId { get; set; }
-        public Guid DefaultWordId { get; set; }
+        public Guid? UserId { get; set; }
+        public Guid? DefaultWordId { get; set; }
         public DateTime? LastTimeEntered { get; set; }
         public int CorrectEnteredCount { get; set; }
         public int IncorrectEnteredCount { get; set; }

@@ -108,5 +108,24 @@ namespace EnjOffer.Core.Services
 
             return true;
         }
+
+        public bool DeleteDefaultWordByWordAndTranslation(string word, string wordTranslation)
+        {
+            if (_defaultWordsRepository.GetDefaultWordByWordAndTranslation(word, wordTranslation) is null)
+            {
+                throw new ArgumentNullException(nameof(word));
+            }
+
+            DefaultWords? defaultWord = _defaultWordsRepository.GetDefaultWordByWordAndTranslation(word, wordTranslation);
+
+            if (defaultWord is null)
+            {
+                return false;
+            }
+
+            _defaultWordsRepository.DeleteDefaultWord(defaultWord.DefaultWordId);
+
+            return true;
+        }
     }
 }

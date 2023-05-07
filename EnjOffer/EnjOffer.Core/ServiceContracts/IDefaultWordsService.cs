@@ -12,6 +12,7 @@ namespace EnjOffer.Core.ServiceContracts
         DefaultWordResponse AddDefaultWord(DefaultWordAddRequest? defaultWordAddRequest);
         List<DefaultWordResponse> GetAllDefaultWords();
         DefaultWordResponse? GetDefaultWordById(Guid? defaultWordId);
+        bool DeleteDefaultWordByWordAndTranslation(string word, string wordTranslation);
         bool DeleteDefaultWord(Guid? defaultWordId);
 
     }

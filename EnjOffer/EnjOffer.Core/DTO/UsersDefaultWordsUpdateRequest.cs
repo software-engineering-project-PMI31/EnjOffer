@@ -11,10 +11,10 @@ namespace EnjOffer.Core.DTO
     public class UsersDefaultWordsUpdateRequest : IValidatableObject
     {
         [Required(ErrorMessage = $"{nameof(UserId)} can't be blank")]
-        public Guid UserId { get; set; }
+        public Guid? UserId { get; set; }
 
         [Required(ErrorMessage = $"{nameof(DefaultWordId)} can't be blank")]
-        public Guid DefaultWordId { get; set; }
+        public Guid? DefaultWordId { get; set; }
 
         public DateTime? LastTimeEntered { get; set; }
 

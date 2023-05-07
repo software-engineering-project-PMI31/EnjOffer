@@ -68,7 +68,8 @@ namespace EnjOffer.Core.DTO
                 LastTimeEntered = userWords.LastTimeEntered,
                 CorrectEnteredCount = userWords.CorrectEnteredCount,
                 IncorrectEnteredCount = userWords.IncorrectEnteredCount,
-                Priority = userWordsService.GetPriority(userWords.LastTimeEntered, userWords.CorrectEnteredCount, userWords.IncorrectEnteredCount),
+                Priority = userWordsService.GetPriority(userWords.LastTimeEntered,
+                    userWords.CorrectEnteredCount, userWords.IncorrectEnteredCount),
                 UserId = userWords.UserId
             };
         }

@@ -67,7 +67,7 @@ namespace EnjOffer.Infrastructure
             modelBuilder.Entity<Books>().Property(t => t.ImageSrc).HasColumnName("book_image_src").HasColumnType("text").HasDefaultValue("imgNotFound.png");
 
             modelBuilder.Entity<DefaultWords>().HasKey(t => t.DefaultWordId);
-            modelBuilder.Entity<DefaultWords>().HasIndex(t => t.Word).IsUnique();
+            modelBuilder.Entity<DefaultWords>().HasIndex(t => new { t.Word, t.WordTranslation }).IsUnique();
             modelBuilder.Entity<DefaultWords>().Property(t => t.DefaultWordId).HasColumnName("default_word_id").HasColumnType("uuid");
             modelBuilder.Entity<DefaultWords>().Property(t => t.Word).HasColumnName("default_word_word").HasColumnType("varchar(400)").HasMaxLength(400).IsRequired().HasDefaultValue(string.Empty);
             modelBuilder.Entity<DefaultWords>().Property(t => t.WordTranslation).HasColumnName("default_word_word_translation").HasColumnType("varchar(400)").HasMaxLength(400).IsRequired().HasDefaultValue(string.Empty);
@@ -78,13 +78,13 @@ namespace EnjOffer.Infrastructure
             modelBuilder.Entity<UserWords>().Property(t => t.UserWordId).HasColumnName("user_word_id").HasColumnType("uuid");
             modelBuilder.Entity<UserWords>().Property(t => t.Word).HasColumnName("user_word_word").HasColumnType("varchar(400)").HasMaxLength(400).IsRequired().HasDefaultValue(string.Empty);
             modelBuilder.Entity<UserWords>().Property(t => t.WordTranslation).HasColumnName("user_word_word_translation").HasColumnType("varchar(400)").HasMaxLength(400).IsRequired().HasDefaultValue(string.Empty);
-            modelBuilder.Entity<UserWords>().Property(t => t.LastTimeEntered).HasColumnName("user_last_time_entered").HasColumnType("date").IsRequired().HasDefaultValue(DateTime.Now);
-            modelBuilder.Entity<UserWords>().Property(t => t.CorrectEnteredCount).HasColumnName("user_correct_entered_count").HasColumnType("integer").IsRequired().HasDefaultValue(0);
-            modelBuilder.Entity<UserWords>().Property(t => t.IncorrectEnteredCount).HasColumnName("user_incorrect_entered_count").HasColumnType("integer").IsRequired().HasDefaultValue(0);
+            modelBuilder.Entity<UserWords>().Property(t => t.LastTimeEntered).HasColumnName("user_last_time_entered").HasColumnType("date");
+            modelBuilder.Entity<UserWords>().Property(t => t.CorrectEnteredCount).HasColumnName("user_correct_entered_count").HasColumnType("integer").IsRequired();
+            modelBuilder.Entity<UserWords>().Property(t => t.IncorrectEnteredCount).HasColumnName("user_incorrect_entered_count").HasColumnType("integer").IsRequired();
 
             modelBuilder.Entity<UserStatistics>().HasKey(t => t.UserStatisticsId);
             modelBuilder.Entity<UserStatistics>().Property(t => t.UserStatisticsId).HasColumnName("user_statistic_id").HasColumnType("uuid");
-            modelBuilder.Entity<UserStatistics>().Property(t => t.AnswerDate).HasColumnName("user_statistic_answer_date").HasColumnType("date").IsRequired().HasDefaultValue(DateTime.Now);
+            modelBuilder.Entity<UserStatistics>().Property(t => t.AnswerDate).HasColumnName("user_statistic_answer_date").HasColumnType("date").IsRequired();
             modelBuilder.Entity<UserStatistics>().Property(t => t.CorrectAnswersCount).HasColumnName("user_statistic_correct_answer_count").HasColumnType("integer").IsRequired().HasDefaultValue(0);
             modelBuilder.Entity<UserStatistics>().Property(t => t.IncorrectAnswersCount).HasColumnName("user_statistic_incorrect_answer_count").HasColumnType("integer").IsRequired().HasDefaultValue(0);
 
@@ -95,11 +95,11 @@ namespace EnjOffer.Infrastructure
                 j => j
                 .HasOne(pt => pt.DefaultWord)
                 .WithMany(t => t.UsersDefaultWords)
-                .HasForeignKey(pt => pt.DefaultWordId).OnDelete(DeleteBehavior.SetNull),
+                .HasForeignKey(pt => pt.DefaultWordId).OnDelete(DeleteBehavior.Cascade),
                 j => j
                 .HasOne(pt => pt.User)
                 .WithMany(t => t.UsersDefaultWords)
-                .HasForeignKey(pt => pt.UserId).OnDelete(DeleteBehavior.SetNull),
+                .HasForeignKey(pt => pt.UserId).OnDelete(DeleteBehavior.Cascade),
 
                 j =>
                 {
@@ -108,23 +108,19 @@ namespace EnjOffer.Infrastructure
                     j
                     .Property(j => j.LastTimeEntered)
                     .HasColumnType("date")
-                    .HasColumnName("last_time_entered")
-                    .IsRequired()
-                    .HasDefaultValue(DateTime.Now);
+                    .HasColumnName("last_time_entered");
 
                     j
                     .Property(j => j.CorrectEnteredCount)
                     .HasColumnType("integer")
                     .HasColumnName("correct_entered_count")
-                    .IsRequired()
-                    .HasDefaultValue(0);
+                    .IsRequired();
 
                     j
                     .Property(j => j.IncorrectEnteredCount)
                     .HasColumnType("integer")
                     .HasColumnName("incorrect_entered_count")
-                    .IsRequired()
-                    .HasDefaultValue(0);
+                    .IsRequired();
 
                     j.ToTable("users_default_words");
                 }

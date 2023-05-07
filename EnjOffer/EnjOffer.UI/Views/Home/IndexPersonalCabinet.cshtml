@@ -1,0 +1,208 @@
+﻿
+@{
+    ViewBag.Title = "Personal cabinet";
+}
+
+@*<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/admin-panel.css">
+    <title>Document</title>
+</head>*@
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+@{
+    string js = @"function formInteraction() {
+        const button = document.querySelector('.form-button');
+        if (button.innerHTML === 'Open form') {
+            button.innerHTML = 'Close form';
+        } else {
+            button.innerHTML = 'Open form';
+        }
+    }
+
+    function canDelete() {
+        const checkAccount = document.getElementById('check-for-delete-account');
+        const checkWord = document.getElementById('check-for-delete-word');
+        const removeAccount = document.getElementById('remove-account-button');
+        const removeWord = document.getElementById('remove-word-button');
+
+        removeAccount && checkAccount.checked
+            ? (removeAccount.disabled = false)
+            : (removeAccount.disabled = true)
+
+        removeWord && checkWord.checked
+            ? (removeWord.disabled = false)
+            : (removeWord.disabled = true)
+    }";
+}
+<script>
+    @Html.Raw(js);
+</script>
+
+@*<body>*@
+    <main class="admin-panel">
+    @Html.PartialAsync("_Header")
+    <div class="admin-panel__main">
+        <h2 class="admin-panel__sections">
+            Admin panel
+        </h2>
+        <div class="manager">
+            <form id="create-admin-account" method="POST" action="/personal-cabinet/add-user">
+                <h3>Add admin account</h3>
+                <details>
+                    <summary class="form-button" onclick="formInteraction()">Open form</summary>
+                    <div class="input-field">
+                        <div class="input-field__item">
+                            <p>Email</p>
+                            <input type="email" class="input-field__input" name="Email" required/>
+                        </div>
+                        <div class="input-field__item">
+                            <p>Password</p>
+                            <input type="password" class="input-field__input" name="Password" minlength="10" required/>
+                        </div>
+                        <div class="input-field__item">
+                            <p>Role</p>
+                            <input type="text" class="input-field__input" name="Role" required/>
+                        </div>
+                        @*@foreach(var item in ViewBag.Errors) {
+                            <span style="color: red; font-style: italic;">@item</span>
+                        }*@
+                        <button class="input-field__button">Create account</button>
+                    </div>
+                </details>
+            </form>
+            <form id="remove-admin-account" method="POST" action="personal-cabinet/delete-user">
+                <h3>Remove admin account</h3>
+                <details>
+                    <summary class="form-button" onclick="formInteraction()">Open form</summary>
+                    <div class="input-field">
+                        <div class="input-field__item">
+                            <p>Email</p>
+                            <input type="email" class="input-field__input" name="Email" required/>
+                        </div>
+                        @*@foreach(var item in ViewBag.Errors) {
+                            <span style="color: red; font-style: italic;">@item</span>
+                        }*@
+                        <div class="remove-section">
+                            <div class="remove-section__check">
+                                <p class="warning-text">I am sure</p>
+                                <input type="checkbox" id="check-for-delete-account" onclick="canDelete()">
+                            </div>
+                            <button type="submit" id="remove-account-button" class="input-field__button" disabled>Remove
+                                account</button>
+                        </div>
+                    </div>
+                </details>
+            </form>
+            <form id="database-add-word" method="POST" action="/personal-cabinet/add-default-word">
+                <h3>Add word to database</h3>
+                <details>
+                    <summary class="form-button" onclick="formInteraction()">Open form</summary>
+                    <div class="input-field">
+                        <div class="input-field__item">
+                            <p>Word</p>
+                            <input type="text" class="input-field__input" name="Word" required />
+                        </div>
+                        <div class="input-field__item">
+                            <p>Translation</p>
+                            <input type="text" class="input-field__input" name="WordTranslation" required />
+                        </div>
+                        <div class="input-field__item">
+                            <p>Link to image</p>
+                            <input type="text" class="input-field__input" name="ImageSrc" />
+                        </div>
+                        @*@foreach(var item in ViewBag.Errors) {
+                            <span style="color: red; font-style: italic;">@item</span>
+                        }*@
+                        <button type="submit" class="input-field__button">Add new word</button>
+                    </div>
+                </details>
+            </form>
+            <form id="database-remove-word" method="POST" action="/personal-cabinet/delete-default-word">
+                <h3>Remove word from database</h3>
+                <details>
+                    <summary class="form-button" onclick="formInteraction()">Open form</summary>
+                    <div class="input-field">
+                        <div class="input-field__item">
+                            <p>Word</p>
+                            <input type="text" class="input-field__input" name="Word" required/>
+                        </div>
+                        <div class="input-field__item">
+                            <p>Word Translation</p>
+                            <input type="text" class="input-field__input" name="WordTranslation" required/>
+                        </div>
+                        @*@foreach(var item in ViewBag.Errors) {
+                            <span style="color: red; font-style: italic;">@item</span>
+                        }*@
+                        <div class="remove-section">
+                            <div class="remove-section__check">
+                                <p class="warning-text">I am sure</p>
+                                <input type="checkbox" id="check-for-delete-word" onclick="canDelete()">
+                            </div>
+                            <button type="submit" id="remove-word-button" class="input-field__button" disabled>Remove
+                                word</button>
+                        </div>
+                    </div>
+                </details>
+            </form>
+        </div>
+        <h2 class="admin-panel__sections" style="margin-bottom: 0;">Statistics</h2>
+        <div>
+            <canvas id="myChart" class="myChart"></canvas>
+        </div>
+        <div class="advices">
+            <div class="advice">
+                <h4>Advice #1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptates hic magni laboriosam corporis officiis, neque sapiente aliquam in. Voluptatem quasi officia ex tenetur provident! Repellendus laudantium perspiciatis cum minus?</p>
+            </div>
+            <div class="advice">
+                <h4>Advice #2</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas fugit temporibus cum veritatis labore facilis at asperiores voluptate saepe eligendi obcaecati rerum corrupti, perspiciatis ipsam deserunt porro, distinctio quia repudiandae.</p>
+            </div>
+            <div class="advice">
+                <h4>Advice #3</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vitae a quod vero, veritatis voluptatum laborum consequuntur corporis et praesentium atque perspiciatis sed quisquam ea tempora itaque provident minus exercitationem?</p>
+            </div>
+        </div>
+    </div>
+</main>
+@*</body>*@
+
+@*</html>*@
+<script>
+    @Html.Raw(@"const ctx = document.getElementById('myChart')?.getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [{
+                label: `Quantity`,
+                data: [12, 19, 3, 5, 2, 3, 7],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+    });")
+</script>

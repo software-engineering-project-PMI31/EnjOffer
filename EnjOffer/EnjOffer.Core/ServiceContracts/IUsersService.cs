@@ -13,5 +13,6 @@ namespace EnjOffer.Core.ServiceContracts
         List<UserResponse> GetAllUsers();
         UserResponse? GetUserById(Guid? userId);
         bool DeleteUser(Guid? userId);
+        bool DeleteUserByEmail(string email);
     }
 }

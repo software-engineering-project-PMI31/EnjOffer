@@ -9,6 +9,7 @@ using EnjOffer.Core.Domain.RepositoryContracts;
 using EnjOffer.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddDbContext<EnjOfferDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetValue<string>("ConnectionStrings:DefaultConnection")));
 
@@ -17,17 +18,18 @@ builder.Host.UseSerilog((HostBuilderContext context, IServiceProvider services, 
     loggerConfiguration.ReadFrom.Configuration(context.Configuration).ReadFrom.Services(services);
 });
 
-builder.Services.AddScoped<IUsersRepository, UsersRepository>();
-builder.Services.AddScoped<IUserWordsRepository, UserWordsRepository>();
-builder.Services.AddScoped<IDefaultWordsRepository, DefaultWordsRepository>();
-builder.Services.AddScoped<IUserStatisticsRepository, UserStatisticsRepository>();
-builder.Services.AddScoped<IUsersDefaultWordsRepository, UsersDefaultWordsRepository>();
-
 builder.Services.AddScoped<IUsersService, UsersService>();
 builder.Services.AddScoped<IUserWordsService, UserWordsService>();
 builder.Services.AddScoped<IDefaultWordsService, DefaultWordsService>();
 builder.Services.AddScoped<IUserStatisticsService, UserStatisticsService>();
 builder.Services.AddScoped<IUsersDefaultWordsService, UsersDefaultWordsService>();
+builder.Services.AddScoped<IWordsService, WordsService>();
+
+builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+builder.Services.AddScoped<IUserWordsRepository, UserWordsRepository>();
+builder.Services.AddScoped<IDefaultWordsRepository, DefaultWordsRepository>();
+builder.Services.AddScoped<IUserStatisticsRepository, UserStatisticsRepository>();
+builder.Services.AddScoped<IUsersDefaultWordsRepository, UsersDefaultWordsRepository>();
 
 builder.Services.AddControllersWithViews();
 

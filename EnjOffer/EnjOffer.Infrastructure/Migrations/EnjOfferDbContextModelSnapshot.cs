@@ -129,7 +129,7 @@ namespace EnjOffer.Infrastructure.Migrations
 
                     b.HasKey("DefaultWordId");
 
-                    b.HasIndex("Word")
+                    b.HasIndex("Word", "WordTranslation")
                         .IsUnique();
 
                     b.ToTable("default_words", (string)null);
@@ -144,9 +144,7 @@ namespace EnjOffer.Infrastructure.Migrations
 
                     b.Property<DateTime?>("AnswerDate")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("date")
-                        .HasDefaultValue(new DateTime(2023, 4, 4, 2, 20, 11, 834, DateTimeKind.Local).AddTicks(9045))
                         .HasColumnName("user_statistic_answer_date");
 
                     b.Property<int>("CorrectAnswersCount")
@@ -161,7 +159,7 @@ namespace EnjOffer.Infrastructure.Migrations
                         .HasDefaultValue(0)
                         .HasColumnName("user_statistic_incorrect_answer_count");
 
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid?>("UserId")
                         .HasColumnType("uuid");
 
                     b.HasKey("UserStatisticsId");
@@ -179,25 +177,18 @@ namespace EnjOffer.Infrastructure.Migrations
                         .HasColumnName("user_word_id");
 
                     b.Property<int>("CorrectEnteredCount")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasDefaultValue(0)
                         .HasColumnName("user_correct_entered_count");
 
                     b.Property<int>("IncorrectEnteredCount")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasDefaultValue(0)
                         .HasColumnName("user_incorrect_entered_count");
 
                     b.Property<DateTime?>("LastTimeEntered")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("date")
-                        .HasDefaultValue(new DateTime(2023, 4, 4, 2, 20, 11, 834, DateTimeKind.Local).AddTicks(7778))
                         .HasColumnName("user_last_time_entered");
 
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid?>("UserId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Word")
@@ -261,29 +252,22 @@ namespace EnjOffer.Infrastructure.Migrations
 
             modelBuilder.Entity("EnjOffer.Core.Domain.Entities.UsersDefaultWords", b =>
                 {
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid?>("UserId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("DefaultWordId")
+                    b.Property<Guid?>("DefaultWordId")
                         .HasColumnType("uuid");
 
                     b.Property<int>("CorrectEnteredCount")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasDefaultValue(0)
                         .HasColumnName("correct_entered_count");
 
                     b.Property<int>("IncorrectEnteredCount")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasDefaultValue(0)
                         .HasColumnName("incorrect_entered_count");
 
                     b.Property<DateTime?>("LastTimeEntered")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("date")
-                        .HasDefaultValue(new DateTime(2023, 4, 4, 2, 20, 11, 836, DateTimeKind.Local).AddTicks(6127))
                         .HasColumnName("last_time_entered");
 
                     b.HasKey("UserId", "DefaultWordId");
@@ -298,8 +282,7 @@ namespace EnjOffer.Infrastructure.Migrations
                     b.HasOne("EnjOffer.Core.Domain.Entities.Users", "User")
                         .WithMany("UserStatistics")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("User");
                 });
@@ -309,8 +292,7 @@ namespace EnjOffer.Infrastructure.Migrations
                     b.HasOne("EnjOffer.Core.Domain.Entities.Users", "User")
                         .WithMany("UserWords")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("User");
                 });
@@ -320,13 +302,13 @@ namespace EnjOffer.Infrastructure.Migrations
                     b.HasOne("EnjOffer.Core.Domain.Entities.DefaultWords", "DefaultWord")
                         .WithMany("UsersDefaultWords")
                         .HasForeignKey("DefaultWordId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("EnjOffer.Core.Domain.Entities.Users", "User")
                         .WithMany("UsersDefaultWords")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("DefaultWord");

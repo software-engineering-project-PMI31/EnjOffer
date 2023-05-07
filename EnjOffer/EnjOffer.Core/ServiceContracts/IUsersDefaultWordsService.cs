@@ -9,12 +9,12 @@ namespace EnjOffer.Core.ServiceContracts
 {
     public interface IUsersDefaultWordsService
     {
-        UsersDefaultWordsResponse AddUserDefaultWord(UsersDefaultWordsAddRequest? userDefaultWordAddRequest);
+        UsersDefaultWordsResponse AddUserDefaultWord(UsersDefaultWordsAddRequest? usersDefaultWordAddRequest);
         List<UsersDefaultWordsResponse> GetAllUserDefaultWords();
         List<UsersDefaultWordsResponse> GetUserDefaultWordsByDate(DateTime? dateTime);
-        List<UsersDefaultWordsResponse> GetUserDefaultWordsSortedByPriority(List<UsersDefaultWordsResponse> userDefaultWords);
+        List<UsersDefaultWordsResponse> GetUserDefaultWordsSortedByPriority(List<UsersDefaultWordsResponse> usersDefaultWords);
         UsersDefaultWordsResponse? GetUserDefaultWordById(Guid? defaultWordId, Guid? userId);
-        UsersDefaultWordsResponse UpdateUserDefaultWord(UsersDefaultWordsUpdateRequest? userWordsUpdateRequest);
+        UsersDefaultWordsResponse UpdateUserDefaultWord(UsersDefaultWordsUpdateRequest? usersDefaultWordsUpdateRequest);
         double GetPriority(DateTime? lastTimeEntered, int correctlyEntered, int incorrectlyEntererd);
         bool DeleteUserDefaultWord(Guid? defaultWordId, Guid? userId);
     }

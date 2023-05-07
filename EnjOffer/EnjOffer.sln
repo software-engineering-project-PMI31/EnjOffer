@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnjOffer.Core", "EnjOffer.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnjOffer.Infrastructure", "EnjOffer.Infrastructure\EnjOffer.Infrastructure.csproj", "{60DBDEA4-C432-4BC5-8996-B068C571EE57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{BE160B9E-B725-4788-85F2-8DC8D91CC6BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{BE160B9E-B725-4788-85F2-8DC8D91CC6BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

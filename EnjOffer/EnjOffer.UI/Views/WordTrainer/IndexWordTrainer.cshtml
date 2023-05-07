@@ -1,0 +1,99 @@
+﻿@using EnjOffer.Core.DTO;
+@model WordsUpdateRequest?;
+@{
+    ViewBag.Title = "Word trainer";
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/word-trainer.css">
+    <title>@ViewBag.Title</title>
+</head>
+
+@{
+    string js = @"function addWord() {
+        document.querySelector('.add-word').style.display = 'none';
+        document.querySelector('.add-word-modal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.querySelector('.add-word-modal').style.display = 'none';
+        document.querySelector('.add-word').style.display = 'block';
+    }
+    
+    if (event.target.className === 'add-word-modal__main') {
+        const inputs = event.target.querySelectorAll('.modal-input');
+
+        inputs.forEach(input => {
+        console.log(`${input.getAttribute('name')}: ${input.value}`);
+        });
+
+        for (let i = 0; i < inputs.length; i++) {
+        inputs[i].value = '';
+        }
+    }
+";
+}
+<script>
+    @Html.Raw(js);
+</script>
+
+<body>
+    <main class="word-trainer">
+        <div class="word-trainer__header">
+            <h1 class="word-trainer__header__text">
+                Word trainer
+            </h1>
+        </div>
+        <form class="word-trainer__main" method="POST" action="word-trainer/check-word">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png"
+                    draggable="false">
+                <h1>Слово або фраза</h1>
+            </div>
+            <input type="text" class="word-input" placeholder="Введіть слово..." name="Word" />
+            <input style="display: none;" type="text" class="word-input" value="@Model?.DefaultWordId" placeholder="" name="DefaultWordId" />
+            <input style="display: none;" type="text" class="word-input" value="@Model?.UserId" placeholder="" name="UserId" />
+            <input style="display: none;" type="text" class="word-input" value="@Model?.UserWordId" placeholder="" name="UserWordId" />
+            @if (ViewBag.IsCorrectEntered == null)
+            {
+                
+            }
+            else if (ViewBag.IsCorrectEntered == true) {
+                <p style="color: green">Попереднє слово було введено правильно</p>
+            }
+            else
+            {
+                <p style="color: red">Попереднє слово було введено неправильно</p>
+            }
+            <p>@Model?.WordTranslation</p>
+            <div class="word-trainer__buttons">
+                <button type="submit" class="functional-button">Enter</button>
+                <button class="functional-button">Use a hint</button>
+            </div>
+        </form>
+        <img src="https://www.freeiconspng.com/thumbs/plus-icon/plus-icon-black-2.png" class="add-word"
+            draggable="false" onclick="@Html.Raw("addWord();")"/>
+        <section class="add-word-modal">
+            <img src="https://www.citypng.com/public/uploads/preview/png-red-round-close-x-icon-31631915146jpppmdzihs.png"
+                draggable="false" class="close-modal-button" onclick="@Html.Raw("closeModal();")" />
+            <div class="add-word-modal__header">
+                <h2>Add your word</h2>
+            </div>
+            <form class="add-word-modal__main" method="POST" action="word-trainer/add-user-word">
+                <input type="text" placeholder="Word" class="modal-input" name="Word" required/>
+                <input type="text" placeholder="Traslation" class="modal-input" name="WordTranslation" required/>
+                <input type="text" placeholder="User" class="modal-input" name="UserId" value="409855c0-8d3a-467e-8edd-87593f4a25cc" style="display: none;"/>
+                <button class="add-word-button" type="submit">Add word</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
