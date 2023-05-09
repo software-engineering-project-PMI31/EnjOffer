@@ -46,6 +46,11 @@
 
 <body>
     <main class="word-trainer">
+        <a href="/">Personal cabinet</a>
+        <a href="word-trainer">Word trainer</a>
+        <a href="library">Library</a>
+        <a href="book-reader">Book reader</a>
+
         <div class="word-trainer__header">
             <h1 class="word-trainer__header__text">
                 Word trainer
@@ -68,9 +73,13 @@
             else if (ViewBag.IsCorrectEntered == true) {
                 <p style="color: green">Попереднє слово було введено правильно</p>
             }
-            else
+            else if (ViewBag.IsCorrectEntered == false)
             {
                 <p style="color: red">Попереднє слово було введено неправильно</p>
+            }
+            else
+            {
+                <p style="color: yellow">Щось не так</p>
             }
             <p>@Model?.WordTranslation</p>
             <div class="word-trainer__buttons">

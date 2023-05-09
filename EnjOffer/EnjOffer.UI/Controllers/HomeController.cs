@@ -10,21 +10,24 @@ namespace EnjOffer.UI.Controllers
         private readonly IUsersService _usersService;
         private readonly IDefaultWordsService _defaultWordsService;
         private readonly IUsersDefaultWordsService _usersDefaultWordsService;
+        private readonly IUserStatisticsService _userStatisticsService;
 
         public HomeController(IUsersService usersService, IDefaultWordsService defaultWordsService,
-            IUsersDefaultWordsService usersDefaultWordsService)
+            IUsersDefaultWordsService usersDefaultWordsService, IUserStatisticsService userStatisticsService)
         {
             _usersService = usersService;
             _defaultWordsService = defaultWordsService;
             _usersDefaultWordsService = usersDefaultWordsService;
+            _userStatisticsService = userStatisticsService;
         }
 
-        [Route("[action]")]
         [Route("/")]
         [HttpGet]
         public IActionResult IndexPersonalCabinet()
         {
-            return View();
+            List<UserStatisticsResponse> userStatistics = _userStatisticsService.GetAllUserStatistics();
+
+            return View("IndexPersonalCabinet", userStatistics);
         }
 
         [Route("/personal-cabinet/add-user")]

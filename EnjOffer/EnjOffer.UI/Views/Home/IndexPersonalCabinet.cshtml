@@ -1,4 +1,5 @@
-﻿
+﻿@using EnjOffer.Core.DTO;
+@model IEnumerable<UserStatisticsResponse>;
 @{
     ViewBag.Title = "Personal cabinet";
 }
@@ -14,7 +15,18 @@
     <title>Document</title>
 </head>*@
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="~/admin-panel.css">
+    <title>@ViewBag.Title</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 @{
     string js = @"function formInteraction() {
         const button = document.querySelector('.form-button');
@@ -43,16 +55,20 @@
 <script>
     @Html.Raw(js);
 </script>
-
-@*<body>*@
+</head>
+<body>
     <main class="admin-panel">
-    @Html.PartialAsync("_Header")
+    <a href="/">Personal cabinet</a>
+        <a href="word-trainer">Word trainer</a>
+        <a href="library">Library</a>
+        <a href="book-reader">Book reader</a>
+    @*Html.PartialAsync("_Header")*@
     <div class="admin-panel__main">
         <h2 class="admin-panel__sections">
-            Admin panel
+            Admin panel. Welcome, @User.Identity?.Name!
         </h2>
         <div class="manager">
-            <form id="create-admin-account" method="POST" action="/personal-cabinet/add-user">
+            <form id="create-admin-account" method="POST" action="register">
                 <h3>Add admin account</h3>
                 <details>
                     <summary class="form-button" onclick="formInteraction()">Open form</summary>
@@ -63,11 +79,20 @@
                         </div>
                         <div class="input-field__item">
                             <p>Password</p>
-                            <input type="password" class="input-field__input" name="Password" minlength="10" required/>
+                            <input type="password" class="input-field__input" name="Password" minlength="6" required/>
                         </div>
                         <div class="input-field__item">
-                            <p>Role</p>
-                            <input type="text" class="input-field__input" name="Role" required/>
+                            <p>Confirm password</p>
+                            <input type="password" class="input-field__input" name="RepeatedPassword" minlength="6" required/>
+                        </div>
+                        <div class="input-field__item">
+                            @*<p>Role</p>
+                            <input type="text" class="input-field__input" name="Role" required/>*@
+                            <label>Admin</label>
+                            <select name="UserType">
+                                <option checked value="Admin">Admin</option>
+                                <option value="User">User</option>
+                            </select>
                         </div>
                         @*@foreach(var item in ViewBag.Errors) {
                             <span style="color: red; font-style: italic;">@item</span>
@@ -155,6 +180,7 @@
         <div>
             <canvas id="myChart" class="myChart"></canvas>
         </div>
+        <a href="logout" class="input-field__button">Log out</a>
         <div class="advices">
             <div class="advice">
                 <h4>Advice #1</h4>
@@ -171,38 +197,55 @@
         </div>
     </div>
 </main>
-@*</body>*@
+@{
+    string?[] dates = Model.Select(temp => temp.AnswerDate!.Value.Date.ToShortDateString()).ToArray();
+    int[] correctWordsPerDay = Model.Select(temp => temp.CorrectAnswersCount).ToArray();
+    int[] incorrectWordsPerDay = Model.Select(temp => temp.IncorrectAnswersCount).ToArray();
 
-@*</html>*@
+    string jsDates = string.Join(",", dates.Select(d => "'" + DateTime.Parse(d).ToString("MM/dd/yyyy") + "'"));
+    string jsCorrectWordsPerDay = string.Join(",", correctWordsPerDay);
+    string jsIncorrectWordsPerDay = string.Join(",", incorrectWordsPerDay);
+
+    string diagramJs = $@"var data = {{
+            labels: [{jsDates}],
+            datasets: [
+                {{
+                    label: 'Правильно введені слова',
+                    backgroundColor: 'green',
+                    data: [{jsCorrectWordsPerDay}]
+                }},
+                {{
+                    label: 'Неправильно введені слова',
+                    backgroundColor: 'red',
+                    data: [{jsIncorrectWordsPerDay}]
+                }}
+            ]
+        }};
+
+        var options = {{
+            scales: {{
+                yAxes: [{{
+                    ticks: {{
+                        beginAtZero: true
+                    }}
+                }}],
+            }}
+        }};
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {{
+            type: 'bar',
+            data: data,
+            options: options
+        }});";
+}
 <script>
-    @Html.Raw(@"const ctx = document.getElementById('myChart')?.getContext('2d');
-    const myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-            datasets: [{
-                label: `Quantity`,
-                data: [12, 19, 3, 5, 2, 3, 7],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(255, 99, 132, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                    'rgba(255, 99, 132, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-    });")
+    @Html.Raw(diagramJs);
 </script>
+</body>
+
+</html>
+
+
+
+

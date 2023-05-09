@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Book reader";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/book-reader.css">
+    <title>@ViewBag.Title</title>
+</head>
+@{
+    string js = @"function handleSubmit(event) {
+  event.preventDefault();
+
+  const inputs = event.target.querySelectorAll('.form-input');
+
+  inputs.forEach(input => {
+    console.log(`${input.getAttribute('name')}: ${input.value}`);
+  });
+
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].value = '';
+  }
+}";
+}
+<script>
+    @Html.Raw(js);
+</script>
+<body>
+    <main class="book-reader">
+        <a href="/">Personal cabinet</a>
+        <a href="word-trainer">Word trainer</a>
+        <a href="library">Library</a>
+        <a href="book-reader">Book reader</a>
+        <div class="book-reader__header">
+            <h1 class="book-reader__header__text">
+                Word trainer
+            </h1>
+        </div>
+        <div class="book-reader__main">
+            <div class="book-actions">
+                <embed src="~/books/clean_code.pdf" type="application/pdf" width="900px" height="550px" />
+                <div class="book-modal">
+                    <div class="book-modal__header">
+                        <h3>Add your own word or phrase</h3>
+                    </div>
+                    <div class="book-modal__main">
+                        <form class="add-word-modal__main" method="POST" action="book-reader/add-user-word">
+                            <input type="text" placeholder="Word" class="form-input" name="Word" required />
+                            <input type="text" placeholder="Traslation" class="form-input" name="WordTranslation"
+                                required />
+                            <input type="text" placeholder="User" class="form-input" name="UserId"
+                                value="409855c0-8d3a-467e-8edd-87593f4a25cc" style="display: none;" />
+                            <button class="form-button" type="submit">Add word</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

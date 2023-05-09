@@ -49,21 +49,6 @@ namespace EnjOffer.Core.Services
             //Add user to list
             _usersRepository.AddUser(user);
 
-            /*foreach (DefaultWords defaultWord in _defaultWordsRepository.GetAllDefaultWords())
-            {
-                UsersDefaultWords userDefaultWord = new UsersDefaultWords()
-                {
-                    UserId = user.UserId,
-                    DefaultWordId = defaultWord.DefaultWordId,
-                    LastTimeEntered = null,
-                    CorrectEnteredCount = 0,
-                    IncorrectEnteredCount = 0
-
-                };
-
-                _usersDefaultWordsRepository.AddUserDefaultWord(userDefaultWord);
-            }*/
-
             //Convert the Users object into UserResponse type
             return user.ToUserResponse();
         }

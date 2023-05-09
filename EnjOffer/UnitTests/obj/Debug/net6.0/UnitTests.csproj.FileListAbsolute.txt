@@ -144,3 +144,13 @@ D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Entit
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\EntityFrameworkCoreMock.Shared.dll
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Fare.dll
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Moq.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\MailKit.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\MimeKit.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\NETCore.MailKit.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\BouncyCastle.Crypto.dll

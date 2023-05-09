@@ -10,11 +10,20 @@ namespace EnjOffer.Core.DTO
 {
     public class UserStatisticsAddRequest
     {
-        [Required(ErrorMessage = $"{nameof(AnswerDate)} can't be blank")]
         public DateTime? AnswerDate { get; set; }
 
+        [Range(0, double.MaxValue, ErrorMessage = $"{nameof(IncorrectAnswersCount)} can't be less than 0")]
+        public int? CorrectAnswersCount { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = $"{nameof(IncorrectAnswersCount)} can't be less than 0")]
+        public int? IncorrectAnswersCount { get; set; }
+
+        public bool IsIncreaseCorrectEnteredAnswers { get; set; }
+
+        public bool IsIncreaseIncorrectEnteredAnswers { get; set; }
+
         [Required(ErrorMessage = $"{nameof(UserId)} can't be blank")]
-        public Guid UserId { get; set; }
+        public Guid? UserId { get; set; }
 
         public UserStatistics ToUserStatistics()
         {

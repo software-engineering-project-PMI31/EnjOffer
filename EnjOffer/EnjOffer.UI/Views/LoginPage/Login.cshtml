@@ -1,0 +1,119 @@
+﻿@model LoginDTO;
+
+@{
+    ViewBag.CurrentPage = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login-page.css">
+    <title>Document</title>
+</head>
+@{
+    string loginHTML = @"<div class='login-form__header'>
+                        <h2>Log in</h2>
+                    </div>
+                    <div class='login-form__main'>
+                        <form method='POST' action='login'>
+                            <div class='input-field'>
+                                <p>Email</p>
+                                <input type='email' required name='EmailLogin' class='input-field__input' placeholder='example@example.com' />
+                            </div>
+                            <div class='input-field'>
+                                <p>Password</p>
+                                <input type='password' required name='PasswordLogin' minLength='6' class='input-field__input' />
+                            </div>
+                            <button class='sign-button'>Sign up</button>
+                        </form>
+                    </div>";
+
+    string signupHTML = @"<div class='login-form__header'>
+                    <h2>Sign up</h2>
+                </div>
+                <div class='login-form__main'>
+                    <form method='POST' action='register'>
+                        <div class='input-field'>
+                            <p>Email</p>
+                            <input type='email' required name='Email' class='input-field__input' placeholder='example@example.com' />
+                        </div>
+                        <div class='input-field'>
+                            <p>Password</p>
+                            <input type='password' required name='Password' minLength='6' class='input-field__input' />
+                        </div>
+                        <div class='input-field'>
+                            <p>Repeat password</p>
+                            <input type='password' required name='RepeatedPassword' minLength='6' class='input-field__input-repeat' />
+                        </div>
+                        <button class='sign-button'>Sign up</button>
+                    </form>
+                </div>";
+
+    string js = $@"function signupMethod() {{
+        const login = document.getElementById('login');
+        const signup = document.getElementById('signup');
+        const loginHTML = {loginHTML};
+        const selectedMethod = document.querySelector('.selectedMethod');
+        selectedMethod.innerHTML = loginHTML;
+        login.classList.add('login-method__item-selected');
+        signup.classList.remove('login-method__item-selected');
+    }}
+
+    function loginMethod() {{
+        const login = document.getElementById('login');
+        const signup = document.getElementById('signup');
+        const signupHTML = {signupHTML};
+        const selectedMethod = document.querySelector('.selectedMethod');
+        selectedMethod.innerHTML = signupHTML;
+        login.classList.remove('login-method__item-selected');
+        signup.classList.add('login-method__item-selected');
+    }}";
+}
+<script>
+    @Html.Raw(js);
+</script>
+
+<body>
+    <main class="login-page">
+        <div class="login-page__header">
+            <h1 class="login-page__header__text">
+                Dashboard. Personal account
+            </h1>
+        </div>
+        <div class="login-page__main">
+            <div class="login-form" id="signup-modal">
+                <div class="login-method">
+                    <a href="register" class="login-method__item" id="signup">signup</a>
+                    <a href="login" class="login-method__item login-method__item-selected" id="login">Login</a>
+                </div>
+                <div class="selectedMethod">
+                    <div class='login-form__header'>
+                        <h2>Log in</h2>
+                    </div>
+                    <div class='login-form__main'>
+                        <form method='POST' action='login'>
+                            <div class='input-field'>
+                                <p>Email</p>
+                                <input asp-for="Email" type="email" required class="input-field__input" style="display: block" placeholder="example@example.com">
+                                <span asp-validation-for="Email" style="color: red; font-size: 12px; display: block;"></span>
+                            </div>
+                            <div class='input-field'>
+                                <p>Password</p>
+                                <input asp-for="Password" type="password" required class="input-field__input-repeat" style="display: block" minlength="6">
+                                <span asp-validation-for="Password" style="color: red; font-size: 12px; display: block;"></span>
+                            </div>
+                            <button class='sign-button'>Log in</button>
+                            <a href="forgot-password">Forget the password?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

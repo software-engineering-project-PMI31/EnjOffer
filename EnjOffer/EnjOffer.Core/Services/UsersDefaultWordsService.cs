@@ -195,20 +195,5 @@ namespace EnjOffer.Core.Services
             //_userWordsRepository
             return matchingUsersDefaultWord.ToUserDefaultWordsResponse(this);
         }
-
-        //TO-DO: create interface and test
-        public DefaultWordResponse? GetDefaultWordToShow()
-        {
-            List<UsersDefaultWordsResponse> usersDefaultWords =
-                _usersDefaultWordsRepository.GetAllUserDefaultWords()
-                .Select(usersDefaultWord => usersDefaultWord.ToUserDefaultWordsResponse(this)).ToList();
-
-            UsersDefaultWordsResponse mathingDefaultWord =
-                usersDefaultWords.OrderByDescending(temp => temp.Priority).ElementAt(0);
-
-            return _defaultWordsRepository.GetAllDefaultWords()
-                .Select(temp => temp.ToDefaultWordResponse())
-                .FirstOrDefault(temp => temp.DefaultWordId == mathingDefaultWord.DefaultWordId);
-        }
     }
 }

@@ -45,7 +45,7 @@ namespace EnjOffer.UI.Controllers
                     LastTimeEntered = wordToCheck.LastTimeEntered
                 };
 
-                ViewBag.IsCorrectEntered = TempData["IsCorrectEntered"];
+                ViewBag.IsCorrectEntered = null;
 
                 return View(wordsNewUpdateRequest);
             }
@@ -86,15 +86,18 @@ namespace EnjOffer.UI.Controllers
         [Route("/word-trainer/check-word")]
         public IActionResult EnterWord(WordsUpdateRequest wordsUpdateRequest)
         {
-            WordsResponse wordToCheck = _wordsService.GetWordToCheck();
-            WordsResponse wordNextToCheck = _wordsService.GetNextWordToCheck();
+            WordsResponse wordNextToCheck = _wordsService.GetNextWordToCheck(wordsUpdateRequest.Word);
             TempData["IsCorrectEntered"] = false;
             try
             {
-                bool isCorrectEntered = _wordsService.CheckWord(wordsUpdateRequest.Word!);
-                
+                WordsResponse? tepWord = _wordsService.GetWordById(wordsUpdateRequest.DefaultWordId,
+                        wordsUpdateRequest.UserWordId);
+                bool isCorrectEntered = tepWord!.Word == wordsUpdateRequest.Word;
+                /*bool isCorrectEntered = _wordsService.CheckWord(wordsUpdateRequest.Word!);*/
+
                 if (isCorrectEntered)
                 {
+                    WordsResponse wordToCheck = _wordsService.GetWordToCheck();
                     TempData["IsCorrectEntered"] = true;
                     wordsUpdateRequest.IsIncreaseCorrectEnteredCount = true;
 
@@ -118,17 +121,19 @@ namespace EnjOffer.UI.Controllers
                     wordsUpdateRequest.IsIncreaseIncorrectEnteredCount = true;
 
                     WordsResponse updatedWord = _wordsService.UpdateWord(wordsUpdateRequest);
+                    WordsResponse? currentWord = _wordsService.GetWordById(wordsUpdateRequest.DefaultWordId,
+                        wordsUpdateRequest.UserWordId);
 
                     WordsUpdateRequest? wordsNewUpdateRequest = new WordsUpdateRequest()
                     {
-                        DefaultWordId = wordToCheck.DefaultWordId,
-                        UserWordId = wordToCheck.UserWordId,
-                        UserId = wordToCheck.UserId,
-                        Word = wordToCheck.Word,
-                        WordTranslation = wordToCheck.WordTranslation,
-                        CorrectEnteredCount = wordToCheck.CorrectEnteredCount,
-                        IncorrectEnteredCount = wordToCheck.IncorrectEnteredCount,
-                        LastTimeEntered = wordToCheck.LastTimeEntered
+                        DefaultWordId = currentWord?.DefaultWordId,
+                        UserWordId = currentWord?.UserWordId,
+                        UserId = currentWord?.UserId,
+                        Word = currentWord!.Word,
+                        WordTranslation = currentWord.WordTranslation,
+                        CorrectEnteredCount = currentWord.CorrectEnteredCount,
+                        IncorrectEnteredCount = currentWord.IncorrectEnteredCount,
+                        LastTimeEntered = currentWord.LastTimeEntered
                     };
 
                     return RedirectToAction("IndexWordTrainer", "WordTrainer", wordsNewUpdateRequest);

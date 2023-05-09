@@ -17,26 +17,6 @@ namespace EnjOffer.Core.Services
 
         public double GetPriority(DateTime? lastTimeEntered, int correctlyEntered, int incorrectlyEntererd)
         {
-            /*const double correctlyEnteredWeight = 0.9;
-            const double incorrectlyEnteredWeight = 0.1;
-            double decayRate = (lastTimeEntered is not null) &&
-                (DateTime.Now - ((DateTime)lastTimeEntered)).TotalHours > 200 ? 600 : 400;
-
-            return (lastTimeEntered is not null)
-                ? ((double)correctlyEntered * correctlyEnteredWeight) / ((incorrectlyEntererd * incorrectlyEnteredWeight) +
-                (correctlyEntered * correctlyEnteredWeight)) * (1 - Math.Exp(-(DateTime.Now - ((DateTime)lastTimeEntered)).TotalHours / decayRate))
-                : 1;*/
-
-            /*const double correctlyEnteredWeight = 8;
-            const double incorrectlyEnteredWeight = 2;
-            double decayRate = (lastTimeEntered is not null) &&
-                (DateTime.Now - ((DateTime)lastTimeEntered)).TotalHours > 200 ? 600 : 400;
-
-            return (lastTimeEntered is not null) ?
-                ((double)correctlyEntered * correctlyEnteredWeight) / ((incorrectlyEntererd * incorrectlyEnteredWeight) +
-                (correctlyEntered * correctlyEnteredWeight)) * (1 / (1 + Math.Exp(-(DateTime.Now - ((DateTime)lastTimeEntered)).TotalHours / decayRate))) :
-                1;*/
-
             return 1.0 / GetRepetitionInterval(correctlyEntered, incorrectlyEntererd, lastTimeEntered);
         }
 
@@ -178,7 +158,16 @@ namespace EnjOffer.Core.Services
             matchingUserWord.CorrectEnteredCount += userWordsUpdateRequest.IsIncreaseCorrectEnteredCount ? 1 : 0;
             matchingUserWord.IncorrectEnteredCount += userWordsUpdateRequest.IsIncreaseIncorrectEnteredCount ? 1 : 0;
 
-            _userWordsRepository.UpdateUserWord(matchingUserWord);
+            UserWords updatedWord = _userWordsRepository.UpdateUserWord(matchingUserWord);
+
+            /*UserStatisticsAddRequest userStatisticsAddRequest = new UserStatisticsAddRequest()
+            {
+                AnswerDate = DateTime.Now.Date,
+                CorrectAnswersCount = updatedWord.CorrectEnteredCount,
+                IncorrectAnswersCount = updatedWord.IncorrectEnteredCount,
+                UserId = updatedWord.UserId
+            };
+            UserStatisticsResponse userStatistics = _userStatisticsService.AddUserStatistics(userStatisticsAddRequest);*/
 
             //_userWordsRepository
             return matchingUserWord.ToUserWordsResponse(this);

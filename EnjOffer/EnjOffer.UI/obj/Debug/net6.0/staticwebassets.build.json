@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I91nChdQFGSi74voRnKVTz/aNPnKq1a5mew9EQHfmBU=",
+  "Hash": "ILeIwaCyPWJPVLv9dGe0ZrMjcLpWqzWMwlo+KgLlABQ=",
   "Source": "EnjOffer.UI",
   "BasePath": "_content/EnjOffer.UI",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\book-reader.css"
+    },
+    {
+      "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\books\\clean_code.pdf",
+      "SourceId": "EnjOffer.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\",
+      "BasePath": "_content/EnjOffer.UI",
+      "RelativePath": "books/clean_code.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\books\\clean_code.pdf"
     },
     {
       "Identity": "D:\\Programming C#\\EnjOfferWeb\\EnjOffer\\EnjOffer\\EnjOffer.UI\\wwwroot\\img\\imgNotFound.png",

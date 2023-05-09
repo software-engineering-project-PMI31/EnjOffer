@@ -3,6 +3,10 @@ body {
     padding: 0;
 }
 
+.a {
+    text-decoration: none;
+}
+
 .login-page {
     display: flex;
     flex-direction: column;

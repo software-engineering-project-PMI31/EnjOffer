@@ -122,7 +122,20 @@ p {
 }
 
 .see-book-button:active {
-.see-book-button:active {
     scale: 0.85;
     background: white;
 }
+
+.library-container::-webkit-scrollbar {
+    height: 7px;
+    width: 4px;
+    background: #00ff90;
+    border-radius: 10px;
+}
+
+.library-container::-webkit-scrollbar-thumb:horizontal {
+    background: gray;
+    border-radius: 10px;
+}
+
+

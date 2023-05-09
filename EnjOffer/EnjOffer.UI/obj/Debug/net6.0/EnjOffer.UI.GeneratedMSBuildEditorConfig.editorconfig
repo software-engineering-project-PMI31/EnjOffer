@@ -8,20 +8,40 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/BookReader/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1JlYWRlclxJbmRleC5jc2h0bWw=
+[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/BookReader/IndexBookReader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1JlYWRlclxJbmRleEJvb2tSZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/Home/IndexPersonalCabinet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleFBlcnNvbmFsQ2FiaW5ldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/Library/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxJbmRleC5jc2h0bWw=
+[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/Library/IndexLibrary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxJbmRleExpYnJhcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/LoginPage/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5QYWdlXEluZGV4LmNzaHRtbA==
+[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/LoginPage/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5QYWdlXEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/LoginPage/ForgotPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5QYWdlXEZvcmdvdFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/LoginPage/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5QYWdlXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/LoginPage/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5QYWdlXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/LoginPage/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5QYWdlXFJlc2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/LoginPage/ResetPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5QYWdlXFJlc2V0UGFzc3dvcmRDb25maXJtYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Programming C\#/EnjOfferWeb/EnjOffer/EnjOffer/EnjOffer.UI/Views/Shared/_Header.cshtml]

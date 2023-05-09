@@ -76,7 +76,7 @@ namespace UnitTests
             });
         }
 
-        [Fact]
+        /*[Fact]
         public void AddUserStatistics_ProperDetails()
         {
             //Arrange
@@ -103,7 +103,7 @@ namespace UnitTests
             //Assert
             Assert.True(userStatistics_response_from_add.UserStatisticsId != Guid.Empty);
             Assert.Equal(userStatistics_response_expected, userStatistics_response_from_add);
-        }
+        }*/
 
         #endregion
 

@@ -9,13 +9,15 @@ namespace EnjOffer.Core.ServiceContracts
 {
     public interface IWordsService
     {
+        WordsResponse? GetWordById(Guid? defaultWordId, Guid? userWordId);
         List<WordsResponse> GetWordsSortedByPriority(IEnumerable<WordsResponse> userWordsDefaultWords);
         WordsResponse GetWordToCheck();
         WordsResponse UpdateWord(WordsUpdateRequest? wordUpdateRequest);
         public IEnumerable<WordsResponse> JoinDefaultWords();
         public IEnumerable<WordsResponse> JoinDefaultWords(List<DefaultWordResponse> defaultWords,
             List<UsersDefaultWordsResponse> usersDefaultWords);
-        public WordsResponse GetNextWordToCheck();
+        public IEnumerable<WordsResponse> JoinDefaultWordsAndUserWords();
+        public WordsResponse GetNextWordToCheck(string word);
         bool CheckWord(string word);
     }
 }

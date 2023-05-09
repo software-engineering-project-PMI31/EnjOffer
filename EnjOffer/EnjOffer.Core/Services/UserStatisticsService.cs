@@ -32,8 +32,20 @@ namespace EnjOffer.Core.Services
             if (userStatisticsAddRequest.AnswerDate is not null &&
                 _userStatisticsRepository.GetUserStatisticsByDate(userStatisticsAddRequest.AnswerDate.Value.Date) is not null)
             {
-                throw new ArgumentException("This statistic record with such date already exist",
-                    nameof(userStatisticsAddRequest));
+                /*throw new ArgumentException("This statistic record with such date already exist",
+                    nameof(userStatisticsAddRequest));*/
+                UserStatisticsUpdateRequest userStatisticsUpdateRequest = new UserStatisticsUpdateRequest()
+                {
+                    UserStatisticsId = _userStatisticsRepository
+                        .GetUserStatisticsByDate(userStatisticsAddRequest.AnswerDate.Value.Date)!.UserStatisticsId,
+                    AnswerDate = userStatisticsAddRequest.AnswerDate,
+                    IsIncreaseCorrectEnteredAnswers = userStatisticsAddRequest.IsIncreaseCorrectEnteredAnswers,
+                    IsIncreaseIncorrectEnteredAnswers = userStatisticsAddRequest.IsIncreaseIncorrectEnteredAnswers,
+                    CorrectAnswersCount = userStatisticsAddRequest.CorrectAnswersCount,
+                    IncorrectAnswersCount = userStatisticsAddRequest.IncorrectAnswersCount
+                };
+
+                return UpdateUserStatistics(userStatisticsUpdateRequest);
             }
 
             //Convert userWordAddRequest to UserWords type
@@ -43,9 +55,9 @@ namespace EnjOffer.Core.Services
             userStatistics.UserStatisticsId = Guid.NewGuid();
 
             //Generate Datetime and default correct and incorrect answers
-            userStatistics.AnswerDate = DateTime.Now.Date;
-            userStatistics.CorrectAnswersCount = 0;
-            userStatistics.IncorrectAnswersCount = 0;
+            userStatistics.AnswerDate = userStatisticsAddRequest.AnswerDate ?? DateTime.Now.Date;
+            userStatistics.CorrectAnswersCount = userStatisticsAddRequest.CorrectAnswersCount ?? 0;
+            userStatistics.IncorrectAnswersCount = userStatisticsAddRequest.IncorrectAnswersCount ?? 0;
 
             _userStatisticsRepository.AddUserStatisticRecord(userStatistics);
 
@@ -102,7 +114,9 @@ namespace EnjOffer.Core.Services
                 userStatisticsUpdateRequest.CorrectAnswersCount ?? matchingUserStatistics.CorrectAnswersCount;
             matchingUserStatistics.IncorrectAnswersCount =
                 userStatisticsUpdateRequest.IncorrectAnswersCount ?? matchingUserStatistics.IncorrectAnswersCount;
-            
+            matchingUserStatistics.CorrectAnswersCount += userStatisticsUpdateRequest.IsIncreaseCorrectEnteredAnswers ? 1 : 0;
+            matchingUserStatistics.IncorrectAnswersCount += userStatisticsUpdateRequest.IsIncreaseIncorrectEnteredAnswers ? 1 : 0;
+
             _userStatisticsRepository.UpdateUserStatistics(matchingUserStatistics);
 
             //_userStatisticsRepository

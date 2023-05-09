@@ -16,18 +16,16 @@ namespace EnjOffer.Core.DTO
 
         public DateTime? LastTimeEntered { get; set; }
 
-        [Required(ErrorMessage = "CorrectEnteredCount can't be blank")]
-        [Range(0, double.MaxValue, ErrorMessage = "CorrectEnteredCountIncrease can't be less than 0")]
+        [Range(0, double.MaxValue, ErrorMessage = $"{nameof(CorrectEnteredCount)} can't be less than 0")]
         public int? CorrectEnteredCount { get; set; }
 
-        [Required(ErrorMessage = "IncorrectEnteredCount can't be blank")]
-        [Range(0, double.MaxValue, ErrorMessage = "IncorrectEnteredCountIncrease can't be less than 0")]
+        [Range(0, double.MaxValue, ErrorMessage = $"{nameof(IncorrectEnteredCount)} can't be less than 0")]
         public int? IncorrectEnteredCount { get; set; }
 
-        [Required(ErrorMessage = "IsIncreaseCorrectEnteredCount can't be blank")]
+        [Required(ErrorMessage = $"{nameof(IsIncreaseCorrectEnteredCount)} can't be blank")]
         public bool IsIncreaseCorrectEnteredCount { get; set; }
 
-        [Required(ErrorMessage = "IsIncreaseIncorrectEnteredCount can't be blank")]
+        [Required(ErrorMessage = $"{nameof(IsIncreaseIncorrectEnteredCount)} can't be blank")]
         public bool IsIncreaseIncorrectEnteredCount { get; set; }
 
         public UserWords ToUserWords()

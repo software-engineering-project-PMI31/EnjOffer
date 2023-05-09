@@ -13,13 +13,19 @@ namespace EnjOffer.Core.DTO
         [Required(ErrorMessage = $"{nameof(UserStatisticsId)} can't be blank")]
         public Guid UserStatisticsId { get; set; }
 
-        [Required(ErrorMessage = $"{nameof(CorrectAnswersCount)} can't be blank")]
+        public DateTime? AnswerDate { get; set; }
+
+
         [Range(0, double.MaxValue, ErrorMessage = $"{nameof(CorrectAnswersCount)} can't be less than 0")]
         public int? CorrectAnswersCount { get; set; }
 
-        [Required(ErrorMessage = $"{nameof(IncorrectAnswersCount)} can't be blank")]
+
         [Range(0, double.MaxValue, ErrorMessage = $"{nameof(IncorrectAnswersCount)} can't be less than 0")]
         public int? IncorrectAnswersCount { get; set; }
+
+        public bool IsIncreaseCorrectEnteredAnswers { get; set; }
+
+        public bool IsIncreaseIncorrectEnteredAnswers { get; set; }
 
         public UserStatistics ToUserStatistics()
         {
@@ -27,7 +33,8 @@ namespace EnjOffer.Core.DTO
             {
                 UserStatisticsId = UserStatisticsId,
                 CorrectAnswersCount = CorrectAnswersCount ?? 0,
-                IncorrectAnswersCount = IncorrectAnswersCount ?? 0
+                IncorrectAnswersCount = IncorrectAnswersCount ?? 0,
+                AnswerDate = AnswerDate,
             };
         }
     }

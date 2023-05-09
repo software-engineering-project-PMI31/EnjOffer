@@ -19,11 +19,13 @@ namespace EnjOffer.Core.Services
         private readonly IUsersDefaultWordsService _userDefaultWordsService;
         private readonly IUserWordsService _userWordsService;
         private readonly IDefaultWordsService _defaultWordsService;
+        private readonly IUserStatisticsService _userStatisticsService;
 
         public WordsService(IDefaultWordsRepository defaultWordsRepository,
             IUsersDefaultWordsRepository userDefaultWordsRepository, IUserWordsRepository userWordsRepository,
             IUsersDefaultWordsService userDefaultWordsService,
-            IUserWordsService userWordsService, IDefaultWordsService defaultWordsService)
+            IUserWordsService userWordsService, IDefaultWordsService defaultWordsService,
+            IUserStatisticsService userStatisticsService)
         {
             _defaultWordsRepository = defaultWordsRepository;
             _userDefaultWordsRepository = userDefaultWordsRepository;
@@ -31,6 +33,7 @@ namespace EnjOffer.Core.Services
             _userDefaultWordsService = userDefaultWordsService;
             _userWordsService = userWordsService;
             _defaultWordsService = defaultWordsService;
+            _userStatisticsService = userStatisticsService;
         }
 
         public bool CheckWord(string word)
@@ -93,21 +96,6 @@ namespace EnjOffer.Core.Services
             IEnumerable<WordsResponse> joined = JoinDefaultWords(defaultWordsResponses, usersDefaultWordsResponses)
                 .Where(temp => temp.UserId == Guid.Parse("409855c0-8d3a-467e-8edd-87593f4a25cc"));
 
-            /*IEnumerable<WordsResponse> joined = defaultWords.Join(usersDefaultWords, defaultWord => defaultWord.DefaultWordId,
-                usersDefaultWord => usersDefaultWord.DefaultWordId, (defaultWord, usersDefaultWord) =>
-                new WordsResponse()
-                {
-                    DefaultWordId = defaultWord.DefaultWordId,
-                    UserId = usersDefaultWord.UserId,
-                    Word = defaultWord.Word,
-                    WordTranslation = defaultWord.WordTranslation,
-                    LastTimeEntered = usersDefaultWord.LastTimeEntered,
-                    CorrectEnteredCount = usersDefaultWord.CorrectEnteredCount,
-                    IncorrectEnteredCount = usersDefaultWord.IncorrectEnteredCount,
-                    Priority = _userDefaultWordsService.GetPriority(usersDefaultWord.LastTimeEntered,
-                        usersDefaultWord.CorrectEnteredCount, usersDefaultWord.IncorrectEnteredCount)
-                }).Where(temp => temp.UserId == Guid.Parse("409855c0-8d3a-467e-8edd-87593f4a25cc"));*/
-
             List<WordsResponse> userWordsToWords = userWords.Select(temp => temp.ToWordsResponse(_userWordsService))
                 .ToList();
 
@@ -120,7 +108,24 @@ namespace EnjOffer.Core.Services
             return wordToCheck;
         }
 
-        public WordsResponse GetNextWordToCheck()
+        public IEnumerable<WordsResponse> JoinDefaultWordsAndUserWords()
+        {
+            List<UserWords> userWords = _userWordsRepository.GetAllUserWords();
+            List<DefaultWordResponse> defaultWordsResponses = _defaultWordsService.GetAllDefaultWords();
+            List<UsersDefaultWordsResponse> usersDefaultWordsResponses = _userDefaultWordsService.GetAllUserDefaultWords();
+
+            IEnumerable<WordsResponse> joined = JoinDefaultWords(defaultWordsResponses, usersDefaultWordsResponses)
+                .Where(temp => temp.UserId == Guid.Parse("409855c0-8d3a-467e-8edd-87593f4a25cc"));
+
+            List<WordsResponse> userWordsToWords = userWords.Select(temp => temp.ToWordsResponse(_userWordsService))
+                .ToList();
+
+            var mergedWords = joined.Concat(userWordsToWords);
+
+            return mergedWords;
+        }
+
+        public WordsResponse GetNextWordToCheck(string word)
         {
             /*List<UserWords> userWords = _userWordsRepository.GetAllUserWords();
             List<DefaultWords> defaultWords = _defaultWordsRepository.GetAllDefaultWords();
@@ -140,7 +145,7 @@ namespace EnjOffer.Core.Services
 
             var sortedWords = GetWordsSortedByPriority(mergedWords);
 
-            WordsResponse wordToCheck = sortedWords.ElementAt(1);
+            WordsResponse wordToCheck = sortedWords.First(temp => temp.Word != word);
 
             return wordToCheck;
         }
@@ -168,7 +173,17 @@ namespace EnjOffer.Core.Services
                 matchingWord.CorrectEnteredCount += wordUpdateRequest.IsIncreaseCorrectEnteredCount ? 1 : 0;
                 matchingWord.IncorrectEnteredCount += wordUpdateRequest.IsIncreaseIncorrectEnteredCount ? 1 : 0;
 
-                _userWordsRepository.UpdateUserWord(matchingWord);
+                UserWords updatedUserWord = _userWordsRepository.UpdateUserWord(matchingWord);
+
+                UserStatisticsAddRequest userStatisticsAddRequest = new UserStatisticsAddRequest()
+                {
+                    AnswerDate = DateTime.Now.Date,
+                    IsIncreaseCorrectEnteredAnswers = wordUpdateRequest.IsIncreaseCorrectEnteredCount,
+                    IsIncreaseIncorrectEnteredAnswers = wordUpdateRequest.IsIncreaseIncorrectEnteredCount,
+                    UserId = updatedUserWord.UserId
+                };
+
+                _userStatisticsService.AddUserStatistics(userStatisticsAddRequest);
 
                 //_userWordsRepository
                 return matchingWord.ToWordsResponse(_userWordsService);
@@ -188,13 +203,42 @@ namespace EnjOffer.Core.Services
                 matchingWord.CorrectEnteredCount += wordUpdateRequest.IsIncreaseCorrectEnteredCount ? 1 : 0;
                 matchingWord.IncorrectEnteredCount += wordUpdateRequest.IsIncreaseIncorrectEnteredCount ? 1 : 0;
 
-                _userDefaultWordsRepository.UpdateUserDefaultWord(matchingWord);
+                UsersDefaultWords updatedUserDefaultWord = _userDefaultWordsRepository.UpdateUserDefaultWord(matchingWord);
+
+                UserStatisticsAddRequest userStatisticsAddRequest = new UserStatisticsAddRequest()
+                {
+                    AnswerDate = DateTime.Now.Date,
+                    IsIncreaseCorrectEnteredAnswers = wordUpdateRequest.IsIncreaseCorrectEnteredCount,
+                    IsIncreaseIncorrectEnteredAnswers = wordUpdateRequest.IsIncreaseIncorrectEnteredCount,
+                    UserId = updatedUserDefaultWord.UserId
+                };
+
+
+
+                _userStatisticsService.AddUserStatistics(userStatisticsAddRequest);
 
                 //_userWordsRepository
                 return matchingWord.ToWordsResponse(_userDefaultWordsService, this);
             }
 
             throw new ArgumentException("Nor UserWord, nor DefaultWord updated", nameof(wordUpdateRequest));
+        }
+
+        public WordsResponse? GetWordById(Guid? defaultWordId, Guid? userWordId)
+        {
+            List<UserWords> userWords = _userWordsRepository.GetAllUserWords();
+            List<DefaultWordResponse> defaultWordsResponses = _defaultWordsService.GetAllDefaultWords();
+            List<UsersDefaultWordsResponse> usersDefaultWordsResponses = _userDefaultWordsService.GetAllUserDefaultWords();
+
+            IEnumerable<WordsResponse> joined = JoinDefaultWords(defaultWordsResponses, usersDefaultWordsResponses)
+                .Where(temp => temp.UserId == Guid.Parse("409855c0-8d3a-467e-8edd-87593f4a25cc"));
+
+            List<WordsResponse> userWordsToWords = userWords.Select(temp => temp.ToWordsResponse(_userWordsService))
+                .ToList();
+
+            var mergedWords = joined.Concat(userWordsToWords);
+
+            return mergedWords.FirstOrDefault(temp => temp.DefaultWordId == defaultWordId && temp.UserWordId == userWordId);
         }
     }
 }

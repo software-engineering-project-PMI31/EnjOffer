@@ -1,97 +1,97 @@
 body,
-    h2,
-    h3,
-    p {
-        margin: 0;
-        padding: 0;
-    }
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
 
-    .book-reader {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        overflow-y: hidden;
-    }
+.book-reader {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: hidden;
+}
 
-    .book-reader__header {
-        margin: 1px;
-        padding: 0 20px;
-        border: 2px solid black;
-    }
+.book-reader__header {
+    margin: 1px;
+    padding: 0 20px;
+    border: 2px solid black;
+}
 
-    .book-reader__main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        padding: 0 45px;
-        gap: 30px;
-        /* padding-bottom: 200px; */
-    }
+.book-reader__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 45px;
+    gap: 30px;
+    /* padding-bottom: 200px; */
+}
 
-    .book-chapter {
-        width: 100%;
-        display: flex;
-        justify-content: start;
-    }
+.book-chapter {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
 
-    .book-text {
-        height: 500px;
-        overflow-y: scroll;
-    }
+.book-text {
+    height: 500px;
+    overflow-y: scroll;
+}
 
-    .book-actions {
-        display: flex;
-        gap: 30px;
-    }
+.book-actions {
+    display: flex;
+    gap: 30px;
+}
 
-    .book-modal {
-        width: 300px;
-        border: 2px solid black;
-        border-radius: 5px;
-        padding: 0 10px;
-        height: fit-content;
-    }
+.book-modal {
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0 10px;
+    height: fit-content;
+}
 
-    .book-modal__header {
-        width: 300px;
-        border-bottom: 2px solid black;
-        padding: 5px 0;
-    }
+.book-modal__header {
+    width: 300px;
+    border-bottom: 2px solid black;
+    padding: 5px 0;
+}
 
-    .book-modal__main {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
+.book-modal__main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    .book-modal__form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 0;
-    }
+.book-modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
 
-    .form-input {
-        padding: 5px 10px;
-        border-radius: 5px;
-        border: 2px solid black;
-        transition: all 0.3s linear, border-color 0.4s ease;
-        font-size: large;
-    }
+.form-input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    transition: all 0.3s linear, border-color 0.4s ease;
+    font-size: large;
+}
 
-    .form-button {
-        width: fit-content;
-        align-self: center;
-        padding: 5px 10px;
-        font-size: medium;
-        background: #fff;
-        border: 2px solid black;
-        border-radius: 5px;
-        transition: all 0.3s linear;
-        user-select: none;
-    }
+.form-button {
+    width: fit-content;
+    align-self: center;
+    padding: 5px 10px;
+    font-size: medium;
+    background: #fff;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+    user-select: none;
+}
 
     .form-button:hover {
         scale: 1.03;
@@ -103,11 +103,18 @@ body,
         background: white;
     }
 
-    .form-input:focus {
-        background: #e3e3e3;
-        scale: 1.02;
-    }
+.form-input:focus {
+    background: #e3e3e3;
+    scale: 1.02;
+}
 
-    .form-input:hover {
-        border-color: #bebebe;
-    }
+.form-input:hover {
+    border-color: #bebebe;
+}
+
+.add-word-modal__main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}

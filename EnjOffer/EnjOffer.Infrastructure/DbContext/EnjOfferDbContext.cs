@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EnjOffer.Core.Domain.Entities;
+using EnjOffer.Core.Domain.IdentityEntities;
 using EnjOffer.Core.Enums;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EnjOffer.Infrastructure
 {
-    public class EnjOfferDbContext : DbContext
+    public class EnjOfferDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>
     {
         public virtual DbSet<Advice>? Advice { get; set; }
 
