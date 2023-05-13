@@ -22,8 +22,6 @@ namespace EnjOffer.Infrastructure
 
         public virtual DbSet<UserWords>? UserWords { get; set; }
 
-        public virtual DbSet<Users>? Users { get; set; }
-
         public virtual DbSet<UserStatistics>? UserStatistics { get; set; }
 
         public virtual DbSet<UsersDefaultWords>? UsersDefaultWords { get; set; }
@@ -40,11 +38,12 @@ namespace EnjOffer.Infrastructure
             base.OnModelCreating(modelBuilder);
 
             var converter = new EnumToStringConverter<UserRole>();
+
             modelBuilder.Entity<Advice>().ToTable("advice");
             modelBuilder.Entity<Books>().ToTable("books");
             modelBuilder.Entity<DefaultWords>().ToTable("default_words");
             modelBuilder.Entity<UserWords>().ToTable("user_words");
-            modelBuilder.Entity<Users>().ToTable("users");
+            //modelBuilder.Entity<Users>().ToTable("users");
             modelBuilder.Entity<UserStatistics>().ToTable("user_statistics");
 
             modelBuilder.Entity<Advice>().HasKey(t => t.AdviceId);
@@ -53,12 +52,12 @@ namespace EnjOffer.Infrastructure
             modelBuilder.Entity<Advice>().Property(t => t.AdviceNumber).HasColumnName("advice_number").HasColumnType("integer").IsRequired().HasDefaultValue(0);
             modelBuilder.Entity<Advice>().Property(t => t.AdviceContent).HasColumnName("advice_content").HasColumnType("text").IsRequired().HasDefaultValue("Advice isn't supplied");
 
-            modelBuilder.Entity<Users>().HasKey(t => t.UserId);
+            /*modelBuilder.Entity<Users>().HasKey(t => t.UserId);
             modelBuilder.Entity<Users>().HasIndex(t => t.Email).IsUnique();
             modelBuilder.Entity<Users>().Property(t => t.UserId).HasColumnName("user_id").HasColumnType("uuid");
             modelBuilder.Entity<Users>().Property(t => t.Email).HasColumnName("user_email").HasColumnType("varchar(320)").HasMaxLength(320).IsRequired();
             modelBuilder.Entity<Users>().Property(t => t.Password).HasColumnName("user_password").HasColumnType("bytea").IsRequired();
-            modelBuilder.Entity<Users>().Property(t => t.Role).HasConversion(converter).HasColumnName("user_role").IsRequired().HasDefaultValue<UserRole>(UserRole.SuperAdmin);
+            modelBuilder.Entity<Users>().Property(t => t.Role).HasConversion(converter).HasColumnName("user_role").IsRequired().HasDefaultValue<UserRole>(UserRole.SuperAdmin);*/
 
             modelBuilder.Entity<Books>().HasKey(t => t.BookId);
             modelBuilder.Entity<Books>().Property(t => t.BookId).HasColumnName("book_id").HasColumnType("uuid");
@@ -89,11 +88,13 @@ namespace EnjOffer.Infrastructure
             modelBuilder.Entity<UserStatistics>().Property(t => t.AnswerDate).HasColumnName("user_statistic_answer_date").HasColumnType("date").IsRequired();
             modelBuilder.Entity<UserStatistics>().Property(t => t.CorrectAnswersCount).HasColumnName("user_statistic_correct_answer_count").HasColumnType("integer").IsRequired().HasDefaultValue(0);
             modelBuilder.Entity<UserStatistics>().Property(t => t.IncorrectAnswersCount).HasColumnName("user_statistic_incorrect_answer_count").HasColumnType("integer").IsRequired().HasDefaultValue(0);
+            //modelBuilder.Entity<Users>().HasMany(u => u.UserStatistics).WithOne(us => us.User).HasForeignKey(us => us.UserId).OnDelete(DeleteBehavior.SetNull);
+            //modelBuilder.Entity<Users>().HasMany(u => u.UserWords).WithOne(uw => uw.User).HasForeignKey(uw => uw.UserId).OnDelete(DeleteBehavior.SetNull);
+            modelBuilder.Entity<ApplicationUser>().HasMany(t => t.UserStatistics).WithOne(t => t.User).HasForeignKey(t => t.UserId).OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<ApplicationUser>().HasMany(t => t.UserWords).WithOne(t => t.User).HasForeignKey(t => t.UserId).OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<Users>().HasMany(u => u.UserStatistics).WithOne(us => us.User).HasForeignKey(us => us.UserId).OnDelete(DeleteBehavior.SetNull);
-            modelBuilder.Entity<Users>().HasMany(u => u.UserWords).WithOne(uw => uw.User).HasForeignKey(uw => uw.UserId).OnDelete(DeleteBehavior.SetNull);
-
-            modelBuilder.Entity<Users>().HasMany(u => u.DefaultWords).WithMany(dw => dw.Users).UsingEntity<UsersDefaultWords>(
+            modelBuilder.Entity<ApplicationUser>().HasMany(u => u.DefaultWords).WithMany(dw => dw.Users)
+                .UsingEntity<UsersDefaultWords>(
                 j => j
                 .HasOne(pt => pt.DefaultWord)
                 .WithMany(t => t.UsersDefaultWords)

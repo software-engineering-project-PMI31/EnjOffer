@@ -11,6 +11,7 @@ using EnjOffer.Core.Domain.Entities;
 using EnjOffer.Core.DTO;
 using EnjOffer.Core.ServiceContracts;
 using EnjOffer.Core.Services;
+using EnjOffer.Core.Domain.IdentityEntities;
 
 namespace UnitTests
 {
@@ -117,7 +118,7 @@ namespace UnitTests
                 .With(temp => temp.DefaultWordId, Guid.Empty)
                 .With(temp => temp.DefaultWord, null as DefaultWords)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users)
+                .With(temp => temp.User, null as ApplicationUser)
                 .Create();*/
 
         #endregion
@@ -168,7 +169,7 @@ namespace UnitTests
                 .With(temp => temp.DefaultWordId, Guid.Empty)
                 .With(temp => temp.DefaultWord, null as DefaultWords)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users)
+                .With(temp => temp.User, null as ApplicationUser)
                 .Create();
 
             UsersDefaultWordsResponse usersDefaultWord_response_expected = usersDefaultWord.ToUserDefaultWordsResponse(_usersDefaultWordsService);
@@ -200,7 +201,7 @@ namespace UnitTests
                     .With(temp => temp.DefaultWordId, Guid.Empty)
                     .With(temp => temp.DefaultWord, null as DefaultWords)
                     .With(temp => temp.UserId, Guid.Empty)
-                    .With(temp => temp.User, null as Users)
+                    .With(temp => temp.User, null as ApplicationUser)
                     .Create(),
 
                 _fixture.Build<UsersDefaultWords>()
@@ -208,7 +209,7 @@ namespace UnitTests
                     .With(temp => temp.DefaultWordId, Guid.Empty)
                     .With(temp => temp.DefaultWord, null as DefaultWords)
                     .With(temp => temp.UserId, Guid.Empty)
-                    .With(temp => temp.User, null as Users)
+                    .With(temp => temp.User, null as ApplicationUser)
                     .Create()
         };
 
@@ -238,7 +239,7 @@ namespace UnitTests
                     .With(temp => temp.DefaultWordId, Guid.Empty)
                     .With(temp => temp.DefaultWord, null as DefaultWords)
                     .With(temp => temp.UserId, Guid.Empty)
-                    .With(temp => temp.User, null as Users)
+                    .With(temp => temp.User, null as ApplicationUser)
                     .Create(),
 
                 _fixture.Build<UsersDefaultWords>()
@@ -246,7 +247,7 @@ namespace UnitTests
                     .With(temp => temp.DefaultWordId, Guid.Empty)
                     .With(temp => temp.DefaultWord, null as DefaultWords)
                     .With(temp => temp.UserId, Guid.Empty)
-                    .With(temp => temp.User, null as Users)
+                    .With(temp => temp.User, null as ApplicationUser)
                     .Create()
             };
 
@@ -278,14 +279,14 @@ namespace UnitTests
                 .With(temp => temp.DefaultWordId, Guid.Empty)
                 .With(temp => temp.DefaultWord, null as DefaultWords)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create(),
+                .With(temp => temp.User, null as ApplicationUser).Create(),
 
                 _fixture.Build<UsersDefaultWords>()
                 .With(temp => temp.LastTimeEntered, null as DateTime?)
                 .With(temp => temp.DefaultWordId, Guid.Empty)
                 .With(temp => temp.DefaultWord, null as DefaultWords)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create()
+                .With(temp => temp.User, null as ApplicationUser).Create()
             };
 
             List<UsersDefaultWordsResponse> usersDefaultWords_response_list_expected = usersDefaultWords.Select(
@@ -328,7 +329,7 @@ namespace UnitTests
                 .With(temp => temp.DefaultWordId, Guid.Empty)
                 .With(temp => temp.DefaultWord, null as DefaultWords)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create(),
+                .With(temp => temp.User, null as ApplicationUser).Create(),
 
                 _fixture.Build<UsersDefaultWords>()
                 .With(temp => temp.LastTimeEntered, dateWeekAgo)
@@ -337,7 +338,7 @@ namespace UnitTests
                 .With(temp => temp.DefaultWordId, Guid.Empty)
                 .With(temp => temp.DefaultWord, null as DefaultWords)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create(),
+                .With(temp => temp.User, null as ApplicationUser).Create(),
 
                 _fixture.Build<UsersDefaultWords>()
                 .With(temp => temp.LastTimeEntered, dateNow)
@@ -346,7 +347,7 @@ namespace UnitTests
                 .With(temp => temp.DefaultWordId, Guid.Empty)
                 .With(temp => temp.DefaultWord, null as DefaultWords)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create(),
+                .With(temp => temp.User, null as ApplicationUser).Create(),
             };
 
             List<UsersDefaultWordsResponse> usersDefaultWords_list_expected = usersDefaultWords.Select(
@@ -400,7 +401,7 @@ namespace UnitTests
                     .With(temp => temp.DefaultWordId, Guid.Empty)
                     .With(temp => temp.DefaultWord, null as DefaultWords)
                     .With(temp => temp.UserId, Guid.Empty)
-                    .With(temp => temp.User, null as Users)
+                    .With(temp => temp.User, null as ApplicationUser)
                     .Create(),
 
                 _fixture.Build<UsersDefaultWords>()
@@ -408,7 +409,7 @@ namespace UnitTests
                     .With(temp => temp.DefaultWordId, Guid.Empty)
                     .With(temp => temp.DefaultWord, null as DefaultWords)
                     .With(temp => temp.UserId, Guid.Empty)
-                    .With(temp => temp.User, null as Users)
+                    .With(temp => temp.User, null as ApplicationUser)
                     .Create()
             };
 
@@ -507,7 +508,7 @@ namespace UnitTests
                 .With(temp => temp.DefaultWordId, Guid.Empty)
                 .With(temp => temp.DefaultWord, null as DefaultWords)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users)
+                .With(temp => temp.User, null as ApplicationUser)
                 .Create();
 
             UsersDefaultWordsResponse usersDefaultWord_response_from_add =
@@ -545,7 +546,7 @@ namespace UnitTests
                 .With(temp => temp.DefaultWordId, Guid.Empty)
                 .With(temp => temp.DefaultWord, null as DefaultWords)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users)
+                .With(temp => temp.User, null as ApplicationUser)
                 .Create();
 
             UsersDefaultWordsResponse usersDefaultWord_response_from_add =
@@ -590,7 +591,7 @@ namespace UnitTests
                 .With(temp => temp.DefaultWordId, Guid.Empty)
                 .With(temp => temp.DefaultWord, null as DefaultWords)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create();
+                .With(temp => temp.User, null as ApplicationUser).Create();
 
             UsersDefaultWordsResponse usersDefaultWord_response_expected =
                 usersDefaultWord.ToUserDefaultWordsResponse(_usersDefaultWordsService);

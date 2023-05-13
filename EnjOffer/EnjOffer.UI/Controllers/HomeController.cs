@@ -2,35 +2,41 @@
 using EnjOffer.Core.DTO;
 using EnjOffer.Core.ServiceContracts;
 using EnjOffer.Core.Services;
+using Microsoft.AspNetCore.Identity;
+using EnjOffer.Core.Domain.IdentityEntities;
 
 namespace EnjOffer.UI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IUsersService _usersService;
         private readonly IDefaultWordsService _defaultWordsService;
         private readonly IUsersDefaultWordsService _usersDefaultWordsService;
         private readonly IUserStatisticsService _userStatisticsService;
+        private readonly IUsersService _usersService;
+        private readonly UserManager<ApplicationUser> _userManager;
 
         public HomeController(IUsersService usersService, IDefaultWordsService defaultWordsService,
-            IUsersDefaultWordsService usersDefaultWordsService, IUserStatisticsService userStatisticsService)
+            IUsersDefaultWordsService usersDefaultWordsService, IUserStatisticsService userStatisticsService,
+            UserManager<ApplicationUser> userManager)
         {
             _usersService = usersService;
             _defaultWordsService = defaultWordsService;
             _usersDefaultWordsService = usersDefaultWordsService;
             _userStatisticsService = userStatisticsService;
+            _userManager = userManager;
         }
 
         [Route("/")]
         [HttpGet]
-        public IActionResult IndexPersonalCabinet()
+        public async Task<IActionResult> IndexPersonalCabinet()
         {
-            List<UserStatisticsResponse> userStatistics = _userStatisticsService.GetAllUserStatistics();
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            List<UserStatisticsResponse> userStatistics = _userStatisticsService.GetAllUserStatistics(user.Id);
 
             return View("IndexPersonalCabinet", userStatistics);
         }
 
-        [Route("/personal-cabinet/add-user")]
+        /*[Route("/personal-cabinet/add-user")]
         [HttpPost]
         public IActionResult AddUser(UserAddRequest userAddRequest)
         {
@@ -68,9 +74,9 @@ namespace EnjOffer.UI.Controllers
             {
                 return BadRequest("Invalid inputs");
             }
-        }
+        }*/
 
-        [Route("/personal-cabinet/delete-user")]
+        /*[Route("/personal-cabinet/delete-user")]
         [HttpPost]
         public IActionResult DeleteUser(string Email)
         {
@@ -91,11 +97,11 @@ namespace EnjOffer.UI.Controllers
             {
                 return BadRequest("Invalid inputs");
             }
-        }
+        }*/
 
         [Route("/personal-cabinet/add-default-word")]
         [HttpPost]
-        public IActionResult AddDefaultWord(DefaultWordAddRequest defaultWordAddRequest)
+        public async Task<IActionResult> AddDefaultWord(DefaultWordAddRequest defaultWordAddRequest)
         {
             if (!ModelState.IsValid)
             {
@@ -108,10 +114,25 @@ namespace EnjOffer.UI.Controllers
                 //call the service method
                 DefaultWordResponse defaultWord = _defaultWordsService.AddDefaultWord(defaultWordAddRequest);
 
-                List<UserResponse> users = _usersService.GetAllUsers();
-                List<DefaultWordResponse> defaultWords = _defaultWordsService.GetAllDefaultWords();
+                //List<UserResponse> users = _usersService.GetAllUsers();
+                List<ApplicationUser> users = await _usersService.GetAllUsers();
+                List <DefaultWordResponse> defaultWords = _defaultWordsService.GetAllDefaultWords();
 
-                foreach (UserResponse user in users)
+                foreach (ApplicationUser user in users)
+                {
+                    foreach (DefaultWordResponse itemDefaultWord in defaultWords)
+                    {
+                        UsersDefaultWordsAddRequest usersDefaultWordsAddRequest = new UsersDefaultWordsAddRequest()
+                        {
+                            DefaultWordId = itemDefaultWord.DefaultWordId,
+                            UserId = user.Id
+                        };
+
+                        _usersDefaultWordsService.AddUserDefaultWord(usersDefaultWordsAddRequest);
+                    }
+                }
+
+                /*foreach (UserResponse user in users)
                 {
                     foreach (DefaultWordResponse itemDefaultWord in defaultWords)
                     {
@@ -123,7 +144,7 @@ namespace EnjOffer.UI.Controllers
 
                         _usersDefaultWordsService.AddUserDefaultWord(usersDefaultWordsAddRequest);
                     }
-                }
+                }*/
 
                 return RedirectToAction("IndexPersonalCabinet", "Home");
             }

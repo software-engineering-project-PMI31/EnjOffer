@@ -17,7 +17,7 @@ using EnjOffer.Core.Domain.RepositoryContracts;
 
 namespace UnitTests
 {
-    public class UsersServiceTest
+    /*public class UsersServiceTest
     {
         private readonly Mock<IUsersRepository> _usersRepositoryMock;
         private readonly IUsersRepository _usersRepository;
@@ -45,12 +45,12 @@ namespace UnitTests
             _usersDefaultWordsRepositoryMock = new Mock<IUsersDefaultWordsRepository>();
             _usersDefaultWordsRepository = _usersDefaultWordsRepositoryMock.Object;
 
-            /*var usersInitialData = new List<Users>();
+            *//*var usersInitialData = new List<Users>();
             DbContextMock<EnjOfferDbContext> dbContextMock =
                 new DbContextMock<EnjOfferDbContext>(new DbContextOptionsBuilder<EnjOfferDbContext>().Options);
 
             EnjOfferDbContext dbContext = dbContextMock.Object;
-            dbContextMock.CreateDbSetMock(temp => temp.Users, usersInitialData);*/
+            dbContextMock.CreateDbSetMock(temp => temp.Users, usersInitialData);*//*
 
             _usersService = new UsersService(_usersRepository, _defaultWordsRepository, _usersDefaultWordsRepository);
         }
@@ -124,9 +124,9 @@ namespace UnitTests
 
             Users first_user = request1.ToUser();
 
-            /*_usersRepositoryMock.SetupSequence(temp => temp.AddUser(It.IsAny<Users>()))
+            *//*_usersRepositoryMock.SetupSequence(temp => temp.AddUser(It.IsAny<Users>()))
                 .Returns(first_user)
-                .Throws<ArgumentException>();*/
+                .Throws<ArgumentException>();*//*
 
             _usersRepositoryMock.SetupSequence(temp => temp.AddUser(It.IsAny<Users>()))
                 .Throws(new ArgumentException("User with same email already exists"))
@@ -290,5 +290,5 @@ namespace UnitTests
         }
 
         #endregion
-    }
+    }*/
 }

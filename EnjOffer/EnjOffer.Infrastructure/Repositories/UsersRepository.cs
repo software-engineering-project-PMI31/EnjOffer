@@ -8,7 +8,7 @@ using EnjOffer.Core.Domain.Entities;
 
 namespace EnjOffer.Infrastructure.Repositories
 {
-    public class UsersRepository : IUsersRepository
+    /*public class UsersRepository : IUsersRepository
     {
         private readonly EnjOfferDbContext _db;
 
@@ -47,5 +47,5 @@ namespace EnjOffer.Infrastructure.Repositories
         {
             return _db.Users.FirstOrDefault(temp => temp.Email == email);
         }
-    }
+    }*/
 }

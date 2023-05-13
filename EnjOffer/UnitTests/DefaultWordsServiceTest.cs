@@ -9,6 +9,7 @@ using EnjOffer.Core.Domain.RepositoryContracts;
 using Moq;
 using EnjOffer.Core.Domain.Entities;
 using System.Linq;
+using EnjOffer.Core.Domain.IdentityEntities;
 
 namespace UnitTests
 {
@@ -40,7 +41,7 @@ namespace UnitTests
             //Arrange
             DefaultWordAddRequest? request = null;
             DefaultWords defaultWord = _fixture.Build<DefaultWords>()
-                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.Users, null as ICollection<ApplicationUser>)
                 .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
                 .Create();
 
@@ -63,7 +64,7 @@ namespace UnitTests
                 .With(temp => temp.Word, null as string).Create();
 
             DefaultWords defaultWord = _fixture.Build<DefaultWords>()
-                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.Users, null as ICollection<ApplicationUser>)
                 .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
                 .Create();
 
@@ -86,7 +87,7 @@ namespace UnitTests
                 .With(temp => temp.WordTranslation, null as string).Create();
 
             DefaultWords defaultWord = _fixture.Build<DefaultWords>()
-                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.Users, null as ICollection<ApplicationUser>)
                 .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
                 .Create();
 
@@ -178,12 +179,12 @@ namespace UnitTests
             List<DefaultWords> defaultWords_list = new List<DefaultWords>()
             {
                 _fixture.Build<DefaultWords>()
-                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.Users, null as ICollection<ApplicationUser>)
                 .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
                 .Create(),
 
                 _fixture.Build<DefaultWords>()
-                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.Users, null as ICollection<ApplicationUser>)
                 .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
                 .Create()
             };
@@ -223,7 +224,7 @@ namespace UnitTests
         {
             //Arrange          
             DefaultWords defaultWord = _fixture.Build<DefaultWords>()
-                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.Users, null as ICollection<ApplicationUser>)
                 .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
                 .Create();
 
@@ -247,7 +248,7 @@ namespace UnitTests
         {
             //Arrange
             DefaultWords defaultWord = _fixture.Build<DefaultWords>()
-                .With(temp => temp.Users, null as ICollection<Users>)
+                .With(temp => temp.Users, null as ICollection<ApplicationUser>)
                 .With(temp => temp.UsersDefaultWords, null as ICollection<UsersDefaultWords>)
                 .Create();
 

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using EnjOffer.Core.Domain.IdentityEntities;
 using Microsoft.AspNetCore.Authorization;
 using EnjOffer.UI.EmailConfiguration;
+using EnjOffer.Core.ServiceContracts;
 
 namespace EnjOffer.UI.Controllers
 {
@@ -14,15 +15,22 @@ namespace EnjOffer.UI.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<ApplicationRole> _roleManager;
         private readonly IConfiguration _config;
+        private readonly IUsersService _usersService;
+        private readonly IDefaultWordsService _defaultWordsService;
+        private readonly IUsersDefaultWordsService _usersDefaultWordsService;
 
         public LoginPageController(UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager, RoleManager<ApplicationRole> roleManager,
-            IConfiguration config)
+            IConfiguration config, IUsersService usersService, IDefaultWordsService defaultWordsService,
+            IUsersDefaultWordsService usersDefaultWordsService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _config = config;
+            _usersService = usersService;
+            _defaultWordsService = defaultWordsService;
+            _usersDefaultWordsService = usersDefaultWordsService;
         }
 
         [Route("/register")]
@@ -71,7 +79,34 @@ namespace EnjOffer.UI.Controllers
                 }
                 else
                 {
+                    if (await _roleManager.FindByNameAsync(Core.Enums.UserTypeOptions.User.ToString()) is null)
+                    {
+                        ApplicationRole applicationRole = new ApplicationRole()
+                        {
+                            Name = Core.Enums.UserTypeOptions.User.ToString()
+                        };
+
+                        await _roleManager.CreateAsync(applicationRole);
+                    }
+
                     await _userManager.AddToRoleAsync(user, Core.Enums.UserTypeOptions.User.ToString());
+                }
+
+                List<ApplicationUser> users = await _usersService.GetAllUsers();
+                List<DefaultWordResponse> defaultWords = _defaultWordsService.GetAllDefaultWords();
+
+                foreach (DefaultWordResponse itemDefaultWord in defaultWords)
+                {
+                    foreach (ApplicationUser itemUser in users)
+                    {
+                        UsersDefaultWordsAddRequest usersDefaultWordsAddRequest = new UsersDefaultWordsAddRequest()
+                        {
+                            DefaultWordId = itemDefaultWord.DefaultWordId,
+                            UserId = itemUser.Id
+                        };
+
+                        _usersDefaultWordsService.AddUserDefaultWord(usersDefaultWordsAddRequest);
+                    }
                 }
 
                 //Sign in
@@ -102,7 +137,7 @@ namespace EnjOffer.UI.Controllers
 
         [Route("/login")]
         [HttpPost]
-        public async Task<IActionResult> Login(LoginDTO loginDTO)
+        public async Task<IActionResult> Login(LoginDTO loginDTO, string? ReturnUrl)
         {
             if (!ModelState.IsValid)
             {
@@ -116,6 +151,11 @@ namespace EnjOffer.UI.Controllers
                 isPersistent: false, lockoutOnFailure: false);
             if (result.Succeeded)
             {
+                if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
+                {
+                    return LocalRedirect(ReturnUrl);
+                }
+
                 return RedirectToAction(nameof(HomeController.IndexPersonalCabinet), "Home");
             }
 

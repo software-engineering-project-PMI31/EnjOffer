@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnjOffer.Core.Domain.IdentityEntities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,10 @@ namespace EnjOffer.Core.Domain.Entities
         public DateTime? LastTimeEntered { get; set; }
         public int CorrectEnteredCount { get; set; }
         public int IncorrectEnteredCount { get; set; }
+        /*public Guid? UserId { get; set; }
+        public Users? User { get; set; }*/
+
         public Guid? UserId { get; set; }
-        public Users? User { get; set; }
+        public ApplicationUser? User { get; set; }
     }
 }

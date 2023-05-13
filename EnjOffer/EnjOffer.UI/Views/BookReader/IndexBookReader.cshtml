@@ -1,6 +1,8 @@
 ﻿@{
     ViewBag.Title = "Book reader";
 }
+@using EnjOffer.Core.DTO;
+@using System.Security.Claims;
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,8 +55,9 @@
                             <input type="text" placeholder="Word" class="form-input" name="Word" required />
                             <input type="text" placeholder="Traslation" class="form-input" name="WordTranslation"
                                 required />
-                            <input type="text" placeholder="User" class="form-input" name="UserId"
-                                value="409855c0-8d3a-467e-8edd-87593f4a25cc" style="display: none;" />
+                            @Html.HiddenFor(ViewBag.UserId, User.FindFirstValue(ClaimTypes.NameIdentifier));
+                            @*<input type="text" placeholder="User" class="form-input" name="UserId"
+                                value="409855c0-8d3a-467e-8edd-87593f4a25cc" style="display: none;" />*@
                             <button class="form-button" type="submit">Add word</button>
                         </form>
                     </div>

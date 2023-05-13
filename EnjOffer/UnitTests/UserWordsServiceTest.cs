@@ -11,6 +11,7 @@ using AutoFixture;
 using Moq;
 using EnjOffer.Core.Domain.RepositoryContracts;
 using EnjOffer.Core.Domain.Entities;
+using EnjOffer.Core.Domain.IdentityEntities;
 
 namespace UnitTests
 {
@@ -214,7 +215,7 @@ namespace UnitTests
             UserWords userWord = _fixture.Build<UserWords>()
                 .With(temp => temp.LastTimeEntered, DateTime.Now.AddDays(-3))
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users)
+                .With(temp => temp.User, null as ApplicationUser)
                 .Create();
 
             UserWordsResponse userWord_response_expected = userWord.ToUserWordsResponse(_userWordsService);
@@ -244,12 +245,12 @@ namespace UnitTests
                 _fixture.Build<UserWords>()
                 .With(temp => temp.LastTimeEntered, (DateTime?)null)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create(),
+                .With(temp => temp.User, null as ApplicationUser).Create(),
 
                 _fixture.Build<UserWords>()
                 .With(temp => temp.LastTimeEntered, (DateTime?)null)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create()
+                .With(temp => temp.User, null as ApplicationUser).Create()
             };
 
             _userWordsRepositoryMock.Setup(temp => temp.GetUserWordsByDate(It.IsAny<DateTime?>())).Returns(userWords);
@@ -275,12 +276,12 @@ namespace UnitTests
                 _fixture.Build<UserWords>()
                 .With(temp => temp.LastTimeEntered, dateNow)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create(),
+                .With(temp => temp.User, null as ApplicationUser).Create(),
 
                 _fixture.Build<UserWords>()
                 .With(temp => temp.LastTimeEntered, dateNow)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create()
+                .With(temp => temp.User, null as ApplicationUser).Create()
             };
 
             _userWordsRepositoryMock.Setup(temp => temp.GetUserWordsByDate(It.IsAny<DateTime?>())).Returns(userWords);
@@ -308,12 +309,12 @@ namespace UnitTests
                 _fixture.Build<UserWords>()
                 .With(temp => temp.LastTimeEntered, null as DateTime?)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create(),
+                .With(temp => temp.User, null as ApplicationUser).Create(),
 
                 _fixture.Build<UserWords>()
                 .With(temp => temp.LastTimeEntered, null as DateTime?)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create()
+                .With(temp => temp.User, null as ApplicationUser).Create()
             };
 
             List<UserWordsResponse> userWords_response_list_expected = userWords.Select(
@@ -353,21 +354,21 @@ namespace UnitTests
                 .With(temp => temp.CorrectEnteredCount, correctEnteredCountForMonthAgo)
                 .With(temp => temp.IncorrectEnteredCount, incorrectEnteredCountForMonthAgo)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create(),
+                .With(temp => temp.User, null as ApplicationUser).Create(),
 
                 _fixture.Build<UserWords>()
                 .With(temp => temp.LastTimeEntered, dateWeekAgo)
                 .With(temp => temp.CorrectEnteredCount, correctEnteredCountForWeekAgo)
                 .With(temp => temp.IncorrectEnteredCount, incorrectEnteredCountForWeekAgo)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create(),
+                .With(temp => temp.User, null as ApplicationUser).Create(),
 
                 _fixture.Build<UserWords>()
                 .With(temp => temp.LastTimeEntered, dateNow)
                 .With(temp => temp.CorrectEnteredCount, correctEnteredCountForNow)
                 .With(temp => temp.IncorrectEnteredCount, incorrectEnteredCountForNow)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create(),
+                .With(temp => temp.User, null as ApplicationUser).Create(),
             };
 
             List<UserWordsResponse> userWords_list_expected = userWords.Select(
@@ -417,12 +418,12 @@ namespace UnitTests
                 _fixture.Build<UserWords>()
                 .With(temp => temp.LastTimeEntered, DateTime.Now.AddDays(-2))
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create(),
+                .With(temp => temp.User, null as ApplicationUser).Create(),
 
                 _fixture.Build<UserWords>()
                 .With(temp => temp.LastTimeEntered, DateTime.Now.AddDays(-2))
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create()
+                .With(temp => temp.User, null as ApplicationUser).Create()
             };
 
             List<UserWordsResponse> userWords_response_list_expected = userWords.Select(
@@ -501,7 +502,7 @@ namespace UnitTests
                 .With(temp => temp.CorrectEnteredCount, 0)
                 .With(temp => temp.IncorrectEnteredCount, 0)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users)
+                .With(temp => temp.User, null as ApplicationUser)
                 .Create();
 
             UserWordsResponse userWord_response_from_add = userWord.ToUserWordsResponse(_userWordsService);
@@ -533,7 +534,7 @@ namespace UnitTests
                 .With(temp => temp.CorrectEnteredCount, 0)
                 .With(temp => temp.IncorrectEnteredCount, 0)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users)
+                .With(temp => temp.User, null as ApplicationUser)
                 .Create();
 
             UserWordsResponse userWord_response_from_add = userWord.ToUserWordsResponse(_userWordsService);
@@ -569,7 +570,7 @@ namespace UnitTests
             UserWords userWord = _fixture.Build<UserWords>()
                 .With(temp => temp.LastTimeEntered, expectedDate)
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users).Create();
+                .With(temp => temp.User, null as ApplicationUser).Create();
 
             UserWordsResponse userWord_response_expected = userWord.ToUserWordsResponse(_userWordsService);
 
@@ -597,7 +598,7 @@ namespace UnitTests
             //Arrange
             UserWords userWord = _fixture.Build<UserWords>()
                 .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as Users)
+                .With(temp => temp.User, null as ApplicationUser)
                 .Create();
 
             _userWordsRepositoryMock.Setup(temp => temp.DeleteUserWord(It.IsAny<Guid>())).Returns(true);

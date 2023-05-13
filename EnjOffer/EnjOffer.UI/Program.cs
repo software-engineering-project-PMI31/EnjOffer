@@ -25,14 +25,14 @@ builder.Host.UseSerilog((HostBuilderContext context, IServiceProvider services, 
     loggerConfiguration.ReadFrom.Configuration(context.Configuration).ReadFrom.Services(services);
 });
 
-builder.Services.AddScoped<IUsersService, UsersService>();
 builder.Services.AddScoped<IUserWordsService, UserWordsService>();
 builder.Services.AddScoped<IDefaultWordsService, DefaultWordsService>();
 builder.Services.AddScoped<IUserStatisticsService, UserStatisticsService>();
 builder.Services.AddScoped<IUsersDefaultWordsService, UsersDefaultWordsService>();
 builder.Services.AddScoped<IWordsService, WordsService>();
 
-builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+
+//builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 builder.Services.AddScoped<IUserWordsRepository, UserWordsRepository>();
 builder.Services.AddScoped<IDefaultWordsRepository, DefaultWordsRepository>();
 builder.Services.AddScoped<IUserStatisticsRepository, UserStatisticsRepository>();
@@ -41,6 +41,8 @@ builder.Services.AddScoped<IUsersDefaultWordsRepository, UsersDefaultWordsReposi
 builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 {
     options.Password.RequiredLength = 6;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
     options.Password.RequiredUniqueChars = 1;
 })
     .AddEntityFrameworkStores<EnjOfferDbContext>()
@@ -48,14 +50,19 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
     .AddUserStore<UserStore<ApplicationUser, ApplicationRole, EnjOfferDbContext, Guid>>()
     .AddRoleStore<RoleStore<ApplicationRole, EnjOfferDbContext, Guid>>();
 
+builder.Services.AddScoped<IUsersService, UsersService>();
+
 builder.Services.AddAuthorization(options => options.FallbackPolicy =
     new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build());
 
-builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/register");
+builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/login");
 
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+app.UseHsts();
+app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseRouting();

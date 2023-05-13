@@ -36,9 +36,9 @@ namespace EnjOffer.Core.Services
             _userStatisticsService = userStatisticsService;
         }
 
-        public bool CheckWord(string word)
+        public bool CheckWord(string word, Guid userId)
         {
-            return word is not null && word == GetWordToCheck().Word;
+            return word is not null && word == GetWordToCheck(userId).Word;
         }
 
         public List<WordsResponse> GetWordsSortedByPriority(IEnumerable<WordsResponse> userWordsDefaultWords)
@@ -86,7 +86,7 @@ namespace EnjOffer.Core.Services
                     });
         }
 
-        public WordsResponse GetWordToCheck()
+        public WordsResponse GetWordToCheck(Guid userId)
         {
             List<UserWords> userWords = _userWordsRepository.GetAllUserWords();
             List<UserWordsResponse> userWordsResponses = _userWordsService.GetAllUserWords();
@@ -94,7 +94,8 @@ namespace EnjOffer.Core.Services
             List<UsersDefaultWordsResponse> usersDefaultWordsResponses = _userDefaultWordsService.GetAllUserDefaultWords();
 
             IEnumerable<WordsResponse> joined = JoinDefaultWords(defaultWordsResponses, usersDefaultWordsResponses)
-                .Where(temp => temp.UserId == Guid.Parse("409855c0-8d3a-467e-8edd-87593f4a25cc"));
+                .Where(temp => temp.UserId == userId);
+            
 
             List<WordsResponse> userWordsToWords = userWords.Select(temp => temp.ToWordsResponse(_userWordsService))
                 .ToList();
@@ -108,14 +109,14 @@ namespace EnjOffer.Core.Services
             return wordToCheck;
         }
 
-        public IEnumerable<WordsResponse> JoinDefaultWordsAndUserWords()
+        public IEnumerable<WordsResponse> JoinDefaultWordsAndUserWords(Guid userId)
         {
             List<UserWords> userWords = _userWordsRepository.GetAllUserWords();
             List<DefaultWordResponse> defaultWordsResponses = _defaultWordsService.GetAllDefaultWords();
             List<UsersDefaultWordsResponse> usersDefaultWordsResponses = _userDefaultWordsService.GetAllUserDefaultWords();
 
             IEnumerable<WordsResponse> joined = JoinDefaultWords(defaultWordsResponses, usersDefaultWordsResponses)
-                .Where(temp => temp.UserId == Guid.Parse("409855c0-8d3a-467e-8edd-87593f4a25cc"));
+                .Where(temp => temp.UserId == userId);
 
             List<WordsResponse> userWordsToWords = userWords.Select(temp => temp.ToWordsResponse(_userWordsService))
                 .ToList();
@@ -125,7 +126,7 @@ namespace EnjOffer.Core.Services
             return mergedWords;
         }
 
-        public WordsResponse GetNextWordToCheck(string word)
+        public WordsResponse GetNextWordToCheck(string word, Guid userId)
         {
             /*List<UserWords> userWords = _userWordsRepository.GetAllUserWords();
             List<DefaultWords> defaultWords = _defaultWordsRepository.GetAllDefaultWords();
@@ -136,7 +137,7 @@ namespace EnjOffer.Core.Services
             List<UsersDefaultWordsResponse> usersDefaultWordsResponses = _userDefaultWordsService.GetAllUserDefaultWords();
 
             IEnumerable<WordsResponse> joined = JoinDefaultWords(defaultWordsResponses, usersDefaultWordsResponses)
-                .Where(temp => temp.UserId == Guid.Parse("409855c0-8d3a-467e-8edd-87593f4a25cc"));
+                .Where(temp => temp.UserId == userId);
 
             List<WordsResponse> userWordsToWords = userWords.Select(temp => temp.ToWordsResponse(_userWordsService))
                 .ToList();
@@ -208,6 +209,15 @@ namespace EnjOffer.Core.Services
                 UserStatisticsAddRequest userStatisticsAddRequest = new UserStatisticsAddRequest()
                 {
                     AnswerDate = DateTime.Now.Date,
+
+                    CorrectAnswersCount = _userStatisticsService
+                        .GetUserStatisticsByDateAndUserId(DateTime.Now.Date, updatedUserDefaultWord.UserId) is null &&
+                        wordUpdateRequest.IsIncreaseCorrectEnteredCount ? 1 : null,
+
+                    IncorrectAnswersCount = _userStatisticsService
+                        .GetUserStatisticsByDateAndUserId(DateTime.Now.Date, updatedUserDefaultWord.UserId) is null &&
+                        wordUpdateRequest.IsIncreaseIncorrectEnteredCount ? 1 : null,
+
                     IsIncreaseCorrectEnteredAnswers = wordUpdateRequest.IsIncreaseCorrectEnteredCount,
                     IsIncreaseIncorrectEnteredAnswers = wordUpdateRequest.IsIncreaseIncorrectEnteredCount,
                     UserId = updatedUserDefaultWord.UserId
@@ -224,14 +234,14 @@ namespace EnjOffer.Core.Services
             throw new ArgumentException("Nor UserWord, nor DefaultWord updated", nameof(wordUpdateRequest));
         }
 
-        public WordsResponse? GetWordById(Guid? defaultWordId, Guid? userWordId)
+        public WordsResponse? GetWordById(Guid? defaultWordId, Guid? userWordId, Guid userId)
         {
             List<UserWords> userWords = _userWordsRepository.GetAllUserWords();
             List<DefaultWordResponse> defaultWordsResponses = _defaultWordsService.GetAllDefaultWords();
             List<UsersDefaultWordsResponse> usersDefaultWordsResponses = _userDefaultWordsService.GetAllUserDefaultWords();
 
             IEnumerable<WordsResponse> joined = JoinDefaultWords(defaultWordsResponses, usersDefaultWordsResponses)
-                .Where(temp => temp.UserId == Guid.Parse("409855c0-8d3a-467e-8edd-87593f4a25cc"));
+                .Where(temp => temp.UserId == userId);
 
             List<WordsResponse> userWordsToWords = userWords.Select(temp => temp.ToWordsResponse(_userWordsService))
                 .ToList();

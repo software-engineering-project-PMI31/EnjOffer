@@ -1,8 +1,11 @@
 ﻿using EnjOffer.Core.Domain.Entities;
+using EnjOffer.Core.Domain.IdentityEntities;
 using EnjOffer.Core.Domain.RepositoryContracts;
 using EnjOffer.Core.DTO;
 using EnjOffer.Core.Helpers;
 using EnjOffer.Core.ServiceContracts;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,20 +16,21 @@ namespace EnjOffer.Core.Services
 {
     public class UsersService : IUsersService
     {
-        private readonly IUsersRepository _usersRepository;
+        //private readonly IUsersRepository _usersRepository;
         private readonly IDefaultWordsRepository _defaultWordsRepository;
         private readonly IUsersDefaultWordsRepository _usersDefaultWordsRepository;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public UsersService(IUsersRepository usersRepository, IDefaultWordsRepository defaultWordsRepository,
-            IUsersDefaultWordsRepository usersDefaultWordsRepository)
+        public UsersService(/*IUsersRepository usersRepository*/ IDefaultWordsRepository defaultWordsRepository,
+            IUsersDefaultWordsRepository usersDefaultWordsRepository, UserManager<ApplicationUser> userManager)
         {
-            _usersRepository = usersRepository;
+            //_usersRepository = usersRepository;
             _defaultWordsRepository = defaultWordsRepository;
             _usersDefaultWordsRepository = usersDefaultWordsRepository;
-
+            _userManager = userManager;
         }
 
-        public UserResponse AddUser(UserAddRequest? userAddRequest)
+        /*public UserResponse AddUser(UserAddRequest? userAddRequest)
         {
             if (userAddRequest is null)
             {
@@ -83,14 +87,20 @@ namespace EnjOffer.Core.Services
 
             _usersRepository.DeleteUser(user.UserId);
             return true;
-        }
+        }*/
 
-        public List<UserResponse> GetAllUsers()
+        /*public List<UserResponse> GetAllUsers()
         {
             return _usersRepository.GetAllUsers().Select(user => user.ToUserResponse()).ToList();
+        }*/
+
+        public async Task<List<ApplicationUser>> GetAllUsers()
+        {
+            var identityUsers = await _userManager.Users.ToListAsync();
+            return identityUsers.Cast<ApplicationUser>().ToList();
         }
 
-        public UserResponse? GetUserById(Guid? userId)
+        /*public UserResponse? GetUserById(Guid? userId)
         {
             if (userId is null)
             {
@@ -105,6 +115,6 @@ namespace EnjOffer.Core.Services
             }
 
             return user_response_from_list?.ToUserResponse() ?? null;
-        }
+        }*/
     }
 }

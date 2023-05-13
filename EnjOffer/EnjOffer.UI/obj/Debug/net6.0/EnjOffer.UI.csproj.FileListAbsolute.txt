@@ -136,3 +136,4 @@ D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\bin\Debug\net6.0\Mai
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\bin\Debug\net6.0\MimeKit.dll
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\bin\Debug\net6.0\NETCore.MailKit.dll
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\EnjOffer.UI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll

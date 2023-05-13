@@ -27,6 +27,8 @@ namespace EnjOffer.Core.DTO
 
         public bool IsIncreaseIncorrectEnteredAnswers { get; set; }
 
+        public Guid? UserId { get; set; }
+
         public UserStatistics ToUserStatistics()
         {
             return new UserStatistics()
@@ -35,6 +37,7 @@ namespace EnjOffer.Core.DTO
                 CorrectAnswersCount = CorrectAnswersCount ?? 0,
                 IncorrectAnswersCount = IncorrectAnswersCount ?? 0,
                 AnswerDate = AnswerDate,
+                UserId = UserId
             };
         }
     }

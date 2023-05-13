@@ -4,6 +4,8 @@ using EnjOffer.Core.ServiceContracts;
 using EnjOffer.Core.Enums;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using EnjOffer.UI.ViewModels;
+using EnjOffer.Core.Domain.IdentityEntities;
+using Microsoft.AspNetCore.Identity;
 
 namespace EnjOffer.UI.Controllers
 {
@@ -13,22 +15,25 @@ namespace EnjOffer.UI.Controllers
         private readonly IUsersDefaultWordsService _usersDefaultWordsService;
         private readonly IUserWordsService _userWordsService;
         private readonly IWordsService _wordsService;
+        private readonly UserManager<ApplicationUser> _userManager;
 
         public WordTrainerController(IDefaultWordsService defaultWordsService, 
             IUsersDefaultWordsService usersDefaultWordsService, IUserWordsService userWordsService,
-            IWordsService wordsService)
+            IWordsService wordsService, UserManager<ApplicationUser> userManager)
         {
             _defaultWordsService = defaultWordsService;
             _usersDefaultWordsService = usersDefaultWordsService;
             _userWordsService = userWordsService;
             _wordsService = wordsService;
+            _userManager = userManager;
         }
 
         [Route("word-trainer")]
         [HttpGet]
-        public IActionResult IndexWordTrainer(WordsUpdateRequest? wordsUpdateRequest)
+        public async Task<IActionResult> IndexWordTrainer(WordsUpdateRequest? wordsUpdateRequest)
         {
-            WordsResponse wordToCheck = _wordsService.GetWordToCheck();
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            WordsResponse wordToCheck = _wordsService.GetWordToCheck(user.Id);
 
             if (wordsUpdateRequest?.DefaultWordId is null && wordsUpdateRequest?.UserId is null &&
                 wordsUpdateRequest?.UserWordId is null)
@@ -84,20 +89,21 @@ namespace EnjOffer.UI.Controllers
         [HttpPost]
         //Url: persons/create
         [Route("/word-trainer/check-word")]
-        public IActionResult EnterWord(WordsUpdateRequest wordsUpdateRequest)
+        public async Task<IActionResult> EnterWord(WordsUpdateRequest wordsUpdateRequest)
         {
-            WordsResponse wordNextToCheck = _wordsService.GetNextWordToCheck(wordsUpdateRequest.Word);
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            WordsResponse wordNextToCheck = _wordsService.GetNextWordToCheck(wordsUpdateRequest.Word, user.Id);
             TempData["IsCorrectEntered"] = false;
             try
             {
                 WordsResponse? tepWord = _wordsService.GetWordById(wordsUpdateRequest.DefaultWordId,
-                        wordsUpdateRequest.UserWordId);
+                        wordsUpdateRequest.UserWordId, user.Id);
                 bool isCorrectEntered = tepWord!.Word == wordsUpdateRequest.Word;
                 /*bool isCorrectEntered = _wordsService.CheckWord(wordsUpdateRequest.Word!);*/
 
                 if (isCorrectEntered)
                 {
-                    WordsResponse wordToCheck = _wordsService.GetWordToCheck();
+                    WordsResponse wordToCheck = _wordsService.GetWordToCheck(user.Id);
                     TempData["IsCorrectEntered"] = true;
                     wordsUpdateRequest.IsIncreaseCorrectEnteredCount = true;
 
@@ -122,7 +128,7 @@ namespace EnjOffer.UI.Controllers
 
                     WordsResponse updatedWord = _wordsService.UpdateWord(wordsUpdateRequest);
                     WordsResponse? currentWord = _wordsService.GetWordById(wordsUpdateRequest.DefaultWordId,
-                        wordsUpdateRequest.UserWordId);
+                        wordsUpdateRequest.UserWordId, user.Id);
 
                     WordsUpdateRequest? wordsNewUpdateRequest = new WordsUpdateRequest()
                     {

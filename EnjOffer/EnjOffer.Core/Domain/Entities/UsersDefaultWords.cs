@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnjOffer.Core.Domain.IdentityEntities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,10 @@ namespace EnjOffer.Core.Domain.Entities
 {
     public class UsersDefaultWords
     {
+        /*public Guid? UserId { get; set; }
+        public Users? User { get; set; }*/
         public Guid? UserId { get; set; }
-        public Users? User { get; set; }
+        public ApplicationUser? User { get; set; }
         public Guid? DefaultWordId { get; set; }
         public DefaultWords? DefaultWord { get; set; }
         public DateTime? LastTimeEntered { get; set; }

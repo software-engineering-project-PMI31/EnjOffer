@@ -217,39 +217,6 @@ namespace EnjOffer.Infrastructure.Migrations
                     b.ToTable("user_words", (string)null);
                 });
 
-            modelBuilder.Entity("EnjOffer.Core.Domain.Entities.Users", b =>
-                {
-                    b.Property<Guid>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid")
-                        .HasColumnName("user_id");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(320)
-                        .HasColumnType("varchar(320)")
-                        .HasColumnName("user_email");
-
-                    b.Property<byte[]>("Password")
-                        .IsRequired()
-                        .HasColumnType("bytea")
-                        .HasColumnName("user_password");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("text")
-                        .HasDefaultValue("SuperAdmin")
-                        .HasColumnName("user_role");
-
-                    b.HasKey("UserId");
-
-                    b.HasIndex("Email")
-                        .IsUnique();
-
-                    b.ToTable("users", (string)null);
-                });
-
             modelBuilder.Entity("EnjOffer.Core.Domain.Entities.UsersDefaultWords", b =>
                 {
                     b.Property<Guid?>("UserId")
@@ -474,20 +441,20 @@ namespace EnjOffer.Infrastructure.Migrations
 
             modelBuilder.Entity("EnjOffer.Core.Domain.Entities.UserStatistics", b =>
                 {
-                    b.HasOne("EnjOffer.Core.Domain.Entities.Users", "User")
+                    b.HasOne("EnjOffer.Core.Domain.IdentityEntities.ApplicationUser", "User")
                         .WithMany("UserStatistics")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("User");
                 });
 
             modelBuilder.Entity("EnjOffer.Core.Domain.Entities.UserWords", b =>
                 {
-                    b.HasOne("EnjOffer.Core.Domain.Entities.Users", "User")
+                    b.HasOne("EnjOffer.Core.Domain.IdentityEntities.ApplicationUser", "User")
                         .WithMany("UserWords")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("User");
                 });
@@ -500,7 +467,7 @@ namespace EnjOffer.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EnjOffer.Core.Domain.Entities.Users", "User")
+                    b.HasOne("EnjOffer.Core.Domain.IdentityEntities.ApplicationUser", "User")
                         .WithMany("UsersDefaultWords")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -567,7 +534,7 @@ namespace EnjOffer.Infrastructure.Migrations
                     b.Navigation("UsersDefaultWords");
                 });
 
-            modelBuilder.Entity("EnjOffer.Core.Domain.Entities.Users", b =>
+            modelBuilder.Entity("EnjOffer.Core.Domain.IdentityEntities.ApplicationUser", b =>
                 {
                     b.Navigation("UserStatistics");
 

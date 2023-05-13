@@ -35,6 +35,18 @@ namespace EnjOffer.Infrastructure.Repositories
             return _db.UserStatistics.FirstOrDefault(temp => temp.UserStatisticsId == userStatisticsId);
         }
 
+        public UserStatistics? GetStatisticsByDateAndUserId(DateTime? dateTime, Guid? userId)
+        {
+            return _db.UserStatistics.FirstOrDefault(temp => temp.AnswerDate == dateTime &&
+                temp.UserId == userId);
+        }
+
+        public UserStatistics? GetStatisticsByIdAndUserId(Guid? userStatisticsId, Guid? userId)
+        {
+            return _db.UserStatistics.FirstOrDefault(temp => temp.UserStatisticsId == userStatisticsId &&
+                temp.UserId == userId);
+        }
+
         public UserStatistics? GetUserStatisticsByDate(DateTime? dateTime)
         {
             return _db.UserStatistics.FirstOrDefault(temp => temp.AnswerDate == dateTime);

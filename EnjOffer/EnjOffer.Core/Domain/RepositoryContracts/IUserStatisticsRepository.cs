@@ -13,6 +13,8 @@ namespace EnjOffer.Core.Domain.RepositoryContracts
         List<UserStatistics> GetAllUserStatistics();
         UserStatistics? GetUserStatisticsByDate(DateTime? dateTime);
         UserStatistics? GetStatisticsById(Guid? userStatisticsId);
+        UserStatistics? GetStatisticsByDateAndUserId(DateTime? dateTime, Guid? userId);
+        UserStatistics? GetStatisticsByIdAndUserId(Guid? userStatisticsId, Guid? userId);
         UserStatistics UpdateUserStatistics(UserStatistics userStatisticsUpdate);
     }
 }

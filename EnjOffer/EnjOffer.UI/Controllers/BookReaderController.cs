@@ -1,5 +1,7 @@
-﻿using EnjOffer.Core.DTO;
+﻿using EnjOffer.Core.Domain.IdentityEntities;
+using EnjOffer.Core.DTO;
 using EnjOffer.Core.ServiceContracts;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EnjOffer.UI.Controllers
@@ -7,15 +9,19 @@ namespace EnjOffer.UI.Controllers
     public class BookReaderController : Controller
     {
         private readonly IUserWordsService _userWordsService;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public BookReaderController(IUserWordsService userWordsService)
+        public BookReaderController(IUserWordsService userWordsService, UserManager<ApplicationUser> userManager)
         {
             _userWordsService = userWordsService;
+            _userManager = userManager;
         }
 
         [Route("/book-reader")]
-        public IActionResult IndexBookReader()
+        public async Task<IActionResult> IndexBookReader()
         {
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            ViewBag.UserId = user.Id;
             return View();
         }
 

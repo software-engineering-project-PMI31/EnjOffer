@@ -1,4 +1,6 @@
-﻿@model LoginDTO;
+﻿@using EnjOffer.Core.DTO;
+@model LoginDTO;
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
 
 @{
     ViewBag.CurrentPage = "Login";
@@ -95,7 +97,7 @@
                         <h2>Log in</h2>
                     </div>
                     <div class='login-form__main'>
-                        <form method='POST' action='login'>
+                        <form method='POST' asp-action="Login" asp-controller="LoginPage" asp-route-ReturnUrl="@Context.Request.Query["ReturnUrl"]">
                             <div class='input-field'>
                                 <p>Email</p>
                                 <input asp-for="Email" type="email" required class="input-field__input" style="display: block" placeholder="example@example.com">
@@ -108,6 +110,17 @@
                             </div>
                             <button class='sign-button'>Log in</button>
                             <a href="forgot-password">Forget the password?</a>
+                            @if (ViewBag.Errors != null)
+                            {
+                             <div>
+                              <ul>
+                               @foreach (string error in ViewBag.Errors)
+                               {
+                                <li style="color: red; font-size: 12px;">@error</li>
+                               }
+                              </ul>
+                             </div>
+                            }
                         </form>
                     </div>
                 </div>

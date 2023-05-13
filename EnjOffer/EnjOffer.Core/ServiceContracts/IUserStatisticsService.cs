@@ -10,8 +10,9 @@ namespace EnjOffer.Core.ServiceContracts
     public interface IUserStatisticsService
     {
         UserStatisticsResponse AddUserStatistics(UserStatisticsAddRequest? userStatisticsAddRequest);
-        List<UserStatisticsResponse> GetAllUserStatistics();
+        List<UserStatisticsResponse> GetAllUserStatistics(Guid userId);
         UserStatisticsResponse? GetUserStatisticsByDate(DateTime? dateTime);
+        UserStatisticsResponse? GetUserStatisticsByDateAndUserId(DateTime? dateTime, Guid? userId);
         UserStatisticsResponse? GetUserStatisticsById(Guid? userStatisticsId);
         UserStatisticsResponse UpdateUserStatistics(UserStatisticsUpdateRequest? userStatisticsUpdateRequest);
     }

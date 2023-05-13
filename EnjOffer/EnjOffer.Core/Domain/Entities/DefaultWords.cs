@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnjOffer.Core.Domain.IdentityEntities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,8 @@ namespace EnjOffer.Core.Domain.Entities
 
         public string? ImageSrc { get; set; }
 
-        public ICollection<Users>? Users { get; set; }
+        //public ICollection<Users>? Users { get; set; }
+        public ICollection<ApplicationUser>? Users { get; set; }
 
         public ICollection<UsersDefaultWords>? UsersDefaultWords { get; set; }
     }

@@ -67,12 +67,14 @@
         <h2 class="admin-panel__sections">
             Admin panel. Welcome, @User.Identity?.Name!
         </h2>
-        <div class="manager">
-            <form id="create-admin-account" method="POST" action="register">
-                <h3>Add admin account</h3>
-                <details>
-                    <summary class="form-button" onclick="formInteraction()">Open form</summary>
-                    <div class="input-field">
+
+            <div class="manager">
+
+                    <form id="create-admin-account" method="POST" action="register">
+                    <h3>Add admin account</h3>
+                    <details>
+                        <summary class="form-button" onclick="formInteraction()">Open form</summary>
+                        <div class="input-field">
                         <div class="input-field__item">
                             <p>Email</p>
                             <input type="email" class="input-field__input" name="Email" required/>
@@ -120,10 +122,10 @@
                             </div>
                             <button type="submit" id="remove-account-button" class="input-field__button" disabled>Remove
                                 account</button>
-                        </div>
-                    </div>
-                </details>
-            </form>
+                                </div>
+                            </div>
+                        </details>
+                    </form>
             <form id="database-add-word" method="POST" action="/personal-cabinet/add-default-word">
                 <h3>Add word to database</h3>
                 <details>
