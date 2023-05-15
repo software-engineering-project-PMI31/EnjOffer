@@ -65,9 +65,10 @@
             </div>
             <input type="text" class="word-input" placeholder="Введіть слово..." name="Word" />
             <input style="display: none;" type="text" class="word-input" value="@Model?.DefaultWordId" placeholder="" name="DefaultWordId" />
-            <input style="display: none;" type="text" class="word-input" value="@Model?.UserId" placeholder="" name="UserId" />
+            <input style="display: none;" type="hidden" class="word-input" value="@Model?.UserId" placeholder="" name="UserId" />
+            <input style="display: none;" type="hidden" class="word-input" value="@Model?.UserWordId" placeholder="" name="UserWordId" />
 
-            @Html.HiddenFor(model => model.UserId, User.FindFirstValue(ClaimTypes.NameIdentifier))
+            @*@Html.HiddenFor(model => model.UserId, User.FindFirstValue(ClaimTypes.NameIdentifier))*@
 
             <!--<input style="display: none;" type="text" class="word-input" value="@Model?.UserWordId" placeholder="" name="UserWordId" />-->
             @if (ViewBag.IsCorrectEntered == null)
@@ -102,7 +103,7 @@
             <form class="add-word-modal__main" method="POST" action="word-trainer/add-user-word">
                 <input type="text" placeholder="Word" class="modal-input" name="Word" required/>
                 <input type="text" placeholder="Traslation" class="modal-input" name="WordTranslation" required/>
-                <input type="text" placeholder="User" class="modal-input" name="UserId" value="409855c0-8d3a-467e-8edd-87593f4a25cc" style="display: none;"/>
+                <input type="hidden" name="UserId" value="@Model?.UserId" style="display: none;"/>
                 <button class="add-word-button" type="submit">Add word</button>
             </form>
         </section>

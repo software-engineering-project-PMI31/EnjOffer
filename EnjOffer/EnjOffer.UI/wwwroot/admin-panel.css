@@ -1,6 +1,277 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: rgba(255, 238, 171, 0.8);
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: fit-content;
+    overflow-x: hidden;
+}
+
+.admin-panel {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.admin-panel__header {
+    margin: 1px;
+    padding: 0 20px;
+    border: 2px solid black;
+}
+
+.admin-panel__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    gap: 50px;
+    padding: 10px;
+}
+
+.manager {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-field__item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-field__input {
+    height: 25px;
+    background: rgba(255, 245, 204, 0.8);
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+select {
+    background: rgba(255, 245, 204, 0.8);
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-field__button {
+    width: fit-content;
+    align-self: center;
+    padding: 5px 10px;
+    border: 1px solid rgba(1, 124, 21, 0.92);
+    border-radius: 5px;
+    background: rgba(253, 221, 96, 0.8);
+    transition: all 0.3s linear;
+}
+
+    .input-field__button:hover {
+        scale: 1.03;
+        background: #e3e3e3;
+    }
+
+    .input-field__button:active {
+        scale: 0.85;
+        background: white;
+    }
+
+    .input-field__button:disabled {
+        background: #626262;
+        color: #7d7d7d;
+    }
+
+        .input-field__button:disabled:hover {
+            scale: 1;
+        }
+
+.form-button {
+    font-size: large;
+    user-select: none;
+}
+
+.remove-section {
+    display: flex;
+    gap: 5px;
+    align-self: center;
+}
+
+.remove-section__check {
+    display: flex;
+}
+
+.admin-panel__sections {
+    text-align: center;
+}
+
+.myChart {
+    width: 800px;
+}
+
+.advice {
+    background: rgba(253, 221, 96, 0.8);
+    border-radius: 13px;
+    padding: 10px;
+    max-width: 250px;
+}
+
+.advices {
+    display: flex;
+    width: fit-content;
+    gap: 50px;
+}
+
+@media (max-width: 1000px) {
+    .myChart {
+        width: 450px;
+    }
+
+    .advice {
+        max-width: 150px;
+    }
+
+    .advice_header {
+        font-size: smaller;
+    }
+
+    .advice_content {
+        font-size: smaller;
+    }
+
+    h3 {
+        font-size: smaller;
+    }
+
+    .form-button {
+        font-size: small;
+    }
+
+    .manager {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        font-size: small;
+        width: 60vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .advice {
+        max-width: 250px;
+    }
+
+    .advice_header {
+        font-size: x-small;
+    }
+
+    .advice_content {
+        font-size: x-small;
+    }
+
+    .advices {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .myChart {
+        width: 350px;
+    }
+}
+
+@media (max-width: 400px) {
+    .myChart {
+        width: 300px;
+    }
+}
+
+@media (max-width: 300px) {
+    .myChart {
+        width: 250px;
+    }
+}
+
+.warning-text {
+    user-select: none;
+}
+
+.sidebar {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255, 207, 18, 0.8);
+    padding: 15px;
+}
+
+.sidebar-container {
+    margin: 1px;
+}
+
+.sidebar__item {
+    height: 50px;
+    display: flex;
+    background: #FC9998;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sidebar__item-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+    user-select: none;
+    text-decoration: none;
+    color: #000000;
+    font-size: large;
+    font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+    .sidebar__item-content {
+        font-size: medium;
+    }
+
+    .sidebar__item {
+        height: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar__item-content {
+        font-size: smaller;
+    }
+
+    .sidebar__item {
+        height: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar__item-content {
+        font-size: x-small;
+    }
+}
+
+
+
+/*body {
+    margin: 0;
+    padding: 0;
 }
 
 .admin-panel {
@@ -113,7 +384,7 @@ body {
 
 .warning-text {
     user-select: none;
-}
+}*/
 
 
 

@@ -30,13 +30,15 @@ builder.Services.AddScoped<IDefaultWordsService, DefaultWordsService>();
 builder.Services.AddScoped<IUserStatisticsService, UserStatisticsService>();
 builder.Services.AddScoped<IUsersDefaultWordsService, UsersDefaultWordsService>();
 builder.Services.AddScoped<IWordsService, WordsService>();
+builder.Services.AddScoped<IAdviceService, AdviceService>();
+builder.Services.AddScoped<IBooksService, BooksService>();
 
-
-//builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 builder.Services.AddScoped<IUserWordsRepository, UserWordsRepository>();
 builder.Services.AddScoped<IDefaultWordsRepository, DefaultWordsRepository>();
 builder.Services.AddScoped<IUserStatisticsRepository, UserStatisticsRepository>();
 builder.Services.AddScoped<IUsersDefaultWordsRepository, UsersDefaultWordsRepository>();
+builder.Services.AddScoped<IAdviceRepository, AdviceRepository>();
+builder.Services.AddScoped<IBooksRepository, BooksRepository>();
 
 builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 {
@@ -57,7 +59,15 @@ builder.Services.AddAuthorization(options => options.FallbackPolicy =
 
 builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/login");
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddNewtonsoftJson();
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
 
@@ -66,6 +76,7 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseRouting();
+app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

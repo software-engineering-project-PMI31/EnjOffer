@@ -3,6 +3,7 @@ using EnjOffer.Core.DTO;
 using EnjOffer.Core.ServiceContracts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace EnjOffer.UI.Controllers
 {
@@ -18,16 +19,22 @@ namespace EnjOffer.UI.Controllers
         }
 
         [Route("/book-reader")]
+        [HttpGet]
         public async Task<IActionResult> IndexBookReader()
         {
             var user = await _userManager.GetUserAsync(HttpContext.User);
             ViewBag.UserId = user.Id;
-            return View();
+
+            string? serializedModel = HttpContext.Session.GetString("Book");
+            BookResponse? book = JsonConvert.DeserializeObject<BookResponse?>(serializedModel);
+
+
+            return View(book);
         }
 
-        [HttpPost]
         //Url: persons/create
         [Route("/book-reader/add-user-word")]
+        [HttpPost]
         public IActionResult AddWord(UserWordsAddRequest userWordAddRequest)
         {
             if (!ModelState.IsValid)

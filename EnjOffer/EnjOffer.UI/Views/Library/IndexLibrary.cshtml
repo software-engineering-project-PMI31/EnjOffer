@@ -1,6 +1,9 @@
-﻿@{
+﻿@using EnjOffer.Core.DTO;
+@model BookResponse?;
+@{
     ViewBag.Title = "Library";
 }
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,26 +29,16 @@
         </div>
         <div class="library__main">
             <div class="selected-book">
-                <div class="selected-book__image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png"
+                <form method="POST" action="book-reader" class="selected-book__image">
+                    <img src="@Model?.ImageSrc"
                         draggable="false">
+                        <input type="hidden" name="BookId" value="@Model?.BookId"/>
                     <button class="read-book-button">Read</button>
-                </div>
+                </form>
                 <div class="selected-book__description">
-                    <h2>Book title</h2>
+                    <h2>@Model?.Title. @Model?.Author</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam maiores commodi iste quos
-                        sapiente veritatis quam rerum enim odit? Omnis molestiae laudantium alias expedita distinctio
-                        quisquam ipsum, in sunt sapiente?
-                        Recusandae temporibus molestiae, quis, ipsum cumque cum vitae suscipit sequi laudantium minus
-                        tenetur fugiat optio odit dolore quae quas nobis quisquam quasi vero distinctio natus
-                        dignissimos velit sint? Ut, totam.
-                        Magnam numquam dolores inventore veniam totam labore, voluptatum vitae nam repudiandae commodi?
-                        Vel modi commodi eaque beatae accusamus perspiciatis, error accusantium esse ullam fugit
-                        necessitatibus eum numquam aspernatur voluptate laudantium?
-                        Ipsum ad eaque totam quis dolore repudiandae unde iste error suscipit. Non unde eveniet vel
-                        cupiditate eius cum maiores suscipit qui excepturi sed, fugit placeat quo expedita aut
-                        blanditiis maxime!
+                        @Model?.Description
                     </p>
                 </div>
             </div>
@@ -53,87 +46,20 @@
 
             <div class="library-container">
                 <div class="library-list">
-                    <div class="library-item">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                    <p>Book name 1</p>
-                    <div class="library-item__actions">
-                        <button class="see-book-button">See</button>
-                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
-                    </div>
-                </div>
-                <div class="library-item">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                    <p>Book name 2</p>
-                    <div class="library-item__actions">
-                        <button class="see-book-button">See</button>
-                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
-                    </div>
-                </div>
-                <div class="library-item">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                    <p>Book name 3</p>
-                    <div class="library-item__actions">
-                        <button class="see-book-button">See</button>
-                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
-                    </div>
-                </div>
-                <div class="library-item">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                    <p>Book name 4</p>
-                    <div class="library-item__actions">
-                        <button class="see-book-button">See</button>
-                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
-                    </div>
-                </div>
-                <div class="library-item">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                    <p>Book name 5</p>
-                    <div class="library-item__actions">
-                        <button class="see-book-button">See</button>
-                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
-                    </div>
-                </div>
-                <div class="library-item">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                    <p>Book name 6</p>
-                    <div class="library-item__actions">
-                        <button class="see-book-button">See</button>
-                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
-                    </div>
-                </div>
-                <div class="library-item">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                    <p>Book name 7</p>
-                    <div class="library-item__actions">
-                        <button class="see-book-button">See</button>
-                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
-                    </div>
-                </div>
-                <div class="library-item">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                    <p>Book name 8</p>
-                    <div class="library-item__actions">
-                        <button class="see-book-button">See</button>
-                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
-                    </div>
-                </div>
-                <div class="library-item">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png" draggable="false">
-                    <p>Book name 9</p>
-                    <div class="library-item__actions">
-                        <button class="see-book-button">See</button>
-                        <img src="~/img/star.svg" class="library-item__star" draggable="false"/>
-                    </div>
-                </div>
+                    @foreach (BookResponse book in ViewBag.Books)
+                    {
+                        <form class="library-item" method="POST" action="library">
+                            <img src="@book.ImageSrc" draggable="false">
+                            <p>@book.Title</p>
+                            <input type="hidden" name="bookId" value="@book.BookId"/>
+                            @*@Html.HiddenFor(model => model.BookId, Model?.BookId)*@
+                            <div class="library-item__actions">
+                        
+                                <button class="see-book-button">See</button>
+                                @*<img src="~/img/star.svg" class="library-item__star" draggable="false"/>*@
+                            </div>
+                        </form>
+                    }
                 </div>
             </div>
 

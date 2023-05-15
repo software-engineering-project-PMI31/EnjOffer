@@ -5,6 +5,7 @@ using EnjOffer.Core.Domain.IdentityEntities;
 using Microsoft.AspNetCore.Authorization;
 using EnjOffer.UI.EmailConfiguration;
 using EnjOffer.Core.ServiceContracts;
+using Newtonsoft.Json;
 
 namespace EnjOffer.UI.Controllers
 {
@@ -46,8 +47,13 @@ namespace EnjOffer.UI.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ViewBag.Errors = ModelState.Values.SelectMany(temp => temp.Errors)
+                ViewBag.ErrorsRegister = ModelState.Values.SelectMany(temp => temp.Errors)
                     .Select(temp => temp.ErrorMessage);
+
+                List<string> errors = new List<string>();
+                errors.AddRange(ViewBag.ErrorsRegister);
+                string serializedErrorsRegisterList = JsonConvert.SerializeObject(errors);
+                HttpContext.Session.SetString("ErrorsRegister", serializedErrorsRegisterList);
 
                 return View("Register", registerDTO);
             }
@@ -109,8 +115,13 @@ namespace EnjOffer.UI.Controllers
                     }
                 }
 
-                //Sign in
-                await _signInManager.SignInAsync(user, false);
+                var roles = await _userManager.GetRolesAsync(user);
+
+                if (roles.Contains(Core.Enums.UserTypeOptions.User.ToString()))
+                {
+                    //Sign in
+                    await _signInManager.SignInAsync(user, false);
+                }
 
                 return RedirectToAction(nameof(HomeController.IndexPersonalCabinet), "Home");
             }
@@ -125,6 +136,52 @@ namespace EnjOffer.UI.Controllers
                     .Select(temp => temp.ErrorMessage);
 
                 return View(registerDTO);
+            }
+        }
+
+        [Route("/personal-cabinet/delete-admin")]
+        [HttpPost]
+        public async Task<IActionResult> DeleteUser(string Email)
+        {
+            var user = await _userManager.FindByEmailAsync(Email);
+            if (user != null)
+            {
+                var result = await _userManager.DeleteAsync(user);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction(nameof(HomeController.IndexPersonalCabinet), "Home");
+                }
+                else
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError("IndexPersonalCabinet", error.Description);
+                    }
+
+                    ViewBag.ErrorsDeleteAdmin = ModelState.Values.SelectMany(temp => temp.Errors)
+                        .Select(temp => temp.ErrorMessage);
+
+                    List<string> errors = new List<string>();
+                    errors.AddRange(ViewBag.ErrorsDeleteAdmin);
+                    string serializedErrorsList = JsonConvert.SerializeObject(errors);
+                    HttpContext.Session.SetString("Errors", serializedErrorsList);
+
+                    return RedirectToAction(nameof(HomeController.IndexPersonalCabinet), "Home");
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("IndexPersonalCabinet", "User not found");
+
+                ViewBag.ErrorsDeleteAdmin = ModelState.Values.SelectMany(temp => temp.Errors)
+                    .Select(temp => temp.ErrorMessage);
+
+                List<string> errors = new List<string>();
+                errors.AddRange(ViewBag.ErrorsDeleteAdmin);
+                string serializedErrorsDeleteAdminList = JsonConvert.SerializeObject(errors);
+                HttpContext.Session.SetString("ErrorsDeleteAdmin", serializedErrorsDeleteAdminList);
+
+                return RedirectToAction(nameof(HomeController.IndexPersonalCabinet), "Home");
             }
         }
 

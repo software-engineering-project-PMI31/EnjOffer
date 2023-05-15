@@ -3,6 +3,9 @@
 }
 @using EnjOffer.Core.DTO;
 @using System.Security.Claims;
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+
+@model BookResponse?;
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +48,7 @@
         </div>
         <div class="book-reader__main">
             <div class="book-actions">
-                <embed src="~/books/clean_code.pdf" type="application/pdf" width="900px" height="550px" />
+                <embed src="@Model?.Content" type="application/pdf" width="900px" height="550px" />
                 <div class="book-modal">
                     <div class="book-modal__header">
                         <h3>Add your own word or phrase</h3>
@@ -55,7 +58,7 @@
                             <input type="text" placeholder="Word" class="form-input" name="Word" required />
                             <input type="text" placeholder="Traslation" class="form-input" name="WordTranslation"
                                 required />
-                            @Html.HiddenFor(ViewBag.UserId, User.FindFirstValue(ClaimTypes.NameIdentifier));
+                            <input type="hidden" name="UserId" value="@ViewBag.UserId" />
                             @*<input type="text" placeholder="User" class="form-input" name="UserId"
                                 value="409855c0-8d3a-467e-8edd-87593f4a25cc" style="display: none;" />*@
                             <button class="form-button" type="submit">Add word</button>

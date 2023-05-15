@@ -70,7 +70,7 @@
 
             <div class="manager">
 
-                    <form id="create-admin-account" method="POST" action="register">
+                    <form id="create-admin-account" method="POST" action="personal-cabinet/add-admin">
                     <h3>Add admin account</h3>
                     <details>
                         <summary class="form-button" onclick="formInteraction()">Open form</summary>
@@ -91,19 +91,24 @@
                             @*<p>Role</p>
                             <input type="text" class="input-field__input" name="Role" required/>*@
                             <label>Admin</label>
-                            <select name="UserType">
+                            <input type="radio" name="UserType" value="Admin" checked/>
+                            @*<select name="UserType">
                                 <option checked value="Admin">Admin</option>
                                 <option value="User">User</option>
-                            </select>
+                            </select>*@
                         </div>
-                        @*@foreach(var item in ViewBag.Errors) {
-                            <span style="color: red; font-style: italic;">@item</span>
-                        }*@
+                            @if (ViewBag.ErrorsRegister is not null)
+                            {
+                                foreach(var item in ViewBag.ErrorsRegister)
+                                {
+                                    <span style="color: red; font-style: italic;">@item</span>
+                                }
+                            }
                         <button class="input-field__button">Create account</button>
                     </div>
                 </details>
             </form>
-            <form id="remove-admin-account" method="POST" action="personal-cabinet/delete-user">
+            <form id="remove-admin-account" method="POST" action="personal-cabinet/delete-admin">
                 <h3>Remove admin account</h3>
                 <details>
                     <summary class="form-button" onclick="formInteraction()">Open form</summary>
@@ -112,9 +117,13 @@
                             <p>Email</p>
                             <input type="email" class="input-field__input" name="Email" required/>
                         </div>
-                        @*@foreach(var item in ViewBag.Errors) {
-                            <span style="color: red; font-style: italic;">@item</span>
-                        }*@
+                       @if (ViewBag.ErrorsDeleteAdmin is not null)
+                            {
+                                foreach(var item in ViewBag.ErrorsDeleteAdmin)
+                                {
+                                    <span style="color: red; font-style: italic;">@item</span>
+                                }
+                            }
                         <div class="remove-section">
                             <div class="remove-section__check">
                                 <p class="warning-text">I am sure</p>
@@ -143,9 +152,13 @@
                             <p>Link to image</p>
                             <input type="text" class="input-field__input" name="ImageSrc" />
                         </div>
-                        @*@foreach(var item in ViewBag.Errors) {
-                            <span style="color: red; font-style: italic;">@item</span>
-                        }*@
+                        @if (ViewBag.ErrorsAddDefaultWord is not null)
+                            {
+                                foreach(var item in ViewBag.ErrorsAddDefaultWord)
+                                {
+                                    <span style="color: red; font-style: italic;">@item</span>
+                                }
+                            }
                         <button type="submit" class="input-field__button">Add new word</button>
                     </div>
                 </details>
@@ -163,9 +176,13 @@
                             <p>Word Translation</p>
                             <input type="text" class="input-field__input" name="WordTranslation" required/>
                         </div>
-                        @*@foreach(var item in ViewBag.Errors) {
-                            <span style="color: red; font-style: italic;">@item</span>
-                        }*@
+                        @if (ViewBag.ErrorsDeleteDefaultWord is not null)
+                            {
+                                foreach(var item in ViewBag.ErrorsDeleteDefaultWord)
+                                {
+                                    <span style="color: red; font-style: italic;">@item</span>
+                                }
+                            }
                         <div class="remove-section">
                             <div class="remove-section__check">
                                 <p class="warning-text">I am sure</p>
@@ -183,19 +200,14 @@
             <canvas id="myChart" class="myChart"></canvas>
         </div>
         <a href="logout" class="input-field__button">Log out</a>
-        <div class="advices">
-            <div class="advice">
-                <h4>Advice #1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptates hic magni laboriosam corporis officiis, neque sapiente aliquam in. Voluptatem quasi officia ex tenetur provident! Repellendus laudantium perspiciatis cum minus?</p>
-            </div>
-            <div class="advice">
-                <h4>Advice #2</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas fugit temporibus cum veritatis labore facilis at asperiores voluptate saepe eligendi obcaecati rerum corrupti, perspiciatis ipsam deserunt porro, distinctio quia repudiandae.</p>
-            </div>
-            <div class="advice">
-                <h4>Advice #3</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vitae a quod vero, veritatis voluptatum laborum consequuntur corporis et praesentium atque perspiciatis sed quisquam ea tempora itaque provident minus exercitationem?</p>
-            </div>
+            <div class="advices">
+                @foreach(AdviceResponse item in ViewBag.Advice)
+                {
+                    <div class="advice">
+                        <h4>Advice #@item.AdviceNumber</h4>
+                        <p>@item.AdviceContent</p>
+                    </div>
+                }
         </div>
     </div>
 </main>

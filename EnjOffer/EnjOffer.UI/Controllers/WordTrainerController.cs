@@ -52,6 +52,8 @@ namespace EnjOffer.UI.Controllers
 
                 ViewBag.IsCorrectEntered = null;
 
+                HttpContext.Session.Remove("Book");
+
                 return View(wordsNewUpdateRequest);
             }
             else
