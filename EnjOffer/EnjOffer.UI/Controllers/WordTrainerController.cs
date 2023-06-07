@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using EnjOffer.Core.ServiceContracts;
 using EnjOffer.Core.Enums;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using EnjOffer.UI.ViewModels;
 using EnjOffer.Core.Domain.IdentityEntities;
 using Microsoft.AspNetCore.Identity;
 
@@ -47,19 +46,25 @@ namespace EnjOffer.UI.Controllers
                     WordTranslation = wordToCheck.WordTranslation,
                     CorrectEnteredCount = wordToCheck.CorrectEnteredCount,
                     IncorrectEnteredCount = wordToCheck.IncorrectEnteredCount,
-                    LastTimeEntered = wordToCheck.LastTimeEntered
+                    LastTimeEntered = wordToCheck.LastTimeEntered,
+                    ImageSrc = wordToCheck.ImageSrc
                 };
 
                 ViewBag.IsCorrectEntered = null;
 
                 HttpContext.Session.Remove("Book");
 
+                ViewBag.Placeholder = HttpContext.Session.GetString("Placeholder");
+                HttpContext.Session.Remove("Placeholder");
+
                 return View(wordsNewUpdateRequest);
             }
             else
             {
                 ViewBag.IsCorrectEntered = TempData["IsCorrectEntered"];
-                //wordTrainerViewModel.wordsResponse = wordToCheck;
+                ViewBag.Placeholder = HttpContext.Session.GetString("Placeholder");
+                HttpContext.Session.Remove("Placeholder");
+
                 return View(wordsUpdateRequest);
             }
         }
@@ -101,7 +106,7 @@ namespace EnjOffer.UI.Controllers
                 WordsResponse? tepWord = _wordsService.GetWordById(wordsUpdateRequest.DefaultWordId,
                         wordsUpdateRequest.UserWordId, user.Id);
                 bool isCorrectEntered = tepWord!.Word == wordsUpdateRequest.Word;
-                /*bool isCorrectEntered = _wordsService.CheckWord(wordsUpdateRequest.Word!);*/
+                
 
                 if (isCorrectEntered)
                 {
@@ -115,6 +120,7 @@ namespace EnjOffer.UI.Controllers
                     wordsUpdateRequest.UserWordId = wordNextToCheck.UserWordId;
                     wordsUpdateRequest.UserId = wordNextToCheck.UserId;
                     wordsUpdateRequest.Word = wordNextToCheck.Word;
+                    wordsUpdateRequest.ImageSrc = wordNextToCheck.ImageSrc;
                     wordsUpdateRequest.WordTranslation = wordNextToCheck.WordTranslation;
                     wordsUpdateRequest.CorrectEnteredCount = wordNextToCheck.CorrectEnteredCount;
                     wordsUpdateRequest.IncorrectEnteredCount = wordNextToCheck.IncorrectEnteredCount;
@@ -147,6 +153,49 @@ namespace EnjOffer.UI.Controllers
                     return RedirectToAction("IndexWordTrainer", "WordTrainer", wordsNewUpdateRequest);
                 }
 
+            }
+            catch (Exception)
+            {
+                return BadRequest("Invalid inputs");
+            }
+        }
+
+        [HttpPost]
+        [Route("/word-trainer/use-hint")]
+        public async Task<IActionResult> UseHint(WordsUpdateRequest wordsUpdateRequest)
+        {
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+
+            TempData["IsCorrectEntered"] = false;
+            try
+            {
+                WordsResponse? tepWord = _wordsService.GetWordById(wordsUpdateRequest.DefaultWordId,
+                        wordsUpdateRequest.UserWordId, user.Id);
+
+                string answer = tepWord?.Word;
+                HttpContext.Session.SetString("Placeholder", answer);
+                TempData["IsCorrectEntered"] = false;
+
+                wordsUpdateRequest.IsIncreaseIncorrectEnteredCount = true;
+
+                WordsResponse updatedWord = _wordsService.UpdateWord(wordsUpdateRequest);
+                WordsResponse? currentWord = _wordsService.GetWordById(wordsUpdateRequest.DefaultWordId,
+                    wordsUpdateRequest.UserWordId, user.Id);
+
+                WordsUpdateRequest? wordsNewUpdateRequest = new WordsUpdateRequest()
+                {
+                    DefaultWordId = currentWord?.DefaultWordId,
+                    UserWordId = currentWord?.UserWordId,
+                    UserId = currentWord?.UserId,
+                    Word = currentWord!.Word,
+                    WordTranslation = currentWord.WordTranslation,
+                    ImageSrc = currentWord.ImageSrc,
+                    CorrectEnteredCount = currentWord.CorrectEnteredCount,
+                    IncorrectEnteredCount = currentWord.IncorrectEnteredCount,
+                    LastTimeEntered = currentWord.LastTimeEntered
+                };
+
+                return RedirectToAction("IndexWordTrainer", "WordTrainer", wordsNewUpdateRequest);
             }
             catch (Exception)
             {

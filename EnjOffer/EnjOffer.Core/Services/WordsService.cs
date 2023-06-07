@@ -59,6 +59,7 @@ namespace EnjOffer.Core.Services
                     UserId = usersDefaultWord.UserId,
                     Word = defaultWord.Word,
                     WordTranslation = defaultWord.WordTranslation,
+                    ImageSrc = defaultWord.ImageSrc,
                     LastTimeEntered = usersDefaultWord.LastTimeEntered,
                     CorrectEnteredCount = usersDefaultWord.CorrectEnteredCount,
                     IncorrectEnteredCount = usersDefaultWord.IncorrectEnteredCount,
@@ -78,6 +79,7 @@ namespace EnjOffer.Core.Services
                         UserId = usersDefaultWord.UserId,
                         Word = defaultWord.Word,
                         WordTranslation = defaultWord.WordTranslation,
+                        ImageSrc = defaultWord.ImageSrc,
                         LastTimeEntered = usersDefaultWord.LastTimeEntered,
                         CorrectEnteredCount = usersDefaultWord.CorrectEnteredCount,
                         IncorrectEnteredCount = usersDefaultWord.IncorrectEnteredCount,
@@ -128,9 +130,6 @@ namespace EnjOffer.Core.Services
 
         public WordsResponse GetNextWordToCheck(string word, Guid userId)
         {
-            /*List<UserWords> userWords = _userWordsRepository.GetAllUserWords();
-            List<DefaultWords> defaultWords = _defaultWordsRepository.GetAllDefaultWords();
-            List<UsersDefaultWords> usersDefaultWords = _userDefaultWordsRepository.GetAllUserDefaultWords();*/
             List<UserWords> userWords = _userWordsRepository.GetAllUserWords();
             List<UserWordsResponse> userWordsResponses = _userWordsService.GetAllUserWords();
             List<DefaultWordResponse> defaultWordsResponses = _defaultWordsService.GetAllDefaultWords();

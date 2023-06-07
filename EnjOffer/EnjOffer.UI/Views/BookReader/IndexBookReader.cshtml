@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/book-reader.css">
+    <link rel="stylesheet" href="~/css/book-reader.css">
     <title>@ViewBag.Title</title>
 </head>
 @{
@@ -37,18 +37,22 @@
 </script>
 <body>
     <main class="book-reader">
-        <a href="/">Personal cabinet</a>
-        <a href="word-trainer">Word trainer</a>
-        <a href="library">Library</a>
-        <a href="book-reader">Book reader</a>
-        <div class="book-reader__header">
-            <h1 class="book-reader__header__text">
-                Word trainer
-            </h1>
+        <div class="sidebar-container">
+            <aside class="sidebar">
+                <a href="/" class="sidebar__item" id="sidebar__personal-account">
+                    <h2 class="sidebar__item-content">Personal account</h2>
+                </a>
+                <a href="word-trainer" class="sidebar__item" id="sidebar__word-trainer">
+                    <h2 class="sidebar__item-content">Word trainer</h2>
+                </a>
+                <a href="library" class="sidebar__item" id="sidebar__library">
+                    <h2 class="sidebar__item-content">Library</h2>
+                </a>
+            </aside>
         </div>
         <div class="book-reader__main">
             <div class="book-actions">
-                <embed src="@Model?.Content" type="application/pdf" width="900px" height="550px" />
+                <embed class="pdf-reader" src="@Model?.Content" type="application/pdf"/>
                 <div class="book-modal">
                     <div class="book-modal__header">
                         <h3>Add your own word or phrase</h3>

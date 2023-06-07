@@ -155,3 +155,6 @@ D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\MimeK
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\NETCore.MailKit.dll
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Programming C#\EnjOfferWeb\EnjOffer\EnjOffer\UnitTests\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

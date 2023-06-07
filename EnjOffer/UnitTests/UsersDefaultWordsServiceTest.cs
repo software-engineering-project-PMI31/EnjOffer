@@ -114,13 +114,6 @@ namespace UnitTests
             });
         }
 
-        /*UsersDefaultWords? usersDefaultWord_add_request = _fixture.Build<UsersDefaultWords>()
-                .With(temp => temp.DefaultWordId, Guid.Empty)
-                .With(temp => temp.DefaultWord, null as DefaultWords)
-                .With(temp => temp.UserId, Guid.Empty)
-                .With(temp => temp.User, null as ApplicationUser)
-                .Create();*/
-
         #endregion
 
         #region GetPriority

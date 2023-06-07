@@ -17,6 +17,7 @@ namespace EnjOffer.Core.DTO
         public DateTime? LastTimeEntered { get; set; }
         public int CorrectEnteredCount { get; set; }
         public int IncorrectEnteredCount { get; set; }
+        public string? ImageSrc { get; set; }
         public double Priority { get; set; }
         public Guid? UserId { get; set; }
 
@@ -41,7 +42,8 @@ namespace EnjOffer.Core.DTO
                 CorrectEnteredCount == word_to_compare.CorrectEnteredCount &&
                 IncorrectEnteredCount == word_to_compare.IncorrectEnteredCount &&
                 Math.Round(Priority, 6) == Math.Round(word_to_compare.Priority, 6) &&
-                UserId == word_to_compare.UserId;
+                UserId == word_to_compare.UserId &&
+                string.Equals(ImageSrc, word_to_compare.ImageSrc);
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Major Bug", "S3249:Classes directly extending \"object\" should not call \"base\" in \"GetHashCode\" or \"Equals\"", Justification = "<Pending>")]
@@ -59,6 +61,7 @@ namespace EnjOffer.Core.DTO
                 DefaultWordId = DefaultWordId,
                 Word = Word,
                 WordTranslation = WordTranslation,
+                ImageSrc = ImageSrc,
                 LastTimeEntered = LastTimeEntered,
                 CorrectEnteredCount = CorrectEnteredCount,
                 IncorrectEnteredCount = IncorrectEnteredCount

@@ -14,7 +14,6 @@ html {
     display: flex;
     flex-direction: column;
     margin: auto;
-    padding-top: 10px;
 }
 
 .admin-panel__header {
@@ -137,32 +136,25 @@ select {
     .myChart {
         width: 450px;
     }
-
     .advice {
         max-width: 150px;
     }
-
     .advice_header {
         font-size: smaller;
     }
-
     .advice_content {
         font-size: smaller;
     }
-
     h3 {
         font-size: smaller;
     }
-
     .form-button {
         font-size: small;
     }
-
     .manager {
         flex-direction: column;
         align-items: center;
     }
-
     form {
         font-size: small;
         width: 60vw;
@@ -173,15 +165,12 @@ select {
     .advice {
         max-width: 250px;
     }
-
     .advice_header {
         font-size: x-small;
     }
-
     .advice_content {
         font-size: x-small;
     }
-
     .advices {
         flex-direction: column;
     }
@@ -213,7 +202,7 @@ select {
     display: flex;
     justify-content: space-around;
     background: rgba(255, 207, 18, 0.8);
-    padding: 15px;
+    padding: 25px;
 }
 
 .sidebar-container {
@@ -245,7 +234,6 @@ select {
     .sidebar__item-content {
         font-size: medium;
     }
-
     .sidebar__item {
         height: 60px;
     }
@@ -255,7 +243,6 @@ select {
     .sidebar__item-content {
         font-size: smaller;
     }
-
     .sidebar__item {
         height: 40px;
     }
@@ -267,239 +254,8 @@ select {
     }
 }
 
-
-
-/*body {
-    margin: 0;
-    padding: 0;
-}
-
-.admin-panel {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding-top: 10px;
-}
-
-.admin-panel__header {
-    margin: 1px;
-    padding: 0 20px;
-    border: 2px solid black;
-}
-
-.admin-panel__main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    gap: 50px;
-}
-
-.manager {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    gap: 30px;
-}
-
-.input-field {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.input-field__item {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.input-field__input {
-    height: 25px;
-}
-
-.input-field__button {
-    width: fit-content;
-    align-self: center;
-    padding: 5px 10px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background: #fff;
-    transition: all 0.3s linear;
-}
-
-    .input-field__button:hover {
-        scale: 1.03;
-        background: #e3e3e3;
+@media (max-width: 340px) {
+    .sidebar__item-content {
+        font-size: xx-small;
     }
-
-    .input-field__button:active {
-        scale: 0.85;
-        background: white;
-    }
-
-    .input-field__button:disabled {
-        background: #626262;
-        color: #7d7d7d;
-    }
-
-        .input-field__button:disabled:hover {
-            scale: 1;
-        }
-
-.form-button {
-    font-size: large;
-    user-select: none;
 }
-
-.remove-section {
-    display: flex;
-    gap: 5px;
-    align-self: center;
-}
-
-.remove-section__check {
-    display: flex;
-}
-
-.admin-panel__sections {
-    width: calc(100% - 210px);
-}
-
-.myChart {
-    width: 800px;
-}
-
-.advices {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-}
-
-.advice {
-    max-width: 200px;
-}
-
-.warning-text {
-    user-select: none;
-}*/
-
-
-
-
-
-/*body {
-    margin: 0;
-    padding: 0;
-}
-
-.admin-panel {
-    display: flex;
-    flex-direction: column;
-}
-
-.admin-panel__header {
-    margin: 1px;
-    padding: 0 20px;
-    border: 2px solid black;
-}
-
-.admin-panel__main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    gap: 50px;
-}
-
-.manager {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-}
-
-.input-field {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.input-field__item {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.input-field__input {
-    height: 25px;
-}
-
-.input-field__button {
-    width: fit-content;
-    align-self: center;
-    padding: 5px 10px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background: #fff;
-    transition: all 0.3s linear;
-}
-
-.input-field__button:hover {
-    scale: 1.03;
-    background: #e3e3e3;
-}
-
-.input-field__button:active {
-    scale: 0.85;
-    background: white;
-}
-
-.input-field__button:disabled {
-    background: #626262;
-    color: #7d7d7d;
-}
-
-.input-field__button:disabled:hover {
-    scale: 1;
-}
-
-.form-button {
-    font-size: large;
-    user-select: none;
-}
-
-.remove-section {
-    display: flex;
-    gap: 5px;
-    align-self: center;
-}
-
-.remove-section__check {
-    display: flex;
-}
-
-.admin-panel__sections {
-    width: calc(100% - 210px);
-}
-
-.myChart {
-    width: 800px;
-}
-
-.advices {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-}
-
-.advice {
-    max-width: 200px;
-}
-
-.warning-text {
-    user-select: none;
-}*/

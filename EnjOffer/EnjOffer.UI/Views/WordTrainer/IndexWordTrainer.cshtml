@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/word-trainer.css">
+    <link rel="stylesheet" href="~/css/word-trainer.css">
     <title>@ViewBag.Title</title>
 </head>
 
@@ -47,23 +47,43 @@
 
 <body>
     <main class="word-trainer">
-        <a href="/">Personal cabinet</a>
-        <a href="word-trainer">Word trainer</a>
-        <a href="library">Library</a>
-        <a href="book-reader">Book reader</a>
-
-        <div class="word-trainer__header">
-            <h1 class="word-trainer__header__text">
-                Word trainer
-            </h1>
+        <div class="sidebar-container">
+            <aside class="sidebar">
+                <a href="/" class="sidebar__item" id="sidebar__personal-account">
+                    <h2 class="sidebar__item-content">Personal account</h2>
+                </a>
+                <a href="word-trainer" class="sidebar__item" id="sidebar__word-trainer">
+                    <h2 class="sidebar__item-content">Word trainer</h2>
+                </a>
+                <a href="library" class="sidebar__item" id="sidebar__library">
+                    <h2 class="sidebar__item-content">Library</h2>
+                </a>
+            </aside>
         </div>
         <form class="word-trainer__main" method="POST" action="word-trainer/check-word">
             <div class="image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png"
+                @if (@Model?.ImageSrc is null)
+                {
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png"
                     draggable="false">
-                <h1>Слово або фраза</h1>
+                    <input type="hidden" style="display: none;" name="ImgSrc" value="@Model?.ImageSrc"></input>
+                }
+                else
+                {
+                    <img src="@Model?.ImageSrc"
+                    draggable="false">
+                    <input type="hidden" style="display: none;" name="ImgSrc" value="@Model?.ImageSrc"></input>
+                }
+                <h1>Enter the word or phrase</h1>
             </div>
-            <input type="text" class="word-input" placeholder="Введіть слово..." name="Word" />
+            @if (ViewBag.Placeholder is null)
+            {
+                <input type="text" class="word-input" placeholder="Enter the word" name="Word" />
+            }
+            else
+            {
+                <input type="text" class="word-input" placeholder="@ViewBag.Placeholder" name="Word" />
+            }
             <input style="display: none;" type="text" class="word-input" value="@Model?.DefaultWordId" placeholder="" name="DefaultWordId" />
             <input style="display: none;" type="hidden" class="word-input" value="@Model?.UserId" placeholder="" name="UserId" />
             <input style="display: none;" type="hidden" class="word-input" value="@Model?.UserWordId" placeholder="" name="UserWordId" />
@@ -76,20 +96,17 @@
                 
             }
             else if (ViewBag.IsCorrectEntered == true) {
-                <p style="color: green">Попереднє слово було введено правильно</p>
+                <p style="color: green;">Попереднє слово було введено правильно</p>
             }
             else if (ViewBag.IsCorrectEntered == false)
             {
-                <p style="color: red">Попереднє слово було введено неправильно</p>
+                <p style="color: red;">Попереднє слово було введено неправильно</p>
             }
-            else
-            {
-                <p style="color: yellow">Щось не так</p>
-            }
-            <p>@Model?.WordTranslation</p>
+
+            <p style="font-size: 22px;">@Model?.WordTranslation</p>
             <div class="word-trainer__buttons">
                 <button type="submit" class="functional-button">Enter</button>
-                <button class="functional-button">Use a hint</button>
+                <button class="functional-button" type="submit" formaction="word-trainer/use-hint">Use a hint</button>
             </div>
         </form>
         <img src="https://www.freeiconspng.com/thumbs/plus-icon/plus-icon-black-2.png" class="add-word"
@@ -111,3 +128,15 @@
 </body>
 
 </html>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------- -->
+

@@ -5,6 +5,10 @@
 }
 @addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
 
+@{
+    ViewBag.Title = "Library";
+}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,20 +16,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/library.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/library.css">
     <title>@ViewBag.Title</title>
 </head>
 <body>
     <main class="library">
-        <a href="/">Personal cabinet</a>
-        <a href="word-trainer">Word trainer</a>
-        <a href="library">Library</a>
-        <a href="book-reader">Book reader</a>
-
-        <div class="library__header">
-            <h1 class="library__header__text">
-                Library
-            </h1>
+        <div class="sidebar-container">
+            <aside class="sidebar">
+                <a href="/" class="sidebar__item" id="sidebar__personal-account">
+                    <h2 class="sidebar__item-content">Personal account</h2>
+                </a>
+                <a href="word-trainer" class="sidebar__item" id="sidebar__word-trainer">
+                    <h2 class="sidebar__item-content">Word trainer</h2>
+                </a>
+                <a href="library" class="sidebar__item" id="sidebar__library">
+                    <h2 class="sidebar__item-content">Library</h2>
+                </a>
+            </aside>
         </div>
         <div class="library__main">
             <div class="selected-book">
@@ -37,8 +47,8 @@
                 </form>
                 <div class="selected-book__description">
                     <h2>@Model?.Title. @Model?.Author</h2>
-                    <p>
-                        @Model?.Description
+                    <p class="book-description">
+                       @Model?.Description
                     </p>
                 </div>
             </div>

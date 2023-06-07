@@ -32,6 +32,7 @@ builder.Services.AddScoped<IUsersDefaultWordsService, UsersDefaultWordsService>(
 builder.Services.AddScoped<IWordsService, WordsService>();
 builder.Services.AddScoped<IAdviceService, AdviceService>();
 builder.Services.AddScoped<IBooksService, BooksService>();
+builder.Services.AddScoped<IUsersService, UsersService>();
 
 builder.Services.AddScoped<IUserWordsRepository, UserWordsRepository>();
 builder.Services.AddScoped<IDefaultWordsRepository, DefaultWordsRepository>();
@@ -51,8 +52,6 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
     .AddDefaultTokenProviders()
     .AddUserStore<UserStore<ApplicationUser, ApplicationRole, EnjOfferDbContext, Guid>>()
     .AddRoleStore<RoleStore<ApplicationRole, EnjOfferDbContext, Guid>>();
-
-builder.Services.AddScoped<IUsersService, UsersService>();
 
 builder.Services.AddAuthorization(options => options.FallbackPolicy =
     new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build());

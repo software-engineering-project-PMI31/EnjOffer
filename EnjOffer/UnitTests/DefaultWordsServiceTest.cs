@@ -15,17 +15,14 @@ namespace UnitTests
 {
     public class DefaultWordsServiceTest
     {
-        /*private readonly IDefaultWordsService _defaultWordsService;*/
         private readonly Mock<IDefaultWordsRepository> _defaultWordsRepositoryMock;
         private readonly IDefaultWordsRepository _defaultWordsRepository;
         private readonly IDefaultWordsService _defaultWordsService;
 
         private readonly IFixture _fixture;
 
-        //TO-DO: Avoid the Service Locator Anti-Pattern here. Use Dependency Injection
         public DefaultWordsServiceTest()
         {
-            /*_defaultWordsService = new DefaultWordsService();*/
             _fixture = new Fixture();
 
             _defaultWordsRepositoryMock = new Mock<IDefaultWordsRepository>();

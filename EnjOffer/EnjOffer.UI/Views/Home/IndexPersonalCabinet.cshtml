@@ -3,17 +3,7 @@
 @{
     ViewBag.Title = "Personal cabinet";
 }
-
-@*<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/admin-panel.css">
-    <title>Document</title>
-</head>*@
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,12 +12,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="~/admin-panel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/admin-panel.css">
     <title>@ViewBag.Title</title>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-@{
+ @{
     string js = @"function formInteraction() {
         const button = document.querySelector('.form-button');
         if (button.innerHTML === 'Open form') {
@@ -58,23 +50,31 @@
 </head>
 <body>
     <main class="admin-panel">
-    <a href="/">Personal cabinet</a>
-        <a href="word-trainer">Word trainer</a>
-        <a href="library">Library</a>
-        <a href="book-reader">Book reader</a>
-    @*Html.PartialAsync("_Header")*@
+        <div class="sidebar-container">
+            <aside class="sidebar">
+                <a href="/" class="sidebar__item" id="sidebar__personal-account">
+                    <h2 class="sidebar__item-content">Personal account</h2>
+                </a>
+                <a href="word-trainer" class="sidebar__item" id="sidebar__word-trainer">
+                    <h2 class="sidebar__item-content">Word trainer</h2>
+                </a>
+                <a href="library" class="sidebar__item" id="sidebar__library">
+                    <h2 class="sidebar__item-content">Library</h2>
+                </a>
+            </aside>
+        </div>
     <div class="admin-panel__main">
         <h2 class="admin-panel__sections">
-            Admin panel. Welcome, @User.Identity?.Name!
+            Welcome, @User.Identity?.Name!
         </h2>
-
-            <div class="manager">
-
-                    <form id="create-admin-account" method="POST" action="personal-cabinet/add-admin">
-                    <h3>Add admin account</h3>
-                    <details>
-                        <summary class="form-button" onclick="formInteraction()">Open form</summary>
-                        <div class="input-field">
+        <div class="manager">
+                @if(User.IsInRole("SuperAdmin"))
+                {
+                    <form id="create-admin-account" method="POST" action="register">
+                <h3>Add admin account</h3>
+                <details>
+                    <summary class="form-button" onclick="@Html.Raw("formInteraction()")">Open form</summary>
+                    <div class="input-field">
                         <div class="input-field__item">
                             <p>Email</p>
                             <input type="email" class="input-field__input" name="Email" required/>
@@ -88,16 +88,10 @@
                             <input type="password" class="input-field__input" name="RepeatedPassword" minlength="6" required/>
                         </div>
                         <div class="input-field__item">
-                            @*<p>Role</p>
-                            <input type="text" class="input-field__input" name="Role" required/>*@
-                            <label>Admin</label>
-                            <input type="radio" name="UserType" value="Admin" checked/>
-                            @*<select name="UserType">
-                                <option checked value="Admin">Admin</option>
-                                <option value="User">User</option>
-                            </select>*@
                         </div>
-                            @if (ViewBag.ErrorsRegister is not null)
+                        <label>Admin</label>
+                        <input type="radio" name="UserType" value="Admin" />
+                        @if (ViewBag.ErrorsRegister is not null)
                             {
                                 foreach(var item in ViewBag.ErrorsRegister)
                                 {
@@ -111,13 +105,13 @@
             <form id="remove-admin-account" method="POST" action="personal-cabinet/delete-admin">
                 <h3>Remove admin account</h3>
                 <details>
-                    <summary class="form-button" onclick="formInteraction()">Open form</summary>
+                    <summary class="form-button" onclick="@Html.Raw("formInteraction()")">Open form</summary>
                     <div class="input-field">
                         <div class="input-field__item">
                             <p>Email</p>
                             <input type="email" class="input-field__input" name="Email" required/>
                         </div>
-                       @if (ViewBag.ErrorsDeleteAdmin is not null)
+                        @if (ViewBag.ErrorsDeleteAdmin is not null)
                             {
                                 foreach(var item in ViewBag.ErrorsDeleteAdmin)
                                 {
@@ -127,15 +121,18 @@
                         <div class="remove-section">
                             <div class="remove-section__check">
                                 <p class="warning-text">I am sure</p>
-                                <input type="checkbox" id="check-for-delete-account" onclick="canDelete()">
+                                <input type="checkbox" id="check-for-delete-account" onclick="@Html.Raw("canDelete()")">
                             </div>
                             <button type="submit" id="remove-account-button" class="input-field__button" disabled>Remove
                                 account</button>
-                                </div>
-                            </div>
-                        </details>
-                    </form>
-            <form id="database-add-word" method="POST" action="/personal-cabinet/add-default-word">
+                        </div>
+                    </div>
+                </details>
+            </form>
+                }
+                @if (User.IsInRole("Admin") || User.IsInRole("SuperAdmin"))
+                {
+                    <form id="database-add-word" method="POST" action="/personal-cabinet/add-default-word">
                 <h3>Add word to database</h3>
                 <details>
                     <summary class="form-button" onclick="formInteraction()">Open form</summary>
@@ -152,7 +149,7 @@
                             <p>Link to image</p>
                             <input type="text" class="input-field__input" name="ImageSrc" />
                         </div>
-                        @if (ViewBag.ErrorsAddDefaultWord is not null)
+                         @if (ViewBag.ErrorsAddDefaultWord is not null)
                             {
                                 foreach(var item in ViewBag.ErrorsAddDefaultWord)
                                 {
@@ -186,7 +183,7 @@
                         <div class="remove-section">
                             <div class="remove-section__check">
                                 <p class="warning-text">I am sure</p>
-                                <input type="checkbox" id="check-for-delete-word" onclick="canDelete()">
+                                <input type="checkbox" id="check-for-delete-word" onclick="@Html.Raw("canDelete()")">
                             </div>
                             <button type="submit" id="remove-word-button" class="input-field__button" disabled>Remove
                                 word</button>
@@ -194,14 +191,14 @@
                     </div>
                 </details>
             </form>
+                }
         </div>
         <h2 class="admin-panel__sections" style="margin-bottom: 0;">Statistics</h2>
         <div>
             <canvas id="myChart" class="myChart"></canvas>
         </div>
-        <a href="logout" class="input-field__button">Log out</a>
-            <div class="advices">
-                @foreach(AdviceResponse item in ViewBag.Advice)
+        <div class="advices">
+            @foreach(AdviceResponse item in ViewBag.Advice)
                 {
                     <div class="advice">
                         <h4>Advice #@item.AdviceNumber</h4>
@@ -209,6 +206,7 @@
                     </div>
                 }
         </div>
+        <a href="logout" class="input-field__button" style="text-decoration: none; color: #000; padding: 10px 20px;">Log out</a>
     </div>
 </main>
 @{
@@ -259,7 +257,4 @@
 </body>
 
 </html>
-
-
-
 

@@ -9,8 +9,6 @@ namespace EnjOffer.Core.Domain.Entities
 {
     public class UsersDefaultWords
     {
-        /*public Guid? UserId { get; set; }
-        public Users? User { get; set; }*/
         public Guid? UserId { get; set; }
         public ApplicationUser? User { get; set; }
         public Guid? DefaultWordId { get; set; }

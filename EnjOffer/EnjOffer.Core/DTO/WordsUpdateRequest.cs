@@ -16,6 +16,7 @@ namespace EnjOffer.Core.DTO
         public Guid? DefaultWordId { get; set; }
         public string? Word { get; set; }
         public string? WordTranslation { get; set; }
+        public string? ImageSrc { get; set; }
 
         public DateTime? LastTimeEntered { get; set; }
 
@@ -37,6 +38,7 @@ namespace EnjOffer.Core.DTO
                 DefaultWordId = DefaultWordId,
                 Word = Word,
                 WordTranslation = WordTranslation,
+                ImageSrc = ImageSrc,
                 LastTimeEntered = LastTimeEntered,
                 CorrectEnteredCount = CorrectEnteredCount ?? 0,
                 IncorrectEnteredCount = IncorrectEnteredCount ?? 0
